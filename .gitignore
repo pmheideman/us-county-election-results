@@ -1,5 +1,8 @@
 # Raw downloads and third-party packages: large, and not ours to redistribute
-R/data/
+# (R/data/* not R/data/ -- a directory-level ignore can't be un-ignored per-file by git)
+R/data/*
+# ...except hand-maintained metadata that the release pipeline depends on (small, not a download)
+!R/data/source_registry.csv
 119372-V1/
 119372-V1.zip
 micro2020.csv
