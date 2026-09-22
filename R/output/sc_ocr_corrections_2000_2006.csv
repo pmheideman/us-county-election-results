@@ -1,0 +1,4 @@
+year,district,county,ocr_value,corrected_value,how_verified
+2000,6,LEE,(blank county),LEE,"name cut off by the punched hole (visible tail 'E', between FLORENCE and MARION; Lee is split between D5 and D6)"
+2004,6,COLLETON,(blank county),COLLETON,text layer splits the COLLETON row onto two lines; page image shows one row
+2000,1,(NL column),BOB BATCHELDER (Natural Law),Joseph F. Innella (Natural Law),"the book prints Batchelder over both the Reform and the Natural Law column; Wikipedia gives Bob Batchelder 2,067 and Joseph F. Innella 1,110 (= the NL column total); FLAGGED name correction, votes unchanged"

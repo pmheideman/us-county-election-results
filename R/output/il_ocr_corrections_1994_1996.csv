@@ -1,0 +1,11 @@
+year,district,county,candidate,ocr_value,corrected_value,how_verified
+1994,2,COOK,Cisneros,(blank in the second table; the text prints only Bartos 13 and Sieck 10),4,printed candidate total is 4 and Cook is the only county; the two tables of the district are joined
+1994,11,GRUNDY,Stachyra,(blank/dropped in the OCR text),2,read from the page image; district total then ties
+1994,18,CASS,Harant,(blank/dropped in the OCR text),1,read from the page image; district total then ties
+1994,18,LOGAN,Harant,(blank/dropped in the OCR text),9,read from the page image; district total then ties
+1994,18,MACON,Harant,(blank/dropped in the OCR text),1,read from the page image; district total then ties
+1996,6,STATE,Hyde/De La Rosa/Meyers,1321401 / 6BIB07 / 41746,"132,401 / 68,807 / 4,746",printed totals garbled by OCR; equal the county sums exactly
+1996,17,STATE,first candidate,12000851 (total and percent run together),120008,equals the county sum exactly
+1996,7,COOK,Stroud/Dixon,"1, 57!","1,571","printed totals '11944' and '11571' read as 1,944 and 1,571; row not parsed by the OCR"
+1996,19,WABASH,Lacher,4D,40,digit 'D' read as 0 (page image confirms 40)
+1994,19,STATE,Poshard/Winters,"candidate lines printed with spaced-dot leaders ('115' 045', '81,995')","115,045 / 81,995","read from the text; plurality 33,050 = difference; county sums tie exactly"

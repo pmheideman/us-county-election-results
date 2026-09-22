@@ -1,0 +1,15 @@
+year,district,county,candidate,ocr_readings,value_used,how_verified
+1990,1,BEAUFORT,Eugene Platt,"8,316 (p.93) / 8,016 (p.95)","8,016","column sums to the printed 42,555 only with 8,016 (and 3,029 in Colleton)"
+1990,1,COLLETON,Eugene Platt,"3,329 (p.93) / 3,029 (p.95)","3,029","same column tie: 42,555 = Wikipedia's Platt total"
+1990,2,ORANGEBURG,Gebhard Sommer,"1,333 (p.93) / 1,535 (p.95)","1,333","column sums to printed 11,101 only with 1,333"
+1990,3,ABBEVILLE,Butler Derrick,"3,432 (p.93) / 3,832 (p.95)","3,832","only one combination of the two readings (with Barnwell 3,061, McCormick 1,361, Pickens 9,832, Saluda 2,826) sums to 86,103"
+1990,3,BARNWELL,Butler Derrick,"3,361 (p.93) / 3,061 (p.95)","3,061",same column tie
+1990,3,MCCORMICK,Butler Derrick,"1,361 (p.93) / 1,561 (p.95)","1,361",same column tie
+1990,3,PICKENS,Butler Derrick,"9,432 (p.93) / 9,832 (p.95)","9,832",same column tie
+1990,3,SALUDA,Butler Derrick,"2,426 (p.93) / 2,826 (p.95)","2,826",same column tie
+1990,4,UNION,Liz J. Patterson,"6,305 (p.93) / 6,005 (p.95)","6,005","column sums to printed 81,927 only with 6,005"
+1990,5,CHESTER,John Spratt,"6,312 (p.94) / 6,012 (p.95)","6,012","column sums to printed 78,203 only with 6,012"
+1990,6,HORRY,Write-In,185 (p.94) / 183 (p.95),183,column sums to printed 419 only with 183
+1990,3,SUMTER,Ray Haskett,14,14 (kept as printed),"Republican column shows only 14 votes in Sumter County (13,572 Democratic); the county precinct pages show the same near-empty column and the district total 52,433 includes the 14; reported low, not an OCR problem (Sumter House total is 0.45 of the 1988 presidential total)"
+1990,all,,,,,"Column headers/candidate names printed vertically; names taken from the letters and confirmed against Wikipedia (Eugene Platt, Arthur Ravenel Jr., Floyd Spence, Gebhard Sommer, Butler Derrick, Ray Haskett, Liz J. Patterson, Terry Haskins, John Spratt, Robin Tallon)"
+1992,all,,,,,"No corrections needed: clear print, every one of 20 candidate columns ties to the printed TOTALS row and to Wikipedia's district totals"

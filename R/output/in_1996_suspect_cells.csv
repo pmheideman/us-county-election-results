@@ -1,0 +1,5 @@
+year,district,county,candidate,printed_value,why_suspect,action
+1996,5,Miami,Douglas L. Clark (D),13550,"printed 13,550 (checked on the image; the printed TOTALS include it); House total 22,170 = 1.74x the county's 1996 presidential total 12,760; 3,550 would give 0.95",kept as printed; probably a typo in the state report
+1996,4,Wells,Gerald L. Houseman (D),7909,"printed 7,909 (image); Wells House total 15,239 = 1.35x the presidential total 11,294; 3,909 would give 0.99; a Republican county",kept as printed; probably a typo in the state report
+1996,2,Jay,R. Marc Carmichael (D),3776,"printed 3,776, identical to McIntosh's 3,776 in the same row (image); Jay total 8,991 (D2+D4) = 1.12x the presidential total 8,017",kept as printed; probably a typo in the state report
+1996,all,statewide,Republican / Democratic party totals,"1118533 / 944469","Wikipedia (final results, House Clerk) 1,109,066 R / 930,919 D: ours are 9,467 R and 13,550 D higher; the D gap equals the Miami cell, so the state report's own totals carry its typos",kept as printed

@@ -1,0 +1,16 @@
+year,district,county,column,ocr_value,corrected_value,how_verified
+1998,01,Blue Earth,Write-In,ro,50,page image (p.15); printed total 250 = column sum with 50
+1998,02,Big Stone,Bentz (RP),ro,60,page image (p.15); printed total 12319 = column sum with 60 + Pipestone 60
+1998,02,Pipestone,Bentz (RP),ro,60,page image (p.15); printed total 12319 = column sum with 60 + Big Stone 60
+1998,02,Nobles,Minge (DFL),51~,5194,page image (p.15); printed total 148933 = column sum with 5194
+1998,02,Big Stone,Minge (DFL),"1987,",1987,page image (p.15); trailing comma is a speck; printed total 148933 ties
+1998,07,Hubbard,Peterson (DFL),5fiT7,5677,page image (p.17); printed total 169907 = column sum with 5677
+1998,08,Aitkin,Oberstar (DFL),47'51,4757,page image (p.18); printed total 173734 = column sum with 4757
+1998,08,Chisago,Shuster (R),'5182,5782,page image (p.18) reads 5782; printed total 69667 = column sum with 5782
+1992,02,Renville,Bentz (IND),335-,335,trailing dash is a speck; printed total 12146 = column sum with 335
+1992,07,Norman,Peterson (DFL),2542·,2542,trailing dot is a speck; printed total 133886 = column sum with 2542
+1992,02,Big Stone,all three candidates,row printed on a line shared with the district-1 header,"1349 / 1845 / 147",row re-assigned to district 2 (OCR merged it with 'PENNY'); district 2 printed totals tie with it
+1992,08,Itasca,all four candidates,row printed inside the district-7 block by the OCR (name merged with 'Lake of the'),"6444 / 11638 / 594 / 1604",row re-assigned to district 8; page image (p.10) confirms; district 7 and 8 printed totals tie with it
+1992,07,Lake of the Woods,both candidates,county name split over two lines ('Lake of the' / 'Woods'),"754 / 1397",name taken as Lake of the Woods (printed on two lines); district 7 printed totals tie
+1990,08,St. Louis,both candidates,name OCR'd 'S1. Louis',"64786 / 18450",name corrected; district 8 printed totals tie
+1994,08,St. Louis,both candidates,name OCR'd 'SI. Louis',"59773 / 23822",name corrected; district 8 printed totals tie

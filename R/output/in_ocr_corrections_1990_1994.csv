@@ -1,0 +1,7 @@
+year,district,county,candidate,ocr_value,corrected_value,how_verified
+1990,08,Lawrence,Richard Mourdock,6063,6083,"first read at 120 dpi; block sum was 20 short of the printed TOTAL 80,645; 400-dpi crop shows 6,083"
+1990,08,Pike,Richard Mourdock,1915,1895,"first read at 120 dpi as illegible and inferred as 1,915 from the printed TOTAL before the crop; 400-dpi crop shows 1,895; block now sums to the printed TOTAL 80,645"
+1990,06,Marion,Dan Burton,39083,39683,"first read at 120 dpi; block sum was 600 short of the printed TOTAL 116,470; 400-dpi crop shows 39,683"
+1990,07,Vermillion,Barbara Bourland,0,11,"first pass 694 vs printed TOTAL 704 (a '11' read as 0); re-read: Vermillion 11, block sums to 704"
+1994,07,(all counties),Michael M. Harmless / John T. Myers,NA,NA,"NOT A CORRECTION: the book prints Myers 101,947 and Harmless 55,941 (both columns re-read at 400 dpi, TOTALs tie: 64.6% / 35.4%) but Wikipedia's national 1994 page says 65.1% / 34.9%; the book's numbers are kept"
+1990,10,Marion,Andrew Jacobs Jr. / Janos Horvath,NA,NA,"NOT A CORRECTION: district 10 is Marion County only and prints no TOTAL line; shares 66.4% / 33.6% (1990), 64.0 / 35.0 / 1.0 (1992), 53.5 / 46.5 (1994) agree with Wikipedia"

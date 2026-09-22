@@ -1,0 +1,2 @@
+district,county,candidate,ocr_value,corrected_value,how_verified
+n/a (check race),Cass,"Richard E. Mourdock (Treasurer of State, used only as the independent county check)",9176,6176,"tesseract misread 6 as 9; page image (pdf p.68) shows 6,176; with it the 92 county cells add up to the printed statewide total 833,531 (Griffin's 92 cells add up to 771,610 without any correction)"

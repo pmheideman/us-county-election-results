@@ -1,0 +1,22 @@
+# Raw downloads and third-party packages: large, and not ours to redistribute
+R/data/
+119372-V1/
+119372-V1.zip
+micro2020.csv
+*.pdf
+# R / editor / tool state
+.Rproj.user/
+.Rhistory
+.RData
+.claude/
+# Secrets: IPUMS API key
+.Renviron
+# Large derived intermediates (released via GitHub Releases instead)
+R/output/**/*.rds
+!R/output/elect_cty_final_provenance_summary.csv
+# Stray/orphaned build artifacts, not referenced by any current script
+R/output/elect_cty_final
+R/output/test.rds
+
+# Release files (published via GitHub Releases, not committed)
+release/**/*.csv

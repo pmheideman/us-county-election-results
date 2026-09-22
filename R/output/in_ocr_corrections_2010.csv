@@ -1,0 +1,5 @@
+district,county,candidate,ocr_value,corrected_value,how_verified
+03,Steuben,Scott Wise,341,541,"tesseract misread or truncated the cell; image read, and the candidate's county sum equals the printed total"
+04,Boone,Todd Rokita,13,13836,"tesseract misread or truncated the cell; image read, and the candidate's county sum equals the printed total"
+04,Johnson,Todd Rokita,24,24216,"tesseract misread or truncated the cell; image read, and the candidate's county sum equals the printed total"
+05,Johnson,Dan Burton,1,1395,"tesseract misread or truncated the cell; image read, and the candidate's county sum equals the printed total"

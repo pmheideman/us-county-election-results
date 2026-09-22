@@ -1,0 +1,9 @@
+year,district,county,candidate,as_read_or_printed,used,how_verified
+1996,05,DARLINGTON,Larry L. Bigham (R),6635 (first reading of the 110 dpi image),6633,"Zoomed 220 dpi crop showed 6,633; the county sum then ties to the printed STATE TOTAL 81,455 (was 2 over)"
+1998,06,FLORENCE,(all columns),row label hidden by a scanner punch hole ('F..NCE'),"16,938 / 489 / 15,232 / wi 100","Row position (alphabetical between Dorchester and Marion), the county order of every other year and the district sum ties for all four columns"
+1998,06,LEE,(all columns),row label hidden by a scanner punch hole ('L..'),"2,279 / 41 / 402 / wi 1",Alphabetical position between Florence and Marion; district sums tie
+1998,01,(district),Joe Innella,party code printed 'NP',party label Natural Law,"Wikipedia (1998 SC elections) lists Joseph F. Innella as the Natural Law candidate with the same total, 11,586; the printed code NP kept in the script comments"
+1998,04,(district),Peter J. Ashy,two printed lines ASHY(PT) 950 and ASHY(RF) 804,kept as two party lines Patriot 950 and Reform 804,"Wikipedia: Ashy also ran as Patriot; totals combined 1,754 = 950 + 804"
+1996,03,ANDERSON,Bill Ramsay (W),named write-in column,"kept as a named candidate 'Bill Ramsay', party Write-In, 1 vote",Printed column and total (1) agree
+1998,03,(district),Ron Gilreath (W),named write-in column,"kept as a named candidate 'Ron Gilreath', party Write-In, 84 votes (Anderson)",Printed column and total (84) agree
+1994-1998,all,(blank cells),,blank = candidate has no votes in that county (typed report prints nothing),0 (zero rows dropped from the long table),Sums tie to the printed STATE TOTAL rows in all 18 district-years

@@ -1,0 +1,4 @@
+year,district,county,candidate,ocr_value,corrected_value,how_verified
+1996,01,Saline,Patrick J. Combs,1987,1967,"first reading of the 150-dpi image; district sum 67,172 vs printed TOTAL 67,152 (+20); 300-dpi crop shows 1967 and the sum then ties"
+1996,03,Adams,Bill Barrett,6961,8961,"main-session recheck: the fork's reading 6,961 made Adams 0.81 of its presidential total; a 250-dpi crop of the rotated page shows 8961 (ratio then 0.97)"
+1996,03,Dawson,Bill Barrett,8364,6364,"main-session recheck: the fork's reading 8,364 made Dawson 1.23 of its presidential total; the crop shows 6364 (ratio then 0.98). The two 6/8 misreads offset (+2,000/-2,000) so the column sum still tied to the printed TOTAL"

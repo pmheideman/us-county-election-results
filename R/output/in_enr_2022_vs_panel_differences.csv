@@ -1,0 +1,2 @@
+"state","year","cty_fips","sample","demovote","repuvote","totalvote","o_dem","o_rep","o_tot","same"
+"INDIANA",2022,18085,"HE",0.175885150607715,0.781971111502554,22708,0.176373435326843,0.781510778859527,23008,FALSE

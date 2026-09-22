@@ -1,0 +1,1254 @@
+year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
+1990,6,CA,01,placeholder,Democratic Candidate,DEM,96468,Douglas H. Bosco,vote_total,wikipedia votes 96468
+1990,6,CA,01,placeholder,Other Candidate 1,OTHER,34011,Darlene G. Comingore,vote_total,wikipedia votes 34011
+1990,6,CA,01,placeholder,Republican Candidate,REP,99782,Frank Riggs,vote_total,wikipedia votes 99782
+1990,6,CA,02,placeholder,Democratic Candidate,DEM,65333,"Erwin E. ""Bill"" Rush",vote_total,wikipedia votes 65333
+1990,6,CA,02,placeholder,Other Candidate 1,OTHER,10753,Ross Crain,vote_total,wikipedia votes 10753
+1990,6,CA,02,placeholder,Republican Candidate,REP,133315,Wally Herger,vote_total,wikipedia votes 133315
+1990,6,CA,03,placeholder,Democratic Candidate,DEM,132143,Robert Matsui,vote_total,wikipedia votes 132143
+1990,6,CA,03,placeholder,Other Candidate 1,OTHER,10797,David M. McCann,vote_total,wikipedia votes 10797
+1990,6,CA,03,placeholder,Republican Candidate,REP,76148,Lowell Patrick Landowski,vote_total,wikipedia votes 76148
+1990,6,CA,04,placeholder,Democratic Candidate,DEM,115090,Vic Fazio,vote_total,wikipedia votes 115090
+1990,6,CA,04,placeholder,Other Candidate 1,OTHER,12626,Bryce Bigwood,vote_total,wikipedia votes 12626
+1990,6,CA,04,placeholder,Republican Candidate,REP,82738,Mark R. Baughman,vote_total,wikipedia votes 82738
+1990,6,CA,05,placeholder,Democratic Candidate,DEM,120633,Nancy Pelosi,vote_total,wikipedia votes 120633
+1990,6,CA,05,placeholder,Republican Candidate,REP,35671,Alan Nichols,vote_total,wikipedia votes 35671
+1990,6,CA,06,placeholder,Democratic Candidate,DEM,137306,Barbara Boxer,vote_total,wikipedia votes 137306
+1990,6,CA,06,placeholder,Republican Candidate,REP,64402,Bill Boerum,vote_total,wikipedia votes 64402
+1990,6,CA,07,placeholder,Democratic Candidate,DEM,121080,George Miller,vote_total,wikipedia votes 121080
+1990,6,CA,07,placeholder,Republican Candidate,REP,79031,Roger A. Payton,vote_total,wikipedia votes 79031
+1990,6,CA,08,placeholder,Democratic Candidate,DEM,119645,Ronald Dellums,vote_total,wikipedia votes 119645
+1990,6,CA,08,placeholder,Republican Candidate,REP,75544,Barbara Galewski,vote_total,wikipedia votes 75544
+1990,6,CA,09,placeholder,Democratic Candidate,DEM,94739,Pete Stark,vote_total,wikipedia votes 94739
+1990,6,CA,09,placeholder,Republican Candidate,REP,67412,Victor Romero,vote_total,wikipedia votes 67412
+1990,6,CA,10,placeholder,Democratic Candidate,DEM,81875,Don Edwards,vote_total,wikipedia votes 81875
+1990,6,CA,10,placeholder,Other Candidate 1,OTHER,15,Peter James,vote_total,wikipedia votes 15
+1990,6,CA,10,placeholder,Republican Candidate,REP,48747,Mark Patrosso,vote_total,wikipedia votes 48747
+1990,6,CA,11,placeholder,Democratic Candidate,DEM,105029,Tom Lantos,vote_total,wikipedia votes 105029
+1990,6,CA,11,placeholder,Other Candidate 1,OTHER,8518,June R. Genis,vote_total,wikipedia votes 8518
+1990,6,CA,11,placeholder,Republican Candidate,REP,45818,Bill Quarishi,vote_total,wikipedia votes 45818
+1990,6,CA,12,placeholder,Democratic Candidate,DEM,69270,Bob Palmer,vote_total,wikipedia votes 69270
+1990,6,CA,12,placeholder,Other Candidate 1,OTHER,11271,Chuck Olson,vote_total,wikipedia votes 11271
+1990,6,CA,12,placeholder,Republican Candidate,REP,125157,Tom Campbell,vote_total,wikipedia votes 125157
+1990,6,CA,13,placeholder,Democratic Candidate,DEM,97286,Norm Mineta,vote_total,wikipedia votes 97286
+1990,6,CA,13,placeholder,Other Candidate 1,OTHER,10587,John H. Webster,vote_total,wikipedia votes 10587
+1990,6,CA,13,placeholder,Republican Candidate,REP,59773,David E. Smith,vote_total,wikipedia votes 59773
+1990,6,CA,14,placeholder,Democratic Candidate,DEM,120742,Patricia Malberg,vote_total,wikipedia votes 120742
+1990,6,CA,14,placeholder,Republican Candidate,REP,128039,John Doolittle,party_D_R,wikipedia votes 128309 vs ours 128039
+1990,6,CA,15,placeholder,Democratic Candidate,DEM,97147,Gary Condit,vote_total,wikipedia votes 97147
+1990,6,CA,15,placeholder,Republican Candidate,REP,49634,Cliff Burris,vote_total,wikipedia votes 49634
+1990,6,CA,16,placeholder,Democratic Candidate,DEM,134236,Leon Panetta,vote_total,wikipedia votes 134236
+1990,6,CA,16,placeholder,Other Candidate 1,OTHER,6881,Brian H. Tucker,vote_total,wikipedia votes 6881
+1990,6,CA,16,placeholder,Republican Candidate,REP,39885,Jerry M. Reiss,vote_total,wikipedia votes 39885
+1990,6,CA,17,placeholder,Democratic Candidate,DEM,82611,Cal Dooley,vote_total,wikipedia votes 82611
+1990,6,CA,17,placeholder,Republican Candidate,REP,68848,"Charles ""Chip"" Pashayan",vote_total,wikipedia votes 68848
+1990,6,CA,18,placeholder,Democratic Candidate,DEM,98804,Richard Lehman,vote_total,wikipedia votes 98804
+1990,6,CA,18,placeholder,Republican Candidate,REP,0,NA,unmatched,NA
+1990,6,CA,19,placeholder,Democratic Candidate,DEM,76991,Anita Perez Ferguson,vote_total,wikipedia votes 76991
+1990,6,CA,19,placeholder,Other Candidate 1,OTHER,1655,Mindy Lorenz,vote_total,wikipedia votes 1655
+1990,6,CA,19,placeholder,Republican Candidate,REP,94599,Bob Lagomarsino,vote_total,wikipedia votes 94599
+1990,6,CA,20,placeholder,Democratic Candidate,DEM,65101,Michael A. Thomas,vote_total,wikipedia votes 65101
+1990,6,CA,20,placeholder,Other Candidate 1,OTHER,10862,William Howard Dilbeck / Lita Martin Reid,pooled_minor_sum,sum of 2 wikipedia candidates = 10862
+1990,6,CA,20,placeholder,Republican Candidate,REP,112962,Bill Thomas,vote_total,wikipedia votes 112962
+1990,6,CA,21,placeholder,Democratic Candidate,DEM,68921,Richard D. Freiman,vote_total,wikipedia votes 68921
+1990,6,CA,21,placeholder,Other Candidate 1,OTHER,15364,Peggy L. Christensen,vote_total,wikipedia votes 15364
+1990,6,CA,21,placeholder,Republican Candidate,REP,118326,Elton Gallegly,vote_total,wikipedia votes 118326
+1990,6,CA,22,placeholder,Democratic Candidate,DEM,61630,David Bayer,vote_total,wikipedia votes 61630
+1990,6,CA,22,placeholder,Other Candidate 1,OTHER,10665,William H. Wilson / Jan B. Tucker,pooled_minor_sum,sum of 2 wikipedia candidates = 10665
+1990,6,CA,22,placeholder,Republican Candidate,REP,108634,Carlos J. Moorhead,vote_total,wikipedia votes 108634
+1990,6,CA,23,placeholder,Democratic Candidate,DEM,103141,Anthony C. Beilenson,vote_total,wikipedia votes 103141
+1990,6,CA,23,placeholder,Other Candidate 1,OTHER,6834,John Honigsfeld,vote_total,wikipedia votes 6834
+1990,6,CA,23,placeholder,Republican Candidate,REP,57118,Jim Salomon,vote_total,wikipedia votes 57118
+1990,6,CA,24,placeholder,Democratic Candidate,DEM,71562,Henry Waxman,vote_total,wikipedia votes 71562
+1990,6,CA,24,placeholder,Other Candidate 1,OTHER,5706,Maggie Phair,vote_total,wikipedia votes 5706
+1990,6,CA,24,placeholder,Republican Candidate,REP,26607,John N. Cowles,vote_total,wikipedia votes 26607
+1990,6,CA,25,placeholder,Democratic Candidate,DEM,48120,Edward R. Roybal,vote_total,wikipedia votes 48120
+1990,6,CA,25,placeholder,Other Candidate 1,OTHER,3576,Robert H. Scott,vote_total,wikipedia votes 3576
+1990,6,CA,25,placeholder,Republican Candidate,REP,17021,Steven J. Renshaw,vote_total,wikipedia votes 17021
+1990,6,CA,26,placeholder,Democratic Candidate,DEM,78031,Howard Berman,vote_total,wikipedia votes 78031
+1990,6,CA,26,placeholder,Other Candidate 1,OTHER,5268,Bernard Zimring,vote_total,wikipedia votes 5268
+1990,6,CA,26,placeholder,Republican Candidate,REP,44492,Roy Dahlson,vote_total,wikipedia votes 44492
+1990,6,CA,27,placeholder,Democratic Candidate,DEM,90857,Mel Levine,vote_total,wikipedia votes 90857
+1990,6,CA,27,placeholder,Other Candidate 1,OTHER,7101,Edward E. Ferrer,vote_total,wikipedia votes 7101
+1990,6,CA,27,placeholder,Republican Candidate,REP,58140,David Barrett Cohen,vote_total,wikipedia votes 58140
+1990,6,CA,28,placeholder,Democratic Candidate,DEM,69482,Julian C. Dixon,vote_total,wikipedia votes 69482
+1990,6,CA,28,placeholder,Other Candidate 2,OTHER,4873,"William R. Williams II / Robert G. ""Bob"" Weber Jr.",pooled_minor_sum,sum of 2 wikipedia candidates = 4873
+1990,6,CA,28,placeholder,Republican Candidate,REP,21245,George Zaldivar Adams,vote_total,wikipedia votes 21245
+1990,6,CA,29,placeholder,Democratic Candidate,DEM,51350,Maxine Waters,vote_total,wikipedia votes 51350
+1990,6,CA,29,placeholder,Other Candidate 1,OTHER,1268,Waheed R. Boctor,vote_total,wikipedia votes 1268
+1990,6,CA,29,placeholder,Republican Candidate,REP,12054,Bill DeWitt,vote_total,wikipedia votes 12054
+1990,6,CA,30,placeholder,Democratic Candidate,DEM,45456,Matthew G. Martinez,vote_total,wikipedia votes 45456
+1990,6,CA,30,placeholder,Other Candidate 1,OTHER,3713,George Curtis Feger,vote_total,wikipedia votes 3713
+1990,6,CA,30,placeholder,Republican Candidate,REP,28914,Reuben D. Franco,vote_total,wikipedia votes 28914
+1990,6,CA,31,placeholder,Democratic Candidate,DEM,56394,Mervyn M. Dymally,vote_total,wikipedia votes 56394
+1990,6,CA,31,placeholder,Republican Candidate,REP,27593,Eunice N. Sato,vote_total,wikipedia votes 27593
+1990,6,CA,32,placeholder,Democratic Candidate,DEM,68268,Glenn M. Anderson,vote_total,wikipedia votes 68268
+1990,6,CA,32,placeholder,Republican Candidate,REP,42692,Sanford W. Kahn,vote_total,wikipedia votes 42692
+1990,6,CA,33,placeholder,Democratic Candidate,DEM,49981,Georgia Houston Webb,vote_total,wikipedia votes 49981
+1990,6,CA,33,placeholder,Other Candidate 1,OTHER,7840,Gail Lightfoot,vote_total,wikipedia votes 7840
+1990,6,CA,33,placeholder,Republican Candidate,REP,101336,David Dreier,vote_total,wikipedia votes 101336
+1990,6,CA,34,placeholder,Democratic Candidate,DEM,55646,Esteban Torres,vote_total,wikipedia votes 55646
+1990,6,CA,34,placeholder,Republican Candidate,REP,36024,John Eastman,vote_total,wikipedia votes 36024
+1990,6,CA,35,placeholder,Democratic Candidate,DEM,66100,Barry Borton,vote_total,wikipedia votes 66100
+1990,6,CA,35,placeholder,Other Candidate 1,OTHER,13020,Jerry Johnson,vote_total,wikipedia votes 13020
+1990,6,CA,35,placeholder,Republican Candidate,REP,121602,Jerry Lewis,vote_total,wikipedia votes 121602
+1990,6,CA,36,placeholder,Democratic Candidate,DEM,72409,"George Brown, Jr.",vote_total,wikipedia votes 72409
+1990,6,CA,36,placeholder,Republican Candidate,REP,64961,Bob Hammock,vote_total,wikipedia votes 64961
+1990,6,CA,37,placeholder,Democratic Candidate,DEM,103961,Ralph Waite,vote_total,wikipedia votes 103961
+1990,6,CA,37,placeholder,Other Candidate 1,OTHER,12652,Gary R. Odom / Bonnie Flickinger,pooled_minor_sum,sum of 2 wikipedia candidates = 12652
+1990,6,CA,37,placeholder,Republican Candidate,REP,115469,Al McCandless,vote_total,wikipedia votes 115469
+1990,6,CA,38,placeholder,Democratic Candidate,DEM,43693,Barbara Jackson,vote_total,wikipedia votes 43693
+1990,6,CA,38,placeholder,Republican Candidate,REP,60561,Bob Dornan,vote_total,wikipedia votes 60561
+1990,6,CA,39,placeholder,Democratic Candidate,DEM,53670,"Francis X. ""Frank"" Hoffman",vote_total,wikipedia votes 53670
+1990,6,CA,39,placeholder,Other Candidate 1,OTHER,6709,Maxine Bell Quirk,vote_total,wikipedia votes 6709
+1990,6,CA,39,placeholder,Republican Candidate,REP,113849,William E. Dannemeyer,vote_total,wikipedia votes 113849
+1990,6,CA,40,placeholder,Democratic Candidate,DEM,68087,Eugene Gratz,vote_total,wikipedia votes 68087
+1990,6,CA,40,placeholder,Republican Candidate,REP,142299,Christopher Cox,vote_total,wikipedia votes 142299
+1990,6,CA,41,placeholder,Democratic Candidate,DEM,93586,"Daniel F. ""Dan"" Kripke",vote_total,wikipedia votes 93586
+1990,6,CA,41,placeholder,Other Candidate 1,OTHER,15428,Karen S.R. Works,vote_total,wikipedia votes 15428
+1990,6,CA,41,placeholder,Republican Candidate,REP,105723,Bill Lowery,vote_total,wikipedia votes 105723
+1990,6,CA,42,placeholder,Democratic Candidate,DEM,67189,Guy C. Kimbrough,vote_total,wikipedia votes 67189
+1990,6,CA,42,placeholder,Other Candidate 1,OTHER,7744,Richard Gibb Martin,vote_total,wikipedia votes 7744
+1990,6,CA,42,placeholder,Republican Candidate,REP,109353,Dana Rohrabacher,vote_total,wikipedia votes 109353
+1990,6,CA,43,placeholder,Democratic Candidate,DEM,0,NA,unmatched,NA
+1990,6,CA,43,placeholder,Other Candidate 2,OTHER,70932,"Doug Hansen / Richard L. ""Rick"" Arnold",pooled_minor_sum,sum of 2 wikipedia candidates = 70932
+1990,6,CA,43,placeholder,Republican Candidate,REP,151206,Ron Packard,vote_total,wikipedia votes 151206
+1990,6,CA,44,placeholder,Democratic Candidate,DEM,48712,Jim Bates,vote_total,wikipedia votes 48712
+1990,6,CA,44,placeholder,Other Candidate 2,OTHER,9622,Donna White / John Wallner,pooled_minor_sum,sum of 2 wikipedia candidates = 9622
+1990,6,CA,44,placeholder,Republican Candidate,REP,50377,Duke Cunningham,vote_total,wikipedia votes 50377
+1990,6,CA,45,placeholder,Democratic Candidate,DEM,0,NA,unmatched,NA
+1990,6,CA,45,placeholder,Other Candidate 1,OTHER,46068,Joe Shea,vote_total,wikipedia votes 46068
+1990,6,CA,45,placeholder,Republican Candidate,REP,123591,Duncan Hunter,vote_total,wikipedia votes 123591
+1990,23,ME,01,surname,Andrews,DEM,167623,Thomas Andrews,surname,wikipedia party Democratic
+1990,23,ME,01,surname,Emery,REP,110836,David F. Emery,surname,wikipedia party Republican
+1990,23,ME,02,surname,McGowan,DEM,116798,Patrick K. McGowan,surname,wikipedia party Democratic
+1990,23,ME,02,surname,Snowe,REP,121704,Olympia Snowe,surname,wikipedia party Republican
+1992,6,CA,01,placeholder,Democratic Candidate,DEM,119656,Dan Hamburg,party_D_R,wikipedia votes 119676 vs ours 119656
+1992,6,CA,01,placeholder,Other Candidate 2,OTHER,18264,Phil Baldwin / Matthew L. Howard,pooled_minor_sum,sum of 2 wikipedia candidates = 18264
+1992,6,CA,01,placeholder,Republican Candidate,REP,113266,Frank Riggs,vote_total,wikipedia votes 113266
+1992,6,CA,02,placeholder,Democratic Candidate,DEM,71780,Elliot Roy Freedman,vote_total,wikipedia votes 71780
+1992,6,CA,02,placeholder,Other Candidate 1,OTHER,17529,"Harry H. ""Doc"" Pendery",vote_total,wikipedia votes 17529
+1992,6,CA,02,placeholder,Republican Candidate,REP,167247,Wally Herger,vote_total,wikipedia votes 167247
+1992,6,CA,03,placeholder,Democratic Candidate,DEM,122149,Vic Fazio,party_D_R,wikipedia votes 112149 vs ours 122149
+1992,6,CA,03,placeholder,Other Candidate 1,OTHER,20444,Ross Crain,vote_total,wikipedia votes 20444
+1992,6,CA,03,placeholder,Republican Candidate,REP,96092,H. L. Richardson,vote_total,wikipedia votes 96092
+1992,6,CA,04,placeholder,Democratic Candidate,DEM,129489,Patricia Malberg,vote_total,wikipedia votes 129489
+1992,6,CA,04,placeholder,Other Candidate 1,OTHER,12721,Patrick Lee McHargue / Don Brooksher,pooled_minor_sum,sum of 2 wikipedia candidates = 12721
+1992,6,CA,04,placeholder,Republican Candidate,REP,141155,John Doolittle,vote_total,wikipedia votes 141155
+1992,6,CA,05,placeholder,Democratic Candidate,DEM,158250,Robert Matsui,vote_total,wikipedia votes 158250
+1992,6,CA,05,placeholder,Other Candidate 1,OTHER,13612,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1992,6,CA,05,placeholder,Republican Candidate,REP,58698,Robert S. Dinsmore,vote_total,wikipedia votes 58698
+1992,6,CA,06,placeholder,Democratic Candidate,DEM,190322,Lynn Woolsey,vote_total,wikipedia votes 190322
+1992,6,CA,06,placeholder,Other Candidate 2,OTHER,3293,Claude Heater / Louis G. Beary,pooled_minor_sum,sum of 2 wikipedia candidates = 3293
+1992,6,CA,06,placeholder,Republican Candidate,REP,98171,Bill Filante,vote_total,wikipedia votes 98171
+1992,6,CA,07,placeholder,Democratic Candidate,DEM,153320,George Miller,vote_total,wikipedia votes 153320
+1992,6,CA,07,placeholder,Other Candidate 1,OTHER,9840,David L. Franklin,vote_total,wikipedia votes 9840
+1992,6,CA,07,placeholder,Republican Candidate,REP,54822,Dave Scholl,vote_total,wikipedia votes 54822
+1992,6,CA,08,placeholder,Democratic Candidate,DEM,191906,Nancy Pelosi,vote_total,wikipedia votes 191906
+1992,6,CA,08,placeholder,Other Candidate 2,OTHER,15092,Cesar G. Cadabes / James R. Elwood / Michael Goldwater,pooled_minor_sum,sum of 3 wikipedia candidates = 15092
+1992,6,CA,08,placeholder,Republican Candidate,REP,25693,Marc Wolin,vote_total,wikipedia votes 25693
+1992,6,CA,09,placeholder,Democratic Candidate,DEM,164265,Ronald Dellums,vote_total,wikipedia votes 164265
+1992,6,CA,09,placeholder,Other Candidate 1,OTHER,10495,Dave Linn / Omari Musa,pooled_minor_sum,sum of 2 wikipedia candidates = 10495
+1992,6,CA,09,placeholder,Republican Candidate,REP,53707,"G. William ""Billy"" Hunter",vote_total,wikipedia votes 53707
+1992,6,CA,10,placeholder,Democratic Candidate,DEM,134635,Wendell H. Williams,vote_total,wikipedia votes 134635
+1992,6,CA,10,placeholder,Other Candidate 2,OTHER,92,Dave Williams / Valerie Janloia,pooled_minor_sum,sum of 2 wikipedia candidates = 92
+1992,6,CA,10,placeholder,Republican Candidate,REP,145702,Bill Baker,vote_total,wikipedia votes 145702
+1992,6,CA,11,placeholder,Democratic Candidate,DEM,90539,Patti Garamendi,vote_total,wikipedia votes 90539
+1992,6,CA,11,placeholder,Other Candidate 1,OTHER,13498,Christine Roberts,vote_total,wikipedia votes 13498
+1992,6,CA,11,placeholder,Republican Candidate,REP,94453,Richard Pombo,vote_total,wikipedia votes 94453
+1992,6,CA,12,placeholder,Democratic Candidate,DEM,157205,Tom Lantos,vote_total,wikipedia votes 157205
+1992,6,CA,12,placeholder,Other Candidate 2,OTHER,17924,Mary Weldon / George L. O'Brien,pooled_minor_sum,sum of 2 wikipedia candidates = 17924
+1992,6,CA,12,placeholder,Republican Candidate,REP,53278,Jim R. Tomlin,vote_total,wikipedia votes 53278
+1992,6,CA,13,placeholder,Democratic Candidate,DEM,123795,Pete Stark,vote_total,wikipedia votes 123795
+1992,6,CA,13,placeholder,Other Candidate 1,OTHER,16768,Roslyn A. Allen,vote_total,wikipedia votes 16768
+1992,6,CA,13,placeholder,Republican Candidate,REP,64953,Verne W. Teyler,vote_total,wikipedia votes 64953
+1992,6,CA,14,placeholder,Democratic Candidate,DEM,146873,Anna Eshoo,vote_total,wikipedia votes 146873
+1992,6,CA,14,placeholder,Other Candidate 1,OTHER,11147,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1992,6,CA,14,placeholder,Republican Candidate,REP,101202,Tom Huening,vote_total,wikipedia votes 101202
+1992,6,CA,15,placeholder,Democratic Candidate,DEM,168617,Norm Mineta,vote_total,wikipedia votes 168617
+1992,6,CA,15,placeholder,Other Candidate 1,OTHER,13878,Duggan Dieterly / Bill Futrell,pooled_minor_sum,sum of 2 wikipedia candidates = 13878
+1992,6,CA,15,placeholder,Republican Candidate,REP,82875,Robert Wick,vote_total,wikipedia votes 82875
+1992,6,CA,16,placeholder,Democratic Candidate,DEM,96661,Don Edwards,vote_total,wikipedia votes 96661
+1992,6,CA,16,placeholder,Other Candidate 1,OTHER,9379,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1992,6,CA,16,placeholder,Republican Candidate,REP,49843,Ted Bundesen,vote_total,wikipedia votes 49843
+1992,6,CA,17,placeholder,Democratic Candidate,DEM,151565,Leon Panetta,vote_total,wikipedia votes 151565
+1992,6,CA,17,placeholder,Other Candidate 2,OTHER,8855,Maureen Smith / John D. Wilkes,pooled_minor_sum,sum of 2 wikipedia candidates = 8855
+1992,6,CA,17,placeholder,Republican Candidate,REP,49947,Bill McCampbell,vote_total,wikipedia votes 49947
+1992,6,CA,18,placeholder,Democratic Candidate,DEM,139704,Gary Condit,vote_total,wikipedia votes 139704
+1992,6,CA,18,placeholder,Other Candidate 1,OTHER,25307,Kim R. Almstrom,vote_total,wikipedia votes 25307
+1992,6,CA,18,placeholder,Republican Candidate,REP,0,NA,unmatched,NA
+1992,6,CA,19,placeholder,Democratic Candidate,DEM,101619,Richard Lehman,vote_total,wikipedia votes 101619
+1992,6,CA,19,placeholder,Other Candidate 1,OTHER,14431,"Dorothy L. Wells / James E. Williams, Jr.",pooled_minor_sum,sum of 2 wikipedia candidates = 14431
+1992,6,CA,19,placeholder,Republican Candidate,REP,100590,Tal L. Cloud,vote_total,wikipedia votes 100590
+1992,6,CA,20,placeholder,Democratic Candidate,DEM,72679,Cal Dooley,vote_total,wikipedia votes 72679
+1992,6,CA,20,placeholder,Republican Candidate,REP,39388,Ed Hunt,vote_total,wikipedia votes 39388
+1992,6,CA,21,placeholder,Democratic Candidate,DEM,68058,Deborah A. Vollmer,vote_total,wikipedia votes 68058
+1992,6,CA,21,placeholder,Other Candidate 1,OTHER,149,Mike Hodges,vote_total,wikipedia votes 149
+1992,6,CA,21,placeholder,Republican Candidate,REP,127758,Bill Thomas,vote_total,wikipedia votes 127758
+1992,6,CA,22,placeholder,Democratic Candidate,DEM,87328,Gloria Ochoa,vote_total,wikipedia votes 87328
+1992,6,CA,22,placeholder,Other Candidate 2,OTHER,31354,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1992,6,CA,22,placeholder,Republican Candidate,REP,131242,Michael Huffington,vote_total,wikipedia votes 131242
+1992,6,CA,23,placeholder,Democratic Candidate,DEM,88225,Anita Perez Ferguson,vote_total,wikipedia votes 88225
+1992,6,CA,23,placeholder,Other Candidate 1,OTHER,9152,"Jay C. Wood / Edward L. Dunbar, Jr.",pooled_minor_sum,sum of 2 wikipedia candidates = 9152
+1992,6,CA,23,placeholder,Republican Candidate,REP,115504,Elton Gallegly,vote_total,wikipedia votes 115504
+1992,6,CA,24,placeholder,Democratic Candidate,DEM,141742,Anthony C. Beilenson,vote_total,wikipedia votes 141742
+1992,6,CA,24,placeholder,Other Candidate 1,OTHER,13690,John Paul Lindblad,vote_total,wikipedia votes 13690
+1992,6,CA,24,placeholder,Republican Candidate,REP,99835,Tom McClintock,vote_total,wikipedia votes 99835
+1992,6,CA,25,placeholder,Democratic Candidate,DEM,72233,James H. Gilmartin,vote_total,wikipedia votes 72233
+1992,6,CA,25,placeholder,Other Candidate 3,OTHER,32871,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1992,6,CA,25,placeholder,Republican Candidate,REP,113611,Howard McKeon,vote_total,wikipedia votes 113611
+1992,6,CA,26,placeholder,Democratic Candidate,DEM,73807,Howard Berman,vote_total,wikipedia votes 73807
+1992,6,CA,26,placeholder,Other Candidate 2,OTHER,10648,Margery Hinds / Bernard Zimring,pooled_minor_sum,sum of 2 wikipedia candidates = 10648
+1992,6,CA,26,placeholder,Republican Candidate,REP,36453,Gary E. Forsch,vote_total,wikipedia votes 36453
+1992,6,CA,27,placeholder,Democratic Candidate,DEM,83805,Doug Kahn,vote_total,wikipedia votes 83805
+1992,6,CA,27,placeholder,Other Candidate 3,OTHER,23124,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1992,6,CA,27,placeholder,Republican Candidate,REP,105521,Carlos J. Moorhead,vote_total,wikipedia votes 105521
+1992,6,CA,28,placeholder,Democratic Candidate,DEM,76525,Al Wachtel,vote_total,wikipedia votes 76525
+1992,6,CA,28,placeholder,Other Candidate 2,OTHER,10504,Walt Contreras Sheasby / Thomas J. Dominy,pooled_minor_sum,sum of 2 wikipedia candidates = 10504
+1992,6,CA,28,placeholder,Republican Candidate,REP,122353,David Dreier,vote_total,wikipedia votes 122353
+1992,6,CA,29,placeholder,Democratic Candidate,DEM,160312,Henry Waxman,vote_total,wikipedia votes 160312
+1992,6,CA,29,placeholder,Other Candidate 3,OTHER,34033,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1992,6,CA,29,placeholder,Republican Candidate,REP,67141,Mark Robbins,vote_total,wikipedia votes 67141
+1992,6,CA,30,placeholder,Democratic Candidate,DEM,48800,Xavier Becerra,vote_total,wikipedia votes 48800
+1992,6,CA,30,placeholder,Other Candidate 3,OTHER,14709,"Blase Bonpane / Elizabeth A. Nakano / Andrew ""Drew"" Consalvo",pooled_minor_sum,sum of 3 wikipedia candidates = 14709
+1992,6,CA,30,placeholder,Republican Candidate,REP,20034,Morry Waksberg,vote_total,wikipedia votes 20034
+1992,6,CA,31,placeholder,Democratic Candidate,DEM,68324,Matthew G. Martinez,vote_total,wikipedia votes 68324
+1992,6,CA,31,placeholder,Other Candidate 1,OTHER,0,Alaric Arrender,vote_total,wikipedia votes 0
+1992,6,CA,31,placeholder,Republican Candidate,REP,40873,Reuben D. Franco,vote_total,wikipedia votes 40873
+1992,6,CA,32,placeholder,Democratic Candidate,DEM,150644,Julian C. Dixon,vote_total,wikipedia votes 150644
+1992,6,CA,32,placeholder,Other Candidate 1,OTHER,22168,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1992,6,CA,32,placeholder,Republican Candidate,REP,0,NA,unmatched,NA
+1992,6,CA,33,placeholder,Democratic Candidate,DEM,32010,Lucille Roybal-Allard,vote_total,wikipedia votes 32010
+1992,6,CA,33,placeholder,Other Candidate 2,OTHER,3341,Tim Delia / Dale S. Olvera,pooled_minor_sum,sum of 2 wikipedia candidates = 3341
+1992,6,CA,33,placeholder,Republican Candidate,REP,15428,Robert Guzman,vote_total,wikipedia votes 15428
+1992,6,CA,34,placeholder,Democratic Candidate,DEM,91738,Esteban Torres,vote_total,wikipedia votes 91738
+1992,6,CA,34,placeholder,Other Candidate 1,OTHER,7073,"Carl M. ""Marty"" Swinney / M. V. Paul Worland",pooled_minor_sum,sum of 2 wikipedia candidates = 7073
+1992,6,CA,34,placeholder,Republican Candidate,REP,50907,J. Jay Hernandez,vote_total,wikipedia votes 50907
+1992,6,CA,35,placeholder,Democratic Candidate,DEM,102941,Maxine Waters,vote_total,wikipedia votes 102941
+1992,6,CA,35,placeholder,Other Candidate 2,OTHER,4418,Alice Mae Miles / Carin Rogers / Gordon Mego,pooled_minor_sum,sum of 3 wikipedia candidates = 4418
+1992,6,CA,35,placeholder,Republican Candidate,REP,17417,Nate Truman,vote_total,wikipedia votes 17417
+1992,6,CA,36,placeholder,Democratic Candidate,DEM,125751,Jane Harman,vote_total,wikipedia votes 125751
+1992,6,CA,36,placeholder,Other Candidate 3,OTHER,24322,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1992,6,CA,36,placeholder,Republican Candidate,REP,109684,Joan Milke Flores,vote_total,wikipedia votes 109684
+1992,6,CA,37,placeholder,Democratic Candidate,DEM,97159,Walter R. Tucker III,vote_total,wikipedia votes 97159
+1992,6,CA,37,placeholder,Other Candidate 1,OTHER,16178,B. Kwaku Duren,vote_total,wikipedia votes 16178
+1992,6,CA,37,placeholder,Republican Candidate,REP,0,NA,unmatched,NA
+1992,6,CA,38,placeholder,Democratic Candidate,DEM,82108,Evan Anderson Braude,vote_total,wikipedia votes 82108
+1992,6,CA,38,placeholder,Other Candidate 2,OTHER,15175,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1992,6,CA,38,placeholder,Republican Candidate,REP,92038,Steve Horn,vote_total,wikipedia votes 92038
+1992,6,CA,39,placeholder,Democratic Candidate,DEM,81728,Molly McClanahan,vote_total,wikipedia votes 81728
+1992,6,CA,39,placeholder,Other Candidate 1,OTHER,9484,Jack Dean,vote_total,wikipedia votes 9484
+1992,6,CA,39,placeholder,Republican Candidate,REP,122472,Ed Royce,vote_total,wikipedia votes 122472
+1992,6,CA,40,placeholder,Democratic Candidate,DEM,63881,"Donald M. ""Don"" Rusk",vote_total,wikipedia votes 63881
+1992,6,CA,40,placeholder,Other Candidate 1,OTHER,11839,Margie Akin,vote_total,wikipedia votes 11839
+1992,6,CA,40,placeholder,Republican Candidate,REP,129563,Jerry Lewis,vote_total,wikipedia votes 129563
+1992,6,CA,41,placeholder,Democratic Candidate,DEM,58777,Bob Baker,vote_total,wikipedia votes 58777
+1992,6,CA,41,placeholder,Other Candidate 1,OTHER,10136,"James Michael ""Mike"" Noonan",vote_total,wikipedia votes 10136
+1992,6,CA,41,placeholder,Republican Candidate,REP,101753,Jay Kim,vote_total,wikipedia votes 101753
+1992,6,CA,42,placeholder,Democratic Candidate,DEM,79780,"George Brown, Jr.",vote_total,wikipedia votes 79780
+1992,6,CA,42,placeholder,Other Candidate 1,OTHER,8424,Fritz R. Ward,vote_total,wikipedia votes 8424
+1992,6,CA,42,placeholder,Republican Candidate,REP,69251,Dick Rutan,vote_total,wikipedia votes 69251
+1992,6,CA,43,placeholder,Democratic Candidate,DEM,88468,Mark A. Takano,vote_total,wikipedia votes 88468
+1992,6,CA,43,placeholder,Other Candidate 1,OTHER,13184,Gary Odom / Gene L. Berkman / John Schwab,pooled_minor_sum,sum of 3 wikipedia candidates = 13184
+1992,6,CA,43,placeholder,Republican Candidate,REP,88987,Ken Calvert,vote_total,wikipedia votes 88987
+1992,6,CA,44,placeholder,Democratic Candidate,DEM,81693,Georgia Smith,vote_total,wikipedia votes 81693
+1992,6,CA,44,placeholder,Other Candidate 1,OTHER,11515,Phil Turner,vote_total,wikipedia votes 11515
+1992,6,CA,44,placeholder,Republican Candidate,REP,110333,Al McCandless,vote_total,wikipedia votes 110333
+1992,6,CA,45,placeholder,Democratic Candidate,DEM,88508,"Patricia ""Pat"" McCabe",vote_total,wikipedia votes 88508
+1992,6,CA,45,placeholder,Other Candidate 1,OTHER,14777,Gary David Copeland,vote_total,wikipedia votes 14777
+1992,6,CA,45,placeholder,Republican Candidate,REP,123731,Dana Rohrabacher,vote_total,wikipedia votes 123731
+1992,6,CA,46,placeholder,Democratic Candidate,DEM,45435,Robert John Banuelos,vote_total,wikipedia votes 45435
+1992,6,CA,46,placeholder,Other Candidate 1,OTHER,9712,Richard G. Newhouse,vote_total,wikipedia votes 9712
+1992,6,CA,46,placeholder,Republican Candidate,REP,55659,Bob Dornan,vote_total,wikipedia votes 55659
+1992,6,CA,47,placeholder,Democratic Candidate,DEM,76924,John F. Anwiler,vote_total,wikipedia votes 76924
+1992,6,CA,47,placeholder,Other Candidate 1,OTHER,12329,Maxine Bell Quirk / Barry M. Charles,pooled_minor_sum,sum of 2 wikipedia candidates = 12329
+1992,6,CA,47,placeholder,Republican Candidate,REP,165004,Christopher Cox,vote_total,wikipedia votes 165004
+1992,6,CA,48,placeholder,Democratic Candidate,DEM,67415,"Michael P. ""Mike"" Farber",vote_total,wikipedia votes 67415
+1992,6,CA,48,placeholder,Other Candidate 2,OTHER,22145,Donna White / Ted Lowe,pooled_minor_sum,sum of 2 wikipedia candidates = 22145
+1992,6,CA,48,placeholder,Republican Candidate,REP,140935,Ron Packard,vote_total,wikipedia votes 140935
+1992,6,CA,49,placeholder,Democratic Candidate,DEM,127280,Lynn Schenk,vote_total,wikipedia votes 127280
+1992,6,CA,49,placeholder,Other Candidate 1,OTHER,15448,John Wallner / Milton Zaslow / Perry T. Thompson,pooled_minor_sum,sum of 3 wikipedia candidates = 15448
+1992,6,CA,49,placeholder,Republican Candidate,REP,106170,Judy Jarvis,vote_total,wikipedia votes 106170
+1992,6,CA,50,placeholder,Democratic Candidate,DEM,77293,Bob Filner,vote_total,wikipedia votes 77293
+1992,6,CA,50,placeholder,Other Candidate 1,OTHER,19802,Barbara Hutchinson / Roger Bruce Batchelder / Lincoln Pickard,pooled_minor_sum,sum of 3 wikipedia candidates = 19802
+1992,6,CA,50,placeholder,Republican Candidate,REP,39531,Tony Valencia,vote_total,wikipedia votes 39531
+1992,6,CA,51,placeholder,Democratic Candidate,DEM,85145,Bea Herbert,party_D_R,wikipedia votes 85148 vs ours 85145
+1992,6,CA,51,placeholder,Other Candidate 1,OTHER,25957,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1992,6,CA,51,placeholder,Republican Candidate,REP,141890,Duke Cunningham,vote_total,wikipedia votes 141890
+1992,6,CA,52,placeholder,Democratic Candidate,DEM,88076,Janet M. Gastil,vote_total,wikipedia votes 88076
+1992,6,CA,52,placeholder,Other Candidate 1,OTHER,12713,Joe Shea / Dennis P. Gretsinger / David Marmon,pooled_minor_sum,sum of 3 wikipedia candidates = 12713
+1992,6,CA,52,placeholder,Republican Candidate,REP,112995,Duncan Hunter,vote_total,wikipedia votes 112995
+1992,12,FL,19,surname,Neff,OTHER,0,NA,unmatched,NA
+1992,23,ME,01,surname,Andrews,DEM,232696,Thomas Andrews,surname,wikipedia party Democratic
+1992,23,ME,01,surname,Bean,REP,125236,Linda Bean,surname,wikipedia party Republican
+1992,23,ME,02,surname,Carter,OTHER,27526,Jonathan Carter,surname,wikipedia party Green
+1992,23,ME,02,surname,McGowan,DEM,130824,Patrick K. McGowan,surname,wikipedia party Democratic
+1992,23,ME,02,surname,Snowe,REP,153022,Olympia Snowe,surname,wikipedia party Republican
+1994,4,AZ,01,placeholder,Democratic Candidate,DEM,70627,Chuck Blanchard,vote_share,wikipedia share 39.1% vs ours 39%
+1994,4,AZ,01,placeholder,Republican Candidate,REP,101350,Matt Salmon,vote_share,wikipedia share 56% vs ours 56%
+1994,4,AZ,02,placeholder,Democratic Candidate,DEM,62589,Ed Pastor,vote_share,wikipedia share 62.3% vs ours 62.3%
+1994,4,AZ,02,placeholder,Republican Candidate,REP,32797,Robert MacDonald,vote_share,wikipedia share 32.7% vs ours 32.7%
+1994,4,AZ,03,placeholder,Democratic Candidate,DEM,61939,Howard Lee Sprague,vote_share,wikipedia share 29.9% vs ours 29.9%
+1994,4,AZ,03,placeholder,Republican Candidate,REP,145396,Bob Stump,vote_share,wikipedia share 70.1% vs ours 70.1%
+1994,4,AZ,04,placeholder,Democratic Candidate,DEM,69760,Carol Cure,vote_share,wikipedia share 36% vs ours 36%
+1994,4,AZ,04,placeholder,Republican Candidate,REP,116714,John Shadegg,vote_share,wikipedia share 60.2% vs ours 60.2%
+1994,4,AZ,05,placeholder,Democratic Candidate,DEM,63436,Gary Auerbach,vote_share,wikipedia share 28.7% vs ours 28.7%
+1994,4,AZ,05,placeholder,Republican Candidate,REP,149514,Jim Kolbe,vote_share,wikipedia share 67.7% vs ours 67.7%
+1994,4,AZ,06,placeholder,Democratic Candidate,DEM,81321,Karan English,vote_share,wikipedia share 41.5% vs ours 41.5%
+1994,4,AZ,06,placeholder,Republican Candidate,REP,107060,J. D. Hayworth,vote_share,wikipedia share 54.6% vs ours 54.6%
+1994,6,CA,01,placeholder,Democratic Candidate,DEM,93717,Dan Hamburg,vote_total,wikipedia votes 93717
+1994,6,CA,01,placeholder,Other Candidate 1,OTHER,86,Russel J. Chase,vote_total,wikipedia votes 86
+1994,6,CA,01,placeholder,Republican Candidate,REP,106870,Frank Riggs,vote_total,wikipedia votes 106870
+1994,6,CA,02,placeholder,Democratic Candidate,DEM,55959,Mary Jacobs,vote_total,wikipedia votes 55959
+1994,6,CA,02,placeholder,Other Candidate 1,OTHER,21037,"Devvy Kidd / Harry H. ""Doc"" Pendery",pooled_minor_sum,sum of 2 wikipedia candidates = 21037
+1994,6,CA,02,placeholder,Republican Candidate,REP,137864,Wally Herger,vote_total,wikipedia votes 137864
+1994,6,CA,03,placeholder,Democratic Candidate,DEM,97093,Vic Fazio,vote_total,wikipedia votes 97093
+1994,6,CA,03,placeholder,Other Candidate 1,OTHER,8100,Ross Crain,vote_total,wikipedia votes 8100
+1994,6,CA,03,placeholder,Republican Candidate,REP,89964,Tim Lefever,vote_total,wikipedia votes 89964
+1994,6,CA,04,placeholder,Democratic Candidate,DEM,82505,Katie Hirning,vote_total,wikipedia votes 82505
+1994,6,CA,04,placeholder,Other Candidate 1,OTHER,8882,Damon C. Falconi,vote_total,wikipedia votes 8882
+1994,6,CA,04,placeholder,Republican Candidate,REP,144936,John Doolittle,vote_total,wikipedia votes 144936
+1994,6,CA,05,placeholder,Democratic Candidate,DEM,125042,Robert Matsui,vote_total,wikipedia votes 125042
+1994,6,CA,05,placeholder,Other Candidate 1,OTHER,4649,Gordon Mors,vote_total,wikipedia votes 4649
+1994,6,CA,05,placeholder,Republican Candidate,REP,52905,Robert S. Dinsmore,vote_total,wikipedia votes 52905
+1994,6,CA,06,placeholder,Democratic Candidate,DEM,137642,Lynn Woolsey,vote_total,wikipedia votes 137642
+1994,6,CA,06,placeholder,Other Candidate 1,OTHER,10258,"Louis Beary / Ernest K. Jones, Jr.",pooled_minor_sum,sum of 2 wikipedia candidates = 10258
+1994,6,CA,06,placeholder,Republican Candidate,REP,88940,Michael J. Nugent,vote_total,wikipedia votes 88940
+1994,6,CA,07,placeholder,Democratic Candidate,DEM,116105,George Miller,party_D_R,wikipedia votes 116015 vs ours 116105
+1994,6,CA,07,placeholder,Other Candidate 1,OTHER,4798,"William A. ""Bill"" Callison",vote_total,wikipedia votes 4798
+1994,6,CA,07,placeholder,Republican Candidate,REP,45698,Charles V. Hughes,vote_total,wikipedia votes 45698
+1994,6,CA,08,placeholder,Democratic Candidate,DEM,137642,Nancy Pelosi,vote_total,wikipedia votes 137642
+1994,6,CA,08,placeholder,Other Candidate 1,OTHER,1,Robert Bowman,vote_total,wikipedia votes 1
+1994,6,CA,08,placeholder,Republican Candidate,REP,30528,Elsa C. Cheung,vote_total,wikipedia votes 30528
+1994,6,CA,09,placeholder,Democratic Candidate,DEM,129233,Ronald Dellums,vote_total,wikipedia votes 129233
+1994,6,CA,09,placeholder,Other Candidate 1,OTHER,9194,Emma Wong Mar,vote_total,wikipedia votes 9194
+1994,6,CA,09,placeholder,Republican Candidate,REP,40448,Deborah Wright,vote_total,wikipedia votes 40448
+1994,6,CA,10,placeholder,Democratic Candidate,DEM,90523,Ellen Schwartz,vote_total,wikipedia votes 90523
+1994,6,CA,10,placeholder,Other Candidate 1,OTHER,4802,Craig W. Cooper,vote_total,wikipedia votes 4802
+1994,6,CA,10,placeholder,Republican Candidate,REP,138916,Bill Baker,vote_total,wikipedia votes 138916
+1994,6,CA,11,placeholder,Democratic Candidate,DEM,55794,Randy A. Perry,vote_total,wikipedia votes 55794
+1994,6,CA,11,placeholder,Other Candidate 1,OTHER,4718,Joseph B. Miller,vote_total,wikipedia votes 4718
+1994,6,CA,11,placeholder,Republican Candidate,REP,99302,Richard Pombo,vote_total,wikipedia votes 99302
+1994,6,CA,12,placeholder,Democratic Candidate,DEM,118408,Tom Lantos,vote_total,wikipedia votes 118408
+1994,6,CA,12,placeholder,Republican Candidate,REP,57228,Deborah Wilder,vote_total,wikipedia votes 57228
+1994,6,CA,13,placeholder,Democratic Candidate,DEM,97344,Pete Stark,vote_total,wikipedia votes 97344
+1994,6,CA,13,placeholder,Other Candidate 1,OTHER,7743,"Robert ""Bob"" Gough",vote_total,wikipedia votes 7743
+1994,6,CA,13,placeholder,Republican Candidate,REP,45555,Larry Molton,vote_total,wikipedia votes 45555
+1994,6,CA,14,placeholder,Democratic Candidate,DEM,120713,Anna Eshoo,party_D_R,wikipedia votes 130713 vs ours 120713
+1994,6,CA,14,placeholder,Republican Candidate,REP,78475,Ben Brink,vote_total,wikipedia votes 78475
+1994,6,CA,15,placeholder,Democratic Candidate,DEM,119921,Norm Mineta,vote_total,wikipedia votes 119921
+1994,6,CA,15,placeholder,Other Candidate 1,OTHER,17,Doris F. Liu,vote_total,wikipedia votes 17
+1994,6,CA,15,placeholder,Republican Candidate,REP,80266,Robert Wick,vote_total,wikipedia votes 80266
+1994,6,CA,16,placeholder,Democratic Candidate,DEM,74935,Zoe Lofgren,vote_total,wikipedia votes 74935
+1994,6,CA,16,placeholder,Other Candidate 1,OTHER,8,Fred Luke Barraza,vote_total,wikipedia votes 8
+1994,6,CA,16,placeholder,Republican Candidate,REP,40409,Lyle J. Smith,vote_total,wikipedia votes 40409
+1994,6,CA,17,placeholder,Democratic Candidate,DEM,87222,Sam Farr,vote_total,wikipedia votes 87222
+1994,6,CA,17,placeholder,Other Candidate 1,OTHER,5591,E. Craig Coffin,vote_total,wikipedia votes 5591
+1994,6,CA,17,placeholder,Republican Candidate,REP,74380,Bill McCampbell,party_D_R,wikipedia votes 74830 vs ours 74380
+1994,6,CA,18,placeholder,Democratic Candidate,DEM,91106,Gary Condit,vote_total,wikipedia votes 91106
+1994,6,CA,18,placeholder,Other Candidate 1,OTHER,3902,James B. Morzella,vote_total,wikipedia votes 3902
+1994,6,CA,18,placeholder,Republican Candidate,REP,44046,Tom Carter,vote_total,wikipedia votes 44046
+1994,6,CA,19,placeholder,Democratic Candidate,DEM,72912,Richard Lehman,vote_total,wikipedia votes 72912
+1994,6,CA,19,placeholder,Other Candidate 1,OTHER,6579,Dolores Comstock,vote_total,wikipedia votes 6579
+1994,6,CA,19,placeholder,Republican Candidate,REP,104435,George Radanovich,vote_total,wikipedia votes 104435
+1994,6,CA,20,placeholder,Democratic Candidate,DEM,57394,Cal Dooley,vote_total,wikipedia votes 57394
+1994,6,CA,20,placeholder,Republican Candidate,REP,43836,Paul Young,vote_total,wikipedia votes 43836
+1994,6,CA,21,placeholder,Democratic Candidate,DEM,47517,John L. Evans,vote_total,wikipedia votes 47517
+1994,6,CA,21,placeholder,Other Candidate 1,OTHER,7238,Mike Hodges / Deborah A. Vollmer,pooled_minor_sum,sum of 2 wikipedia candidates = 7238
+1994,6,CA,21,placeholder,Republican Candidate,REP,116874,Bill Thomas,vote_total,wikipedia votes 116874
+1994,6,CA,22,placeholder,Democratic Candidate,DEM,101424,Walter Capps,vote_total,wikipedia votes 101424
+1994,6,CA,22,placeholder,Other Candidate 1,OTHER,4597,David L. Bersohn,vote_total,wikipedia votes 4597
+1994,6,CA,22,placeholder,Republican Candidate,REP,102987,Andrea Seastrand,vote_total,wikipedia votes 102987
+1994,6,CA,23,placeholder,Democratic Candidate,DEM,47345,Kevin Ready,vote_total,wikipedia votes 47345
+1994,6,CA,23,placeholder,Other Candidate 1,OTHER,10952,Bill Brown / Robert T. Marston / Mark Nagode,pooled_minor_sum,sum of 3 wikipedia candidates = 10952
+1994,6,CA,23,placeholder,Republican Candidate,REP,114043,Elton Gallegly,vote_total,wikipedia votes 114043
+1994,6,CA,24,placeholder,Democratic Candidate,DEM,95342,Anthony C. Beilenson,vote_total,wikipedia votes 95342
+1994,6,CA,24,placeholder,Other Candidate 1,OTHER,6031,John C. Koehler,vote_total,wikipedia votes 6031
+1994,6,CA,24,placeholder,Republican Candidate,REP,91806,Rich Sybert,vote_total,wikipedia votes 91806
+1994,6,CA,25,placeholder,Democratic Candidate,DEM,53445,James H. Gilmartin,vote_total,wikipedia votes 53445
+1994,6,CA,25,placeholder,Other Candidate 1,OTHER,6225,Devin Cutler / Sandra F. Tulley,pooled_minor_sum,sum of 2 wikipedia candidates = 6225
+1994,6,CA,25,placeholder,Republican Candidate,REP,110301,Howard McKeon,vote_total,wikipedia votes 110301
+1994,6,CA,26,placeholder,Democratic Candidate,DEM,55145,Howard Berman,vote_total,wikipedia votes 55145
+1994,6,CA,26,placeholder,Other Candidate 1,OTHER,4570,Erich D. Miller,vote_total,wikipedia votes 4570
+1994,6,CA,26,placeholder,Republican Candidate,REP,28423,Gary E. Forsch,vote_total,wikipedia votes 28423
+1994,6,CA,27,placeholder,Democratic Candidate,DEM,70267,Doug Kahn,vote_total,wikipedia votes 70267
+1994,6,CA,27,placeholder,Other Candidate 1,OTHER,8166,Bill Gibbs / Dennis Decherd,pooled_minor_sum,sum of 2 wikipedia candidates = 8166
+1994,6,CA,27,placeholder,Republican Candidate,REP,88341,Carlos J. Moorhead,vote_total,wikipedia votes 88341
+1994,6,CA,28,placeholder,Democratic Candidate,DEM,50022,Tommy Randle,vote_total,wikipedia votes 50022
+1994,6,CA,28,placeholder,Other Candidate 1,OTHER,4076,Jorj Clayton Baker / Barry L. Hatch,pooled_minor_sum,sum of 2 wikipedia candidates = 4076
+1994,6,CA,28,placeholder,Republican Candidate,REP,110179,David Dreier,vote_total,wikipedia votes 110179
+1994,6,CA,29,placeholder,Democratic Candidate,DEM,129413,Henry Waxman,vote_total,wikipedia votes 129413
+1994,6,CA,29,placeholder,Other Candidate 1,OTHER,7162,Mike Binkley,vote_total,wikipedia votes 7162
+1994,6,CA,29,placeholder,Republican Candidate,REP,53801,Paul Stepanek,vote_total,wikipedia votes 53801
+1994,6,CA,30,placeholder,Democratic Candidate,DEM,43943,Xavier Becerra,vote_total,wikipedia votes 43943
+1994,6,CA,30,placeholder,Other Candidate 1,OTHER,3741,R. William Weilberg,vote_total,wikipedia votes 3741
+1994,6,CA,30,placeholder,Republican Candidate,REP,18741,David A. Ramirez,vote_total,wikipedia votes 18741
+1994,6,CA,31,placeholder,Democratic Candidate,DEM,50541,Matthew G. Martinez,vote_total,wikipedia votes 50541
+1994,6,CA,31,placeholder,Republican Candidate,REP,34926,John V. Flores,vote_total,wikipedia votes 34926
+1994,6,CA,32,placeholder,Democratic Candidate,DEM,98017,Julian C. Dixon,vote_total,wikipedia votes 98017
+1994,6,CA,32,placeholder,Other Candidate 1,OTHER,6099,John Honigsfeld,vote_total,wikipedia votes 6099
+1994,6,CA,32,placeholder,Republican Candidate,REP,22190,Ernie A. Farhat,vote_total,wikipedia votes 22190
+1994,6,CA,33,placeholder,Democratic Candidate,DEM,33814,Lucille Roybal-Allard,vote_total,wikipedia votes 33814
+1994,6,CA,33,placeholder,Other Candidate 1,OTHER,7694,Kermit Booker,vote_total,wikipedia votes 7694
+1994,6,CA,33,placeholder,Republican Candidate,REP,0,NA,unmatched,NA
+1994,6,CA,34,placeholder,Democratic Candidate,DEM,72439,Esteban Torres,vote_total,wikipedia votes 72439
+1994,6,CA,34,placeholder,Other Candidate 1,OTHER,4948,"Carl M. ""Marty"" Swinney / James W. Scott",pooled_minor_sum,sum of 2 wikipedia candidates = 4948
+1994,6,CA,34,placeholder,Republican Candidate,REP,40068,Albert J. Nunez,vote_total,wikipedia votes 40068
+1994,6,CA,35,placeholder,Democratic Candidate,DEM,65688,Maxine Waters,vote_total,wikipedia votes 65688
+1994,6,CA,35,placeholder,Other Candidate 1,OTHER,3,Gordon Michael Mego,vote_total,wikipedia votes 3
+1994,6,CA,35,placeholder,Republican Candidate,REP,18390,Nate Truman,party_D_R,wikipedia votes 18930 vs ours 18390
+1994,6,CA,36,placeholder,Democratic Candidate,DEM,93939,Jane Harman,vote_total,wikipedia votes 93939
+1994,6,CA,36,placeholder,Other Candidate 2,OTHER,8742,"Jack Tyler / Joseph J. ""Joe"" Fields",pooled_minor_sum,sum of 2 wikipedia candidates = 8742
+1994,6,CA,36,placeholder,Republican Candidate,REP,93127,Susan Brooks,vote_total,wikipedia votes 93127
+1994,6,CA,37,placeholder,Democratic Candidate,DEM,64166,Walter Tucker,vote_total,wikipedia votes 64166
+1994,6,CA,37,placeholder,Other Candidate 1,OTHER,18765,Guy Wilson / Lewis B. Prulitsky,pooled_minor_sum,sum of 2 wikipedia candidates = 18765
+1994,6,CA,37,placeholder,Republican Candidate,REP,0,NA,unmatched,NA
+1994,6,CA,38,placeholder,Democratic Candidate,DEM,53681,Peter Mathews,vote_total,wikipedia votes 53681
+1994,6,CA,38,placeholder,Other Candidate 1,OTHER,6863,Lester W. Mueller / Richard K. Green / John Duke,pooled_minor_sum,sum of 3 wikipedia candidates = 6863
+1994,6,CA,38,placeholder,Republican Candidate,REP,85225,Steve Horn,vote_total,wikipedia votes 85225
+1994,6,CA,39,placeholder,Democratic Candidate,DEM,49696,"R. O. ""Bob"" Davis",vote_total,wikipedia votes 49696
+1994,6,CA,39,placeholder,Other Candidate 1,OTHER,7907,Jack Dean,vote_total,wikipedia votes 7907
+1994,6,CA,39,placeholder,Republican Candidate,REP,113641,Ed Royce,vote_total,wikipedia votes 113641
+1994,6,CA,40,placeholder,Democratic Candidate,DEM,48003,"Donald M. ""Don"" Rusk",vote_total,wikipedia votes 48003
+1994,6,CA,40,placeholder,Republican Candidate,REP,115728,Jerry Lewis,vote_total,wikipedia votes 115728
+1994,6,CA,41,placeholder,Democratic Candidate,DEM,50043,Ed Tessier,vote_total,wikipedia votes 50043
+1994,6,CA,41,placeholder,Republican Candidate,REP,82100,Jay Kim,vote_total,wikipedia votes 82100
+1994,6,CA,42,placeholder,Democratic Candidate,DEM,58888,"George Brown, Jr.",vote_total,wikipedia votes 58888
+1994,6,CA,42,placeholder,Other Candidate 1,OTHER,58,Denis LaBine / Manuel M. Sanchez,pooled_minor_sum,sum of 2 wikipedia candidates = 58
+1994,6,CA,42,placeholder,Republican Candidate,REP,56259,Rob Guzman,vote_total,wikipedia votes 56259
+1994,6,CA,43,placeholder,Democratic Candidate,DEM,59342,Mark A. Takano,vote_total,wikipedia votes 59342
+1994,6,CA,43,placeholder,Other Candidate 1,OTHER,10544,Gene L. Berkman / John Schwab / Velma Hickey,pooled_minor_sum,sum of 3 wikipedia candidates = 10544
+1994,6,CA,43,placeholder,Republican Candidate,REP,84500,Ken Calvert,vote_total,wikipedia votes 84500
+1994,6,CA,44,placeholder,Democratic Candidate,DEM,65370,Steve Clute,vote_total,wikipedia votes 65370
+1994,6,CA,44,placeholder,Other Candidate 1,OTHER,10885,Donald Cochran,vote_total,wikipedia votes 10885
+1994,6,CA,44,placeholder,Republican Candidate,REP,95521,Sonny Bono,vote_total,wikipedia votes 95521
+1994,6,CA,45,placeholder,Democratic Candidate,DEM,55849,Brett Williamson,vote_total,wikipedia votes 55849
+1994,6,CA,45,placeholder,Republican Candidate,REP,124875,Dana Rohrabacher,vote_total,wikipedia votes 124875
+1994,6,CA,46,placeholder,Democratic Candidate,DEM,33004,"Michael P. ""Mike"" Farber",vote_total,wikipedia votes 33004
+1994,6,CA,46,placeholder,Other Candidate 1,OTHER,5077,Richard G. Newhouse,vote_total,wikipedia votes 5077
+1994,6,CA,46,placeholder,Republican Candidate,REP,50616,Bob Dornan,vote_total,wikipedia votes 50616
+1994,6,CA,47,placeholder,Democratic Candidate,DEM,53669,Gary Kingsbury,vote_total,wikipedia votes 53669
+1994,6,CA,47,placeholder,Other Candidate 1,OTHER,7257,"Victor A. Wagner, Jr.",vote_total,wikipedia votes 7257
+1994,6,CA,47,placeholder,Republican Candidate,REP,154071,Christopher Cox,vote_total,wikipedia votes 154071
+1994,6,CA,48,placeholder,Democratic Candidate,DEM,43523,Andrei Leschick,vote_total,wikipedia votes 43523
+1994,6,CA,48,placeholder,Other Candidate 1,OTHER,8543,Donna White,vote_total,wikipedia votes 8543
+1994,6,CA,48,placeholder,Republican Candidate,REP,143570,Ron Packard,vote_total,wikipedia votes 143570
+1994,6,CA,49,placeholder,Democratic Candidate,DEM,85597,Lynn Schenk,vote_total,wikipedia votes 85597
+1994,6,CA,49,placeholder,Other Candidate 1,OTHER,10238,Chris Hoogenboom / Renate M. Kline / Perry T. Thompson,pooled_minor_sum,sum of 3 wikipedia candidates = 10238
+1994,6,CA,49,placeholder,Republican Candidate,REP,90283,Brian Bilbray,vote_total,wikipedia votes 90283
+1994,6,CA,50,placeholder,Democratic Candidate,DEM,59214,Bob Filner,vote_total,wikipedia votes 59214
+1994,6,CA,50,placeholder,Other Candidate 1,OTHER,8282,Richardo Duenez / Guillermo Ramirez / Kip Krueger,pooled_minor_sum,sum of 3 wikipedia candidates = 8282
+1994,6,CA,50,placeholder,Republican Candidate,REP,36955,Mary Alice Acevedo,vote_total,wikipedia votes 36955
+1994,6,CA,51,placeholder,Democratic Candidate,DEM,57374,Rita K. Tamerius,vote_total,wikipedia votes 57374
+1994,6,CA,51,placeholder,Other Candidate 1,OTHER,11067,Bill Holmes / Miriam Clark,pooled_minor_sum,sum of 2 wikipedia candidates = 11067
+1994,6,CA,51,placeholder,Republican Candidate,REP,138547,Duke Cunningham,vote_total,wikipedia votes 138547
+1994,6,CA,52,placeholder,Democratic Candidate,DEM,53024,Janet M. Gastil,vote_total,wikipedia votes 53024
+1994,6,CA,52,placeholder,Other Candidate 1,OTHER,8461,Joe Shea / Art Edelman,pooled_minor_sum,sum of 2 wikipedia candidates = 8461
+1994,6,CA,52,placeholder,Republican Candidate,REP,109201,Duncan Hunter,vote_total,wikipedia votes 109201
+1994,12,FL,02,surname,Prescott,OTHER,8,NA,unmatched,NA
+1994,12,FL,21,surname,Tobias,OTHER,1,NA,no_wikipedia_district,NA
+1994,13,GA,01,surname,Jack,DEM,27197,NA,unmatched,NA
+1994,13,GA,01,surname,Kingston,REP,88788,Jack Kingston,surname,wikipedia party Republican
+1994,13,GA,02,surname,Clayton,REP,33429,John Clayton,surname,wikipedia party Republican
+1994,13,GA,02,surname,John,DEM,65383,NA,unmatched,NA
+1994,13,GA,03,surname,Collins,REP,94717,Mac Collins,surname,wikipedia party Republican
+1994,13,GA,03,surname,Mac,DEM,49828,NA,unmatched,NA
+1994,13,GA,04,surname,John,DEM,65566,NA,unmatched,NA
+1994,13,GA,04,surname,Linder,REP,90063,John Linder,surname,wikipedia party Republican
+1994,13,GA,05,surname,Dale,DEM,85094,NA,unmatched,NA
+1994,13,GA,05,surname,Dixon,REP,37999,Dale Dixon,surname,wikipedia party Republican
+1994,13,GA,06,surname,Gingrich,REP,119432,Newt Gingrich,surname,wikipedia party Republican
+1994,13,GA,06,surname,Newt,DEM,66700,NA,unmatched,NA
+1994,13,GA,07,surname,Barr,REP,71265,Bob Barr,surname,wikipedia party Republican
+1994,13,GA,07,surname,Bob,DEM,65978,NA,unmatched,NA
+1994,13,GA,08,surname,Chambliss,REP,89591,Saxby Chambliss,surname,wikipedia party Republican
+1994,13,GA,08,surname,Saxby,DEM,53408,NA,unmatched,NA
+1994,13,GA,09,surname,Castello,REP,57568,Robert L. Castello,surname,wikipedia party Republican
+1994,13,GA,09,surname,Robert,DEM,79145,NA,unmatched,NA
+1994,13,GA,10,surname,Charlie,DEM,51192,NA,unmatched,NA
+1994,13,GA,10,surname,Norwood,REP,96099,Charlie Norwood,surname,wikipedia party Republican
+1994,13,GA,11,surname,Lovett,REP,37533,Woodrow Lovett,surname,wikipedia party Republican
+1994,13,GA,11,surname,Woodrow,DEM,71560,NA,unmatched,NA
+1994,40,OK,01,surname,Largent,REP,107085,Steve Largent,surname,wikipedia party Republican
+1994,40,OK,01,surname,Price,DEM,63753,Stuart Price,surname,wikipedia party Democratic
+1994,40,OK,02,surname,Coburn,REP,82479,Tom Coburn,surname,wikipedia party Republican
+1994,40,OK,02,surname,Cooper,DEM,75943,Virgil R. Cooper,surname,wikipedia party Democratic
+1994,40,OK,03,surname,Brewster,DEM,115731,Bill Brewster,surname,wikipedia party Democratic
+1994,40,OK,03,surname,Tallant,REP,41147,Darrel Dewayne Tallant,surname,wikipedia party Republican
+1994,40,OK,04,surname,Perryman,DEM,67237,David Perryman,surname,wikipedia party Democratic
+1994,40,OK,04,surname,Tiffee,OTHER,7913,Bill Tiffee,surname,wikipedia party Independent
+1994,40,OK,04,surname,Watts,REP,80251,J. C. Watts,surname,wikipedia party Republican
+1994,40,OK,05,surname,Istook,REP,136877,Ernest Istook,surname,wikipedia party Republican
+1994,40,OK,05,surname,Keith,OTHER,38270,Tom Keith,surname_unique,only candidate with this surname in the district; wikipedia party Democratic
+1994,40,OK,06,surname,Lucas,REP,106961,Frank Lucas,surname,wikipedia party Republican
+1994,40,OK,06,surname,Tollett,DEM,45399,Jeffrey S. Tollett,surname,wikipedia party Democratic
+1996,4,AZ,01,surname,Cox,DEM,89738,John Cox,surname,wikipedia party Democratic
+1996,4,AZ,01,surname,Salmon,REP,135634,Matt Salmon,surname,wikipedia party Republican
+1996,4,AZ,02,surname,Bangle,OTHER,5333,Alice Bangle,surname,wikipedia party Libertarian
+1996,4,AZ,02,surname,Buster,REP,38786,Jim Buster,surname,wikipedia party Republican
+1996,4,AZ,02,surname,Pastor,DEM,81982,Ed Pastor,surname,wikipedia party Democratic
+1996,4,AZ,03,surname,Schneider,DEM,88214,Alexander Schneider,surname,wikipedia party Democratic
+1996,4,AZ,03,surname,Stump,REP,175231,Bob Stump,surname,wikipedia party Republican
+1996,4,AZ,04,surname,Milton,DEM,74857,Maria Milton,surname,wikipedia party Democratic
+1996,4,AZ,04,surname,Shadegg,REP,150486,John Shadegg,surname,wikipedia party Republican
+1996,4,AZ,05,surname,Finkelstein,OTHER,6630,Ed Finkelstein,surname,wikipedia party Reform
+1996,4,AZ,05,surname,Kolbe,REP,179349,Jim Kolbe,surname,wikipedia party Republican
+1996,4,AZ,05,surname,Nelson,DEM,67597,Mort Nelson,surname,wikipedia party Democratic
+1996,4,AZ,05,surname,Zajac,OTHER,7322,John Zajac,surname,wikipedia party Libertarian
+1996,4,AZ,06,surname,Anderson,OTHER,14899,Robert Anderson,surname,wikipedia party Libertarian
+1996,4,AZ,06,surname,Hayworth,REP,121431,J. D. Hayworth,surname,wikipedia party Republican
+1996,4,AZ,06,surname,Owens,DEM,118957,Steve Owens,surname,wikipedia party Democratic
+1996,6,CA,01,placeholder,Democratic Candidate,DEM,96522,Michela Alioto,vote_total,wikipedia votes 96522
+1996,6,CA,01,placeholder,Other Candidate 1,OTHER,15376,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,01,placeholder,Republican Candidate,REP,110262,Frank Riggs,party_D_R,wikipedia votes 110242 vs ours 110262
+1996,6,CA,02,placeholder,Democratic Candidate,DEM,80401,Roberts Braden,vote_total,wikipedia votes 80401
+1996,6,CA,02,placeholder,Other Candidate 2,OTHER,13019,Patrice Thiessen / William Brunner / Bob Todd,pooled_minor_sum,sum of 3 wikipedia candidates = 13019
+1996,6,CA,02,placeholder,Republican Candidate,REP,144885,Wally Herger,party_D_R,wikipedia votes 144913 vs ours 144885
+1996,6,CA,03,placeholder,Democratic Candidate,DEM,118487,Vic Fazio,party_D_R,wikipedia votes 118663 vs ours 118487
+1996,6,CA,03,placeholder,Other Candidate 2,OTHER,11940,Timothy Erich / Erin Donelle,pooled_minor_sum,sum of 2 wikipedia candidates = 11940
+1996,6,CA,03,placeholder,Republican Candidate,REP,91134,Tim Lefever,vote_total,wikipedia votes 91134
+1996,6,CA,04,placeholder,Democratic Candidate,DEM,97948,Katie Hirning,vote_total,wikipedia votes 97948
+1996,6,CA,04,placeholder,Other Candidate 1,OTHER,9319,Patrick McHargue,vote_total,wikipedia votes 9319
+1996,6,CA,04,placeholder,Republican Candidate,REP,163827,John Doolittle,party_D_R,wikipedia votes 164048 vs ours 163827
+1996,6,CA,05,placeholder,Democratic Candidate,DEM,142618,Robert Matsui,vote_total,wikipedia votes 142618
+1996,6,CA,05,placeholder,Other Candidate 2,OTHER,6902,Joseph Miller / Gordon Mors / Charles Kersey,pooled_minor_sum,sum of 3 wikipedia candidates = 6902
+1996,6,CA,05,placeholder,Republican Candidate,REP,52940,Robert Dinsmore,vote_total,wikipedia votes 52940
+1996,6,CA,06,placeholder,Democratic Candidate,DEM,156958,Lynn Woolsey,vote_total,wikipedia votes 156958
+1996,6,CA,06,placeholder,Other Candidate 2,OTHER,10602,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,06,placeholder,Republican Candidate,REP,86278,Duane Hughes,vote_total,wikipedia votes 86278
+1996,6,CA,07,placeholder,Democratic Candidate,DEM,137069,George Miller,party_D_R,wikipedia votes 137089 vs ours 137069
+1996,6,CA,07,placeholder,Other Candidate 2,OTHER,11266,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,07,placeholder,Republican Candidate,REP,42542,Norman Reece,vote_total,wikipedia votes 42542
+1996,6,CA,08,placeholder,Democratic Candidate,DEM,175216,Nancy Pelosi,vote_total,wikipedia votes 175216
+1996,6,CA,08,placeholder,Other Candidate 1,OTHER,6805,David Smithstein / Ed Murray,pooled_minor_sum,sum of 2 wikipedia candidates = 6805
+1996,6,CA,08,placeholder,Republican Candidate,REP,25739,Justin Raimondo,vote_total,wikipedia votes 25739
+1996,6,CA,09,placeholder,Democratic Candidate,DEM,154806,Ronald Dellums,vote_total,wikipedia votes 154806
+1996,6,CA,09,placeholder,Other Candidate 2,OTHER,9044,Tom Condit / Jack Forem / Omari Musa,pooled_minor_sum,sum of 3 wikipedia candidates = 9044
+1996,6,CA,09,placeholder,Republican Candidate,REP,37128,Deborah Wright,party_D_R,wikipedia votes 37126 vs ours 37128
+1996,6,CA,10,placeholder,Democratic Candidate,DEM,137726,Ellen Tauscher,vote_total,wikipedia votes 137726
+1996,6,CA,10,placeholder,Other Candidate 3,OTHER,11824,John Place / Valerie Janlois / Gregory Lyon,pooled_minor_sum,sum of 3 wikipedia candidates = 11824
+1996,6,CA,10,placeholder,Republican Candidate,REP,133633,Bill Baker,vote_total,wikipedia votes 133633
+1996,6,CA,11,placeholder,Democratic Candidate,DEM,65536,Jason Silva,vote_total,wikipedia votes 65536
+1996,6,CA,11,placeholder,Other Candidate 1,OTHER,8083,Kelly Rego / Selene Bush,pooled_minor_sum,sum of 2 wikipedia candidates = 8083
+1996,6,CA,11,placeholder,Republican Candidate,REP,107477,Richard Pombo,vote_total,wikipedia votes 107477
+1996,6,CA,12,placeholder,Democratic Candidate,DEM,149052,Tom Lantos,vote_total,wikipedia votes 149052
+1996,6,CA,12,placeholder,Other Candidate 1,OTHER,9583,Christopher Schmidt / Richard Borg,pooled_minor_sum,sum of 2 wikipedia candidates = 9583
+1996,6,CA,12,placeholder,Republican Candidate,REP,49278,Storm Jenkins,vote_total,wikipedia votes 49278
+1996,6,CA,13,placeholder,Democratic Candidate,DEM,114408,Pete Stark,vote_total,wikipedia votes 114408
+1996,6,CA,13,placeholder,Other Candidate 1,OTHER,7746,Terry Savage,vote_total,wikipedia votes 7746
+1996,6,CA,13,placeholder,Republican Candidate,REP,53385,James Fay,vote_total,wikipedia votes 53385
+1996,6,CA,14,placeholder,Democratic Candidate,DEM,149313,Anna Eshoo,vote_total,wikipedia votes 149313
+1996,6,CA,14,placeholder,Other Candidate 3,OTHER,9289,Timothy Thompson / Joseph Dehn / Robert Wells,pooled_minor_sum,sum of 3 wikipedia candidates = 9289
+1996,6,CA,14,placeholder,Republican Candidate,REP,71573,Ben Brink,vote_total,wikipedia votes 71573
+1996,6,CA,15,placeholder,Democratic Candidate,DEM,79048,Dick Lane,vote_total,wikipedia votes 79048
+1996,6,CA,15,placeholder,Other Candidate 3,OTHER,15099,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,15,placeholder,Republican Candidate,REP,132737,Tom Campbell,vote_total,wikipedia votes 132737
+1996,6,CA,16,placeholder,Democratic Candidate,DEM,94020,Zoe Lofgren,vote_total,wikipedia votes 94020
+1996,6,CA,16,placeholder,Other Candidate 1,OTHER,6012,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,16,placeholder,Republican Candidate,REP,43197,Chuck Wojslaw,vote_total,wikipedia votes 43197
+1996,6,CA,17,placeholder,Democratic Candidate,DEM,115114,Sam Farr,party_D_R,wikipedia votes 115116 vs ours 115114
+1996,6,CA,17,placeholder,Other Candidate 1,OTHER,6572,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,17,placeholder,Republican Candidate,REP,73856,Jess Brown,vote_total,wikipedia votes 73856
+1996,6,CA,18,placeholder,Democratic Candidate,DEM,108827,Gary Condit,vote_total,wikipedia votes 108827
+1996,6,CA,18,placeholder,Other Candidate 1,OTHER,4064,James Morzella / Page Riskin,pooled_minor_sum,sum of 2 wikipedia candidates = 4064
+1996,6,CA,18,placeholder,Republican Candidate,REP,52695,Bill Conrad,vote_total,wikipedia votes 52695
+1996,6,CA,19,placeholder,Democratic Candidate,DEM,58432,Paul Barile,party_D_R,wikipedia votes 58452 vs ours 58432
+1996,6,CA,19,placeholder,Other Candidate 1,OTHER,10825,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,19,placeholder,Republican Candidate,REP,137402,George Radanovich,vote_total,wikipedia votes 137402
+1996,6,CA,20,placeholder,Democratic Candidate,DEM,65381,Cal Dooley,vote_total,wikipedia votes 65381
+1996,6,CA,20,placeholder,Other Candidate 1,OTHER,5048,Jonathan Richter,vote_total,wikipedia votes 5048
+1996,6,CA,20,placeholder,Republican Candidate,REP,45276,Trice Harvey,vote_total,wikipedia votes 45276
+1996,6,CA,21,placeholder,Democratic Candidate,DEM,50684,Deborah Vollmer,party_D_R,wikipedia votes 50694 vs ours 50684
+1996,6,CA,21,placeholder,Other Candidate 3,OTHER,14714,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,21,placeholder,Republican Candidate,REP,125916,Bill Thomas,vote_total,wikipedia votes 125916
+1996,6,CA,22,placeholder,Democratic Candidate,DEM,118299,Walter Capps,vote_total,wikipedia votes 118299
+1996,6,CA,22,placeholder,Other Candidate 4,OTHER,17802,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,22,placeholder,Republican Candidate,REP,107987,Andrea Seastrand,vote_total,wikipedia votes 107987
+1996,6,CA,23,placeholder,Democratic Candidate,DEM,70017,Robert Unruhe,party_D_R,wikipedia votes 70035 vs ours 70017
+1996,6,CA,23,placeholder,Other Candidate 1,OTHER,10592,Gail Lightfoot / Stephen Hospodar,pooled_minor_sum,sum of 2 wikipedia candidates = 10592
+1996,6,CA,23,placeholder,Republican Candidate,REP,118880,Elton Gallegly,vote_total,wikipedia votes 118880
+1996,6,CA,24,placeholder,Democratic Candidate,DEM,106193,Brad Sherman,vote_total,wikipedia votes 106193
+1996,6,CA,24,placeholder,Other Candidate 3,OTHER,15026,Ralph Shroyer / Erich Miller / Ron Lawrence,pooled_minor_sum,sum of 3 wikipedia candidates = 15026
+1996,6,CA,24,placeholder,Republican Candidate,REP,93629,Rich Sybert,vote_total,wikipedia votes 93629
+1996,6,CA,25,placeholder,Democratic Candidate,DEM,65089,Diane Trautman,vote_total,wikipedia votes 65089
+1996,6,CA,25,placeholder,Other Candidate 1,OTHER,8686,Bruce Acker / Justin Gerber,pooled_minor_sum,sum of 2 wikipedia candidates = 8686
+1996,6,CA,25,placeholder,Republican Candidate,REP,122428,Howard McKeon,vote_total,wikipedia votes 122428
+1996,6,CA,26,placeholder,Democratic Candidate,DEM,67525,Howard Berman,vote_total,wikipedia votes 67525
+1996,6,CA,26,placeholder,Other Candidate 1,OTHER,5658,Scott Fritschler / Gary Hearne,pooled_minor_sum,sum of 2 wikipedia candidates = 5658
+1996,6,CA,26,placeholder,Republican Candidate,REP,29332,Bill Glass,vote_total,wikipedia votes 29332
+1996,6,CA,27,placeholder,Democratic Candidate,DEM,82014,Doug Kahn,vote_total,wikipedia votes 82014
+1996,6,CA,27,placeholder,Other Candidate 2,OTHER,12828,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,27,placeholder,Republican Candidate,REP,95310,Jim Rogan,vote_total,wikipedia votes 95310
+1996,6,CA,28,placeholder,Democratic Candidate,DEM,69037,David Levering,vote_total,wikipedia votes 69037
+1996,6,CA,28,placeholder,Other Candidate 1,OTHER,4459,Ken Saurenman,vote_total,wikipedia votes 4459
+1996,6,CA,28,placeholder,Republican Candidate,REP,113389,David Dreier,vote_total,wikipedia votes 113389
+1996,6,CA,29,placeholder,Democratic Candidate,DEM,145276,Henry Waxman,party_D_R,wikipedia votes 145278 vs ours 145276
+1996,6,CA,29,placeholder,Other Candidate 3,OTHER,16682,John Daly / Mike Binkley / Brian Rees,pooled_minor_sum,sum of 3 wikipedia candidates = 16682
+1996,6,CA,29,placeholder,Republican Candidate,REP,52857,Paul Stepanek,vote_total,wikipedia votes 52857
+1996,6,CA,30,placeholder,Democratic Candidate,DEM,58283,Xavier Becerra,vote_total,wikipedia votes 58283
+1996,6,CA,30,placeholder,Other Candidate 1,OTHER,7229,Pam Probst / Shirley Mandel / Rosemary Watson-Frith,pooled_minor_sum,sum of 3 wikipedia candidates = 7229
+1996,6,CA,30,placeholder,Republican Candidate,REP,15078,Patricia Parker,vote_total,wikipedia votes 15078
+1996,6,CA,31,placeholder,Democratic Candidate,DEM,69285,Matthew G. Martinez,vote_total,wikipedia votes 69285
+1996,6,CA,31,placeholder,Other Candidate 1,OTHER,4700,Michael Everling,vote_total,wikipedia votes 4700
+1996,6,CA,31,placeholder,Republican Candidate,REP,28705,John Flores,vote_total,wikipedia votes 28705
+1996,6,CA,32,placeholder,Democratic Candidate,DEM,124712,Julian C. Dixon,vote_total,wikipedia votes 124712
+1996,6,CA,32,placeholder,Other Candidate 1,OTHER,7947,Neal Donner / Rashied Jibri,pooled_minor_sum,sum of 2 wikipedia candidates = 7947
+1996,6,CA,32,placeholder,Republican Candidate,REP,18766,Larry Ardito,party_D_R,wikipedia votes 18768 vs ours 18766
+1996,6,CA,33,placeholder,Democratic Candidate,DEM,47478,Lucille Roybal-Allard,vote_total,wikipedia votes 47478
+1996,6,CA,33,placeholder,Other Candidate 1,OTHER,2203,Howard Johnson,vote_total,wikipedia votes 2203
+1996,6,CA,33,placeholder,Republican Candidate,REP,8147,John Leonard,vote_total,wikipedia votes 8147
+1996,6,CA,34,placeholder,Democratic Candidate,DEM,94730,Esteban Torres,vote_total,wikipedia votes 94730
+1996,6,CA,34,placeholder,Other Candidate 1,OTHER,6858,J. Scott / David Argall,pooled_minor_sum,sum of 2 wikipedia candidates = 6858
+1996,6,CA,34,placeholder,Republican Candidate,REP,36852,David Nunez,vote_total,wikipedia votes 36852
+1996,6,CA,35,placeholder,Democratic Candidate,DEM,92762,Maxine Waters,vote_total,wikipedia votes 92762
+1996,6,CA,35,placeholder,Other Candidate 1,OTHER,2610,Gordon Mego,vote_total,wikipedia votes 2610
+1996,6,CA,35,placeholder,Republican Candidate,REP,13116,Eric Carlson,vote_total,wikipedia votes 13116
+1996,6,CA,36,placeholder,Democratic Candidate,DEM,117752,Jane Harman,vote_total,wikipedia votes 117752
+1996,6,CA,36,placeholder,Other Candidate 1,OTHER,8169,Bruce Dovner / Bradley McManus,pooled_minor_sum,sum of 2 wikipedia candidates = 8169
+1996,6,CA,36,placeholder,Republican Candidate,REP,98538,Susan Brooks,vote_total,wikipedia votes 98538
+1996,6,CA,37,placeholder,Democratic Candidate,DEM,87247,Juanita Millender-McDonald,vote_total,wikipedia votes 87247
+1996,6,CA,37,placeholder,Republican Candidate,REP,15399,Michael Voetee,party_D_R,wikipedia votes 15339 vs ours 15399
+1996,6,CA,38,placeholder,Democratic Candidate,DEM,71827,Rick Zbur,party_D_R,wikipedia votes 71627 vs ours 71827
+1996,6,CA,38,placeholder,Other Candidate 1,OTHER,7882,William Yeager / Paul Gautreau,pooled_minor_sum,sum of 2 wikipedia candidates = 7882
+1996,6,CA,38,placeholder,Republican Candidate,REP,88138,Steve Horn,party_D_R,wikipedia votes 88136 vs ours 88138
+1996,6,CA,39,placeholder,Democratic Candidate,DEM,61392,R. Davis,vote_total,wikipedia votes 61392
+1996,6,CA,39,placeholder,Other Candidate 1,OTHER,10139,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,39,placeholder,Republican Candidate,REP,120761,Ed Royce,vote_total,wikipedia votes 120761
+1996,6,CA,40,placeholder,Democratic Candidate,DEM,44102,Robert Conaway,vote_total,wikipedia votes 44102
+1996,6,CA,40,placeholder,Other Candidate 1,OTHER,9338,Hale McGee / Joseph Kelley,pooled_minor_sum,sum of 2 wikipedia candidates = 9338
+1996,6,CA,40,placeholder,Republican Candidate,REP,98821,Jerry Lewis,vote_total,wikipedia votes 98821
+1996,6,CA,41,placeholder,Democratic Candidate,DEM,47346,Richard Waldron,vote_total,wikipedia votes 47346
+1996,6,CA,41,placeholder,Other Candidate 1,OTHER,12285,Richard Newhouse / David Kramer / Marjorie Mikels,pooled_minor_sum,sum of 3 wikipedia candidates = 12285
+1996,6,CA,41,placeholder,Republican Candidate,REP,83934,Jay Kim,vote_total,wikipedia votes 83934
+1996,6,CA,42,placeholder,Democratic Candidate,DEM,52166,"George Brown, Jr.",vote_total,wikipedia votes 52166
+1996,6,CA,42,placeholder,Republican Candidate,REP,51170,Linda Wilde,vote_total,wikipedia votes 51170
+1996,6,CA,43,placeholder,Democratic Candidate,DEM,67422,Guy Kimborough,vote_total,wikipedia votes 67422
+1996,6,CA,43,placeholder,Other Candidate 2,OTHER,15057,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,43,placeholder,Republican Candidate,REP,97247,Ken Calvert,vote_total,wikipedia votes 97247
+1996,6,CA,44,placeholder,Democratic Candidate,DEM,73844,Anita Rufus,vote_total,wikipedia votes 73844
+1996,6,CA,44,placeholder,Other Candidate 1,OTHER,7139,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,44,placeholder,Republican Candidate,REP,110843,Sonny Bono,party_D_R,wikipedia votes 110643 vs ours 110843
+1996,6,CA,45,placeholder,Democratic Candidate,DEM,68312,Sally Alexander,vote_total,wikipedia votes 68312
+1996,6,CA,45,placeholder,Other Candidate 1,OTHER,11884,Mark Murphy / Rand McDevitt,pooled_minor_sum,sum of 2 wikipedia candidates = 11884
+1996,6,CA,45,placeholder,Republican Candidate,REP,125326,Dana Rohrabacher,vote_total,wikipedia votes 125326
+1996,6,CA,46,placeholder,Democratic Candidate,DEM,47984,Loretta Sanchez,party_D_R,wikipedia votes 47964 vs ours 47984
+1996,6,CA,46,placeholder,Other Candidate 3,OTHER,7540,Lawrence Stafford / Thomas Reimer / J. Aguirre,pooled_minor_sum,sum of 3 wikipedia candidates = 7540
+1996,6,CA,46,placeholder,Republican Candidate,REP,46980,Bob Dornan,vote_total,wikipedia votes 46980
+1996,6,CA,47,placeholder,Democratic Candidate,DEM,70362,Tina Laine,vote_total,wikipedia votes 70362
+1996,6,CA,47,placeholder,Other Candidate 2,OTHER,13337,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,47,placeholder,Republican Candidate,REP,160078,Christopher Cox,vote_total,wikipedia votes 160078
+1996,6,CA,48,placeholder,Democratic Candidate,DEM,59558,Dan Farrell,vote_total,wikipedia votes 59558
+1996,6,CA,48,placeholder,Other Candidate 2,OTHER,16019,William Dreu / Sharon Miles,pooled_minor_sum,sum of 2 wikipedia candidates = 16019
+1996,6,CA,48,placeholder,Republican Candidate,REP,145814,Ron Packard,vote_total,wikipedia votes 145814
+1996,6,CA,49,placeholder,Democratic Candidate,DEM,86657,Peter Navarro,vote_total,wikipedia votes 86657
+1996,6,CA,49,placeholder,Other Candidate 1,OTHER,11305,Ernie Lippe / Kevin Hambsch / Peter Sterling,pooled_minor_sum,sum of 3 wikipedia candidates = 11305
+1996,6,CA,49,placeholder,Republican Candidate,REP,108806,Brian Bilbray,vote_total,wikipedia votes 108806
+1996,6,CA,50,placeholder,Democratic Candidate,DEM,73200,Bob Filner,vote_total,wikipedia votes 73200
+1996,6,CA,50,placeholder,Other Candidate 3,OTHER,6789,Earl Shepard / Dan Clark / Philip Zoebisch,pooled_minor_sum,sum of 3 wikipedia candidates = 6789
+1996,6,CA,50,placeholder,Republican Candidate,REP,38351,Jim Baize,vote_total,wikipedia votes 38351
+1996,6,CA,51,placeholder,Democratic Candidate,DEM,66250,Rita Tamerius,vote_total,wikipedia votes 66250
+1996,6,CA,51,placeholder,Other Candidate 3,OTHER,13742,Miriam Clark / J.C. Anderson / Eric Bourdette,pooled_minor_sum,sum of 3 wikipedia candidates = 13742
+1996,6,CA,51,placeholder,Republican Candidate,REP,149032,Duke Cunningham,vote_total,wikipedia votes 149032
+1996,6,CA,52,placeholder,Democratic Candidate,DEM,53104,Darity Wesley,vote_total,wikipedia votes 53104
+1996,6,CA,52,placeholder,Other Candidate 3,OTHER,8491,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+1996,6,CA,52,placeholder,Republican Candidate,REP,116766,Duncan Hunter,party_D_R,wikipedia votes 116746 vs ours 116766
+1996,13,GA,01,surname,Kaszans,DEM,50622,Rosemary Kaszans,surname,wikipedia party Democratic
+1996,13,GA,01,surname,Kingston,REP,108616,Jack Kingston,surname,wikipedia party Republican
+1996,13,GA,02,surname,Bishop,DEM,88256,Sanford Bishop,surname,wikipedia party Democratic
+1996,13,GA,02,surname,Ealum,REP,75282,Darrel Ealum,surname,wikipedia party Republican
+1996,13,GA,03,surname,Chafin,DEM,76538,Jim Chafin,surname,wikipedia party Democratic
+1996,13,GA,03,surname,Collins,REP,120251,Mac Collins,surname,wikipedia party Republican
+1996,13,GA,04,surname,McKinney,DEM,127157,Cynthia McKinney,surname,wikipedia party Democratic
+1996,13,GA,04,surname,Mitnick,REP,92985,John Mitnick,surname,wikipedia party Republican
+1996,13,GA,05,surname,Lewis,DEM,136555,John Lewis,page_text,'John Lewis' appears 3 times on the page
+1996,13,GA,06,surname,Coles,DEM,127135,Michael Coles,surname,wikipedia party Democratic
+1996,13,GA,06,surname,Gingrich,REP,174155,Newt Gingrich,surname,wikipedia party Republican
+1996,13,GA,07,surname,Barr,REP,112009,Bob Barr,surname,wikipedia party Republican
+1996,13,GA,07,surname,Watts,DEM,81765,Charlie Watts,surname,wikipedia party Democratic
+1996,13,GA,08,surname,Chambliss,REP,93619,Saxby Chambliss,surname,wikipedia party Republican
+1996,13,GA,08,surname,Wiggins,DEM,84506,Jim Wiggins,surname,wikipedia party Democratic
+1996,13,GA,09,surname,Deal,REP,132532,Nathan Deal,surname,wikipedia party Republican
+1996,13,GA,09,surname,Poston,DEM,69662,Ken Poston,surname,wikipedia party Democratic
+1996,13,GA,10,surname,Bell,DEM,88054,David Bell,surname,wikipedia party Democratic
+1996,13,GA,10,surname,Norwood,REP,96723,Charlie Norwood,surname,wikipedia party Republican
+1996,13,GA,11,surname,Linder,REP,145821,John Linder,surname,wikipedia party Republican
+1996,13,GA,11,surname,Stephenson,DEM,80940,Tommy Stephenson,surname,wikipedia party Democratic
+1996,33,NH,01,surname,Flanders,OTHER,8176,Gary Flanders,surname,wikipedia party Libertarian
+1996,33,NH,01,surname,Keefe,DEM,115462,Joe Keefe,surname,wikipedia party Democratic
+1996,33,NH,01,surname,Sununu,REP,123939,John E. Sununu,surname,wikipedia party Republican
+1996,33,NH,02,surname,Arnesen,DEM,105867,Deborah Arnesen,surname,wikipedia party Democratic
+1996,33,NH,02,surname,Bass,REP,123001,Charles Bass,surname,wikipedia party Republican
+1996,33,NH,02,surname,Kendel,OTHER,3727,Roy Kendel,surname,wikipedia party Independent American
+1996,33,NH,02,surname,Lamirande,OTHER,10757,Carole Lamirande,surname,wikipedia party Independent
+1998,6,CA,29,surname,Blasdell-,OTHER,2717,Karen Blasdell-Wilkinson,vote_total,wikipedia votes 2717
+1998,13,GA,01,surname,Kingston,REP,92229,Jack Kingston,page_text,'Jack Kingston' appears 2 times on the page
+1998,13,GA,02,surname,Bishop,DEM,77953,Sanford Bishop,surname,wikipedia party Democratic
+1998,13,GA,02,surname,McCormick,REP,59305,Joseph F. McCormick,surname,wikipedia party Republican
+1998,13,GA,03,surname,Collins,REP,123064,Mac Collins,page_text,'Mac Collins' appears 2 times on the page
+1998,13,GA,04,surname,McKinney,DEM,100622,Cynthia McKinney,surname,wikipedia party Democratic
+1998,13,GA,04,surname,Warren,REP,64146,Sunny Warren,surname,wikipedia party Republican
+1998,13,GA,05,surname,Lewis,DEM,109177,John Lewis,surname,wikipedia party Democratic
+1998,13,GA,06,surname,Gingrich,REP,164966,Newt Gingrich,surname,wikipedia party Republican
+1998,13,GA,06,surname,Pelphrey,DEM,68366,Gary Pelphrey,surname,wikipedia party Democratic
+1998,13,GA,07,surname,Barr,REP,85982,Bob Barr,surname,wikipedia party Republican
+1998,13,GA,07,surname,Williams,DEM,69293,James Williams,surname,wikipedia party Democratic
+1998,13,GA,08,surname,Cain,DEM,53079,Ronald Cain,surname,wikipedia party Democratic
+1998,13,GA,08,surname,Chambliss,REP,87993,Saxby Chambliss,surname,wikipedia party Republican
+1998,13,GA,09,surname,Deal,REP,122713,Nathan Deal,page_text,'Nathan Deal' appears 2 times on the page
+1998,13,GA,10,surname,Freeman,DEM,60004,Marion Freeman,surname,wikipedia party Democratic
+1998,13,GA,10,surname,Norwood,REP,88527,Charlie Norwood,surname,wikipedia party Republican
+1998,13,GA,11,surname,Linder,REP,120909,John Linder,surname,wikipedia party Republican
+1998,13,GA,11,surname,Littman,DEM,53510,Vince Littman,surname,wikipedia party Democratic
+1998,23,ME,01,surname,Allen,DEM,134335,Tom Allen,surname,wikipedia party Democratic
+1998,23,ME,01,surname,Connelly,REP,79160,Ross Connelly,surname,wikipedia party Republican
+1998,23,ME,01,surname,Greiner,OTHER,9182,Eric Greiner,surname,wikipedia party U.S. Taxpayers
+1998,23,ME,02,surname,Baldacci,DEM,146202,John Baldacci,surname,wikipedia party Democratic
+1998,23,ME,02,surname,Reisman,REP,45674,Johnathan Reisman,surname,wikipedia party Republican
+2000,1,AL,01,surname,Callahan,REP,151188,Sonny Callahan,surname,wikipedia party Republican
+2000,1,AL,01,surname,Coffee,OTHER,14031,Dick Coffee,surname,wikipedia party Libertarian
+2000,1,AL,02,surname,Everett,REP,154980,Terry Everett,surname,wikipedia party Republican
+2000,1,AL,02,surname,McGahan,OTHER,4214,Wallace B. McGahan,surname,wikipedia party Libertarian
+2000,1,AL,02,surname,Woods,DEM,67696,Charles Woods,surname,wikipedia party Democratic
+2000,1,AL,03,surname,Riley,REP,147317,Bob Riley,surname,wikipedia party Republican
+2000,1,AL,03,surname,Sophocleus,OTHER,21119,John Sophocleus,surname,wikipedia party Libertarian
+2000,1,AL,04,surname,Folsom,DEM,86400,Marsha Folsom,surname,wikipedia party Democratic
+2000,1,AL,04,surname,Goodrich,OTHER,3519,Craig Goodrich,surname,wikipedia party Libertarian
+2000,1,AL,05,surname,Barksdale,OTHER,22110,Alan F. Barksdale,surname,wikipedia party Libertarian
+2000,1,AL,05,surname,Cramer,DEM,186059,Robert E. Cramer,surname,wikipedia party Democratic
+2000,1,AL,06,surname,Bachus,REP,212751,Spencer Bachus,surname,wikipedia party Republican
+2000,1,AL,06,surname,Reagin,OTHER,28189,Terry Reagin,surname,wikipedia party Libertarian
+2000,1,AL,07,surname,Hager,OTHER,3829,Ken Hager,surname,wikipedia party Libertarian
+2000,1,AL,07,surname,Hilliard,DEM,148243,Earl Hilliard,surname,wikipedia party Democratic
+2000,19,IA,03,surname,Atkinson,OTHER,5563,Sue Atkinson,surname,wikipedia party Independence
+2000,23,ME,01,surname,Allen,DEM,202823,Tom Allen,surname,wikipedia party Democratic
+2000,23,ME,01,surname,Amero,REP,123915,Jane Amero,surname,wikipedia party Republican
+2000,23,ME,01,surname,Staples,OTHER,12356,J. Frederic Staples,surname,wikipedia party Libertarian
+2000,23,ME,02,surname,Baldacci,DEM,219783,John Baldacci,surname,wikipedia party Democratic
+2000,23,ME,02,surname,Campbell,REP,79522,Richard Campbell,surname,wikipedia party Republican
+2000,33,NH,01,surname,Belforti,OTHER,5713,Dan Belforti,surname,wikipedia party Libertarian
+2000,33,NH,01,surname,Clark,DEM,128387,Martha Fuller Clark,surname,wikipedia party Democratic
+2000,33,NH,01,surname,Sununu,REP,150609,John E. Sununu,surname,wikipedia party Republican
+2000,33,NH,02,surname,Bass,REP,152581,Charlie Bass,surname,wikipedia party Republican
+2000,33,NH,02,surname,Brannen,DEM,110367,Barney Brannen,surname,wikipedia party Democratic
+2000,33,NH,02,surname,Christeson,OTHER,6188,Brian Christeson,surname,wikipedia party Libertarian
+2000,33,NH,02,surname,Kendel,OTHER,2204,Roy Kendel,surname,wikipedia party Constitution
+2000,36,NY,07,placeholder,Unnamed (name Missing In Source),OTHER,153374,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2000,40,OK,01,surname,Clem,OTHER,2984,Michael A. Clem,vote_total,wikipedia votes 2984
+2000,40,OK,01,surname,Largent,REP,138528,Steve Largent,vote_total,wikipedia votes 138528
+2000,40,OK,01,surname,Lowe,DEM,58493,Dan Lowe,vote_total,wikipedia votes 58493
+2000,40,OK,02,surname,Carson,DEM,107273,Brad Carson,vote_total,wikipedia votes 107273
+2000,40,OK,02,surname,Ewing,REP,81672,Andy Ewing,vote_total,wikipedia votes 81672
+2000,40,OK,02,surname,Mavis,OTHER,6467,Neil Mavis,vote_total,wikipedia votes 6467
+2000,40,OK,03,surname,Watkins,REP,137826,Wes Watkins,vote_total,wikipedia votes 137826
+2000,40,OK,03,surname,White,OTHER,6730,R.C. Sevier White,vote_total,wikipedia votes 6730
+2000,40,OK,04,surname,Ducey,OTHER,4897,Susan Ducey,vote_total,wikipedia votes 4897
+2000,40,OK,04,surname,Johnson,OTHER,1979,Keith B. Johnson,vote_total,wikipedia votes 1979
+2000,40,OK,04,surname,Weatherford,DEM,54808,Larry Weatherford,vote_total,wikipedia votes 54808
+2000,40,OK,05,surname,Istook,REP,134159,Ernest Istook,vote_total,wikipedia votes 134159
+2000,40,OK,05,surname,Maguire,OTHER,5930,Bill Maguire,vote_total,wikipedia votes 5930
+2000,40,OK,05,surname,McWatters,DEM,53275,Garland McWatters,vote_total,wikipedia votes 53275
+2000,40,OK,05,surname,Murphy,OTHER,2658,Robert T. Murphy,vote_total,wikipedia votes 2658
+2000,40,OK,06,surname,Beutler,DEM,63106,Randy Beutler,vote_total,wikipedia votes 63106
+2000,40,OK,06,surname,Cristiano,OTHER,2435,Joseph V. Cristiano,vote_total,wikipedia votes 2435
+2000,40,OK,06,surname,Lucas,REP,95635,Frank Lucas,vote_total,wikipedia votes 95635
+2000,56,WY,00,surname,Cubin,REP,141848,Barbara Cubin,surname,wikipedia party Republican
+2000,56,WY,00,surname,Green,DEM,60638,Michael Allen Green,surname,wikipedia party Democratic
+2000,56,WY,00,surname,Raymond,OTHER,3415,Victor Raymond,surname,wikipedia party Natural Law
+2000,56,WY,00,surname,Stock,OTHER,6411,Lewis Stock,surname,wikipedia party Libertarian
+2002,12,FL,05,surname,Werder,OTHER,53,NA,unmatched,NA
+2002,12,FL,23,surname,B.B.B.,OTHER,5,NA,unmatched,NA
+2002,19,IA,05,surname,King,REP,113257,Steve King,surname,wikipedia party Republican
+2002,19,IA,05,placeholder,Unnamed (name Missing In Source),REP,127,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2002,24,MD,01,placeholder,Democratic,DEM,57986,Amy D. Tamlyn,vote_total,wikipedia votes 57986
+2002,24,MD,01,placeholder,Republican,REP,192004,Wayne Gilchrest,vote_total,wikipedia votes 192004
+2002,24,MD,01,placeholder,Unnamed (name Missing In Source),OTHER,423,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2002,24,MD,02,placeholder,Democratic,DEM,105718,Dutch Ruppersberger,vote_total,wikipedia votes 105718
+2002,24,MD,02,placeholder,Republican,REP,88954,Helen Delich Bentley,vote_total,wikipedia votes 88954
+2002,24,MD,02,placeholder,Unnamed (name Missing In Source),OTHER,530,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2002,24,MD,03,placeholder,Democratic,DEM,145589,Benjamin Cardin,vote_total,wikipedia votes 145589
+2002,24,MD,03,placeholder,Republican,REP,75721,Scott Conwell,vote_total,wikipedia votes 75721
+2002,24,MD,03,placeholder,Unnamed (name Missing In Source),OTHER,233,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2002,24,MD,04,placeholder,Democratic,DEM,131806,Al Wynn,party_D_R,wikipedia votes 131644 vs ours 131806
+2002,24,MD,04,placeholder,Republican,REP,34923,John B. Kimble,party_D_R,wikipedia votes 34890 vs ours 34923
+2002,24,MD,04,placeholder,Unnamed (name Missing In Source),OTHER,826,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2002,24,MD,05,placeholder,Democratic,DEM,137903,Steny Hoyer,vote_total,wikipedia votes 137903
+2002,24,MD,05,surname,Green,OTHER,186,NA,unmatched,NA
+2002,24,MD,05,placeholder,Republican,REP,60758,Joseph T. Crawford,vote_total,wikipedia votes 60758
+2002,24,MD,05,placeholder,Unnamed (name Missing In Source),OTHER,240,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2002,24,MD,06,placeholder,Democratic,DEM,75575,Donald M. DeArmon,vote_total,wikipedia votes 75575
+2002,24,MD,06,placeholder,Republican,REP,147825,Roscoe Bartlett,vote_total,wikipedia votes 147825
+2002,24,MD,06,placeholder,Unnamed (name Missing In Source),OTHER,211,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2002,24,MD,07,placeholder,Democratic,DEM,137047,Elijah Cummings,vote_total,wikipedia votes 137047
+2002,24,MD,07,placeholder,Republican,REP,49172,Joseph E. Ward,vote_total,wikipedia votes 49172
+2002,24,MD,07,placeholder,Unnamed (name Missing In Source),OTHER,175,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2002,24,MD,08,placeholder,Democratic,DEM,112788,Chris Van Hollen,vote_total,wikipedia votes 112788
+2002,24,MD,08,placeholder,Republican,REP,103587,Connie Morella,vote_total,wikipedia votes 103587
+2002,24,MD,08,surname,Unaffiliated,OTHER,1599,NA,unmatched,NA
+2002,24,MD,08,placeholder,Unnamed (name Missing In Source),OTHER,139,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2002,40,OK,01,surname,Cristiano,OTHER,4740,Joe Cristiano,surname,wikipedia party Independent
+2002,40,OK,01,surname,Dodd,DEM,90649,Doug Dodd,surname,wikipedia party Democratic
+2002,40,OK,01,surname,Sullivan,REP,119566,John Sullivan,surname,wikipedia party Republican
+2002,40,OK,02,surname,Carson,DEM,146748,Brad Carson,surname,wikipedia party Democratic
+2002,40,OK,02,surname,Pharaoh,REP,51234,Kent Pharaoh,surname,wikipedia party Republican
+2002,40,OK,03,surname,Lucas,REP,148206,Frank Lucas,surname,wikipedia party Republican
+2002,40,OK,03,surname,Murphy,OTHER,47884,Robert T. Murphy,surname_unique,only candidate with this surname in the district; wikipedia party Democratic
+2002,40,OK,04,surname,Cole,REP,106452,Tom Cole,surname,wikipedia party Republican
+2002,40,OK,04,surname,Roberts,DEM,91322,Darryl Roberts,surname,wikipedia party Democratic
+2002,40,OK,05,surname,Barlow,DEM,63208,Lou Barlow,surname,wikipedia party Democratic
+2002,40,OK,05,surname,Davis,OTHER,10469,Donna C. Davis,surname,wikipedia party Independent
+2002,40,OK,05,surname,Istook,REP,121374,Ernest Istook,surname,wikipedia party Republican
+2002,56,WY,00,surname,Akin,DEM,10360,Ron Akin,surname,wikipedia party Democratic
+2002,56,WY,00,surname,Cubin,REP,110229,Barbara Cubin,surname,wikipedia party Republican
+2002,56,WY,00,surname,Stock,OTHER,5962,Lewis Stock,surname,wikipedia party Libertarian
+2004,1,AL,01,surname,Belk,DEM,93938,Judy McCain Belk,vote_total,wikipedia votes 93938
+2004,1,AL,01,surname,Bonner,REP,161067,Jo Bonner,vote_total,wikipedia votes 161067
+2004,1,AL,02,surname,Everett,REP,177086,Terry Everett,vote_total,wikipedia votes 177086
+2004,1,AL,02,surname,James,DEM,70562,Chuck James,vote_total,wikipedia votes 70562
+2004,1,AL,03,surname,Fuller,DEM,95240,Bill Fuller,vote_total,wikipedia votes 95240
+2004,1,AL,03,surname,Rogers,REP,150411,Mike D. Rogers,vote_total,wikipedia votes 150411
+2004,1,AL,04,surname,Aderholt,REP,191110,Robert Aderholt,vote_total,wikipedia votes 191110
+2004,1,AL,04,surname,Cole,DEM,64278,Carl Cole,vote_total,wikipedia votes 64278
+2004,1,AL,05,surname,Cramer,DEM,200999,Bud Cramer,vote_total,wikipedia votes 200999
+2004,1,AL,05,surname,Wallace,REP,74145,Gerry Wallace,vote_total,wikipedia votes 74145
+2004,1,AL,06,surname,Bachus,REP,264819,Spencer Bachus,vote_total,wikipedia votes 264819
+2004,1,AL,07,surname,Cameron,REP,61019,Steve Cameron,vote_total,wikipedia votes 61019
+2004,1,AL,07,surname,Davis,DEM,183408,Artur Davis,vote_total,wikipedia votes 183408
+2004,12,FL,05,surname,Werder,OTHER,33,H. David Werder,vote_total,wikipedia votes 33
+2006,1,AL,01,surname,Beckerle,DEM,52770,Vivian Sheffield Beckerle,vote_total,wikipedia votes 52770
+2006,1,AL,01,surname,Bonner,REP,112944,Jo Bonner,vote_total,wikipedia votes 112944
+2006,1,AL,02,surname,Everett,REP,124302,Terry Everett,vote_total,wikipedia votes 124302
+2006,1,AL,02,surname,James,DEM,54450,Chuck James,vote_total,wikipedia votes 54450
+2006,1,AL,03,surname,Layfield,OTHER,3414,Mark Edwin Layfield,vote_total,wikipedia votes 3414
+2006,1,AL,03,surname,Pierce,DEM,63559,Greg A. Pierce,vote_total,wikipedia votes 63559
+2006,1,AL,03,surname,Rogers,REP,98257,Mike D. Rogers,vote_total,wikipedia votes 98257
+2006,1,AL,04,surname,Aderholt,REP,128484,Robert Aderholt,vote_total,wikipedia votes 128484
+2006,1,AL,04,surname,Bobo,DEM,54382,Barbara Bobo,vote_total,wikipedia votes 54382
+2006,1,AL,05,surname,Cramer,DEM,143015,Bud Cramer,vote_total,wikipedia votes 143015
+2006,1,AL,06,surname,Bachus,REP,163514,Spencer Bachus,vote_total,wikipedia votes 163514
+2006,1,AL,07,surname,Davis,DEM,133870,Artur Davis,vote_total,wikipedia votes 133870
+2006,10,DE,00,surname,Hartley-Na,OTHER,5769,Karen Hartley-Nagle,surname_fuzzy,close surname match; wikipedia party Independent
+2006,12,FL,14,surname,Dan,OTHER,1,NA,unmatched,NA
+2006,33,NH,01,surname,Bradley,REP,95527,Jeb Bradley,vote_total,wikipedia votes 95527
+2006,33,NH,01,surname,Shea-Porter,DEM,100691,Carol Shea-Porter,vote_total,wikipedia votes 100691
+2006,33,NH,02,surname,Bass,REP,94088,Charlie Bass,vote_total,wikipedia votes 94088
+2006,33,NH,02,surname,Blevens,OTHER,3305,Ken Blevens,vote_total,wikipedia votes 3305
+2006,33,NH,02,surname,Hodes,DEM,108743,Paul Hodes,vote_total,wikipedia votes 108743
+2006,40,OK,01,surname,Gentges,DEM,56724,Alan Gentges,vote_total,wikipedia votes 56724
+2006,40,OK,01,surname,Sullivan,REP,116920,John Sullivan,vote_total,wikipedia votes 116920
+2006,40,OK,01,surname,Wortman,OTHER,10085,Bill Wortman,vote_total,wikipedia votes 10085
+2006,40,OK,02,surname,Boren,DEM,122347,Dan Boren,vote_total,wikipedia votes 122347
+2006,40,OK,02,surname,Miller,REP,45861,Patrick K. Miller,vote_total,wikipedia votes 45861
+2006,40,OK,03,surname,Barton,DEM,61749,Sue Barton,vote_total,wikipedia votes 61749
+2006,40,OK,03,surname,Lucas,REP,128042,Frank Lucas,vote_total,wikipedia votes 128042
+2006,40,OK,04,surname,Cole,REP,118266,Tom Cole,vote_total,wikipedia votes 118266
+2006,40,OK,04,surname,Spake,DEM,64775,Hal Spake,vote_total,wikipedia votes 64775
+2006,40,OK,05,surname,Fallin,REP,108936,Mary Fallin,vote_total,wikipedia votes 108936
+2006,40,OK,05,surname,Hunter,DEM,67293,David Hunter,vote_total,wikipedia votes 67293
+2006,40,OK,05,surname,Woodson,OTHER,4196,Matthew Horton Woodson,vote_total,wikipedia votes 4196
+2008,10,DE,00,surname,Hartley-Na,DEM,146434,Karen Hartley-Nagle,surname_fuzzy,close surname match; wikipedia party Democratic
+2008,19,IA,02,placeholder,Unnamed (name Missing In Source),OTHER,5437,Brian White,vote_total,wikipedia votes 5437
+2010,1,AL,01,surname,Bonner,REP,129063,Jo Bonner,vote_total,wikipedia votes 129063
+2010,1,AL,01,surname,Walter,OTHER,26357,David Walter,vote_total,wikipedia votes 26357
+2010,1,AL,02,surname,Bright,DEM,106865.16236,Bobby Bright,surname,wikipedia party Democratic Party (United States)
+2010,1,AL,02,surname,Roby,REP,111645,Martha Roby,vote_total,wikipedia votes 111645
+2010,1,AL,03,surname,Rogers,REP,117736,Mike Rogers,vote_total,wikipedia votes 117736
+2010,1,AL,03,surname,Segrest,DEM,80204,Steve Segrest,vote_total,wikipedia votes 80204
+2010,1,AL,04,surname,Aderholt,REP,167714,Robert Aderholt,vote_total,wikipedia votes 167714
+2010,1,AL,05,surname,Brooks,REP,131109,Mo Brooks,vote_total,wikipedia votes 131109
+2010,1,AL,05,surname,Raby,DEM,95192,Steve Raby,vote_total,wikipedia votes 95192
+2010,1,AL,06,surname,Bachus,REP,205288,Spencer Bachus,vote_total,wikipedia votes 205288
+2010,1,AL,07,surname,Chamberlain,REP,51890,Don Chamberlain,vote_total,wikipedia votes 51890
+2010,1,AL,07,surname,Sewell,DEM,136696,Terri Sewell,vote_total,wikipedia votes 136696
+2010,21,KY,01,surname,Hatchett,DEM,62090,Charles Kendall Hatchett,vote_total,wikipedia votes 62090
+2010,21,KY,01,surname,Whitfield,REP,153840,Ed Whitfield,vote_total,wikipedia votes 153840
+2010,21,KY,02,surname,Guthrie,REP,155906,Brett Guthrie,vote_total,wikipedia votes 155906
+2010,21,KY,02,surname,Marksberry,DEM,73749,Ed Marksberry,vote_total,wikipedia votes 73749
+2010,21,KY,03,surname,Lally,REP,112627,Todd Lally,vote_total,wikipedia votes 112627
+2010,21,KY,03,placeholder,Other Candidates,OTHER,3363,Edward A. Martin / Michael D. Hansen,pooled_minor_sum,sum of 2 wikipedia candidates = 3363
+2010,21,KY,03,surname,Yarmuth,DEM,139940,John Yarmuth,vote_total,wikipedia votes 139940
+2010,21,KY,04,surname,Davis,REP,151813,Geoff Davis,vote_total,wikipedia votes 151813
+2010,21,KY,04,surname,Waltz,DEM,66694,John Waltz,vote_total,wikipedia votes 66694
+2010,21,KY,05,surname,Holbert,DEM,44034,Jim Holbert,vote_total,wikipedia votes 44034
+2010,21,KY,05,surname,Rogers,REP,151019,Hal Rogers,vote_total,wikipedia votes 151019
+2010,21,KY,06,surname,Barr,REP,119164,Andy Barr,vote_total,wikipedia votes 119164
+2010,21,KY,06,surname,Chandler,DEM,119812,Ben Chandler,vote_total,wikipedia votes 119812
+2010,21,KY,06,placeholder,Other Candidates,OTHER,247,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2012,12,FL,25,surname,Voteforeddie.Com,OTHER,17099,NA,unmatched,NA
+2012,16,ID,01,surname,Pro-Life,OTHER,7607,Pro-Life,vote_total,wikipedia votes 7607
+2012,21,KY,02,surname,Astor,OTHER,4914,Craig R. Astor,vote_total,wikipedia votes 4914
+2012,21,KY,02,surname,Beacham,OTHER,6304,Andrew R. Beacham,vote_total,wikipedia votes 6304
+2012,21,KY,04,surname,Lewis,OTHER,8674,David Lewis,vote_total,wikipedia votes 8674
+2012,21,KY,06,surname,Vance,OTHER,8340,Randolph Vance,vote_total,wikipedia votes 8340
+2012,25,MA,01,placeholder,Democrats,DEM,262263,Richard Neal,party_D_R,wikipedia votes 261936 vs ours 262263
+2012,25,MA,06,placeholder,Democrats,DEM,9365,John F. Tierney,party_word,only DEM candidate on wikipedia for the district
+2012,25,MA,08,placeholder,Democrats,DEM,147327,Stephen Lynch,party_word,only DEM candidate on wikipedia for the district
+2012,25,MA,08,placeholder,Republicans,REP,80702,Joe Selvaggi,party_D_R,wikipedia votes 82242 vs ours 80702
+2012,25,MA,08,surname,Unenrolled,OTHER,9649,NA,unmatched,NA
+2012,36,NY,23,surname,Reed,REP,20764,Tom Reed,surname,wikipedia party Republican Party (United States)
+2012,36,NY,23,surname,Shinagawa,DEM,11594,Nate Shinagawa,surname,wikipedia party Democratic Party (United States)
+2012,36,NY,NA,surname,Buerkle,REP,13840,Ann Marie Buerkle,surname_statewide,only candidate with this surname in the state-year
+2012,36,NY,NA,surname,Maffei,DEM,13164,Dan Maffei,surname_statewide,only candidate with this surname in the state-year
+2012,36,NY,NA,surname,Rozum,OTHER,2882,Ursula Rozum,surname_statewide,only candidate with this surname in the state-year
+2012,49,UT,01,surname,Bishop,REP,7391,Rob Bishop,surname,wikipedia party Republican Party (United States)
+2012,49,UT,01,surname,McAleer,DEM,9317,Donna M. McAleer,surname,wikipedia party Democratic Party (United States)
+2012,49,UT,01,surname,Phipps,OTHER,371,Sherry Phipps,surname,wikipedia party Constitution Party (United States)
+2012,53,WA,05,surname,Uncertified,OTHER,3,NA,unmatched,NA
+2012,53,WA,06,surname,Uncertified,OTHER,117,NA,unmatched,NA
+2014,1,AL,01,surname,Byrne,REP,6299,Bradley Byrne,surname,wikipedia party Republican Party (United States)
+2014,1,AL,01,surname,Laflore,DEM,2570,Burton LeFlore,surname_fuzzy,close surname match; wikipedia party Democratic Party (United States)
+2014,1,AL,02,surname,Roby,REP,25804,Martha Roby,surname,wikipedia party Republican Party (United States)
+2014,1,AL,02,surname,Wright,DEM,8079,Erick Wright,surname,wikipedia party Democratic Party (United States)
+2014,1,AL,03,surname,Rogers,REP,59234,Mike D. Rogers,surname,wikipedia party Republican Party (United States)
+2014,1,AL,03,surname,Smith,DEM,30448,Jesse Smith,surname,wikipedia party Democratic Party (United States)
+2014,1,AL,04,surname,Aderhold,REP,12134,Robert Aderholt,surname_fuzzy,close surname match; wikipedia party Republican Party (United States)
+2014,1,AL,04,surname,Aderholt,REP,4213,Robert Aderholt,surname,wikipedia party Republican Party (United States)
+2014,1,AL,06,surname,Lester,DEM,6242,Mark Lester,surname,wikipedia party Democratic Party (United States)
+2014,1,AL,06,surname,Palmer,REP,26728,Gary Palmer,surname,wikipedia party Republican Party (United States)
+2014,1,AL,07,surname,Sewell,DEM,17130,Terri Sewell,surname,wikipedia party Democratic Party (United States)
+2014,21,KY,03,surname,Puccetti,OTHER,2318,Gregory Peter Puccetti,vote_total,wikipedia votes 2318
+2014,49,UT,02,surname,McCausland,OTHER,102,Shaun McCausland,surname,wikipedia party Constitution Party (United States)
+2014,49,UT,02,placeholder,Unnamed (name Missing In Source),OTHER,1,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2014,49,UT,03,surname,Chaffetz,REP,3172,Jason Chaffetz,surname,wikipedia party Republican Party (United States)
+2014,49,UT,03,surname,Mates,OTHER,76,Ben J. Mates,surname,wikipedia party Independent (United States)
+2014,49,UT,03,surname,Strong,OTHER,237,Zack Strong,surname,wikipedia party Independent American Party
+2014,49,UT,03,surname,Tryon,OTHER,321,Stephen P. Tryon,surname,wikipedia party Independent (United States)
+2014,49,UT,03,surname,Wonnacott,DEM,1796,Brian Wonnacott,surname,wikipedia party Democratic Party (United States)
+2016,10,DE,00,surname,Rochester,DEM,233554,Lisa Blunt Rochester,surname,wikipedia party Democratic
+2016,12,FL,02,placeholder,Unnamed (name Missing In Source),OTHER,507,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,12,FL,04,placeholder,Unnamed (name Missing In Source),OTHER,651,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,12,FL,07,placeholder,Unnamed (name Missing In Source),OTHER,222,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,12,FL,18,placeholder,Unnamed (name Missing In Source),OTHER,331,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,12,FL,19,placeholder,Unnamed (name Missing In Source),OTHER,243,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,16,ID,01,surname,Pro-Life,OTHER,53,Write-ins,vote_total,wikipedia votes 53
+2016,21,KY,01,surname,McIntosh,OTHER,0,Terry McIntosh,surname,wikipedia party Independent (United States)
+2016,23,ME,01,surname,Holbrook,REP,13465,Mark Holbrook,surname,wikipedia party Republican Party (United States)
+2016,23,ME,01,surname,Pingree,DEM,35768,Chellie Pingree,surname,wikipedia party Democratic Party (United States)
+2016,23,ME,01,surname,S,OTHER,30,NA,unmatched,NA
+2016,23,ME,01,placeholder,Unnamed (name Missing In Source),OTHER,32,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,24,MD,01,placeholder,Unnamed (name Missing In Source),OTHER,319,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,24,MD,02,placeholder,Unnamed (name Missing In Source),OTHER,390,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,24,MD,03,placeholder,Unnamed (name Missing In Source),OTHER,307,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,24,MD,04,placeholder,Unnamed (name Missing In Source),OTHER,292,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,24,MD,05,placeholder,Unnamed (name Missing In Source),OTHER,368,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,24,MD,06,placeholder,Unnamed (name Missing In Source),OTHER,191,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,24,MD,07,placeholder,Unnamed (name Missing In Source),OTHER,369,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,24,MD,08,placeholder,Unnamed (name Missing In Source),OTHER,285,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,36,NY,19,surname,Woerner,OTHER,0,NA,unmatched,NA
+2016,36,NY,24,surname,Anonymous,OTHER,2,NA,unmatched,NA
+2016,38,ND,00,placeholder,Unnamed (name Missing In Source),OTHER,574,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,44,RI,01,placeholder,Unnamed (name Missing In Source),OTHER,812,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,44,RI,02,placeholder,Unnamed (name Missing In Source),OTHER,543,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2016,56,WY,00,placeholder,Unnamed (name Missing In Source),OTHER,739,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2018,36,NY,08,placeholder,Unnamed (name Missing In Source),OTHER,0,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2018,36,NY,19,placeholder,Unnamed (name Missing In Source),OTHER,204,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2018,50,VT,00,surname,Gibbs,OTHER,1,NA,unmatched,NA
+2018,50,VT,00,surname,Morrisey,OTHER,1,NA,unmatched,NA
+2018,50,VT,00,surname,Others,OTHER,5,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2018,50,VT,00,surname,Unknown,OTHER,1,NA,unmatched,NA
+2020,16,ID,01,surname,Pro-Life,OTHER,7,NA,unmatched,NA
+2020,16,ID,02,surname,Pro-Life,OTHER,8573,Pro-Life,vote_total,wikipedia votes 8573
+2020,36,NY,22,surname,Abstain,OTHER,1,NA,unmatched,NA
+2020,36,NY,22,surname,Jesus,OTHER,1,NA,unmatched,NA
+2020,36,NY,22,surname,Katco,OTHER,1,NA,unmatched,NA
+2020,36,NY,22,surname,Neither,OTHER,2,NA,unmatched,NA
+2020,36,NY,22,surname,Stalin,OTHER,1,NA,unmatched,NA
+2020,48,TX,01,surname,Gilbert,DEM,83008,Hank Gilbert,surname,wikipedia party Democratic]]
+2020,48,TX,01,surname,Gohmert,REP,219716,Louie Gohmert,surname,wikipedia party Republican]]
+2020,48,TX,02,surname,Crenshaw,REP,192828,Dan Crenshaw,vote_total,wikipedia votes 192828
+2020,48,TX,02,surname,Ladjevardian,DEM,148374,Sima Ladjevardian,vote_total,wikipedia votes 148374
+2020,48,TX,02,surname,Scheirman,OTHER,5524,Elliott Scheirman,vote_total,wikipedia votes 5524
+2020,48,TX,03,surname,Claytor,OTHER,8621,Christopher Claytor,vote_total,wikipedia votes 8621
+2020,48,TX,03,surname,Seikaly,DEM,179458,Lulu Seikaly,vote_total,wikipedia votes 179458
+2020,48,TX,03,surname,Taylor,REP,230512,Van Taylor,vote_total,wikipedia votes 230512
+2020,48,TX,04,surname,Antonelli,OTHER,6327,Lou Antonelli,surname,wikipedia party Libertarian]]
+2020,48,TX,04,surname,Fallon,REP,253693,Pat Fallon,surname,wikipedia party Republican]]
+2020,48,TX,04,surname,Foster,DEM,76237,Russell Foster,surname,wikipedia party Democratic]]
+2020,48,TX,04,surname,Jones,OTHER,1616,Tracy Jones,surname,wikipedia party Independent]]
+2020,48,TX,05,surname,Gooden,REP,173836,Lance Gooden,vote_total,wikipedia votes 173836
+2020,48,TX,05,surname,Hale,OTHER,5834,Kevin Hale,vote_total,wikipedia votes 5834
+2020,48,TX,05,surname,Salter,DEM,100743,Carolyn Salter,vote_total,wikipedia votes 100743
+2020,48,TX,06,surname,Black,OTHER,10955,Melanie Black,vote_total,wikipedia votes 10955
+2020,48,TX,06,surname,Daniel,DEM,149530,Stephen Daniel,vote_total,wikipedia votes 149530
+2020,48,TX,06,surname,Wright,REP,179507,Ron Wright,vote_total,wikipedia votes 179507
+2020,48,TX,07,surname,Fletcher,DEM,159529,Lizzie Fletcher,vote_total,wikipedia votes 159529
+2020,48,TX,07,surname,Hunt,REP,149054,Wesley Hunt,vote_total,wikipedia votes 149054
+2020,48,TX,07,surname,Kelly,OTHER,5542,Shawn Kelly,vote_total,wikipedia votes 5542
+2020,48,TX,08,surname,Brady,REP,277327,Kevin Brady,vote_total,wikipedia votes 277327
+2020,48,TX,08,surname,Duncan,OTHER,7735,Chris Duncan,vote_total,wikipedia votes 7735
+2020,48,TX,08,surname,Hernandez,DEM,97408,Elizabeth Hernandez,surname,wikipedia party Democratic]]
+2020,48,TX,09,surname,Green,DEM,172938,Al Green,vote_total,wikipedia votes 172938
+2020,48,TX,09,surname,Sosa,OTHER,6594,Joe Sosa,vote_total,wikipedia votes 6594
+2020,48,TX,09,surname,Teague,REP,49575,Johnny Teague,vote_total,wikipedia votes 49575
+2020,48,TX,10,surname,Eriksen,OTHER,8992,Roy Eriksen,vote_total,wikipedia votes 8992
+2020,48,TX,10,surname,McCaul,REP,217179,Michael McCaul,surname,wikipedia party Republican]]
+2020,48,TX,10,surname,Siegel,DEM,187650,Mike Siegel,surname,wikipedia party Democratic]]
+2020,48,TX,11,surname,Cody,OTHER,5805,Wacey Alpha Cody,surname,wikipedia party Libertarian]]
+2020,48,TX,11,surname,Hogg,DEM,53400,Jon Mark Hogg,surname,wikipedia party Democratic]]
+2020,48,TX,11,surname,Pfluger,REP,232661,August Pfluger,surname,wikipedia party Republican]]
+2020,48,TX,12,surname,Granger,REP,233853,Kay Granger,vote_total,wikipedia votes 233853
+2020,48,TX,12,surname,Holcomb,OTHER,11918,Trey Holcomb,vote_total,wikipedia votes 11918
+2020,48,TX,12,surname,Welch,DEM,121250,Lisa Welch,vote_total,wikipedia votes 121250
+2020,48,TX,13,surname,Jackson,REP,217121,Ronny Jackson,surname,wikipedia party Republican]]
+2020,48,TX,13,surname,Trujillo,DEM,50475,Gus Trujillo,surname,wikipedia party Democratic]]
+2020,48,TX,13,surname,Westbrook,OTHER,5907,Jack B. Westbrook,vote_total,wikipedia votes 5907
+2020,48,TX,14,surname,Bell,DEM,118574,Adrienne Bell,vote_total,wikipedia votes 118574
+2020,48,TX,14,surname,Weber,REP,190541,Randy Weber,vote_total,wikipedia votes 190541
+2020,48,TX,15,surname,Gonzalez,DEM,115606,Vicente Gonzalez,surname,wikipedia party Democratic]]
+2020,48,TX,15,surname,Leone,OTHER,4295,Ross Lynn Leone,vote_total,wikipedia votes 4295
+2020,48,TX,16,surname,Armendariz-Jackson,REP,84006,Irene Armendariz-Jackson,vote_total,wikipedia votes 84006
+2020,48,TX,16,surname,Escobar,DEM,154108,Veronica Escobar,vote_total,wikipedia votes 154108
+2020,48,TX,17,surname,Brown,OTHER,9918,Ted Brown,vote_total,wikipedia votes 9918
+2020,48,TX,17,surname,Kennedy,DEM,125565,Rick Kennedy,vote_total,wikipedia votes 125565
+2020,48,TX,17,surname,Sessions,REP,171386,Pete Sessions,surname,wikipedia party Republican]]
+2020,48,TX,18,surname,Champion,REP,58033,Wendell Champion,vote_total,wikipedia votes 58033
+2020,48,TX,18,surname,Duncan,OTHER,3396,Vince Duncan,vote_total,wikipedia votes 3396
+2020,48,TX,18,surname,Spencer,OTHER,4514,Luke Spencer,vote_total,wikipedia votes 4514
+2020,48,TX,19,surname,Arrington,REP,198193,Jodey Arrington,surname,wikipedia party Republican]]
+2020,48,TX,19,surname,Burnes,OTHER,6271,Joe Burnes,vote_total,wikipedia votes 6271
+2020,48,TX,19,surname,Watson,DEM,60572,Tom Watson,surname,wikipedia party Democratic]]
+2020,48,TX,20,surname,Blunt,OTHER,6017,Jeffrey Blunt,vote_total,wikipedia votes 6017
+2020,48,TX,20,surname,Castro,DEM,175078,Joaquín Castro,vote_total,wikipedia votes 175078
+2020,48,TX,20,surname,Garza,REP,89628,Mauro Garza,vote_total,wikipedia votes 89628
+2020,48,TX,21,surname,Davis,DEM,205780,Wendy Davis,vote_total,wikipedia votes 205780
+2020,48,TX,21,surname,Dibianca,OTHER,8666,Arthur DiBlanca,vote_total,wikipedia votes 8666
+2020,48,TX,21,surname,Roy,REP,235741,Chip Roy,surname,wikipedia party Republican]]
+2020,48,TX,21,surname,Wakely,OTHER,3564,Tom Wakely,vote_total,wikipedia votes 3564
+2020,48,TX,22,surname,Kulkarni,DEM,181998,Sri Preston Kulkarni,vote_total,wikipedia votes 181998
+2020,48,TX,22,surname,Leblanc,OTHER,15791,Joseph LeBlanc Jr.,vote_total,wikipedia votes 15791
+2020,48,TX,22,surname,Nehls,REP,210259,Troy Nehls,vote_total,wikipedia votes 210259
+2020,48,TX,23,surname,Gonzales,REP,149398,Tony Gonzales,surname,wikipedia party Republican]]
+2020,48,TX,23,surname,Villela,OTHER,8371,Beto Villela,surname,wikipedia party Libertarian]]
+2020,48,TX,24,surname,Bauer,OTHER,2909,Mark Bauer,vote_total,wikipedia votes 2909
+2020,48,TX,24,surname,Hamilton,OTHER,5647,Darren Hamilton,vote_total,wikipedia votes 5647
+2020,48,TX,24,surname,Kuzmich,OTHER,4229,Steve Kuzmich,vote_total,wikipedia votes 4229
+2020,48,TX,24,surname,Valenzuela,DEM,163326,Candace Valenzuela,vote_total,wikipedia votes 163326
+2020,48,TX,24,surname,Vanduyne,REP,167910,Beth Van Duyne,vote_total,wikipedia votes 167910
+2020,48,TX,25,surname,Kelsey,OTHER,7728,Bill Kelsey,surname,wikipedia party Libertarian]]
+2020,48,TX,25,surname,Oliver,DEM,165676,Julie Oliver,surname,wikipedia party Democratic]]
+2020,48,TX,25,surname,Williams,REP,220009,Roger Williams,surname,wikipedia party Republican]]
+2020,48,TX,26,surname,Boler,OTHER,9243,Mark Boler,vote_total,wikipedia votes 9243
+2020,48,TX,26,surname,Burgess,REP,261963,Michael C. Burgess,vote_total,wikipedia votes 261963
+2020,48,TX,26,surname,Iannuzzi,DEM,161009,Carol Iannuzzi,vote_total,wikipedia votes 161009
+2020,48,TX,27,surname,Cloud,REP,172305,Michael Cloud,vote_total,wikipedia votes 172305
+2020,48,TX,27,surname,Gray,OTHER,5482,Phil Gray,vote_total,wikipedia votes 5482
+2020,48,TX,28,surname,Congdon,OTHER,6426,Bekah Congdon,surname,wikipedia party Libertarian]]
+2020,48,TX,28,surname,Cuellar,DEM,137492,Henry Cuellar,surname,wikipedia party Democratic]]
+2020,48,TX,28,surname,Whitten,REP,91910,Sandra Whitten,surname,wikipedia party Republican]]
+2020,48,TX,29,surname,Blanco,REP,42840,Jaimy Z. Blanco,vote_total,wikipedia votes 42840
+2020,48,TX,29,surname,Garcia,DEM,111305,Sylvia Garcia,vote_total,wikipedia votes 111305
+2020,48,TX,29,surname,Kurtz,OTHER,2328,Phil Kurtz,vote_total,wikipedia votes 2328
+2020,48,TX,30,surname,Pennie,REP,48685,Tre Pennie,vote_total,wikipedia votes 48685
+2020,48,TX,30,surname,Williams,OTHER,10851,Eric Williams,vote_total,wikipedia votes 10851
+2020,48,TX,31,surname,Carter,REP,211464,John Carter,surname,wikipedia party Republican]]
+2020,48,TX,31,surname,Imam,DEM,174981,Donna Imam,surname,wikipedia party Democratic]]
+2020,48,TX,31,surname,Patterson,OTHER,8857,Clark Patterson,surname,wikipedia party Libertarian]]
+2020,48,TX,32,surname,Allred,DEM,178542,Colin Allred,vote_total,wikipedia votes 178542
+2020,48,TX,32,surname,Collins,REP,157867,Genevieve Collins,vote_total,wikipedia votes 157867
+2020,48,TX,32,surname,Sigmon,OTHER,2332,Jason Sigmon,vote_total,wikipedia votes 2332
+2020,48,TX,33,surname,Quintanilla,OTHER,8071,Carlos Quintanilla,vote_total,wikipedia votes 8071
+2020,48,TX,33,surname,Reeves,OTHER,2586,Jason Reeves,vote_total,wikipedia votes 2586
+2020,48,TX,33,surname,Veasey,DEM,105317,Marc Veasey,vote_total,wikipedia votes 105317
+2020,48,TX,33,surname,Welton,OTHER,1994,Rene Welton,vote_total,wikipedia votes 1994
+2020,48,TX,34,surname,Cristo,OTHER,3225,Anthony Cristo,surname,wikipedia party Libertarian]]
+2020,48,TX,34,surname,Gonzalez,REP,84170,Rey Gonzalez,surname,wikipedia party Republican]]
+2020,48,TX,34,surname,Royal,OTHER,2247,Chris Royal,surname,wikipedia party Independent]]
+2020,48,TX,34,surname,Vela,DEM,111488,Filemon Vela,surname,wikipedia party Democratic]]
+2020,48,TX,35,surname,Doggett,DEM,176373,Lloyd Doggett,vote_total,wikipedia votes 176373
+2020,48,TX,35,surname,Loewe,OTHER,7393,Mark Loewe,vote_total,wikipedia votes 7393
+2020,48,TX,35,surname,Mata,OTHER,5236,Jason Mata,vote_total,wikipedia votes 5236
+2020,48,TX,36,surname,Abbey,OTHER,4848,Chad Abbey,vote_total,wikipedia votes 4848
+2020,48,TX,36,surname,Babin,REP,222712,Brian Babin,vote_total,wikipedia votes 222712
+2020,48,TX,36,surname,Lewis,DEM,73410,Rashad Lewis,surname,wikipedia party Democratic]]
+2020,48,TX,36,surname,Ridley,OTHER,1571,Hal Ridley Jr.,vote_total,wikipedia votes 1571
+2020,50,VT,00,surname,Fic,OTHER,4,NA,unmatched,NA
+2020,50,VT,00,surname,Gaffey,OTHER,1,NA,unmatched,NA
+2020,50,VT,00,surname,Others,OTHER,12,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2020,50,VT,00,surname,Stephanie,OTHER,1,NA,unmatched,NA
+2020,50,VT,00,surname,Sven,OTHER,1,NA,unmatched,NA
+2020,50,VT,00,surname,Taylor,OTHER,1,NA,unmatched,NA
+2022,23,ME,01,surname,Others,OTHER,159,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2022,26,MI,01,placeholder,Unnamed (name Missing In Source),OTHER,7,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2022,26,MI,02,placeholder,Unnamed (name Missing In Source),OTHER,66,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2022,26,MI,02,surname,Unresolved,OTHER,0,NA,unmatched,NA
+2022,26,MI,03,surname,Unresolved,OTHER,0,NA,unmatched,NA
+2022,26,MI,04,placeholder,Unnamed (name Missing In Source),OTHER,38,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2022,26,MI,04,surname,Unresolved,OTHER,0,NA,unmatched,NA
+2022,26,MI,05,placeholder,Unnamed (name Missing In Source),OTHER,125,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2022,26,MI,07,placeholder,Unnamed (name Missing In Source),OTHER,42,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2022,26,MI,08,placeholder,Unnamed (name Missing In Source),OTHER,66,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2022,26,MI,09,placeholder,Unnamed (name Missing In Source),OTHER,39,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2022,48,TX,01,surname,Jefferson,DEM,51434,Jrmar Jefferson,surname,wikipedia party Democratic
+2022,48,TX,01,surname,Moran,REP,183217,Nathaniel Moran,surname,wikipedia party Republican
+2022,48,TX,02,surname,Crenshaw,REP,151791,Dan Crenshaw,surname,wikipedia party Republican
+2022,48,TX,02,surname,Fulford,DEM,78496,Robin Fulford,surname,wikipedia party Democratic
+2022,48,TX,03,surname,Claytor,OTHER,6895,Christopher J. Claytor,surname,wikipedia party Libertarian
+2022,48,TX,03,surname,Self,REP,164240,Keith Self,surname,wikipedia party Republican
+2022,48,TX,03,surname,Srivastava,DEM,100121,Sandeep Srivastava,surname,wikipedia party Democratic
+2022,48,TX,04,surname,Fallon,REP,170821,Pat Fallon,surname,wikipedia party Republican
+2022,48,TX,04,surname,Omere,DEM,79186,Iro Omere,surname,wikipedia party Democratic
+2022,48,TX,04,surname,Simmons,OTHER,6052,John Simmons,surname,wikipedia party Libertarian
+2022,48,TX,05,surname,Gooden,REP,135578,Lance Gooden,surname,wikipedia party Republican
+2022,48,TX,05,surname,Hale,OTHER,4288,Kevin Hale,surname,wikipedia party Libertarian
+2022,48,TX,05,surname,Hill,DEM,71906,Tartisha Hill,surname,wikipedia party Democratic
+2022,48,TX,05,surname,Torres,OTHER,317,NA,unmatched,NA
+2022,48,TX,06,surname,Ellzey,REP,149318,Jake Ellzey,page_text,'Jake Ellzey' appears 11 times on the page
+2022,48,TX,07,surname,Fletcher,DEM,115994,Lizzie Fletcher,surname,wikipedia party Democratic
+2022,48,TX,07,surname,Teague,REP,65835,Johnny Teague,surname,wikipedia party Republican
+2022,48,TX,08,surname,Eriksen,OTHER,3126,Roy Eriksen,surname,wikipedia party Libertarian
+2022,48,TX,08,surname,Jones,DEM,68715,Laura Jones,surname,wikipedia party Democratic
+2022,48,TX,08,surname,Luttrell,REP,153127,Morgan Luttrell,surname,wikipedia party Republican
+2022,48,TX,09,surname,Green,DEM,125446,Al Green,surname,wikipedia party Democratic
+2022,48,TX,09,surname,Leon,REP,38161,Jimmy Leon,surname,wikipedia party Republican
+2022,48,TX,10,surname,Kelsey,OTHER,6066,Bill Kelsey,surname,wikipedia party Libertarian
+2022,48,TX,10,surname,McCaul,REP,159580,Michael McCaul,surname,wikipedia party Republican
+2022,48,TX,10,surname,Nuno,DEM,86500,Linda Nuno,surname,wikipedia party Democratic
+2022,48,TX,11,surname,Pfluger,REP,145318,August Pfluger,page_text,'August Pfluger' appears 11 times on the page
+2022,48,TX,12,surname,Granger,REP,152953,Kay Granger,surname,wikipedia party Republican
+2022,48,TX,12,surname,Hunt,DEM,85026,Trey Hunt,surname,wikipedia party Democratic
+2022,48,TX,13,surname,Brown,DEM,52910,Kathleen Brown,surname,wikipedia party Democratic
+2022,48,TX,13,surname,Jackson,REP,161766,Ronny Jackson,surname,wikipedia party Republican
+2022,48,TX,14,surname,Weber,REP,149537,Randy Weber,surname,wikipedia party Republican
+2022,48,TX,14,surname,Williams,DEM,68606,Mikal Williams,surname,wikipedia party Democratic
+2022,48,TX,15,surname,Leone,OTHER,2814,Ross Lynn Leone,surname,wikipedia party Libertarian
+2022,48,TX,15,surname,Vallejo,DEM,68097,Michelle Vallejo,surname,wikipedia party Democratic
+2022,48,TX,16,surname,Armendariz-Jackson,REP,54986,Irene Armendariz-Jackson,surname,wikipedia party Republican
+2022,48,TX,16,surname,Escobar,DEM,95510,Veronica Escobar,surname,wikipedia party Democratic
+2022,48,TX,17,surname,Sessions,REP,144416,Pete Sessions,surname,wikipedia party Republican
+2022,48,TX,17,surname,Woods,DEM,72830,Mary Jo Woods,surname,wikipedia party Democratic
+2022,48,TX,18,surname,Duncan,OTHER,2765,NA,unmatched,NA
+2022,48,TX,18,surname,Kurtz,OTHER,2050,NA,unmatched,NA
+2022,48,TX,18,surname,Montiel,REP,40931,Carmen María Montiel,surname,wikipedia party Republican
+2022,48,TX,19,surname,Arrington,REP,152265,Jodey Arrington,surname,wikipedia party Republican
+2022,48,TX,19,surname,Lewis,OTHER,37351,Nathan Lewis,surname,wikipedia party Independent
+2022,48,TX,20,surname,Castro,DEM,115352,Joaquin Castro,surname,wikipedia party Democratic
+2022,48,TX,20,surname,Jonasz,OTHER,143,NA,unmatched,NA
+2022,48,TX,20,surname,Sinclair,REP,53226,Kyle Sinclair,surname,wikipedia party Republican
+2022,48,TX,21,surname,Roy,REP,207405,Chip Roy,surname,wikipedia party Republican
+2022,48,TX,21,surname,Zapata,DEM,122676,Claudia Zapata,surname,wikipedia party Democratic
+2022,48,TX,22,surname,Jordan,DEM,85653,Jamie Jordan,surname,wikipedia party Democratic
+2022,48,TX,22,surname,Leblanc,OTHER,5378,Joseph LeBlanc Jr.,surname,wikipedia party Libertarian
+2022,48,TX,22,surname,Nehls,REP,150014,Troy Nehls,surname,wikipedia party Republican
+2022,48,TX,22,surname,Squires,OTHER,246,NA,unmatched,NA
+2022,48,TX,23,surname,Gonzales,REP,116707,Tony Gonzales,surname,wikipedia party Republican
+2022,48,TX,23,surname,Lira,DEM,80922,John Lira,surname,wikipedia party Democratic
+2022,48,TX,23,surname,Lopez,OTHER,11177,Frank Lopez,surname,wikipedia party Independent
+2022,48,TX,24,surname,McDowell,DEM,119878,Jan McDowell,surname,wikipedia party Democratic
+2022,48,TX,25,surname,Williams,REP,185270,Mikal Williams,surname_statewide,only candidate with this surname in the state-year
+2022,48,TX,26,surname,Burgess,REP,183638,Michael C. Burgess,surname,wikipedia party Republican
+2022,48,TX,26,surname,Kolls,OTHER,81383,Mike Kolls,surname,wikipedia party Libertarian
+2022,48,TX,27,surname,Cloud,REP,133416,Michael Cloud,surname,wikipedia party Republican
+2022,48,TX,27,surname,Perez,DEM,73611,Maclovio Pérez,surname,wikipedia party Democratic
+2022,48,TX,28,surname,Cuellar,DEM,93803,Henry Cuellar,surname,wikipedia party Democratic
+2022,48,TX,28,surname,Garcia,REP,71778,Cassy Garcia,surname,wikipedia party Republican
+2022,48,TX,29,surname,Garcia,DEM,71837,Sylvia Garcia,surname,wikipedia party Democratic
+2022,48,TX,29,surname,Schafranek,REP,28765,Robert Schafranek,surname,wikipedia party Republican
+2022,48,TX,30,surname,Crockett,DEM,134876,Jasmine Crockett,surname,wikipedia party Democratic
+2022,48,TX,30,surname,Gray,OTHER,1870,Phil Gray,surname,wikipedia party Libertarian
+2022,48,TX,30,surname,Manning,OTHER,3820,Zachariah Manning,surname,wikipedia party Independent
+2022,48,TX,30,surname,Rodgers,REP,39209,James Rodgers,surname,wikipedia party Republican
+2022,48,TX,30,surname,Walker,OTHER,738,NA,unmatched,NA
+2022,48,TX,31,surname,Carter,REP,183180,John Carter,page_text,'John Carter' appears 10 times on the page
+2022,48,TX,32,surname,Allred,DEM,115998,Colin Allred,surname,wikipedia party Democratic
+2022,48,TX,32,surname,Swad,REP,61492,Antonio Swad,surname,wikipedia party Republican
+2022,48,TX,33,surname,Ashby,OTHER,2746,Ken Ashby,surname,wikipedia party Libertarian
+2022,48,TX,33,surname,Gillespie,REP,29203,Patrick Gillespie,surname,wikipedia party Republican
+2022,48,TX,33,surname,Veasey,DEM,82081,Marc Veasey,surname,wikipedia party Democratic
+2022,48,TX,34,surname,Flores,REP,59464,Mayra Flores,surname,wikipedia party Republican
+2022,48,TX,34,surname,Gonzalez,DEM,70895,Vicente Gonzalez,surname,wikipedia party Democratic
+2022,48,TX,34,surname,Royal,OTHER,4079,Chris Royal,surname,wikipedia party Independent
+2022,48,TX,35,surname,Casar,DEM,129808,Greg Casar,surname,wikipedia party Democratic
+2022,48,TX,35,surname,McQueen,REP,48995,Dan McQueen,surname,wikipedia party Republican
+2022,48,TX,36,surname,Babin,REP,145559,Brian Babin,surname,wikipedia party Republican
+2022,48,TX,36,surname,Haire,DEM,64000,Jon Haire,surname,wikipedia party Democratic
+2022,48,TX,37,surname,Doggett,DEM,220075,Lloyd Doggett,surname,wikipedia party Democratic
+2022,48,TX,37,surname,Patterson,OTHER,6352,Clark Patterson,surname,wikipedia party Libertarian
+2022,48,TX,37,surname,Taylor,OTHER,180,Van Taylor,page_text,'Van Taylor' appears 8 times on the page
+2022,48,TX,38,surname,Dejean,OTHER,3970,Joel Dejean,surname,wikipedia party Independent
+2022,48,TX,38,surname,Hunt,REP,163597,Wesley Hunt,surname,wikipedia party Republican
+2022,48,TX,38,surname,Klussmann,DEM,92302,Duncan Klussmann,surname,wikipedia party Democratic
+2022,50,VT,00,surname,Fictional,OTHER,2,NA,unmatched,NA
+2022,50,VT,00,surname,Gray,OTHER,1,NA,unmatched,NA
+2022,50,VT,00,surname,Me,OTHER,1,NA,unmatched,NA
+2022,50,VT,00,surname,Notz,OTHER,1,NA,unmatched,NA
+2022,50,VT,00,surname,Others,OTHER,14,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2022,50,VT,00,surname,Ramsey,OTHER,1,NA,unmatched,NA
+2022,50,VT,00,surname,Thers,OTHER,16,NA,unmatched,NA
+2022,50,VT,00,surname,Unknown,OTHER,3,NA,unmatched,NA
+2024,19,IA,01,placeholder,Unnamed (name Missing In Source),OTHER,967,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2024,19,IA,02,placeholder,Unnamed (name Missing In Source),OTHER,341,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2024,19,IA,03,placeholder,Unnamed (name Missing In Source),OTHER,1197,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2024,19,IA,04,placeholder,Unnamed (name Missing In Source),OTHER,1127,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2024,23,ME,02,surname,Others,OTHER,410,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
+2024,34,NJ,02,surname,Salerno,DEM,1,Joe Salerno,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,01,surname,Moran,REP,258504,Nathaniel Moran,surname,wikipedia party Republican Party (United States)
+2024,48,TX,02,surname,Crenshaw,REP,214631,Dan Crenshaw,vote_total,wikipedia votes 214631
+2024,48,TX,02,surname,Filler,DEM,112252,Peter Filler,vote_total,wikipedia votes 112252
+2024,48,TX,03,surname,Self,REP,237794,Keith Self,vote_total,wikipedia votes 237794
+2024,48,TX,03,surname,Srivastava,DEM,142953,Sandeep Srivastava,vote_total,wikipedia votes 142953
+2024,48,TX,04,surname,Cardell,DEM,111696,Simon Cardell,vote_total,wikipedia votes 111696
+2024,48,TX,04,surname,Fallon,REP,241603,Pat Fallon,vote_total,wikipedia votes 241603
+2024,48,TX,05,surname,Gooden,REP,192185,Lance Gooden,vote_total,wikipedia votes 192185
+2024,48,TX,05,surname,Torres,DEM,107712,Ruth Torres,vote_total,wikipedia votes 107712
+2024,48,TX,06,surname,Ellzey,REP,188121,Jake Ellzey,surname,wikipedia party Republican Party (United States)
+2024,48,TX,06,surname,Love,DEM,98321,John Love III,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,07,surname,Fletcher,DEM,149820,Lizzie Fletcher,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,07,surname,Kane,REP,94651,Caroline Kane,surname,wikipedia party Republican Party (United States)
+2024,48,TX,08,surname,Jones,DEM,108754,Laura Jones,vote_total,wikipedia votes 108754
+2024,48,TX,08,surname,Luttrell,REP,233423,Morgan Luttrell,vote_total,wikipedia votes 233423
+2024,48,TX,09,surname,Green,DEM,184141,Al Green,vote_total,wikipedia votes 184141
+2024,48,TX,10,surname,Boisseau,DEM,118278,Theresa Boisseau,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,10,surname,McCaul,REP,221226,Michael McCaul,surname,wikipedia party Republican Party (United States)
+2024,48,TX,10,surname,Miller,OTHER,8309,NA,unmatched,NA
+2024,48,TX,11,surname,Pfluger,REP,212016,August Pfluger,surname,wikipedia party Republican Party (United States)
+2024,48,TX,12,surname,Goldman,REP,215564,Craig Goldman,surname,wikipedia party Republican Party (United States)
+2024,48,TX,12,surname,Hunt,DEM,124154,Trey Hunt,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,13,surname,Jackson,REP,240619,Ronny Jackson,surname,wikipedia party Republican Party (United States)
+2024,48,TX,14,surname,Hart,DEM,95875,Rhonda Hart,vote_total,wikipedia votes 95875
+2024,48,TX,14,surname,Weber,REP,210320,Randy Weber,vote_total,wikipedia votes 210320
+2024,48,TX,15,surname,Vallejo,DEM,95965,Michelle Vallejo,vote_total,wikipedia votes 95965
+2024,48,TX,16,surname,Escobar,DEM,131391,Veronica Escobar,vote_total,wikipedia votes 131391
+2024,48,TX,16,surname,Montanez,REP,377,NA,unmatched,NA
+2024,48,TX,17,surname,Lorenzen,DEM,97936,Mark Lorenzen,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,17,surname,Sessions,REP,193095,Pete Sessions,surname,wikipedia party Republican Party (United States)
+2024,48,TX,19,surname,Arrington,REP,215039,Jodey Arrington,surname,wikipedia party Republican Party (United States)
+2024,48,TX,19,surname,Johnson,OTHER,23962,Bernard Johnson,surname,wikipedia party Libertarian Party (United States)
+2024,48,TX,19,surname,Lewis,OTHER,27461,Nathan Lewis,surname,wikipedia party Independent
+2024,48,TX,20,surname,Castro,DEM,157890,Joaquin Castro,vote_total,wikipedia votes 157890
+2024,48,TX,21,surname,Hook,DEM,153764,Kristin Hook,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,21,surname,King,OTHER,8914,Bob King,vote_total,wikipedia votes 8914
+2024,48,TX,21,surname,Roy,REP,263744,Chip Roy,vote_total,wikipedia votes 263744
+2024,48,TX,22,surname,Nehls,REP,209285,Troy Nehls,vote_total,wikipedia votes 209285
+2024,48,TX,23,surname,Gonzales,REP,180702,Tony Gonzales,surname,wikipedia party Republican Party (United States)
+2024,48,TX,23,surname,Limon,DEM,109357,Santos Limon,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,24,surname,Eppler,DEM,149518,Sam Eppler,vote_total,wikipedia votes 149518
+2024,48,TX,25,surname,Hagg,OTHER,2959,NA,unmatched,NA
+2024,48,TX,25,surname,Williams,REP,263033,Roger Williams,surname,wikipedia party Republican Party (United States)
+2024,48,TX,26,surname,Gill,REP,241096,Brandon Gill,vote_total,wikipedia votes 241096
+2024,48,TX,26,surname,Gray,OTHER,8773,Phil Gray,vote_total,wikipedia votes 8773
+2024,48,TX,26,surname,Lineberger,DEM,138558,Ernest Lineberger,vote_total,wikipedia votes 138558
+2024,48,TX,27,surname,Cloud,REP,183970,Michael Cloud,surname,wikipedia party Republican Party (United States)
+2024,48,TX,27,surname,Lloyd,DEM,94595,Tanya Lloyd,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,28,surname,Cuellar,DEM,125525,Henry Cuellar,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,28,surname,Furman,REP,112123,Jay Furman,surname,wikipedia party Republican Party (United States)
+2024,48,TX,29,surname,Garcia,DEM,99379,Sylvia Garcia,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,29,surname,Garza,REP,52830,Alan Garza,surname,wikipedia party Republican Party (United States)
+2024,48,TX,30,surname,Crockett,DEM,197650,Jasmine Crockett,vote_total,wikipedia votes 197650
+2024,48,TX,30,surname,Jefferson,OTHER,35175,Jrmar Jefferson,vote_total,wikipedia votes 35175
+2024,48,TX,31,surname,Carter,REP,229087,John Carter,surname,wikipedia party Republican Party (United States)
+2024,48,TX,31,surname,Whitlow,DEM,126470,Stuart Whitlow,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,32,surname,Day,REP,85941,Darrell Day,vote_total,wikipedia votes 85941
+2024,48,TX,32,surname,Hale,OTHER,5987,Kevin Hale,vote_total,wikipedia votes 5987
+2024,48,TX,32,surname,Johnson,DEM,140536,Julie Johnson,vote_total,wikipedia votes 140536
+2024,48,TX,33,surname,Gillespie,REP,51864,Patrick Gillespie,surname,wikipedia party Republican Party (United States)
+2024,48,TX,33,surname,Veasey,DEM,114289,Marc Veasey,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,34,surname,Flores,REP,97606,Mayra Flores,surname,wikipedia party Republican Party (United States)
+2024,48,TX,34,surname,Gonzalez,DEM,102786,Vicente Gonzalez,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,35,surname,Casar,DEM,170508,Greg Casar,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,35,surname,Wright,REP,82608,Steven Wright,surname,wikipedia party Republican Party (United States)
+2024,48,TX,36,surname,Babin,REP,206020,Brian Babin,surname,wikipedia party Republican Party (United States)
+2024,48,TX,36,surname,Steele,DEM,91006,Dayna Steele,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,37,surname,Altekar,OTHER,7511,Girish Altekar,vote_total,wikipedia votes 7511
+2024,48,TX,37,surname,Doggett,DEM,252970,Lloyd Doggett,surname,wikipedia party Democratic Party (United States)
+2024,48,TX,38,surname,Ayers,OTHER,94,Write-ins,vote_total,wikipedia votes 94
+2024,48,TX,38,surname,Hunt,REP,215030,Wesley Hunt,vote_total,wikipedia votes 215030
+2024,48,TX,38,surname,McDonough,DEM,127640,Melissa McDonough,vote_total,wikipedia votes 127640

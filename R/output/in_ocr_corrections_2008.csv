@@ -1,0 +1,3 @@
+district,county,candidate,ocr_value,corrected_value,how_verified
+all,all,all,"none needed","none","IN_2008.pdf pp.66-67 were read from 200-dpi images (no OCR digits were used); all 24 candidate lines tied to the printed candidate totals on the first reading. 100-dpi OCR was used only to locate the section"
+07,Marion,Delbert Suits,"party printed (W-R)","Write-In (Republican) [OTHER group]","printed party code W-R = write-in Republican candidate with 4 votes; kept as a named write-in, not counted in the Republican group"

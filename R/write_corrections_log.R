@@ -1,0 +1,486 @@
+## Hand-maintained log of every data error found in the election panel and how it was handled.
+## Output: R/output/data_corrections_log.csv. Re-run this script after adding a row below.
+## Companion to build_provenance.R: every panel row that build_provenance.R reports as "modified" should
+## be explainable by an entry here. Only counts that were actually measured are given; the rest are
+## marked "not quantified". status: fixed = code/panel corrected in place; replaced = source swapped;
+## flagged = known problem, not changed.
+
+library(tibble)
+OUTPUT_DIR <- "R/output"
+
+L <- tribble(
+~source_affected, ~state, ~years, ~sample, ~issue, ~evidence, ~action, ~status, ~rows_affected, ~where_fixed, ~date,
+
+"MEDSL", "MN", "2016;2020;2022", "HE",
+"Democratic-Farmer-Labor party not classified as Democrat: demovote = 0 for every county (2020/2022 party_simplified = OTHER; 2016 exact-string match failed on 'Democratic-Farmer-Labor')",
+"party_detailed = DEMOCRATIC FARMER LABOR but party_simplified = OTHER for all MN rows in 2020 and 2022; statewide D share was 0",
+"Added DFL-pattern override in 01a; recomputed MN 2016/2020/2022 HE rows from raw precinct files and replaced them in the panel",
+"fixed", "261 (87 counties x 3 years)", "R/data_creation/01a_election_data_medsl.R; panel patched in place", "2026-09 (approx)",
+
+"MEDSL", "OR;VT", "2016", "HE;SE",
+"Fusion / bare-word party strings (e.g. Democratic + Working Families) failed an exact-match classifier, zeroing demovote and partly repuvote",
+"Found while cross-checking the Oregon build against the panel; both House and Senate 2016 affected",
+"Replaced exact match with substring match on the democrat/republican token in the 2016 classifier; panel rows patched. Small residual imprecision accepted for Multnomah/Clackamas",
+"fixed", "50 HE (OR 36, VT 14) + 1 SE (OR)", "R/data_creation/01a_election_data_medsl.R; panel patched in place", "2026-09-18",
+
+"MEDSL", "ME", "2018", "HE",
+"Only 6 of 16 counties present, and only their District 1 portions (District 2 Golden/Poliquin race missing entirely); OpenElections 2018 has the same gap",
+"MEDSL Kennebec 34,196 vs OpenElections CD1-only 33,403; SOS CD1+CD2 tie to printed totals",
+"Replaced with Maine SOS town/ward files (CD1 + CD2 first-round votes)",
+"replaced", "6 rows replaced by 16", "R/data_creation/01bq_house_county_maine_2018.R", "2026-09-19",
+
+"MEDSL", "LA", "2024", "HE",
+"Raw MEDSL file carries only about half of Louisiana House votes",
+"house_2024.raw LA total 957,388 vs SOS 1,905,718 and presidential 2,006,975; Mike Johnson 137,756 vs SOS LA-4 total 306,248; SOS matches MEDSL exactly in 2016-2022",
+"Replaced with Louisiana SOS parish-level results (first-round, Nov 5 2024)",
+"replaced", "64 rows", "R/data_creation/01bx_house_county_louisiana_sos.R -> elect_he_cty_la_sos_2024.rds", "2026-09-20",
+
+"OpenElections", "LA", "2004", "HE",
+"Repo file 20041204__la__general.csv is misdated: it holds the 2014 Dec-6 runoffs (Abraham/Mayo, Graves/Edwards), not the real 2004 runoffs",
+"Candidate names belong to 2014; real Dec-4-2004 runoffs were Melancon/Tauzin III (LA-3) and Boustany/Mount (LA-7)",
+"Removed all 140 OpenElections-based LA rows (2002-2014, coverage 3-56%) and replaced with SOS build; 01ae marked SUPERSEDED",
+"replaced", "35 mislabeled 2004 rows (140 old rows replaced by 714 new)", "R/data_creation/01bw_louisiana_results_download.R; 01bx_house_county_louisiana_sos.R", "2026-09-20",
+
+"panel (stale)", "NY", "2000;2012;2014", "HE",
+"Panel held pre-fix rows: totalvote doubled by uncaught Total / Ballots Cast pseudo-rows, shares halved (two-party sum ~0.3-0.45). The NY script fix reached elect_he_cty_ny.rds but not the panel",
+"Found by provenance check: panel totalvote = ~2x source; source/presidential ratio 1.01 (2000) vs panel 2.02",
+"Replaced panel rows with the corrected elect_he_cty_ny.rds rows",
+"fixed", "132 (62 + 8 + 62)", "elect_cty_final.rds (re-synced to source)", "2026-09-20",
+
+"panel (stale)", "KY", "1990", "HE",
+"Letcher County row missing 138 District-5 votes (older parse, before the uncontested-district fix)",
+"Raw 1990 file: 138 (CD5) + 2,245 + 2,653 (CD7) = 5,036 = source; panel had 4,898",
+"Replaced panel row with elect_he_cty_ky.rds row",
+"fixed", "1", "elect_cty_final.rds (re-synced to source)", "2026-09-20",
+
+"OpenElections", "NY", "2012", "HE",
+"Raw 2012 precinct data appears doubled in some counties: candidate rows sum to ~2x the county presidential total. Shares are unaffected, totalvote is ~2x too high",
+"totalvote / presidential total = 2.01-2.02 for 36003, 36051, 36073, 36097, 36101 and 2.81 for 36079 (Allegany raw: Reed + Shinagawa + blanks = 34,146 vs presidential 16,953); the other 50 counties sit near 1",
+"Not fixed; needs a look at the raw file for these counties",
+"flagged", "6 counties (totalvote only)", "elect_he_cty_ny.rds (01o_house_county_new_york.R)", "2026-09-20",
+
+"MEDSL", "KY", "2016", "HE",
+"Winning candidate's party recorded as OTHER for uncontested races",
+"Clay County 2016: Hal Rogers unopposed, only party row is OTHER",
+"Not fixed; the KY-PDF-sourced pre-2016 data is unaffected",
+"flagged", "26 counties have neither major-party share (one_party flag; upper bound)", "n/a", "2026-09-20",
+
+"MEDSL", "AL", "2016", "HE",
+"Totals looked internally inflated (statewide ~3.04M vs ~1.89M plausible)",
+"Same cause as the AL;SC;AR;IN entry: 1.16M straight-party votes counted as House votes",
+"Fixed by the office filter (see the AL;SC;AR;IN;KY;DC entry)",
+"fixed", "67 counties", "R/data_creation/01cg_medsl_office_filter_apply.R", "2026-09-20",
+
+"MEDSL", "TX", "2016", "HE",
+"Source coverage only 97.2%",
+"Harris County +0.9pp vs the more complete OpenElections build",
+"Not overridden",
+"flagged", "not quantified", "n/a", "2026-09 (approx)",
+
+"MEDSL", "IN", "2018;2020;2022", "HE",
+"Only 55%, 58% and 41% of Indiana counties present",
+"Coverage tracker: 0.554 / 0.576 / 0.413",
+"Not investigated yet",
+"flagged", "not quantified", "n/a", "2026-09-20",
+
+"MEDSL", "all", "2016;2018;2020;2022;2024", "HE;SE",
+"Non-candidate rows (UNDERVOTES, OVERVOTES, BLANKS, VOIDS, CONTEST TOTAL, TOTAL VOTES CAST, CAST VOTES, BALLOTS CAST) were counted in totalvote by 01a, inflating totals and diluting every share (repuvote = R / total). (This was the 2018 'blank ballots' suspicion.)",
+"49 state-years had >0.5% of votes in such rows (up to ~50% in some 2024 states). After exclusion, MEDSL House/Senate totals are 0.97-0.99 of the presidential total in the median (2020 and 2024 95th percentile 1.00)",
+"Exclusion implemented in 01a (exclude_pseudo, default on) and applied to ALL MEDSL-sourced House/Senate rows (decision 2026-09-20); MEDSL source files refreshed",
+"fixed", "3,081 rows changed in 99 state-years (worst: IN 2018 mean |R share| change 0.34, MI 2022 0.13, VT 2024 0.18)", "R/data_creation/01a_election_data_medsl.R; 01ce_medsl_pseudo_special_apply.R; R/output/medsl_final_changes.csv", "2026-09-20",
+
+"MEDSL", "ME", "2004", "PE",
+"Cumberland County 2004 presidential total is 1.15x the House total (statewide House shares match Wikipedia)",
+"Reported by the Maine 1990-2014 build fork",
+"Not investigated",
+"flagged", "1 county-year", "n/a", "2026-09-19",
+
+"MEDSL", "ND", "2020;2022", "HE;SE",
+"Democratic-NPL party mapped to OTHER by MEDSL's party_simplified (same class of bug as Minnesota DFL): demovote = 0 in every county",
+"Raw house_2020.raw: DEMOCRATIC-NPL / OTHER, 97,970 votes; ND Senate 2022 has the same string. (ND House 2022 is different: no Democrat ran, the challenger was an independent)",
+"Substring fallback on party_detailed added to 01a (party_fallback); recomputed from raw and patched into the panel",
+"fixed", "53 HE (2020) + 53 SE (2022)", "R/data_creation/01a_election_data_medsl.R; 01ca_medsl_fixes_apply.R", "2026-09-20",
+
+"MEDSL", "NJ", "2024", "HE;SE",
+"Blank and NONPARTISAN party labels swamp the D/R classification, and pseudo-rows (CONTEST TOTAL, TOTAL VOTES CAST, UNDERVOTES...) inflate totals up to 3x; several whole districts have no labelled row at all",
+"Raw house_2024.raw NJ: 2,107,698 votes with blank party, 504,619 NONPARTISAN; panel mean demovote 0.22, repuvote 0.23 and Camden total 741,611 vs 237,171 after the fix. After the fix statewide weighted House shares D 0.528 / R 0.449 (certified ~0.53 / 0.44)",
+"Fixed in 01a: pseudo-row exclusion, copy party from the same candidate's labelled rows, candidate->party overrides from Wikipedia nominees for wholly blank districts (candidate_party_overrides.csv), candidate-level party; patched into the panel",
+"fixed", "12 HE + 9 SE rows changed (other counties were already fine)", "R/data_creation/01a_election_data_medsl.R; 01cb_candidate_party_overrides.R; 01ca_medsl_fixes_apply.R", "2026-09-20",
+
+"MEDSL", "OR", "2024", "HE",
+"Blank party labels, fusion strings ('DEMOCRAT / INDEPENDENT', 'DEMOCRAT / PROGRESSIVE') classified as OTHER, pseudo-rows in totals, and misaligned labels in Harney County (Dan Ruby labelled LIBERTARIAN, Michael Stettler labelled DEMOCRAT)",
+"Raw house_2024.raw OR: 976,021 votes with blank party; panel mean demovote 0.25, repuvote 0.46; Harney demovote 0.043 (true ~0.15). After the fix weighted D 0.534 / R 0.423, Harney D 0.153",
+"Fixed in 01a (party_fallback, fill_blank_party, exclude_pseudo, candidate_level_party) and patched into the panel",
+"fixed", "30 HE rows changed", "R/data_creation/01a_election_data_medsl.R; 01ca_medsl_fixes_apply.R", "2026-09-20",
+
+"MEDSL", "VT", "2016", "HE",
+"NOT AN ERROR (entry corrected 2026-09-20; an earlier version wrongly called the labels mislabeled). Peter Welch won the Republican write-in primary as well, so he really was the Democratic AND Republican nominee (89.53%); Erica Clawson was the Liberty Union candidate (9.96%). No separate Republican was on the ballot",
+"Wikipedia 2016 US House election in Vermont: Welch 89.53% (alliance with Republican Party), Clawson 9.96%. MEDSL raw and the panel (demovote ~0.886, repuvote 0) are correct",
+"None needed. The one_party flag (no_rep, 14 counties) is a genuine one-party race",
+"not_an_error", "0", "n/a", "2026-09-20",
+
+"MEDSL", "GA", "2016", "HE",
+"Candidates with a blank party (unopposed races) fall into OTHER, so neither major-party share exists",
+"one_party flag: 14 counties neither_major_party; raw house_2016 GA has 208,927 votes with blank party",
+"Not fixed (same known quirk as Kentucky 2016)",
+"flagged", "14 counties", "n/a", "2026-09-20",
+
+"MEDSL", "MN", "2020", "SE",
+"Senate 2020 rows still carried the DFL zero-Democrat bug: the earlier Minnesota patch replaced House 2016/2020/2022 but never the Senate",
+"Found by the 01ca validation gate: legacy (DFL-aware) re-computation disagreed with the panel in exactly these 87 rows; panel demovote 0, true mean 0.369",
+"Replaced with recomputed values",
+"fixed", "87 (all MN counties)", "R/data_creation/01ca_medsl_fixes_apply.R", "2026-09-20",
+
+"MEDSL", "NY;VT", "2024", "HE;SE",
+"Fusion strings 'REPUBLICAN/CONSERVATIVE' (NY) and 'REPUBLICAN/LIBERTARIAN' (VT) mapped to OTHER, so some counties had repuvote 0",
+"Audit of every 2018-2024 House/Senate row: exactly 7 detailed-party strings contain DEMOCRAT/REPUBLIC but are not simplified to D/R (MN DFL, ND DEMOCRATIC-NPL, VT REPUBLICAN/LIBERTARIAN, NY REPUBLICAN/CONSERVATIVE, OR DEMOCRAT / INDEPENDENT, OR DEMOCRAT / PROGRESSIVE)",
+"Substring fallback in 01a; NY rows patched into the panel, VT 2024 House rows restored with the fix",
+"fixed", "NY 2 HE + 2 SE; VT 14 HE (restored)", "R/data_creation/01a_election_data_medsl.R; 01ca_medsl_fixes_apply.R", "2026-09-20",
+
+"MEDSL", "NJ", "2024", "HE",
+"Bergen County (34003) total is 1.86x its presidential total (853,419 vs 459,077); the fix did not change it, so the raw rows look duplicated. Shares look plausible (D 0.549 / R 0.427)",
+"House/presidential ratio 1.86 vs 0.71-1.0 elsewhere in NJ",
+"Not fixed",
+"flagged", "1 county-year (totalvote only)", "n/a", "2026-09-20",
+
+"panel (fold-in)", "WI;WV;AR;WA;WY;VT", "2016-2024", "HE",
+"House rows for whole states were missing from the panel although present in elect_he_cty_medsl.rds: an earlier fold-in removed each state's House rows and re-added only its own years",
+"Found while validating the 01ca re-computation: 1,258 MEDSL keys absent from the panel (WI 360, WV 275, AR 250, WA 195, WY 115, VT 2018-2024 56). The coverage tracker reads source files and the provenance check only looked at existing rows, so neither could see it",
+"Restored from the MEDSL source (with party fixes). Completeness check added to build_provenance.R",
+"fixed", "1,251 rows restored (7 non-finite skipped)", "R/data_creation/01ca_medsl_fixes_apply.R; R/build_provenance.R", "2026-09-20",
+
+"panel (fold-in)", "AR;TX;VA", "2002-2016", "HE",
+"State-build House rows absent from the panel: Arkansas 2002/2008/2010/2012/2014, Texas 2016 (7 counties MEDSL lacks), Virginia 2016 (1 county)",
+"build_provenance.R completeness check: source keys with no panel row",
+"Restored from the per-state source files (only keys with no panel row were added)",
+"fixed", "238 (AR 230, TX 7, VA 1)", "R/data_creation/01cc_restore_missing_panel_rows.R", "2026-09-20",
+
+"panel (fold-in)", "IN", "2018", "SE",
+"41 Indiana counties for the 2018 Senate exist in elect_se_cty_historical.rds but not in the panel (MEDSL Indiana 2018 covers only ~55% of counties)",
+"build_provenance.R completeness check (source=se_cty_historical, state 18, year 2018)",
+"Not restored: the historical file's origin for 2018 needs checking first; could help the Indiana 2018 gap",
+"flagged", "41", "n/a", "2026-09-20",
+
+"MEDSL", "AZ;CA;GA;MN;MS;NE;OK;WI;MD;MI;TX;NY;IN;KY", "2016-2024", "HE;SE",
+"Special-election races (MEDSL `special` flag) were summed with the regular race in the county rows, so state-years with two races on one ballot had doubled totals and blended shares (Senate: AZ 2020, CA 2024, GA 2020, MN 2018, MS 2018, NE 2024, OK 2022, each ~50% of votes; House: WI-8 2024, MD-7 2020, MI-13 2018, TX-18 2024, NY-25 2018, IN-2 2022, KY-1 2016)",
+"Raw files: special-flagged votes ~0.50 of all votes in those Senate state-years; regular + special were summed by 01a. v1 scope = regular general elections only (decision 2026-09-20)",
+"exclude_special added to 01a (default on) and applied to all MEDSL-sourced House/Senate rows. Arizona's 2020 Senate race was a special election only, so its 15 county rows were REMOVED (gap reason: special election only)",
+"fixed", "special races removed from the affected state-years; 15 AZ Senate 2020 rows removed", "R/data_creation/01a_election_data_medsl.R; 01ce_medsl_pseudo_special_apply.R; R/output/medsl_final_removed_rows.csv", "2026-09-20",
+
+"MEDSL", "AL;SC;AR;IN;KY;DC", "2016", "HE;SE",
+"Rows belonging to OTHER offices were counted as House/Senate votes: STRAIGHT PARTY / STRAIGHT TICKET lines (AL 1.16M votes, SC 1.07M, IN 213K, KY 36K), Arkansas 'UNOPPOSED CANDIDATES' ballot rows (candidate 'FOR'), and DC delegate/shadow offices. This was the cause of the 1.45-1.67x totals (and a candidate called 'For' with 428,423 votes)",
+"The 2016 MEDSL files carry an `office` column that 01a never filtered on; 31 state-file-years had such rows (23.6M votes in all, mostly DC delegate and special-election rows)",
+"Added exclude_other_offices to 01a (keeps only US House / US Senate rows) and applied it to all MEDSL-sourced rows; HE 2016 total/presidential 95th percentile fell from 1.40 to 1.00, SE 2016 from 1.47 to 1.01",
+"fixed", "362 rows changed in 13 state-years; 4 rows removed (DC, one IN county); shares of the affected AL/SC/AR/IN counties also change", "R/data_creation/01a_election_data_medsl.R; 01cg_medsl_office_filter_apply.R; R/output/medsl_office_filter_changes.csv", "2026-09-20",
+
+"MEDSL", "ME;NY;IL;UT;+", "2016-2024", "HE;SE",
+"More non-candidate rows were counted as votes: Maine 2024 'Total Ballots Cast' (835,904 votes, the cause of Maine's exactly doubled totals), New York 'Affidavit', 'Absentee / Military' and 'Over', plus 'Blank Ballots', 'Blank/void', 'Undervotes-Voids', 'Federal (Ballots)', 'Not Qualified', 'Special Votes', 'Contest Totals', 'Spoiled', 'Invalid' ...",
+"Scan of MEDSL candidate strings by vote volume; Maine 2024 House/presidential ratio was 2.00 in all 16 counties and is now ~0.97",
+"Extended the pseudo-row pattern in 01a (PSEUDO_RE) and applied it to all MEDSL-sourced rows with the gated script 01ch_medsl_pseudo_v2_apply.R. Write-ins and 'scattering' are real votes and stay",
+"fixed", "315 rows changed in 30 state-years (Maine 2024: 16 HE + 16 SE, totals halved)", "R/data_creation/01a_election_data_medsl.R; 01ch_medsl_pseudo_v2_apply.R", "2026-09-20",
+
+"OpenElections", "NY", "2004", "HE",
+"Kings County (36047): Edolphus Towns was labelled 'REP DEM WOR', so his 147,212 votes counted in BOTH the Democratic and the Republican numerator (repuvote 0.297 in Brooklyn)",
+"Found by the long-table acceptance test (Northeast fork): shares derived from the candidate-level table gave repuvote 0.0852 while demovote and totalvote agreed",
+"Candidate on both major-party lines now counted as Democratic only (01o rule and the shares file / panel row corrected); no other NY key was affected",
+"fixed", "1 county-year", "R/data_creation/01o_house_county_new_york.R; elect_he_cty_ny.rds; panel", "2026-09-20",
+
+"OpenElections", "CA", "2000", "HE",
+"Congressional District 16 (Santa Clara) was mis-parsed by 01bd: it took the wrong header row, read only 2 of 4 vote columns and attached the wrong party text, so Lofgren's 115,118 votes counted as neither party and 7,415 votes were missing",
+"Found by the long-table acceptance test (West fork). CA 2000 statement of vote: Lofgren DEM 115,118, Thayn REP 37,213, Umphress LIB 4,742, Klein NL 2,673. Santa Clara 2000 House/presidential total ratio after the fix 0.956",
+"Corrected the long table, shares file and panel (Santa Clara 2000: Democratic share 0.427 -> 0.641, total 516,500 -> 523,915) with 02zz_fix_ca2000_d16.R, a post-step to re-run after 01bd",
+"fixed", "1 county-year (Santa Clara 2000)", "R/data_creation/02zz_fix_ca2000_d16.R", "2026-09-20",
+
+"MEDSL", "MO;ME;NY", "2016;2020", "HE",
+"Non-county buckets: MEDSL assigns Missouri's Kansas City votes to a made-up FIPS 29380 (127,894 votes in 2016) instead of Jackson, Clay and Platte counties, so those three counties are UNDERCOUNTED in 2016; also Maine 23000 (2020) and 23099 (2016) federal/UOCAVA buckets and New York 36122 (9,540 votes, 2016)",
+"House long table contains county FIPS 29380, 23099, 23000, 36122 that are not in the county crosswalk",
+"Excluded from the release files (cannot be mapped to counties). Apportioning Kansas City's votes to its counties is not done",
+"flagged", "144,143 votes in 4 non-county buckets; Jackson, Clay and Platte MO 2016 undercounted", "R/data_creation/03a_house_release.R", "2026-09-20",
+
+"various", "CA;AZ;KY;ME;NH;OK;AL;TX;NY;MD;+", "1990-2024", "HE",
+"Candidate names were missing or incomplete in many sources: generic placeholders ('Democratic Candidate', 'Other Candidate 2' in the CA 1990-96 and AZ 1994 transcriptions) and surname-only names (Texas and New York MEDSL, Oklahoma PDFs, Alabama historical, Maine/NH historical, AZ 1996, KY 2010, ...). 7,635 long rows (1,448 candidates) were flagged",
+"Full names taken from Wikipedia district results and matched to our rows by exact district vote total, by surname (unique) or by vote share; every rename is unique and recorded with its method and evidence in R/data/raw_election/candidate_name_overrides.csv (1,185 renames: 723 vote_total, ~350 surname, 72 pooled_minor_sum, 31 party_D_R, 12 vote_share). Only names changed: total votes and the master check are unchanged",
+"Applied in the assembler (02z); the matcher (03b) is idempotent and reads the pre-override table. Candidates with >=1% of their district: 99.2% now named",
+"fixed", "1,185 renames; flagged long rows 7,635 -> 950", "R/data_creation/03b_candidate_names_wikipedia.R; 02z_house_long_assemble.R", "2026-09-20",
+
+"various", "UT;FL;ID;TX", "2012-2024", "HE",
+"63 candidates (8 with >=1% of their district vote, 3 with >=5%) still have a surname-only or placeholder name: Florida 2012 'Voteforeddie.Com', Idaho 'Pro-Life' lines, small Texas minor-party candidates",
+"R/output/candidate_name_matching_report.csv",
+"Not resolved; need candidate lists from the state election offices",
+"flagged", "63 candidates (228 long rows)", "n/a", "2026-09-20",
+
+"OpenElections", "CA", "1992;1996", "HE",
+"Hand-transcription errors in our California PDF data, found by comparing district totals with Wikipedia and confirmed against the official Statement of Vote: 1992 CD-27 Kahn (LA County) 63,805 vs printed 83,805; 1992 CD-14 Huening (San Mateo) 36,693 vs 38,693; 1996 CD-24 Sybert (LA) 85,054 vs 65,054; CD-33 Leonard 6,147 vs 8,147; CD-18 Condit and Stanislaus; CD-41 Kim (San Bernardino) 1,000 too high; CD-2 Herger 4,000 too high",
+"Official PDFs: text layer for 1992 (pdftotext), rendered page images for the scanned 1996 book. Wikipedia had its own typos in 8 other district totals (1992 CA-3, 1994 CA-14/35/17, 1998 CA-38/22), where our data was right",
+"Corrected the transcription CSVs at their source (ca_manual_transcription/1992_raw.csv, 1996_raw.csv); every corrected district ties to its printed totals",
+"fixed", "12 county-years (2 in 1992, 10 in 1996)", "R/data/county_house_files/ca_manual_transcription; R/output/ca_fixes_for_panel.rds", "2026-09-20",
+
+"OpenElections", "CA", "1998;2000", "HE",
+"01bd matched party codes by prefix, so Reform (Rfm) columns were counted as REPUBLICAN: e.g. 1998 CA-21 stored Thomas 115,989 plus Evans (Rfm) 30,994 as one Republican total of 146,983. 5 districts in 1998 and 7 in 2000 (CD 1, 17, 22, 23, 36, 44, 48) affected",
+"Wikipedia and the printed District Totals (1998: Thomas 115,989; Ball 103,299; Kuykendall 88,843; Cox 132,711)",
+"Rebuilt CA 1998 and 2000 from the PDF district blocks with exact party codes; all 104 district-years tie to the printed District Totals; total votes unchanged, 54 county-district-party cells move from REP to OTHER",
+"fixed", "25 county-years (8 in 1998, 17 in 2000); Republican share up to 0.18 lower", "R/data_creation/02c_california_1998_2000_rebuild.R (supersedes 01bd and 02zz_fix_ca2000_d16.R)", "2026-09-20",
+
+"Arkansas SoS", "AR", "1990-2006", "HE",
+"Arkansas had almost no House county data before this (74 partial OpenElections counties for 2002). Built from the official election books: 1990 and 2006 (scanned images, read by hand), 1992-1998 (state spreadsheets), 2000 (text), 2002 (certification PDF)",
+"County sums equal the printed statewide/district totals exactly in every year (1990, 2006: all 4 districts tie on dem, rep, total and county count; 1992-2002: every candidate ties)",
+"Added to the panel with 01ci_arkansas_apply.R (gated, backed up); 2002 replaces the 74 OpenElections rows (identical values in the 74 shared counties)",
+"fixed", "558 county-years added or replaced (1990 75, 1992 75, 1994 75, 1996 75, 1998 50, 2000 59, 2002 74, 2006 75)", "R/data_creation/02r_house_ar_*.R; 01ci_arkansas_apply.R", "2026-09-20",
+
+"Arkansas SoS", "AR", "1998;2000;2002", "HE",
+"Unopposed seats have no county tallies: 1998 AR-1 (Berry) and 2000 AR-3 (Hutchinson) are not in the state files; 2002 AR-3 (Boozman vs a write-in) has partial tallies: Boone County prints 0 votes for both candidates and Marion County prints Boozman 2,684 (0.45 of the 2000 presidential total, others 0.56-0.72)",
+"House vs presidential totals; the 1998 AR-1 tallies in the county sheets exist in only 12 of 25 counties and look partial (0.05-0.72 of the Senate total), saved to R/output/ar_1998_district1_unopposed_tallies.csv for reference",
+"Left as gaps (1998: 25 counties, 2000: 16 counties, 2002: Boone). 2002 Marion kept as printed and should be treated as a low count",
+"flagged", "41 county-years missing; 1 low county-year (Marion 2002)", "R/data_creation/02r_house_ar_1992_1998.R; 02r_house_ar_2000.R; 02r_house_ar_2002.R", "2026-09-20",
+
+"Arkansas SoS", "AR", "1992;1994", "HE",
+"Small disagreements inside the state files: 1992 Polk County J. Van Winkle 3,761 on the statewide sheet vs 3,432 on the county sheet; 1992 Cleburne 6,989/2,938 vs 6,990/2,943; 1994 Union County uses the 'AS PER UNION CTY ELEC. COMM.' column (5,185/8,117) rather than the TOTALS column (5,251/8,274)",
+"Statewide sheet totals are the printed totals that every county sum ties to",
+"Kept the statewide-sheet figures; difference is 329 votes in Polk 1992 (Polk House total 7,168 vs presidential 7,217, so the statewide figure looks right)",
+"flagged", "3 county-years", "R/data_creation/02r_house_ar_1992_1998.R", "2026-09-20",
+
+"Texas SoS", "TX", "1992-1998;2006", "HE",
+"Texas had no House county data before 2000 (and 49 counties missing in 2006). Built from the official Secretary of State 'Historical Elections - Official Results' pages (elections.sos.state.tx.us): 1992, 1994, 1996, 1998 (all 254 counties each) and the 2006 districts (15, 21, 23, 25, 28) that voted in the November 2006 special-election ballot with a December runoff for 23",
+"Every county row: candidate cells add up to the printed Votes cell (454 race pages); county sums equal the printed ALL COUNTIES row for all 350 pages that print one; 2000-2004 and 2008-2012 rebuilt from these pages are identical to the panel's existing Texas rows",
+"Added to the panel with 01ck_texas_apply.R (gated, backed up). 1996 districts 3,5,6,7,8,9,18,22,24,25,26,29,30 are from the Nov 5 1996 special election ballot (redrawn districts, Bush v. Vera); 8, 9, 25 use the December runoff (stage 'runoff', decisive-round rule); 2006 D23 uses the December runoff. 2006 D22 'Unexpired Term' special ignored. A county that lies partly in an unopposed district has no votes for that district (no ballot line)",
+"fixed", "1,065 county-years added (254 each in 1992-1998, 49 in 2006)", "R/data_creation/01cj_texas_sos_download.R; 02r_house_tx_sos.R; 01ck_texas_apply.R", "2026-09-20",
+
+"OpenElections", "TX", "2014", "HE",
+"El Paso (48141) and Ellis (48139) County results were swapped: the panel had El Paso 31,786 total votes and Ellis 80,029",
+"Texas SoS official results (El Paso 80,029, Ellis 31,786; El Paso is the far larger county)",
+"Replaced with the SOS values",
+"fixed", "2 county-years", "R/data_creation/01ck_texas_apply.R", "2026-09-20",
+
+"MEDSL", "TX", "2016;2018", "HE",
+"MEDSL precinct-based county totals differ from the official Texas canvass: 2016 Harris County 1,246,869 vs official 1,269,535 (22,666 votes short), Leon 3,840 vs 6,853, Crockett 960 vs 577 and 42 smaller differences; 2018 43 counties differ by up to 1.9% (0.35 pt in Democratic share)",
+"Texas SoS official results",
+"Replaced with the SOS values (identical rows unchanged)",
+"fixed", "88 county-years (45 in 2016, 43 in 2018)", "R/data_creation/01ck_texas_apply.R", "2026-09-20",
+
+"Virginia DoE", "VA", "1990-2004", "HE",
+"Virginia had no House county data before 2006. Built from the Virginia Department of Elections Historical Elections Database (historical.elections.virginia.gov): one Results CSV per congressional district with a row per county / independent city (and precincts), November general elections 1990-2024",
+"For 194 of 197 district contests the locality rows add up exactly to the printed district total for every candidate; 196 of 197 locality rows add up to their own Total Votes Cast (exceptions below); 2024 and 2016-2022 rebuilt from the site agree with MEDSL in 129-133 of 133 localities",
+"Added for 1990-2004 (1,086 county-years incl. Clifton Forge, South Boston and Bedford cities) and used for every year 2006-2024 (01cm_virginia_apply.R, gated and backed up). Write-Ins is one aggregated candidate. Candidate names are initials-only in the 1990s-2000s ('H. H. Bateman', flag initials_only)",
+"fixed", "1,086 county-years added, 242 replaced", "R/data_creation/01cl_virginia_download.R; 02r_house_va.R; 01cm_virginia_apply.R", "2026-09-20",
+
+"OpenElections", "VA", "2006-2016", "HE",
+"Virginia name collisions between counties and independent cities: Bedford City (51515) 2006-2012 held the Bedford COUNTY numbers (24,491 votes instead of 1,935 in 2006) and there were ghost 51515 rows for 2014 and 2016 (the city ceased to exist in 2013); 2014 had ten split counties (Chesterfield, Henrico, Hanover, ...) with totals 1.5-2x too large and Richmond City 61,482 vs 48,332; Hampton City 2010 37,524 vs 22,682; Amelia 2006 3,143 vs 3,822; about 100 rows with small differences",
+"Virginia Department of Elections official results (locality rows tie to the district totals)",
+"Replaced with the official values; the 2 ghost rows were removed",
+"fixed", "242 county-years changed, 2 ghost rows removed (2014 and 2016 Bedford City)", "R/data_creation/01cm_virginia_apply.R", "2026-09-20",
+
+"Virginia DoE", "VA", "2018;2022", "HE",
+"Source inconsistencies inside the official database: 2022 district 8 Alexandria City: the candidate cells (Beyer 41,041 ...) sum to 53,016 but its own Total Votes Cast is 54,223 (the precinct sums, Beyer 41,974 ..., do add to 54,223); the district row is built from the stale cells. 2018 districts 6 and 11: the district row is 1 vote more than the localities add up to (one write-in vote not assigned to a locality). The database also labels the cities of Richmond and Franklin as 'Richmond County' / 'Franklin County' in most years",
+"Locality rows vs district rows vs precinct sums",
+"Alexandria 2022 uses the precinct sums (matches MEDSL); the 1-vote differences are ignored; Richmond and Franklin labels are resolved by geography (Richmond County lies only in district 1; Franklin County only in district 5/9), and by the printed labels where both the city and the county are listed",
+"fixed", "3 contests; Richmond/Franklin rows in about 25 contests", "R/data_creation/02r_house_va.R", "2026-09-20",
+
+"Kansas SoS", "KS", "1990-2010", "HE",
+"Kansas had no House county data before 2012. Built from the Secretary of State's election-statistics books (scanned, OCR text layer), all 11 elections 1990-2010, 105 counties each (Marion and Douglas split between districts in every year; Geary, Greenwood and Nemaha in 2002-2004; four splits in 2006-2010); 1990 has five districts",
+"County sums equal the printed district Total rows for every candidate and each district total equals the book's 'Total vote for U.S. Representatives' overview page, in every year (exceptions below); House total vs presidential/Senate total per county is 0.56-1.04",
+"Added to the panel with 01cn_kansas_apply.R (gated, backed up), 1,155 county-years. OCR errors (a '%' glyph for a digit, 5 read as 3, 2 read as 3, dropped rows) were found by the tie checks and corrected from the page images: 31 cells in 1990-1996, 10 cells in 1998-2004 (logged in R/output/ks_ocr_corrections_*.csv)",
+"fixed", "1,155 county-years added", "R/data_creation/02k_house_ks_*.R; 01cn_kansas_apply.R", "2026-09-21",
+
+"Kansas SoS", "KS", "2008;1992", "HE",
+"Source inconsistencies in the book: 2008 district 1 (Moran): the county rows add up to 214,278 but the printed Total and the overview page say 214,549 (271 votes short; every county row was re-read against the page image, so the county table itself is short by 271, culprit unknown). 1992 district 1: the printed Total row (94,165 / 37,826 / 3,286) is only the second page's subtotal, so there is no printed district total to tie to (checked instead: second-page rows sum to that subtotal, first-page rows read from the image, House total 0.93-1.00 of each county's presidential total)",
+"Printed totals vs county rows in the books",
+"Values kept as printed; the effect on shares is negligible (2008 D1: up to 271 votes across the district)",
+"flagged", "2008 district 1 (25+ counties), 1992 district 1", "R/data_creation/02k_house_ks_2006_2010.R; 02k_house_ks_1990_1996.R", "2026-09-21",
+
+"Minnesota SoS", "MN", "1990-2010", "HE",
+"Minnesota had no House county data before 2012. Built from the Secretary of State election books archived by the Legislative Reference Library: 1990-1998 ('Vote for U.S. Representative by county' in the scanned books) and 2000-2010 ('Minnesota Votes' chapter tables), all 87 counties, 8 districts, 8-12 split counties a year. DFL is counted as Democratic, Independent-Republican / R as Republican",
+"County sums equal the printed TOTAL rows for all 126 (1990-1998) and 185 (2000-2010) candidate columns; 2000-2010 district totals equal Wikipedia's; House total vs presidential/Senate total per county 0.92-1.02 (midterms vs the nearest presidential year lower, 0.64-0.91)",
+"Added to the panel with 01co_minnesota_apply.R (gated, backed up), 957 county-years. OCR digit errors fixed from page images and the printed totals (15 items 1990-1998; 1 in 2000: Sabo, Hennepin printed '17,6629' -> 176,629). Zero-vote county-district blocks dropped",
+"fixed", "957 county-years added", "R/data_creation/02q_house_mn_*.R; 01co_minnesota_apply.R", "2026-09-21",
+
+"Minnesota SoS", "MN", "1990;1992;1994;1996", "HE",
+"The 1990-1996 books print only the listed candidates, with no write-in column, so write-in votes (about 0.1-0.5% of a district) are missing from the county totals: Democratic and Republican shares are overstated by roughly 0.1-0.5 points in those years (1998 and later include write-ins where the book prints them; 2000 prints no write-in column and 2006 only named write-ins)",
+"Comparison with Wikipedia district totals",
+"Kept as printed",
+"flagged", "MN 1990-1996 (348 county-years) and 2000", "R/data_creation/02q_house_mn_1990_1998.R", "2026-09-21",
+
+"Minnesota SoS", "MN", "2006", "HE",
+"2006 district 6, Binkowski (Independence), Sherburne County: the book prints 393 but the printed district total (23,557) is 2,000 more than the county rows add to (21,557), and Wikipedia agrees with the total. Sherburne was set to 2,393 (his share is 7-9% in every other county and 1.3% with 393); this is inferred from the totals, not read from the book",
+"Printed district total, Wikipedia, share in other counties",
+"Corrected to 2,393 by inference; treat as a flagged estimate (affects Sherburne 2006 by 2,000 of ~24,000 votes)",
+"flagged", "1 county-year (Sherburne 2006)", "R/data_creation/02q_house_mn_2000_2010.R", "2026-09-21",
+
+"SC Election Commission", "SC", "2008", "HE",
+"South Carolina 2008 had House rows for only 28 of 46 counties in the panel. Completed from the State Election Commission's Election Night Reporting archive (enr-scvotes.org/SC/8562/15723; official post-election snapshot dated 06/01/2009; one row per county, districts 1-6, 12 split counties)",
+"County sums equal the printed candidate totals for all 20 candidate lines; the 28 counties already in the panel are identical to this build; House total vs 2008 presidential total per county 0.90-0.99",
+"Added the 18 missing counties with 01cp_south_carolina_2008_apply.R (gated, backed up); candidate names restored with punctuation by hand (the file prints 'James E Jim Clyburn')",
+"fixed", "18 county-years added", "R/data_creation/02t_house_sc_2008.R; 01cp_south_carolina_2008_apply.R", "2026-09-21",
+
+"SC Election Commission", "SC", "1990-2006", "HE",
+"South Carolina had no House county data before 2008. Built from the State Election Commission election reports (scanned computer printouts): 1990 and 1992 (statewide tables read from page images; 1990 is dot-matrix and printed twice), 1994-1998 (OCR columns scrambled, county rows transcribed from images), 2000-2006 (OCR text cleaned: Z for 2, '.' for ',', slipped columns), 46 counties, 6 districts, 12-13 split counties a year",
+"County sums equal the printed STATE TOTAL rows for every candidate column in every year (16, 20, 65 and 102 columns); district totals equal Wikipedia's (which cites the same report) except 2002 district 1; the 2000-2006 parser reproduces the 2008 report exactly; county House total vs presidential total 0.54-1.12 (0.23-0.69 in districts with no Democrat or in years compared with a different presidential year)",
+"Added to the panel with 01cq_south_carolina_apply.R (gated, backed up), 414 county-years. Fusion candidates are kept as one row per party line (Democratic line counts as Democratic, Working Families / Patriot / Reform / etc. as Other). Corrections: 1990 (11 cells where the two printed copies disagreed, resolved by the column total), 1996 D5 Darlington 6,635 -> 6,633, 1998 D6 Florence/Lee names hidden by punch holes assigned by alphabetical position, 2004 D6 Colleton row split, 2000 D6 Lee",
+"fixed", "414 county-years added", "R/data_creation/02s_house_sc_*.R; 01cq_south_carolina_apply.R", "2026-09-21",
+
+"SC Election Commission", "SC", "2002", "HE",
+"2002 district 1: the report prints Brown 122,518, Dunn 9,560, Innella 4,775 but Wikipedia has 127,562, 9,841 and 4,965 (all three higher; districts 2-6 match Wikipedia exactly). The county rows tie to the report's own printed STATE TOTAL and the page image was re-read",
+"Wikipedia vs the report",
+"Kept the report's numbers; probably a later amendment to the certified result (not confirmed). Second source needed",
+"flagged", "2002 district 1 (5 counties)", "R/data_creation/02s_house_sc_2000_2006.R", "2026-09-21",
+
+"SC Election Commission", "SC", "2000;1998;1990", "HE",
+"Name and label uncertainties: 2000 district 1 prints 'BOB BATCHELDER' over both the Reform and Natural Law columns (the Natural Law column was named Joseph F. Innella per Wikipedia: Batchelder 2,067, Innella 1,110); 1998 district 1 Innella's party code is printed 'NP' (labelled Natural Law per Wikipedia); 1990 district 3 Sumter County has 14 Republican votes against 13,572 Democratic (the county's precinct page shows the same near-empty column and the district total includes it: low count in the source)",
+"Wikipedia, the report's precinct pages",
+"Kept as described; votes unchanged",
+"flagged", "3 items", "R/data_creation/02s_house_sc_*.R", "2026-09-21",
+
+"Indiana SoS", "IN", "1990-2000", "HE",
+"Indiana had no House county data before 2002. Built from the Indiana Secretary of State election reports (image-only 400-dpi scans; per-district candidate blocks or county-by-candidate tables): 1990, 1992, 1994, 1996, 1998, 2000, all 92 counties, 10 districts, 13 split counties a year",
+"County sums equal the printed TOTAL for all 158 candidate blocks that print one (the 7 Marion-only district-10 blocks in 1990-94 have no TOTAL and match Wikipedia's shares); Wikipedia party totals match for 1998 and 2000; House total vs Senate/presidential total per county 0.86-1.13 (median 0.97-1.01)",
+"Added with 01cr_indiana_apply.R (gated, backed up), 552 county-years. Misreads found by the tie checks were corrected from 400-dpi crops (4 in 1990 and about 10 rows or cells in 1996-2000, logged in R/output/in_ocr_corrections_*.csv)",
+"fixed", "552 county-years added", "R/data_creation/02u_house_in_1990_1994.R; 02u_house_in_1996_2000.R; 01cr_indiana_apply.R", "2026-09-21",
+
+"OpenElections", "IN", "2002;2010", "HE",
+"The OpenElections-based Indiana rows (66 of 92 counties) were wrong for 2002 and 2010: 26 counties (Adams, Benton, Blackford, Carroll, Cass, Dubois, Hancock, Huntington, Jasper, Jay, Jefferson, Jennings, Johnson, Lawrence, Madison, Miami, Newton, Ohio, Perry, Putnam, Ripley, Spencer, Switzerland, Wabash, Warren, Wells) were all-zero records, and 11 (2002) / 12 (2010) split counties carried only one district's part of the vote (e.g. Shelby 2002: 1,140 votes instead of 9,600; 2010 Shelby 14% of the official total)",
+"The official Indiana election reports: 2002 (native-text PDF) and 2010 (scanned booklet); all candidate sums equal the printed totals, 2010 matches Wikipedia's district totals and the county Senate totals (0.97-1.06)",
+"Replaced all 66 rows and added the 26 counties (23 of the 66 old rows changed value)",
+"fixed", "92 county-years each for 2002 and 2010 (52 added, 23 changed)", "R/data_creation/02u_house_in_2002.R; 02u_house_in_2010.R; 01cr_indiana_apply.R", "2026-09-21",
+
+"OpenElections", "IN", "2004;2006;2008", "HE",
+"The same OpenElections source has the same flaws for 2004, 2006 and 2008 (66 of 92 counties, the 26 zero-vote counties missing, and split counties probably carrying only part of their vote), which the official reports would fix; no official report for these years is available yet",
+"Pattern found in 2002 and 2010 (identical 26 missing counties in every year 2002-2010)",
+"Not fixed; treat Indiana 2004-2008 county rows as unreliable for split counties until an official report is added",
+"flagged", "3 state-years (198 county-years present, 78 missing)", "R/data_creation/01ac_house_county_indiana.R", "2026-09-21",
+
+"Indiana SoS", "IN", "1996;1994", "HE",
+"1996 suspect printed cells (kept as printed; the book's own totals include them): Miami district 5 Clark (D) 13,550 (House total 1.74x the presidential total; 3,550 would give 0.95), Wells district 4 Houseman (D) 7,909 (1.35x; 3,909 would give 0.99), Jay district 2 Carmichael (D) 3,776 (identical to McIntosh's in the same row). Our 1996 totals are 1,118,533 R / 944,469 D against Wikipedia's 1,109,066 / 930,919 (the Democratic gap equals the Miami cell). 1994 district 7: the book prints Myers 101,947 / Harmless 55,941 (64.6/35.4%), Wikipedia 65.1/34.9%",
+"House vs presidential totals per county; Wikipedia",
+"Kept as printed; probably typographical errors in the book, shares of Miami and Wells in 1996 are distorted by about 10,000 votes each",
+"flagged", "3 cells in 1996, 1994 district 7", "R/data_creation/02u_house_in_1996_2000.R; 02u_house_in_1990_1994.R", "2026-09-21",
+
+"MEDSL", "IN", "2016;2018;2020;2022;2024", "HE",
+"MEDSL's Indiana House county rows were unreliable: county totals doubled in some counties (2016 Hamilton 63,882 vs 31,931; 2024 Hendricks 160,804 vs 80,387 and St. Joseph 217,886 vs 108,943), a district missing in others (2016 Grant and 2018 Vermillion/Fountain-type counties with no Democratic votes), 0.1-1% differences from the certified result in about 90 more county-years, and only 51 (2018), 53 (2020) and 35 (2022) of 92 counties",
+"Indiana Election Division ENR archive (certified results, JSON): all 128 candidate lines tie to the district summary totals; House total vs presidential total per county 0.83-1.01 in 2016/2020/2024; the 2020 MEDSL rows that existed (53) are identical",
+"Replaced all Indiana House rows for 2016-2024 with the ENR archive values and added the missing counties (01ct_indiana_enr_apply.R, gated, backed up); 134 existing rows changed (2016: 53, 2018: 42, 2022: 1, 2024: 38) and 138 were added",
+"fixed", "460 county-years (134 changed, 138 added, 188 unchanged)", "R/data_creation/01cs_indiana_enr_download.R; 02v_house_in_enr.R; 01ct_indiana_enr_apply.R", "2026-09-21",
+
+"Indiana Election Division", "IN", "2016", "HE",
+"The 2016 ENR archive's settings file carries no 'certified' flag (2018-2024 do); the data are the post-election snapshot of Nov 17 2016",
+"settings.json of the archive",
+"Used as is; House totals are 0.83-1.00 of the presidential totals",
+"flagged", "92 county-years", "R/data_creation/02v_house_in_enr.R", "2026-09-21",
+
+"Indiana SoS", "IN", "2004;2006;2008", "HE",
+"Indiana 2004-2008 built from the official Indiana Election Division election reports (image-only scans; every cell read from the page images): all 92 counties, 9 districts, 12 split counties, 25 / 23 / 24 candidate lines",
+"County sums equal the printed candidate totals for all 72 lines; Wikipedia's district totals match; House total vs presidential total per county 0.93-1.01 (2004, 2008); 2006 vs the report's Treasurer of State race 1.01-1.12 (the Senate race had only two candidates)",
+"Replaced the flawed OpenElections rows (01cw_indiana_2004_2008_apply.R, gated, backed up): 198 old rows replaced (35 changed value: 11 split counties per year carried 12-96% of their vote), 78 counties added (26 all-zero counties per year). Old 2006 rows counted the write-in Mantooth '(W-R)' as Republican. John Plemons (W-I, 2006 district 7) has no county cell in the report and is not included",
+"fixed", "276 county-years (198 replaced, 78 added)", "R/data_creation/02u_house_in_2004.R; 02u_house_in_2006.R; 02u_house_in_2008.R; 01cw_indiana_2004_2008_apply.R", "2026-09-21",
+
+"Illinois SBE", "IL", "1998-2024", "HE",
+"Illinois had House rows only for 2008-2014 (OpenElections) and 2016-2024 (MEDSL). Built from the State Board of Elections' downloadable vote totals (Candidate Totals by County, GE<year>Cty files), 1998-2024, all 102 counties, 17-20 districts, 14-32 split counties; candidates listed without a party appear as 'None listed (write-in)'. The MEDSL rows differed from the official files in 48 (2016), 16 (2018), 22 (2020), 36 (2022) and 62 (2024) county-years, e.g. 2022 Cook 857,598 vs 1,404,768 and DuPage 130,050 vs 338,272; 2016 and 2024 MEDSL totals were up to 4% higher than certified",
+"County sums equal the statewide candidate totals for every candidate in every year with a totals file (13 of 14 years; 2022 has none on the site); the 2008-2014 OpenElections rows are identical to the official files in all 102 counties; House total vs presidential/Senate total per county 0.71-1.10 (median 0.95-1.01; low values in unopposed districts)",
+"Added 1998-2006 (510 county-years) and replaced the differing MEDSL rows 2016-2024 (01cv_illinois_apply.R, gated, backed up)",
+"fixed", "694 county-years (510 added, 184 replaced)", "R/data_creation/01cu_illinois_sbe_download.py; 02w_house_il_sbe.R; 01cv_illinois_apply.R", "2026-09-21",
+
+"Illinois SBE", "IL", "1990-1996", "HE",
+"Illinois had no House county data before 1998. Built from the State Board of Elections official-vote books (scanned, OCR text layer): 1990 (22 districts), 1992, 1994, 1996 (20 districts), all 102 counties, 14-23 split counties; each district prints statewide candidate totals and percentages, county rows carry a plurality column",
+"County sums equal the printed candidate totals for all 208 candidate lines (49, 52, 50, 57) and the printed percentages; the county-district pairs of 1994 and 1996 equal the 1998 official file's; House total vs presidential/Senate total per county 0.89-1.03 in 1992 and 1996 (1990: 0.60-1.03, low where Madigan and Michel had no opponent; 1994 compared with 1992: 0.53-0.92)",
+"Added with 01cx_illinois_1990_1996_apply.R (gated, backed up), 408 county-years. OCR fixes from page images (about 20 cells, e.g. write-in cells dropped by OCR, garbled printed totals such as '100 1890' = 100,890, 1996 Wabash 4D = 40) are logged in R/output/il_ocr_corrections_*.csv. 1990 districts 8, 12, 15, 18 and 22 had no Democratic or Republican opponent (write-ins or minor parties only)",
+"fixed", "408 county-years added", "R/data_creation/02w_house_il_1990_1992.R; 02w_house_il_1994_1996.R; 01cx_illinois_1990_1996_apply.R", "2026-09-21",
+
+"Nebraska SoS", "NE", "1990-2006", "HE",
+"Nebraska had House county data only from 2008. Built from the Secretary of State canvass books for 1990-2006 (1990-2002 and 2006 image-only scans read cell by cell from page images; 2004 native text; 1996 is rotated 90 degrees with all three districts on one page): all 93 counties, 3 districts, 1-2 split counties (Cass, Cedar, Sarpy)",
+"County sums equal the printed TOTAL rows for every candidate column in every year; House total vs presidential/Senate total per county 0.86-1.06 (lower in years without a Democrat in district 3); the 1996-1998 books print no party labels (taken from Wikipedia); a cross-year scan of county totals found only 1998 Dundy as an outlier",
+"Added with 01cy_nebraska_apply.R (gated, backed up), 837 county-years. Two offsetting 6/8 misreads in the 1996 district 3 (Adams Barrett 6,961 -> 8,961; Dawson 8,364 -> 6,364) were found only by the presidential-ratio check (0.81 and 1.23) because the column sum still tied; corrected from a 250-dpi crop. LESSON: a column-sum tie cannot catch offsetting misreads, so always inspect county-level ratio outliers",
+"fixed", "837 county-years added", "R/data_creation/02x_house_ne_*.R; 01cy_nebraska_apply.R", "2026-09-21",
+
+"Nebraska SoS", "NE", "1998", "HE",
+"1998 district 3 Dundy County is printed as Barrett 162, Hickman 85, Remmenga 0, write-in 2 (total 249, about 0.28 of its usual House vote); the book's own printed district total includes these numbers. Also 1998 district 3 Hickman: the book prints 27,278 and the county rows tie, Wikipedia has 22,278 (probably a Wikipedia typo)",
+"Cross-year county totals; the page image; Wikipedia",
+"Kept as printed (the book's totals include the Dundy numbers)",
+"flagged", "1 county-year (Dundy 1998)", "R/data_creation/02x_house_ne_1996_1998.R", "2026-09-21",
+
+"Georgia SoS (Wayback)", "GA", "1990-1998", "HE",
+"Georgia had House county data from 2000 only. Built from the Secretary of State's archived results pages (Internet Archive captures of July 2008): one page per congressional district (10 districts in 1990, 11 in 1992-1998) with county votes and printed candidate totals; all 159 counties, 3-26 split counties. The November 1992 runoff is ignored",
+"County sums equal the printed candidate totals and percentages on all 54 district pages; House total vs presidential/Senate total per county 0.44-1.20, low (0.44-0.7) in uncontested districts (1998 districts 1, 3, 9: the unopposed candidate is listed with fewer votes than the Senate total)",
+"Added with 01db_georgia_archive_apply.R (gated, backed up), 795 county-years. The 1990-1994 pages break 'Ben Hill' and 'Jeff Davis' over two lines (mapped by hand); the 1996-1998 pages give surnames only (names completed from Wikipedia where matched; flag surname_only otherwise) and list only the Democratic and Republican lines",
+"fixed", "795 county-years added", "R/data_creation/01da_georgia_sos_archive_download.py; 02y_house_ga_archive.R; 01db_georgia_archive_apply.R", "2026-09-21",
+
+"MEDSL", "ID;NC;RI;UT;WA;WV;WI;WY", "2024", "PE",
+"367 county-years of the 2024 presidential results were missing from the panel: MEDSL's 2024 county file has a BLANK vote mode for Idaho, North Carolina, Rhode Island, Utah, Washington, West Virginia, Wisconsin and Wyoming; 01a read it as NA, its `any(mode == 'TOTAL')` test was NA and its filter silently dropped every row of those states",
+"MEDSL countypres_2000-2024.tab (2024 rows for these states have mode ''); county totals afterwards are 0.83-1.21 of 2020 (median 1.01)",
+"A blank mode is treated as a total (02c_president_long_medsl.R); the 367 rows were added with 01dd_pe_2024_missing_states_apply.R (gated, backed up) and to elect_pe_cty_medsl.rds",
+"fixed", "367 county-years added", "R/data_creation/02c_president_long_medsl.R; 01dd_pe_2024_missing_states_apply.R", "2026-09-21",
+
+"MEDSL", "AZ;IA;VT", "2024", "PE",
+"MEDSL's `totalvotes` column includes OVERVOTES and UNDERVOTES rows in Arizona, Iowa and Vermont 2024 (0.4-1.8% of the total); 01a divided by it, so shares were slightly low and totals included non-votes",
+"Candidate rows add up to less than totalvotes in exactly these 127 county-years",
+"Totals and shares now use the sum of candidate votes (over/undervote rows removed with 01a's pseudo-row list); 127 panel rows replaced (01dc_pe_se_panel_apply.R)",
+"fixed", "127 county-years", "R/data_creation/01dc_pe_se_panel_apply.R", "2026-09-21",
+
+"Algara & Amlani", "IN;OK;GA;MO;DE;MA;WV", "1990;1994;2000;2002;2010", "SE",
+"515 Senate county-years of even years 1990-2014 came from special elections only (Indiana 1990, Oklahoma 1994, Georgia 2000, Missouri 2002, Delaware / Massachusetts / West Virginia 2010): 01b used a special election when a state-year had no general one",
+"Algara & Amlani election_type 'S'",
+"Removed from the panel and the release (special elections are excluded from v1; the state-years appear in the gaps file as special_election_only)",
+"fixed", "515 county-years removed", "R/data_creation/01dc_pe_se_panel_apply.R", "2026-09-21",
+
+"MEDSL", "IN", "2016;2018;2022;2024", "SE",
+"MEDSL's Indiana Senate county rows have the same problems as its House rows: 51 (2018) and 35 (2022) of 92 counties, and 139 of the existing rows differ from the certified results",
+"Indiana Election Division ENR archive (certified results): all county sums equal the statewide candidate totals",
+"Replaced and completed with the ENR values (01de_indiana_senate_enr_apply.R, gated, backed up)",
+"fixed", "368 county-years (139 changed, 98 added, 131 unchanged)", "R/data_creation/01cs_indiana_enr_download.R; 02v2_senate_in_enr.R; 01de_indiana_senate_enr_apply.R", "2026-09-21",
+
+"Algara & Amlani", "all", "1990-2014 (SE); 1992;1996 (PE)", "SE;PE",
+"The historical President (1992, 1996) and Senate (1990-2014) sources itemize only the Democratic and Republican nominees; all other candidates are one aggregated row 'All other candidates (not itemized in the source)' (flag other_candidates_aggregated). MEDSL's own President 'OTHER' rows are likewise aggregated ('Other candidates')",
+"Source columns",
+"Kept; documented in SOURCES.csv and the data dictionary",
+"flagged", "President 1992-1996 and Senate 1990-2014; MEDSL President 2000-2024 other rows", "R/data_creation/02d_historical_pe_se_long.R", "2026-09-21",
+
+"MEDSL", "various", "2018;2022", "SE",
+"A few non-candidate strings remain in MEDSL Senate rows ('Times Blank Voted' 590 votes, 'Blank (2)' 2 votes, 2018/2022): about 0.005% of the votes, not removed because the panel shares would need re-applying",
+"Candidate names in the long table",
+"Left as is (negligible)",
+"flagged", "2 candidate rows", "R/data_creation/02b_senate_long_medsl.R", "2026-09-21",
+
+"MEDSL", "NY", "2016;2018;2022", "HE;SE",
+"MEDSL's New York rows carried non-candidate strings as votes: 'PUBLIC COUNTER' (the machine-count subtotal: 274,705 in the Bronx 2018) doubled the total and halved every share in Bronx and Queens 2018 and in all five boroughs in 2022 (House and Senate); smaller 'Manually Counted Emergency' / 'Scattered Votes' amounts in 2016 and in Kings, Nassau, Suffolk, Westchester and upstate counties; Tompkins County 2018 Senate had 38,211 'FEDERAL VOTES' (total 75,539 instead of 37,328)",
+"Comparison of New York's 2018 Senate county table in America Votes 33: after the fix the county totals equal America Votes in 52 of 59 counties (within 0.1%) and Bronx, Queens and Tompkins agree",
+"Added 'Federal Votes', 'Public Counter', 'Manually Counted (Emergency)' and 'Scattered Votes' to the pseudo-row list (01a PSEUDO_RE) and replaced 22 House and 22 Senate panel rows (01df_medsl_ny_pseudo_v3_apply.R, gated, backed up). Before the fix New York City's 2022 House shares were about half of their true value",
+"fixed", "44 county-years (22 House, 22 Senate)", "R/data_creation/01a_election_data_medsl.R; 01df_medsl_ny_pseudo_v3_apply.R", "2026-09-21",
+
+"America Votes 33", "NY", "2018", "SE",
+"Three New York 2018 Senate counties (Jefferson, Niagara, Ulster) are missing from MEDSL; filled from the county table 'SENATOR 2018' of America Votes 33 (all 62 counties tie to the printed statewide totals). The book's candidate totals combine all party lines (Gillibrand: Democratic + Working Families + Independence + Women's Equality), while the MEDSL-based counties count the Democratic and Republican lines only, so these three counties' Democratic/Republican shares are slightly higher than a line-based count",
+"America Votes 33, printed statewide totals",
+"Added 3 county-years (01dg_ny_senate_2018_av33_apply.R); the rest of New York keeps the MEDSL line-based counts",
+"fixed", "3 county-years added", "R/data_creation/02b2_senate_ny_2018_av33.R; 01dg_ny_senate_2018_av33_apply.R", "2026-09-21",
+
+"MEDSL", "NY", "2018", "SE",
+"Even after the fix, four New York counties differ from America Votes 33 by more than 1%: Lewis (MEDSL 8,182 vs 8,830), Madison (22,367 vs 25,735), Wyoming (13,818 vs 13,170) and Nassau (491,668 vs 499,245); MEDSL's precinct data look incomplete or padded there",
+"America Votes 33 county table",
+"Left as MEDSL (the book combines party lines, so a replacement would change the party definition within the state); flagged",
+"flagged", "4 county-years", "R/data_creation/02b2_senate_ny_2018_av33.R", "2026-09-21",
+
+"MEDSL", "GA;KY;ND;IL;ME;NJ;IN;NY;VT;AZ", "2016;2018;2020;2024", "HE;SE",
+"MEDSL rows with a BLANK party field were classified OTHER: Georgia, Kentucky and North Dakota 2016 had Democratic AND Republican shares of 0 in 158 / 108 / 53 Senate county-years and in 16 (GA) and 27 (KY) House county-years; smaller cases in Illinois, Maine, New Jersey (2016), Indiana, New York, Vermont (2018/2020) and Arizona (2024). Totals were right, only the party split was wrong (in Georgia 2016 Senate the Democratic share showed 0 instead of about 0.42)",
+"QA sweep test T3 (R/qa_medsl_sweep.R: Democratic and Republican shares both 0 in a county with more than 1,000 votes)",
+"Blank party labels are now filled from the same candidate's labelled rows (state + district + name) for ALL state-years (01a fill_blank_party, previously used only for NJ/OR 2024); two Wikipedia overrides for North Dakota 2016 Senate (Hoeven REP, Glassheim DEM-NPL: no labelled row anywhere). 377 panel rows replaced (55 House, 322 Senate; 01dh_medsl_blank_party_apply.R)",
+"fixed", "377 county-years", "R/data_creation/01dh_medsl_blank_party_apply.R; 02a_house_long_medsl.R; 02b_senate_long_medsl.R", "2026-09-21",
+
+"MEDSL", "GA", "2022", "SE",
+"MEDSL's Georgia 2022 Senate file holds the November general AND the December runoff (stage GEN and GEN RUNOFF); 01a summed both, so all 159 county totals were about twice the House totals (Democratic/Republican shares were close to the truth)",
+"QA sweep test T2 (House vs Senate total in the same county: ratio 0.51 in 147 counties)",
+"Decisive-round rule (same as Louisiana): only the runoff rows are kept (01a decisive_round; stage 'runoff'); 159 rows replaced (01di_medsl_ga_senate_2022_runoff_apply.R)",
+"fixed", "159 county-years", "R/data_creation/01a_election_data_medsl.R; 01di_medsl_ga_senate_2022_runoff_apply.R", "2026-09-21",
+
+"MEDSL", "NJ", "2022", "HE",
+"MEDSL's New Jersey 2022 House file repeats the DISTRICT total in every county of the district (e.g. Salem County 273,706 votes: Van Drew 162,103 = his whole district); county totals are 2-8 times the presidential total in all 21 counties, so the county data are unusable",
+"QA sweep test T1 (ratio to the presidential total 2.0-8.1 against a state median of 1.28)",
+"Not fixed; needs the official 2022 results by county (New Jersey Division of Elections)",
+"flagged", "21 county-years (New Jersey 2022 House)", "R/qa_medsl_sweep.R", "2026-09-21",
+
+"MEDSL", "NY;OR;MI;FL;MD;MS;OK;NH;UT;AL;TN;TX;ND", "2016-2024", "HE;SE",
+"Remaining outliers found by the QA sweep and not yet resolved (R/output/qa_medsl_sweep_flags.csv, 64 flags): NY 2018 House Monroe (Morelle's Democratic rows are missing from the raw file entirely: House total 122,869 vs Senate 280,026), Dutchess, Montgomery, Rensselaer and Oswego; NY 2022 Chenango and Otsego (about 1.4x the usual ratio in both offices); Oregon 2018 Tillamook (House votes doubled: Schrader 13,604 + Callahan 11,436 in a county of about 14,000 voters); Michigan 2022 Midland (4,293 votes, about 10% of the usual turnout); New Hampshire 2016 Strafford; Maryland 2020 Howard and Baltimore City (0.43 of presidential); Mississippi 2022 Yazoo and 2024 Noxubee; Oklahoma 2024 Canadian and Creek; New Jersey 2024 Bergen (already flagged); and low ratios in Florida, Alabama and Tennessee that mostly reflect unopposed districts (Florida prints no unopposed races)",
+"QA sweep tests T1 and T2",
+"Flagged only: each needs the state's official county results or a check of the raw MEDSL rows",
+"flagged", "about 50 county-years", "R/qa_medsl_sweep.R", "2026-09-21"
+)
+
+write.csv(L, file.path(OUTPUT_DIR, "data_corrections_log.csv"), row.names = FALSE)
+chk <- read.csv(file.path(OUTPUT_DIR, "data_corrections_log.csv"))
+stopifnot(nrow(chk) == nrow(L), ncol(chk) == 11)
+cat(nrow(L), "entries:", paste(names(table(L$status)), table(L$status), collapse = ", "), "\n")

@@ -1,0 +1,2 @@
+"year","district","county","candidate","ocr_value","corrected_value","how_verified"
+"1990-1994","all","all","all","","","none needed: every cell read from page images (250 dpi crops); all 9 districts' county sums equal the printed TOTAL rows exactly on first reading"

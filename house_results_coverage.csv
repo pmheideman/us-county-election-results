@@ -1,0 +1,901 @@
+state,year,county_status,county_coverage_pct,county_source,district_status,district_source,notes
+ALABAMA,1990,full,0.985,al_historical,none,,
+ALABAMA,1992,full,1,al_historical,good,America Votes,
+ALABAMA,1994,full,1,al_historical,good,America Votes,
+ALABAMA,1996,full,1,al_historical,good,America Votes,
+ALABAMA,1998,full,1,al_historical,good,America Votes,
+ALABAMA,2000,full,1,al_historical,good,America Votes,
+ALABAMA,2002,full,1,al_historical,good,America Votes,
+ALABAMA,2004,full,1,al_historical,good,America Votes,
+ALABAMA,2006,full,1,al_historical,good,America Votes,
+ALABAMA,2008,full,1,al_historical,good,America Votes,
+ALABAMA,2010,full,1,al_historical,good,America Votes,
+ALABAMA,2012,full,1,al; al_historical,unreliable,"America Votes (unreliable, excluded)",
+ALABAMA,2014,partial,0.955,al,unreliable,"America Votes (unreliable, excluded)",
+ALABAMA,2016,full,1,MEDSL precinct,none,,
+ALABAMA,2018,full,1,MEDSL precinct,none,,
+ALABAMA,2020,full,1,MEDSL precinct,none,,
+ALABAMA,2022,full,1,MEDSL precinct,none,,
+ALABAMA,2024,full,1,MEDSL precinct,none,,
+ALASKA,1990,none,0,,good,America Votes,
+ALASKA,1992,none,0,,good,America Votes,
+ALASKA,1994,none,0,,good,America Votes,
+ALASKA,1996,none,0,,good,America Votes,
+ALASKA,1998,none,0,,good,America Votes,
+ALASKA,2000,none,0,,good,America Votes,
+ALASKA,2002,none,0,,good,America Votes,
+ALASKA,2004,none,0,,good,America Votes,
+ALASKA,2006,none,0,,good,America Votes,
+ALASKA,2008,none,0,,good,America Votes,
+ALASKA,2010,none,0,,good,America Votes,
+ALASKA,2012,none,0,,none,,
+ALASKA,2014,none,0,,none,,
+ALASKA,2016,none,0,,none,,
+ALASKA,2018,none,0,,none,,
+ALASKA,2020,none,0,,none,,
+ALASKA,2022,none,0,,none,,
+ALASKA,2024,partial,0.073,MEDSL precinct,none,,
+ARIZONA,1990,full,1,az_1990,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,1992,full,1,az_1992,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,1994,full,1,az_1994,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,1996,full,1,az_1996,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,1998,full,1,az_1998,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2000,full,1,az,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2002,full,1,az,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2004,full,1,az,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2006,full,1,az,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2008,full,1,az,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2010,full,1,az,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2012,full,1,az,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2014,full,1,az,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2016,full,1,MEDSL precinct,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2018,full,1,MEDSL precinct,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2020,full,1,MEDSL precinct,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2022,full,1,MEDSL precinct,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARIZONA,2024,full,1,MEDSL precinct,none,,"County-level 2000-2014 DONE via OpenElections (github.com/openelections/openelections-data-az) -- azsos.gov's own site is Cloudflare-bot-blocked, but OpenElections is a separate GitHub archive, unaffected. America Votes district-level table still never located (parser gap, possibly an OCR'd map graphic in its place) -- moot for 2000-2014 now that county data exists directly; 1992-1998 (pre-OpenElections) would still need it or a manual browser visit."
+ARKANSAS,1990,full,1,ar_1990,none,,
+ARKANSAS,1992,full,1,ar_1992,good,America Votes,
+ARKANSAS,1994,full,1,ar_1994,good,America Votes,
+ARKANSAS,1996,full,1,ar_1996,good,America Votes,
+ARKANSAS,1998,partial,0.667,ar_1998,good,America Votes,
+ARKANSAS,2000,partial,0.787,ar_2000,good,America Votes,
+ARKANSAS,2002,full,0.987,ar; ar_2002,good,America Votes,
+ARKANSAS,2004,none,0,,good,America Votes,
+ARKANSAS,2006,full,1,ar_2006,good,America Votes,
+ARKANSAS,2008,partial,0.653,ar,good,America Votes,
+ARKANSAS,2010,full,1,ar,good,America Votes,
+ARKANSAS,2012,partial,0.96,ar,unreliable,"America Votes (unreliable, excluded)",
+ARKANSAS,2014,full,0.987,ar,unreliable,"America Votes (unreliable, excluded)",
+ARKANSAS,2016,full,1,MEDSL precinct,none,,
+ARKANSAS,2018,full,1,MEDSL precinct,none,,
+ARKANSAS,2020,full,1,MEDSL precinct,none,,
+ARKANSAS,2022,full,0.987,MEDSL precinct,none,,
+ARKANSAS,2024,full,1,MEDSL precinct,none,,
+CALIFORNIA,1990,full,1,ca_1990,none,,
+CALIFORNIA,1992,full,1,ca_1992; ca_1992_OLD,good,America Votes,
+CALIFORNIA,1994,full,1,ca_1994,good,America Votes,
+CALIFORNIA,1996,full,1,ca_1996; ca_1996_OLD,good,America Votes,
+CALIFORNIA,1998,full,1,ca_historical; ca_historical_OLD_PARSE,good,America Votes,
+CALIFORNIA,2000,full,1,ca_historical; ca_historical_OLD_PARSE,good,America Votes,
+CALIFORNIA,2002,full,1,ca,good,America Votes,
+CALIFORNIA,2004,full,1,ca,good,America Votes,
+CALIFORNIA,2006,full,1,ca,good,America Votes,
+CALIFORNIA,2008,full,1,ca,good,America Votes,
+CALIFORNIA,2010,full,1,ca,good,America Votes,
+CALIFORNIA,2012,full,1,ca,unreliable,"America Votes (unreliable, excluded)",
+CALIFORNIA,2014,full,1,ca,unreliable,"America Votes (unreliable, excluded)",
+CALIFORNIA,2016,full,1,MEDSL precinct,none,,
+CALIFORNIA,2018,full,1,MEDSL precinct,none,,
+CALIFORNIA,2020,full,1,MEDSL precinct,good,America Votes,
+CALIFORNIA,2022,full,1,MEDSL precinct,none,,
+CALIFORNIA,2024,full,1,MEDSL precinct,none,,
+COLORADO,1990,none,0,,none,,
+COLORADO,1992,none,0,,good,America Votes,
+COLORADO,1994,none,0,,good,America Votes,
+COLORADO,1996,none,0,,good,America Votes,
+COLORADO,1998,none,0,,good,America Votes,
+COLORADO,2000,none,0,,good,America Votes,
+COLORADO,2002,full,1,co,good,America Votes,
+COLORADO,2004,full,1,co,good,America Votes,
+COLORADO,2006,full,1,co,good,America Votes,
+COLORADO,2008,full,1,co,good,America Votes,
+COLORADO,2010,full,1,co,good,America Votes,
+COLORADO,2012,full,1,co,unreliable,"America Votes (unreliable, excluded)",
+COLORADO,2014,full,1,co,unreliable,"America Votes (unreliable, excluded)",
+COLORADO,2016,full,1,MEDSL precinct,none,,
+COLORADO,2018,full,1,MEDSL precinct,none,,
+COLORADO,2020,full,1,MEDSL precinct,none,,
+COLORADO,2022,full,1,MEDSL precinct,none,,
+COLORADO,2024,full,1,MEDSL precinct,none,,
+CONNECTICUT,1990,none,0,,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,1992,none,0,,good,America Votes,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,1994,none,0,,good,America Votes,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,1996,none,0,,good,America Votes,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,1998,none,0,,good,America Votes,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2000,full,1,ct,good,America Votes,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2002,full,1,ct,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2004,none,0,,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2006,full,1,ct,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2008,full,1,ct,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2010,full,1,ct,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2012,partial,0.375,ct,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2014,none,0,,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2016,full,1,MEDSL precinct,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2018,full,1,MEDSL precinct,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2020,full,1,MEDSL precinct,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2022,full,1,MEDSL precinct,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+CONNECTICUT,2024,full,1,MEDSL precinct,none,,"Bot-blocked: portaldir.ct.gov (WAF ""Request Rejected""). Needs a manual browser visit."
+DELAWARE,1990,none,0,,good,America Votes,
+DELAWARE,1992,none,0,,good,America Votes,
+DELAWARE,1994,none,0,,good,America Votes,
+DELAWARE,1996,none,0,,good,America Votes,
+DELAWARE,1998,none,0,,good,America Votes,
+DELAWARE,2000,full,1,de,good,America Votes,
+DELAWARE,2002,full,1,de,good,America Votes,
+DELAWARE,2004,full,1,de,good,America Votes,
+DELAWARE,2006,full,1,de,good,America Votes,
+DELAWARE,2008,full,1,de,good,America Votes,
+DELAWARE,2010,full,1,de,good,America Votes,
+DELAWARE,2012,none,0,,none,,
+DELAWARE,2014,full,1,de,none,,
+DELAWARE,2016,full,1,MEDSL precinct,none,,
+DELAWARE,2018,full,1,MEDSL precinct,none,,
+DELAWARE,2020,full,1,MEDSL precinct,none,,
+DELAWARE,2022,full,1,MEDSL precinct,none,,
+DELAWARE,2024,full,1,MEDSL precinct,none,,
+FLORIDA,1990,none,0,,none,,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,1992,full,1,fl,good,America Votes,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,1994,partial,0.91,fl,good,America Votes,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,1996,partial,0.97,fl,good,America Votes,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,1998,partial,0.672,fl,good,America Votes,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2000,full,1,fl,good,America Votes,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2002,full,0.985,fl,good,America Votes,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2004,partial,0.97,fl,good,America Votes,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2006,partial,0.821,fl,good,America Votes,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2008,full,1,fl,good,America Votes,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2010,full,1,fl,good,America Votes,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2012,full,1,fl,unreliable,"America Votes (unreliable, excluded)","Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2014,full,0.985,fl,unreliable,"America Votes (unreliable, excluded)","Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2016,full,1,fl; MEDSL precinct,none,,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2018,full,1,MEDSL precinct,none,,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2020,full,0.985,MEDSL precinct,none,,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2022,full,1,MEDSL precinct,none,,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+FLORIDA,2024,full,1,MEDSL precinct,none,,"Legacy ASP/frames site (results.elections.myflorida.com), not bot-blocked, just needs someone to navigate ElectionRaces.asp/TitlePage.asp for a given year/county."
+GEORGIA,1990,full,1,ga_archive_1990,none,,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,1992,full,1,ga_archive_1992,none,,"Book footnote (America Votes 24): mid-decade court-ordered redistricting means these years need America Votes 21, which we don't have."
+GEORGIA,1994,full,1,ga_archive_1994,none,,"Book footnote (America Votes 24): mid-decade court-ordered redistricting means these years need America Votes 21, which we don't have."
+GEORGIA,1996,full,1,ga_archive_1996,good,America Votes,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,1998,full,1,ga_archive_1998,good,America Votes,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2000,full,1,ga,good,America Votes,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2002,full,1,ga,good,America Votes,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2004,full,1,ga,good,America Votes,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2006,full,1,ga,good,America Votes,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2008,full,1,ga,good,America Votes,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2010,full,1,ga,good,America Votes,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2012,full,1,ga_2012,unreliable,"America Votes (unreliable, excluded)","sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2014,full,1,ga,unreliable,"America Votes (unreliable, excluded)","sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2016,full,1,MEDSL precinct,none,,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2018,full,1,MEDSL precinct,none,,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2020,full,1,MEDSL precinct,none,,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2022,full,1,MEDSL precinct,none,,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+GEORGIA,2024,full,1,MEDSL precinct,none,,"sos.ga.gov is Cloudflare-blocked for scripted access, but manually downloading a given year's results through a real browser works fine -- 2012 done this way (dropped in R/data/county_house_files/georgia_2012.csv, already county-level with a 'Total Votes' pseudo-row per county-district). Same manual approach should work for GA's other missing years."
+HAWAII,1990,none,0,,none,,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,1992,none,0,,good,America Votes,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,1994,none,0,,good,America Votes,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,1996,none,0,,unreliable,America Votes (all rows flagged unreliable),"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,1998,none,0,,good,America Votes,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2000,none,0,,good,America Votes,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2002,none,0,,none,,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2004,none,0,,none,,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2006,none,0,,none,,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2008,full,1,hi,none,,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2010,full,1,hi,none,,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2012,full,1,hi,unreliable,"America Votes (unreliable, excluded)","America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2014,full,1,hi,unreliable,"America Votes (unreliable, excluded)","America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2016,full,1,MEDSL precinct,none,,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2018,full,1,MEDSL precinct,none,,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2020,full,1,MEDSL precinct,none,,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2022,full,1,MEDSL precinct,none,,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+HAWAII,2024,full,1,MEDSL precinct,none,,"America Votes gap 2002-2010 (parser didn't find/match the table). elections.hawaii.gov has per-county PDFs, not bot-blocked, but historical-year URL pattern/archive depth not confirmed."
+IDAHO,1990,none,0,,none,,
+IDAHO,1992,none,0,,good,America Votes,
+IDAHO,1994,full,1,id,good,America Votes,
+IDAHO,1996,full,1,id,good,America Votes,
+IDAHO,1998,full,1,id,good,America Votes,
+IDAHO,2000,full,1,id,good,America Votes,
+IDAHO,2002,full,1,id,good,America Votes,
+IDAHO,2004,full,1,id,good,America Votes,
+IDAHO,2006,full,1,id,good,America Votes,
+IDAHO,2008,full,1,id,good,America Votes,
+IDAHO,2010,full,1,id,good,America Votes,
+IDAHO,2012,full,1,id,unreliable,"America Votes (unreliable, excluded)",
+IDAHO,2014,full,1,id,unreliable,"America Votes (unreliable, excluded)",
+IDAHO,2016,full,1,MEDSL precinct,none,,
+IDAHO,2018,full,1,MEDSL precinct,none,,
+IDAHO,2020,full,1,MEDSL precinct,none,,
+IDAHO,2022,partial,0.977,MEDSL precinct,none,,
+IDAHO,2024,full,1,MEDSL precinct,none,,
+ILLINOIS,1990,full,1,il_1990,none,,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,1992,full,1,il_1992,good,America Votes,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,1994,full,1,il_1994,good,America Votes,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,1996,full,1,il_1996,good,America Votes,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,1998,full,1,il_sbe_1998,good,America Votes,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2000,full,1,il_sbe_2000,good,America Votes,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2002,full,1,il_sbe_2002,good,America Votes,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2004,full,1,il_sbe_2004,good,America Votes,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2006,full,1,il_sbe_2006,good,America Votes,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2008,full,1,il; il_sbe_2008,good,America Votes,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2010,full,1,il; il_sbe_2010,good,America Votes,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2012,full,1,il; il_sbe_2012,unreliable,"America Votes (unreliable, excluded)","DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2014,full,1,il; il_sbe_2014,unreliable,"America Votes (unreliable, excluded)","DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2016,full,1,il_sbe_2016; MEDSL precinct,none,,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2018,full,1,il_sbe_2018; MEDSL precinct,none,,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2020,full,1,il_sbe_2020; MEDSL precinct,none,,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2022,full,1,il_sbe_2022; MEDSL precinct,none,,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+ILLINOIS,2024,full,1,il_sbe_2024; MEDSL precinct,none,,"DONE 2008-2014 (all 4 pre-MEDSL years IL's OpenElections repo has, github.com/openelections/openelections-data-il -- repo only starts at 2008) -- see 01p_house_county_illinois.R. Cleanest state in this whole pass: identical schema and 'U.S. House' office label all 4 years, party already DEM/REP, no pseudo-total row, Cook County handled identically to every other county, zero bugs, zero exclusions -- 408/408 (102 counties x 4 years). Note for future scripts: the county_fips crosswalk (countypres_2000-2024.tab) has TWO spelling variants mapped to the same fips for two IL counties (DEWITT/DE WITT -> 17039, JODAVIESS/JO DAVIESS -> 17085) -- harmless for a name-keyed left_join (IL's source consistently uses the no-space spelling, matches fine), but would silently multiply rows in any script that joins the other direction (by fips) instead."
+INDIANA,1990,full,1,in_1990,none,,
+INDIANA,1992,full,1,in_1992,good,America Votes,
+INDIANA,1994,full,1,in_1994,good,America Votes,
+INDIANA,1996,full,1,in_1996,good,America Votes,
+INDIANA,1998,full,1,in_1998,good,America Votes,
+INDIANA,2000,full,1,in_2000,good,America Votes,
+INDIANA,2002,full,1,in; in_2002,good,America Votes,
+INDIANA,2004,full,1,in; in_2004,good,America Votes,
+INDIANA,2006,full,1,in; in_2006,good,America Votes,
+INDIANA,2008,full,1,in; in_2008,good,America Votes,
+INDIANA,2010,full,1,in; in_2010,good,America Votes,
+INDIANA,2012,full,1,in,unreliable,"America Votes (unreliable, excluded)",
+INDIANA,2014,full,1,in,unreliable,"America Votes (unreliable, excluded)",
+INDIANA,2016,full,1,in_enr_2016; MEDSL precinct,none,,
+INDIANA,2018,full,1,in_enr_2018; MEDSL precinct,none,,
+INDIANA,2020,full,1,in_enr_2020; MEDSL precinct,none,,
+INDIANA,2022,full,1,in_enr_2022; MEDSL precinct,none,,
+INDIANA,2024,full,1,in_enr_2024; MEDSL precinct,none,,
+IOWA,1990,none,0,,none,,
+IOWA,1992,none,0,,good,America Votes,
+IOWA,1994,none,0,,good,America Votes,
+IOWA,1996,none,0,,good,America Votes,
+IOWA,1998,none,0,,good,America Votes,
+IOWA,2000,full,1,ia,good,America Votes,
+IOWA,2002,full,1,ia,good,America Votes,
+IOWA,2004,full,1,ia,good,America Votes,
+IOWA,2006,full,1,ia,good,America Votes,
+IOWA,2008,partial,0.899,ia,good,America Votes,
+IOWA,2010,full,1,ia,good,America Votes,
+IOWA,2012,full,1,ia,unreliable,"America Votes (unreliable, excluded)",
+IOWA,2014,full,1,ia,unreliable,"America Votes (unreliable, excluded)",
+IOWA,2016,full,1,MEDSL precinct,none,,
+IOWA,2018,full,1,MEDSL precinct,none,,
+IOWA,2020,full,1,MEDSL precinct,none,,
+IOWA,2022,full,1,MEDSL precinct,none,,
+IOWA,2024,full,1,MEDSL precinct,none,,
+KANSAS,1990,full,1,ks_1990,none,,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,1992,full,1,ks_1992,good,America Votes,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,1994,full,1,ks_1994,good,America Votes,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,1996,full,1,ks_1996,good,America Votes,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,1998,full,1,ks_1998,good,America Votes,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2000,full,1,ks_2000,good,America Votes,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2002,full,1,ks_2002,good,America Votes,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2004,full,1,ks_2004,good,America Votes,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2006,full,1,ks_2006,good,America Votes,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2008,full,1,ks_2008,good,America Votes,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2010,full,1,ks_2010,unreliable,America Votes (all rows flagged unreliable),"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2012,full,1,ks,unreliable,"America Votes (unreliable, excluded)","sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2014,full,1,ks,unreliable,"America Votes (unreliable, excluded)","sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2016,full,1,MEDSL precinct,none,,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2018,full,1,MEDSL precinct,none,,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2020,full,1,MEDSL precinct,none,,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2022,full,1,MEDSL precinct,none,,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KANSAS,2024,full,1,MEDSL precinct,none,,"sos.ks.gov's own 'General Election Official Vote Totals' PDFs (checked back to 2004, the earliest posted) give only statewide per-district totals, no county breakdown -- confirmed by direct inspection, matches the user's own assessment that the site is useless for this. 2012 and 2014 DONE instead via OpenElections (github.com/openelections/openelections-data-ks), which has real county-level results sourced from official county canvasses for those two years only -- see 01j_house_county_kansas.R. 1992-2010 remains an open gap: OpenElections doesn't reach back further and no other free county-level source found yet; would likely need the Kansas Historical Society's microfilmed county canvass books."
+KENTUCKY,1990,full,1,ky,none,,
+KENTUCKY,1992,full,1,ky,good,America Votes,
+KENTUCKY,1994,full,1,ky,good,America Votes,
+KENTUCKY,1996,full,1,ky,good,America Votes,
+KENTUCKY,1998,full,1,ky,good,America Votes,
+KENTUCKY,2000,full,1,ky; ky_2000s,good,America Votes,"elect.ky.gov has real vote files for 2000+ (not bot-blocked) but they're a completely different, harder layout than the 1990-1998 files this pipeline handles: transposed (counties as column headers, candidates as rows, wrapped 6-per-block) and candidate rows don't show party letters directly -- would need an external candidate-to-party mapping to use safely. Not attempted."
+KENTUCKY,2002,full,1,ky; ky_2000s,good,America Votes,"Same as 2000 -- harder transposed format, not attempted."
+KENTUCKY,2004,full,1,ky; ky_2000s,good,America Votes,"Same as 2000 -- harder transposed format, not attempted."
+KENTUCKY,2006,full,1,ky; ky_2000s,good,America Votes,"Same as 2000 -- harder transposed format, not attempted."
+KENTUCKY,2008,full,1,ky; ky_2000s,good,America Votes,"Same as 2000 -- harder transposed format, not attempted."
+KENTUCKY,2010,full,1,ky; ky_2010,good,America Votes,"DONE: official-results PDF (off2010gen.pdf) is scanned/image-only -- OCR'd to locate the US House section, then hand-transcribed from 300dpi page images and verified against each district's printed Total Votes row. See 01i_house_county_kentucky_2010.R."
+KENTUCKY,2012,full,1,ky; ky_2010s,unreliable,"America Votes (unreliable, excluded)","Same as 2000 -- harder transposed format, not attempted."
+KENTUCKY,2014,full,1,ky; ky_2010s,unreliable,"America Votes (unreliable, excluded)","Same as 2000 -- harder transposed format, not attempted."
+KENTUCKY,2016,full,1,ky; ky_2010s; MEDSL precinct,none,,"elect.ky.gov's 2016 results-index page loaded but had no results-file links in its HTML at all (likely loaded some other way, e.g. an iframe) -- not investigated further."
+KENTUCKY,2018,full,1,MEDSL precinct,none,,
+KENTUCKY,2020,full,1,MEDSL precinct,none,,
+KENTUCKY,2022,full,1,MEDSL precinct,none,,
+KENTUCKY,2024,full,1,MEDSL precinct,none,,
+LOUISIANA,1990,partial,0.953,la_sos,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,1992,full,1,la_sos,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,1994,full,1,la_sos,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,1996,partial,0.766,la_sos,good,America Votes,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,1998,partial,0.172,la_sos,good,America Votes,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2000,full,1,la_sos,good,America Votes,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2002,full,1,la_sos,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2004,partial,0.812,la_sos,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2006,full,1,la_sos,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2008,partial,0.562,la_sos,good,America Votes,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2010,partial,0.891,la_sos,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2012,full,1,la_sos,unreliable,"America Votes (unreliable, excluded)","Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2014,full,1,la_sos,unreliable,"America Votes (unreliable, excluded)","Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2016,full,1,MEDSL precinct,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2018,full,1,MEDSL precinct,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2020,full,1,MEDSL precinct,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2022,partial,0.766,MEDSL precinct,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+LOUISIANA,2024,full,1,la_sos_2024; MEDSL precinct,none,,"Scattered America Votes gaps (1992,94,2002,04,06,10) not explained by any book footnote -- possibly Louisiana's jungle-primary system producing unusual table structure some years; not confirmed. sos.la.gov not bot-blocked, results subpage not located."
+MAINE,1990,full,1,me_historical,none,,
+MAINE,1992,full,1,me_historical,none,,
+MAINE,1994,full,1,me_historical,good,America Votes,
+MAINE,1996,full,1,me_historical,good,America Votes,
+MAINE,1998,full,1,me_historical,good,America Votes,
+MAINE,2000,full,1,me_historical,good,America Votes,
+MAINE,2002,full,1,me_historical,good,America Votes,
+MAINE,2004,full,1,me_historical,good,America Votes,
+MAINE,2006,full,1,me_historical,good,America Votes,
+MAINE,2008,full,1,me_historical,good,America Votes,
+MAINE,2010,full,1,me_historical,good,America Votes,
+MAINE,2012,full,1,me,unreliable,"America Votes (unreliable, excluded)",
+MAINE,2014,full,1,me_historical,unreliable,"America Votes (unreliable, excluded)",
+MAINE,2016,full,1,MEDSL precinct,none,,
+MAINE,2018,full,1,me_2018; MEDSL precinct,none,,
+MAINE,2020,full,1,MEDSL precinct,none,,
+MAINE,2022,full,1,MEDSL precinct,none,,
+MAINE,2024,full,1,MEDSL precinct,none,,
+MARYLAND,1990,full,1,md_html,none,,
+MARYLAND,1992,full,1,md_html,good,America Votes,
+MARYLAND,1994,full,1,md_html,good,America Votes,
+MARYLAND,1996,full,1,md_html,good,America Votes,
+MARYLAND,1998,full,1,md_html,good,America Votes,
+MARYLAND,2000,full,1,md_csv,good,America Votes,
+MARYLAND,2002,full,1,md_html,good,America Votes,
+MARYLAND,2004,full,1,md_csv,good,America Votes,
+MARYLAND,2006,full,1,md_csv,good,America Votes,
+MARYLAND,2008,full,1,md_csv,good,America Votes,
+MARYLAND,2010,full,1,md_csv,good,America Votes,
+MARYLAND,2012,full,1,md_csv,unreliable,"America Votes (unreliable, excluded)",
+MARYLAND,2014,full,1,md_csv,unreliable,"America Votes (unreliable, excluded)",
+MARYLAND,2016,full,1,MEDSL precinct,none,,
+MARYLAND,2018,full,1,MEDSL precinct,none,,
+MARYLAND,2020,full,1,MEDSL precinct,none,,
+MARYLAND,2022,full,1,MEDSL precinct,none,,
+MARYLAND,2024,full,1,MEDSL precinct,none,,
+MASSACHUSETTS,1990,none,0,,none,,
+MASSACHUSETTS,1992,none,0,,good,America Votes,
+MASSACHUSETTS,1994,none,0,,good,America Votes,
+MASSACHUSETTS,1996,none,0,,good,America Votes,
+MASSACHUSETTS,1998,none,0,,good,America Votes,
+MASSACHUSETTS,2000,full,1,ma,good,America Votes,
+MASSACHUSETTS,2002,full,1,ma,good,America Votes,
+MASSACHUSETTS,2004,full,1,ma,good,America Votes,
+MASSACHUSETTS,2006,full,1,ma,good,America Votes,
+MASSACHUSETTS,2008,full,1,ma,good,America Votes,
+MASSACHUSETTS,2010,full,1,ma,good,America Votes,
+MASSACHUSETTS,2012,partial,0.929,ma,unreliable,"America Votes (unreliable, excluded)",
+MASSACHUSETTS,2014,full,1,ma,unreliable,"America Votes (unreliable, excluded)",
+MASSACHUSETTS,2016,full,1,MEDSL precinct,none,,
+MASSACHUSETTS,2018,full,1,MEDSL precinct,none,,
+MASSACHUSETTS,2020,full,1,MEDSL precinct,none,,
+MASSACHUSETTS,2022,full,1,MEDSL precinct,none,,
+MASSACHUSETTS,2024,full,1,MEDSL precinct,none,,
+MICHIGAN,1990,none,0,,none,,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,1992,none,0,,good,America Votes,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,1994,none,0,,good,America Votes,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,1996,none,0,,good,America Votes,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,1998,none,0,,good,America Votes,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2000,none,0,,good,America Votes,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2002,none,0,,good,America Votes,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2004,none,0,,good,America Votes,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2006,none,0,,good,America Votes,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2008,full,1,mi,good,America Votes,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2010,full,1,mi,good,America Votes,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2012,full,1,mi,unreliable,"America Votes (unreliable, excluded)","DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2014,full,1,mi,unreliable,"America Votes (unreliable, excluded)","DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2016,full,1,MEDSL precinct,none,,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2018,full,1,MEDSL precinct,none,,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2020,full,1,MEDSL precinct,none,,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2022,full,1,MEDSL precinct,none,,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MICHIGAN,2024,full,1,MEDSL precinct,none,,"DONE 2008,2010,2012,2014 via OpenElections (github.com/openelections/openelections-data-mi) -- see 01m_house_county_michigan.R. Every year is precinct-level only (summed to county); office label is the one thing that's consistent across all 9 years checked ('U.S. House' every time). One county-name fix needed: 'GD. TRAVERSE' -> 'GRAND TRAVERSE' to match the crosswalk. 1998-2006 NOT included: the party column exists in the schema but is a genuinely empty string for every U.S. House row in those 5 years -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet."
+MINNESOTA,1990,full,1,mn_1990,none,,
+MINNESOTA,1992,full,1,mn_1992,good,America Votes,
+MINNESOTA,1994,full,1,mn_1994,good,America Votes,
+MINNESOTA,1996,full,1,mn_1996,good,America Votes,
+MINNESOTA,1998,full,1,mn_1998,good,America Votes,
+MINNESOTA,2000,full,1,mn_2000,good,America Votes,
+MINNESOTA,2002,full,1,mn_2002,good,America Votes,
+MINNESOTA,2004,full,1,mn_2004,good,America Votes,
+MINNESOTA,2006,full,1,mn_2006,good,America Votes,
+MINNESOTA,2008,full,1,mn_2008,good,America Votes,
+MINNESOTA,2010,full,1,mn_2010,good,America Votes,
+MINNESOTA,2012,full,1,mn,unreliable,"America Votes (unreliable, excluded)",
+MINNESOTA,2014,full,1,mn,unreliable,"America Votes (unreliable, excluded)",
+MINNESOTA,2016,full,1,MEDSL precinct,none,,
+MINNESOTA,2018,full,1,MEDSL precinct,none,,
+MINNESOTA,2020,full,1,MEDSL precinct,none,,
+MINNESOTA,2022,full,1,MEDSL precinct,none,,
+MINNESOTA,2024,full,1,MEDSL precinct,none,,
+MISSISSIPPI,1990,none,0,,none,,
+MISSISSIPPI,1992,none,0,,good,America Votes,
+MISSISSIPPI,1994,none,0,,good,America Votes,
+MISSISSIPPI,1996,none,0,,good,America Votes,
+MISSISSIPPI,1998,none,0,,good,America Votes,
+MISSISSIPPI,2000,none,0,,good,America Votes,
+MISSISSIPPI,2002,none,0,,good,America Votes,
+MISSISSIPPI,2004,none,0,,good,America Votes,
+MISSISSIPPI,2006,full,1,ms,good,America Votes,
+MISSISSIPPI,2008,full,1,ms,good,America Votes,
+MISSISSIPPI,2010,full,1,ms,good,America Votes,
+MISSISSIPPI,2012,full,1,ms,unreliable,"America Votes (unreliable, excluded)",
+MISSISSIPPI,2014,full,1,ms,unreliable,"America Votes (unreliable, excluded)",
+MISSISSIPPI,2016,full,1,MEDSL precinct,none,,
+MISSISSIPPI,2018,full,1,MEDSL precinct,none,,
+MISSISSIPPI,2020,full,1,MEDSL precinct,none,,
+MISSISSIPPI,2022,full,1,MEDSL precinct,none,,
+MISSISSIPPI,2024,full,1,MEDSL precinct,none,,
+MISSOURI,1990,none,0,,none,,
+MISSOURI,1992,none,0,,good,America Votes,
+MISSOURI,1994,none,0,,good,America Votes,
+MISSOURI,1996,none,0,,good,America Votes,
+MISSOURI,1998,none,0,,good,America Votes,
+MISSOURI,2000,full,0.991,mo,good,America Votes,
+MISSOURI,2002,full,1,mo,good,America Votes,
+MISSOURI,2004,full,1,mo,good,America Votes,
+MISSOURI,2006,full,0.991,mo,good,America Votes,
+MISSOURI,2008,full,0.991,mo,good,America Votes,
+MISSOURI,2010,full,1,mo,good,America Votes,
+MISSOURI,2012,full,1,mo,unreliable,"America Votes (unreliable, excluded)",
+MISSOURI,2014,full,1,mo,unreliable,"America Votes (unreliable, excluded)",
+MISSOURI,2016,full,1,MEDSL precinct,none,,
+MISSOURI,2018,full,1,MEDSL precinct,none,,
+MISSOURI,2020,full,1,MEDSL precinct,none,,
+MISSOURI,2022,full,1,MEDSL precinct,none,,
+MISSOURI,2024,full,1,MEDSL precinct,none,,
+MONTANA,1990,none,0,,none,,
+MONTANA,1992,none,0,,good,America Votes,
+MONTANA,1994,none,0,,good,America Votes,
+MONTANA,1996,none,0,,good,America Votes,
+MONTANA,1998,none,0,,good,America Votes,
+MONTANA,2000,full,1,mt,good,America Votes,
+MONTANA,2002,full,1,mt,good,America Votes,
+MONTANA,2004,full,1,mt,unreliable,America Votes (all rows flagged unreliable),
+MONTANA,2006,full,1,mt,good,America Votes,
+MONTANA,2008,full,1,mt,good,America Votes,
+MONTANA,2010,full,1,mt,good,America Votes,
+MONTANA,2012,full,1,mt,none,,
+MONTANA,2014,full,1,mt,none,,
+MONTANA,2016,full,1,MEDSL precinct,none,,
+MONTANA,2018,full,1,MEDSL precinct,none,,
+MONTANA,2020,full,1,MEDSL precinct,none,,
+MONTANA,2022,none,0,,none,,
+MONTANA,2024,full,1,MEDSL precinct,none,,
+NEBRASKA,1990,full,1,ne_1990,good,America Votes,
+NEBRASKA,1992,full,1,ne_1992,good,America Votes,
+NEBRASKA,1994,full,1,ne_1994,good,America Votes,
+NEBRASKA,1996,full,1,ne_1996,good,America Votes,
+NEBRASKA,1998,full,1,ne_1998,good,America Votes,
+NEBRASKA,2000,full,1,ne_2000,good,America Votes,
+NEBRASKA,2002,full,1,ne_2002,good,America Votes,
+NEBRASKA,2004,full,1,ne_2004,good,America Votes,
+NEBRASKA,2006,full,1,ne_2006,good,America Votes,
+NEBRASKA,2008,full,1,ne,good,America Votes,
+NEBRASKA,2010,full,1,ne,good,America Votes,
+NEBRASKA,2012,full,1,ne,unreliable,"America Votes (unreliable, excluded)",
+NEBRASKA,2014,full,1,ne,unreliable,"America Votes (unreliable, excluded)",
+NEBRASKA,2016,full,1,MEDSL precinct,none,,
+NEBRASKA,2018,full,1,MEDSL precinct,none,,
+NEBRASKA,2020,full,1,MEDSL precinct,none,,
+NEBRASKA,2022,full,1,MEDSL precinct,none,,
+NEBRASKA,2024,full,1,MEDSL precinct,none,,
+NEVADA,1990,none,0,,none,,
+NEVADA,1992,none,0,,good,America Votes,
+NEVADA,1994,none,0,,good,America Votes,
+NEVADA,1996,none,0,,good,America Votes,
+NEVADA,1998,none,0,,good,America Votes,
+NEVADA,2000,full,1,nv,good,America Votes,
+NEVADA,2002,full,1,nv,good,America Votes,
+NEVADA,2004,full,1,nv,good,America Votes,
+NEVADA,2006,full,1,nv,good,America Votes,
+NEVADA,2008,full,1,nv,good,America Votes,
+NEVADA,2010,full,1,nv,good,America Votes,
+NEVADA,2012,full,1,nv,unreliable,"America Votes (unreliable, excluded)",
+NEVADA,2014,full,1,nv,unreliable,"America Votes (unreliable, excluded)",
+NEVADA,2016,full,1,MEDSL precinct,none,,
+NEVADA,2018,full,1,MEDSL precinct,none,,
+NEVADA,2020,full,1,MEDSL precinct,none,,
+NEVADA,2022,full,1,MEDSL precinct,none,,
+NEVADA,2024,full,1,MEDSL precinct,none,,
+NEW HAMPSHIRE,1990,none,0,,none,,
+NEW HAMPSHIRE,1992,none,0,,good,America Votes,
+NEW HAMPSHIRE,1994,none,0,,good,America Votes,
+NEW HAMPSHIRE,1996,full,1,nh_historical,good,America Votes,
+NEW HAMPSHIRE,1998,none,0,,good,America Votes,
+NEW HAMPSHIRE,2000,full,1,nh_historical,good,America Votes,
+NEW HAMPSHIRE,2002,none,0,,good,America Votes,
+NEW HAMPSHIRE,2004,none,0,,good,America Votes,
+NEW HAMPSHIRE,2006,full,1,nh_historical,good,America Votes,
+NEW HAMPSHIRE,2008,none,0,,good,America Votes,
+NEW HAMPSHIRE,2010,full,1,nh_historical,good,America Votes,
+NEW HAMPSHIRE,2012,full,1,nh,unreliable,"America Votes (unreliable, excluded)",
+NEW HAMPSHIRE,2014,full,1,nh,unreliable,"America Votes (unreliable, excluded)",
+NEW HAMPSHIRE,2016,full,1,MEDSL precinct,none,,
+NEW HAMPSHIRE,2018,full,1,MEDSL precinct,none,,
+NEW HAMPSHIRE,2020,full,1,MEDSL precinct,none,,
+NEW HAMPSHIRE,2022,full,1,MEDSL precinct,none,,
+NEW HAMPSHIRE,2024,full,1,MEDSL precinct,none,,
+NEW JERSEY,1990,none,0,,none,,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,1992,none,0,,good,America Votes,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,1994,none,0,,good,America Votes,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,1996,none,0,,good,America Votes,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,1998,none,0,,good,America Votes,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2000,full,1,nj_historical,good,America Votes,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2002,full,1,nj_historical,good,America Votes,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2004,full,1,nj_historical,good,America Votes,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2006,full,1,nj_historical,good,America Votes,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2008,full,1,nj_historical,good,America Votes,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2010,full,1,nj_historical,good,America Votes,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2012,full,1,nj,none,,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2014,full,1,nj,none,,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2016,full,1,MEDSL precinct,none,,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2018,full,1,MEDSL precinct,none,,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2020,full,1,MEDSL precinct,none,,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2022,full,1,MEDSL precinct; nj_2022,none,,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW JERSEY,2024,partial,0.952,MEDSL precinct,none,,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
+NEW MEXICO,1990,none,0,,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,1992,none,0,,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,1994,none,0,,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,1996,none,0,,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,1998,none,0,,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2000,full,1,nm,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2002,partial,0.97,nm,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2004,none,0,,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2006,none,0,,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2008,full,1,nm,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2010,full,1,nm,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2012,full,1,nm,unreliable,"America Votes (unreliable, excluded)","America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2014,full,1,nm,unreliable,"America Votes (unreliable, excluded)","America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2016,full,1,MEDSL precinct,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2018,full,1,MEDSL precinct,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2020,full,1,MEDSL precinct,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2022,full,1,MEDSL precinct,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2024,full,1,MEDSL precinct,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW YORK,1990,none,0,,none,,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,1992,none,0,,good,America Votes,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,1994,none,0,,good,America Votes,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,1996,none,0,,good,America Votes,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,1998,none,0,,good,America Votes,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2000,full,1,ny,good,America Votes,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2002,none,0,,good,America Votes,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2004,full,1,ny,good,America Votes,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2006,full,1,ny,good,America Votes,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2008,none,0,,good,America Votes,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2010,none,0,,good,America Votes,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2012,partial,0.935,ny,unreliable,"America Votes (unreliable, excluded)","DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2014,full,1,ny,unreliable,"America Votes (unreliable, excluded)","DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2016,full,0.984,MEDSL precinct,none,,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2018,partial,0.758,MEDSL precinct,none,,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2020,full,1,MEDSL precinct,none,,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2022,full,1,MEDSL precinct,none,,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NEW YORK,2024,full,1,MEDSL precinct,none,,"DONE 2000,2004,2006,2014 (full) + 2012 (partial, 58/62) via OpenElections (github.com/openelections/openelections-data-ny) -- see 01o_house_county_new_york.R. NY has a real electoral-fusion system (a candidate can appear on multiple parties' ballot lines, e.g. Democratic + Working Families) -- handled by collapsing to (county,district,candidate) and summing ALL of a candidate's lines before classifying DEM/REP, rather than trusting any single row's party field. Hit and fixed two pseudo-candidate rows that silently doubled totalvote if not excluded ('Total' and, in the 2012 precinct file only, 'Ballots Cast'/'Over Votes'/'Under Votes'). 2012 has a real, uncorrectable gap: Chautauqua/Chemung/Montgomery/Onondaga have no U.S. House rows at all that year. 2002 EXCLUDED (file exists but has no U.S. House race at all that year -- OpenElections archive gap). 2008/2010 EXCLUDED (repo only has 1-2 counties' worth of precinct files, not statewide)."
+NORTH CAROLINA,1990,none,0,,none,,
+NORTH CAROLINA,1992,none,0,,none,,
+NORTH CAROLINA,1994,none,0,,none,,
+NORTH CAROLINA,1996,none,0,,none,,
+NORTH CAROLINA,1998,none,0,,good,America Votes,
+NORTH CAROLINA,2000,full,1,NCSBE direct,good,America Votes,
+NORTH CAROLINA,2002,full,1,NCSBE direct,good,America Votes,
+NORTH CAROLINA,2004,full,1,NCSBE direct,good,America Votes,
+NORTH CAROLINA,2006,full,1,NCSBE direct,good,America Votes,
+NORTH CAROLINA,2008,full,1,NCSBE direct,good,America Votes,
+NORTH CAROLINA,2010,full,1,NCSBE direct,good,America Votes,
+NORTH CAROLINA,2012,full,1,NCSBE direct,unreliable,"America Votes (unreliable, excluded)",
+NORTH CAROLINA,2014,full,1,NCSBE direct,unreliable,"America Votes (unreliable, excluded)",
+NORTH CAROLINA,2016,full,1,MEDSL precinct; NCSBE direct,none,,
+NORTH CAROLINA,2018,full,1,MEDSL precinct,none,,
+NORTH CAROLINA,2020,full,1,MEDSL precinct,none,,
+NORTH CAROLINA,2022,full,1,MEDSL precinct,none,,
+NORTH CAROLINA,2024,full,1,MEDSL precinct,none,,
+NORTH DAKOTA,1990,none,0,,good,America Votes,
+NORTH DAKOTA,1992,none,0,,good,America Votes,
+NORTH DAKOTA,1994,none,0,,good,America Votes,
+NORTH DAKOTA,1996,none,0,,good,America Votes,
+NORTH DAKOTA,1998,none,0,,good,America Votes,
+NORTH DAKOTA,2000,full,1,nd,good,America Votes,
+NORTH DAKOTA,2002,full,1,nd,good,America Votes,
+NORTH DAKOTA,2004,full,1,nd,good,America Votes,
+NORTH DAKOTA,2006,full,1,nd,good,America Votes,
+NORTH DAKOTA,2008,full,1,nd,good,America Votes,
+NORTH DAKOTA,2010,full,1,nd,good,America Votes,
+NORTH DAKOTA,2012,full,1,nd,none,,
+NORTH DAKOTA,2014,full,1,nd,none,,
+NORTH DAKOTA,2016,full,1,MEDSL precinct,none,,
+NORTH DAKOTA,2018,full,1,MEDSL precinct,none,,
+NORTH DAKOTA,2020,full,1,MEDSL precinct,none,,
+NORTH DAKOTA,2022,full,1,MEDSL precinct,none,,
+NORTH DAKOTA,2024,full,1,MEDSL precinct,none,,
+OHIO,1990,none,0,,none,,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,1992,none,0,,good,America Votes,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,1994,none,0,,good,America Votes,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,1996,none,0,,good,America Votes,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,1998,none,0,,good,America Votes,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2000,full,1,oh,good,America Votes,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2002,full,1,oh,good,America Votes,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2004,none,0,,good,America Votes,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2006,full,1,oh,good,America Votes,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2008,full,1,oh,good,America Votes,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2010,none,0,,good,America Votes,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2012,full,1,oh,unreliable,"America Votes (unreliable, excluded)","DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2014,full,1,oh,unreliable,"America Votes (unreliable, excluded)","DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2016,full,1,MEDSL precinct,none,,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2018,full,1,MEDSL precinct,none,,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2020,full,1,MEDSL precinct,none,,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2022,full,1,MEDSL precinct,none,,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OHIO,2024,full,1,MEDSL precinct,none,,"DONE 2000,2002,2006,2008,2012,2014 via OpenElections (github.com/openelections/openelections-data-oh) -- see 01l_house_county_ohio.R. Office label and party format both vary every year (6 different layouts across 6 years) but no pseudo-total row in any of them. 2004 NOT included: OE's OH repo has no general-election file at all for that year (only a primary). 2010 NOT included: that year's file has no party column at all, just candidate names -- would need a Kentucky-style Wikipedia candidate-to-party lookup to close, not attempted yet. (Separately: ohiosos.gov itself returned a maintenance/Cloudflare page when checked earlier -- may be temporary, not the blocker here since OpenElections sidesteps it anyway.)"
+OKLAHOMA,1990,none,0,,none,,
+OKLAHOMA,1992,none,0,,good,America Votes,
+OKLAHOMA,1994,full,1,ok_pdfs,good,America Votes,
+OKLAHOMA,1996,none,0,,good,America Votes,
+OKLAHOMA,1998,none,0,,good,America Votes,
+OKLAHOMA,2000,full,1,ok_pdfs,good,America Votes,
+OKLAHOMA,2002,full,1,ok_pdfs,good,America Votes,
+OKLAHOMA,2004,full,1,ok,good,America Votes,
+OKLAHOMA,2006,full,1,ok_pdfs,good,America Votes,
+OKLAHOMA,2008,full,1,ok,good,America Votes,
+OKLAHOMA,2010,partial,0.818,ok; ok_pdfs,good,America Votes,
+OKLAHOMA,2012,full,1,ok,unreliable,"America Votes (unreliable, excluded)",
+OKLAHOMA,2014,partial,0.961,ok,unreliable,"America Votes (unreliable, excluded)",
+OKLAHOMA,2016,partial,0.961,MEDSL precinct,none,,
+OKLAHOMA,2018,full,1,MEDSL precinct,none,,
+OKLAHOMA,2020,full,1,MEDSL precinct,none,,
+OKLAHOMA,2022,full,1,MEDSL precinct,none,,
+OKLAHOMA,2024,partial,0.636,MEDSL precinct,none,,
+OREGON,1990,none,0,,none,,
+OREGON,1992,none,0,,good,America Votes,
+OREGON,1994,none,0,,good,America Votes,
+OREGON,1996,none,0,,good,America Votes,
+OREGON,1998,none,0,,good,America Votes,
+OREGON,2000,partial,0.528,or,good,America Votes,
+OREGON,2002,partial,0.611,or,good,America Votes,
+OREGON,2004,partial,0.75,or,good,America Votes,
+OREGON,2006,full,1,or,good,America Votes,
+OREGON,2008,full,1,or,good,America Votes,
+OREGON,2010,full,1,or,good,America Votes,
+OREGON,2012,partial,0.944,or,unreliable,"America Votes (unreliable, excluded)",
+OREGON,2014,full,1,or,unreliable,"America Votes (unreliable, excluded)",
+OREGON,2016,full,1,MEDSL precinct,none,,
+OREGON,2018,full,1,MEDSL precinct,none,,
+OREGON,2020,full,1,MEDSL precinct,none,,
+OREGON,2022,full,1,MEDSL precinct,none,,
+OREGON,2024,full,1,MEDSL precinct,none,,
+PENNSYLVANIA,1990,none,0,,none,,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,1992,none,0,,good,America Votes,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,1994,none,0,,good,America Votes,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,1996,none,0,,good,America Votes,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,1998,none,0,,good,America Votes,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2000,full,1,pa,good,America Votes,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2002,full,1,pa,good,America Votes,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2004,full,1,pa,good,America Votes,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2006,full,1,pa,good,America Votes,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2008,full,1,pa,good,America Votes,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2010,full,1,pa,good,America Votes,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2012,full,1,pa,unreliable,"America Votes (unreliable, excluded)","DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2014,full,1,pa,unreliable,"America Votes (unreliable, excluded)","DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2016,full,1,MEDSL precinct,none,,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2018,full,1,MEDSL precinct,none,,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2020,full,1,MEDSL precinct,none,,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2022,full,1,MEDSL precinct,none,,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+PENNSYLVANIA,2024,full,1,MEDSL precinct,none,,"DONE 2000-2014 via OpenElections (github.com/openelections/openelections-data-pa) -- see 01k_house_county_pennsylvania.R. 2000-2010+2014 use OE's own cleaned county-level file; 2012 has no cleaned file yet so parsed directly from PA's raw SURE-system precinct export using its documented 33-column layout (office code 'USC', county FIPS given directly in column 28). 1992-1998 remains an open gap -- OE's PA repo doesn't reach back that far."
+RHODE ISLAND,1990,none,0,,none,,
+RHODE ISLAND,1992,none,0,,good,America Votes,
+RHODE ISLAND,1994,none,0,,good,America Votes,
+RHODE ISLAND,1996,none,0,,good,America Votes,
+RHODE ISLAND,1998,none,0,,good,America Votes,
+RHODE ISLAND,2000,none,0,,good,America Votes,
+RHODE ISLAND,2002,none,0,,good,America Votes,
+RHODE ISLAND,2004,none,0,,good,America Votes,
+RHODE ISLAND,2006,none,0,,good,America Votes,
+RHODE ISLAND,2008,full,1,ri,good,America Votes,
+RHODE ISLAND,2010,none,0,,good,America Votes,
+RHODE ISLAND,2012,full,1,ri,unreliable,"America Votes (unreliable, excluded)",
+RHODE ISLAND,2014,full,1,ri,unreliable,"America Votes (unreliable, excluded)",
+RHODE ISLAND,2016,full,1,MEDSL precinct,none,,
+RHODE ISLAND,2018,full,1,MEDSL precinct,none,,
+RHODE ISLAND,2020,full,1,MEDSL precinct,none,,
+RHODE ISLAND,2022,full,1,MEDSL precinct,none,,
+RHODE ISLAND,2024,full,1,MEDSL precinct,none,,
+SOUTH CAROLINA,1990,full,1,sc_1990,none,,
+SOUTH CAROLINA,1992,full,1,sc_1992,good,America Votes,
+SOUTH CAROLINA,1994,full,1,sc_1994,good,America Votes,
+SOUTH CAROLINA,1996,full,1,sc_1996,good,America Votes,
+SOUTH CAROLINA,1998,full,1,sc_1998,good,America Votes,
+SOUTH CAROLINA,2000,full,1,sc_2000,good,America Votes,
+SOUTH CAROLINA,2002,full,1,sc_2002,good,America Votes,
+SOUTH CAROLINA,2004,full,1,sc_2004,good,America Votes,
+SOUTH CAROLINA,2006,full,1,sc_2006,good,America Votes,
+SOUTH CAROLINA,2008,full,1,sc; sc_2008,good,America Votes,
+SOUTH CAROLINA,2010,none,0,,good,America Votes,
+SOUTH CAROLINA,2012,full,1,sc,unreliable,"America Votes (unreliable, excluded)",
+SOUTH CAROLINA,2014,full,1,sc,unreliable,"America Votes (unreliable, excluded)",
+SOUTH CAROLINA,2016,full,1,MEDSL precinct,none,,
+SOUTH CAROLINA,2018,full,1,MEDSL precinct,none,,
+SOUTH CAROLINA,2020,full,1,MEDSL precinct,none,,
+SOUTH CAROLINA,2022,full,1,MEDSL precinct,none,,
+SOUTH CAROLINA,2024,full,1,MEDSL precinct,none,,
+SOUTH DAKOTA,1990,full,0.985,sd_sos,good,America Votes,
+SOUTH DAKOTA,1992,none,0,,good,America Votes,
+SOUTH DAKOTA,1994,full,0.985,sd_sos,good,America Votes,
+SOUTH DAKOTA,1996,full,0.985,sd_sos,good,America Votes,
+SOUTH DAKOTA,1998,full,0.985,sd_sos,good,America Votes,
+SOUTH DAKOTA,2000,full,0.985,sd_sos,good,America Votes,
+SOUTH DAKOTA,2002,full,0.985,sd_sos,good,America Votes,
+SOUTH DAKOTA,2004,full,0.985,sd_sos,good,America Votes,
+SOUTH DAKOTA,2006,full,0.985,sd_sos,good,America Votes,
+SOUTH DAKOTA,2008,full,0.985,sd_sos,good,America Votes,
+SOUTH DAKOTA,2010,full,0.985,sd_sos,good,America Votes,
+SOUTH DAKOTA,2012,full,0.985,sd_sos,none,,
+SOUTH DAKOTA,2014,full,0.985,sd,none,,
+SOUTH DAKOTA,2016,full,0.985,MEDSL precinct,none,,
+SOUTH DAKOTA,2018,full,0.985,MEDSL precinct,none,,
+SOUTH DAKOTA,2020,full,0.985,MEDSL precinct,none,,
+SOUTH DAKOTA,2022,full,0.985,MEDSL precinct,none,,
+SOUTH DAKOTA,2024,full,0.985,MEDSL precinct,none,,
+TENNESSEE,1990,none,0,,none,,
+TENNESSEE,1992,none,0,,good,America Votes,
+TENNESSEE,1994,none,0,,good,America Votes,
+TENNESSEE,1996,none,0,,good,America Votes,
+TENNESSEE,1998,none,0,,good,America Votes,
+TENNESSEE,2000,full,1,tn,good,America Votes,
+TENNESSEE,2002,full,1,tn,good,America Votes,
+TENNESSEE,2004,full,1,tn,good,America Votes,
+TENNESSEE,2006,full,1,tn,good,America Votes,
+TENNESSEE,2008,full,1,tn,good,America Votes,
+TENNESSEE,2010,full,1,tn,good,America Votes,
+TENNESSEE,2012,full,1,tn,unreliable,"America Votes (unreliable, excluded)",
+TENNESSEE,2014,full,1,tn,unreliable,"America Votes (unreliable, excluded)",
+TENNESSEE,2016,full,1,MEDSL precinct,none,,
+TENNESSEE,2018,full,1,MEDSL precinct,none,,
+TENNESSEE,2020,full,1,MEDSL precinct,none,,
+TENNESSEE,2022,full,1,MEDSL precinct,none,,
+TENNESSEE,2024,full,1,MEDSL precinct,none,,
+TEXAS,1990,none,0,,none,,
+TEXAS,1992,full,1,tx_sos_1992,good,America Votes,
+TEXAS,1994,full,1,tx_sos_1994,good,America Votes,
+TEXAS,1996,full,1,tx_sos_1996,good,America Votes,
+TEXAS,1998,full,1,tx_sos_1998,good,America Votes,
+TEXAS,2000,full,1,tx; tx_sos_2000,good,America Votes,
+TEXAS,2002,full,1,tx; tx_sos_2002,good,America Votes,
+TEXAS,2004,full,1,tx; tx_sos_2004,good,America Votes,
+TEXAS,2006,full,1,tx; tx_sos_2006,good,America Votes,
+TEXAS,2008,full,1,tx; tx_sos_2008,good,America Votes,
+TEXAS,2010,full,1,tx; tx_sos_2010,good,America Votes,
+TEXAS,2012,full,1,tx; tx_sos_2012,unreliable,"America Votes (unreliable, excluded)",
+TEXAS,2014,full,0.996,tx; tx_sos_2014,unreliable,"America Votes (unreliable, excluded)",
+TEXAS,2016,full,1,MEDSL precinct; tx; tx_sos_2016,none,,
+TEXAS,2018,full,1,MEDSL precinct; tx_sos_2018,none,,
+TEXAS,2020,full,1,MEDSL precinct,none,,
+TEXAS,2022,full,1,MEDSL precinct,none,,
+TEXAS,2024,full,1,MEDSL precinct,none,,
+UTAH,1990,none,0,,none,,
+UTAH,1992,none,0,,good,America Votes,
+UTAH,1994,none,0,,good,America Votes,
+UTAH,1996,none,0,,good,America Votes,
+UTAH,1998,none,0,,good,America Votes,
+UTAH,2000,none,0,,good,America Votes,
+UTAH,2002,none,0,,good,America Votes,
+UTAH,2004,none,0,,good,America Votes,
+UTAH,2006,none,0,,good,America Votes,
+UTAH,2008,full,1,ut_xls,good,America Votes,
+UTAH,2010,full,1,ut_xls,good,America Votes,
+UTAH,2012,partial,0.517,ut,unreliable,"America Votes (unreliable, excluded)",
+UTAH,2014,partial,0.862,ut,unreliable,"America Votes (unreliable, excluded)",
+UTAH,2016,full,1,MEDSL precinct,none,,
+UTAH,2018,full,1,MEDSL precinct,none,,
+UTAH,2020,full,1,MEDSL precinct,none,,
+UTAH,2022,full,1,MEDSL precinct,none,,
+UTAH,2024,full,1,MEDSL precinct,none,,
+VERMONT,1990,none,0,,good,America Votes,
+VERMONT,1992,none,0,,good,America Votes,
+VERMONT,1994,none,0,,good,America Votes,
+VERMONT,1996,none,0,,good,America Votes,
+VERMONT,1998,none,0,,good,America Votes,
+VERMONT,2000,none,0,,good,America Votes,
+VERMONT,2002,none,0,,good,America Votes,
+VERMONT,2004,none,0,,good,America Votes,
+VERMONT,2006,none,0,,good,America Votes,
+VERMONT,2008,none,0,,good,America Votes,
+VERMONT,2010,none,0,,good,America Votes,
+VERMONT,2012,full,1,vt,none,,
+VERMONT,2014,full,1,vt,none,,
+VERMONT,2016,full,1,MEDSL precinct,none,,
+VERMONT,2018,full,1,MEDSL precinct,none,,
+VERMONT,2020,full,1,MEDSL precinct,none,,
+VERMONT,2022,full,1,MEDSL precinct,none,,
+VERMONT,2024,full,1,MEDSL precinct,none,,
+VIRGINIA,1990,full,1,va_1990,none,,
+VIRGINIA,1992,full,1,va_1992,good,America Votes,
+VIRGINIA,1994,full,1,va_1994,good,America Votes,
+VIRGINIA,1996,full,1,va_1996,good,America Votes,
+VIRGINIA,1998,full,1,va_1998,good,America Votes,
+VIRGINIA,2000,full,1,va_2000,good,America Votes,
+VIRGINIA,2002,full,1,va_2002,good,America Votes,
+VIRGINIA,2004,full,1,va_2004,good,America Votes,
+VIRGINIA,2006,full,1,VA SBE direct; va_2006,good,America Votes,
+VIRGINIA,2008,full,1,VA SBE direct; va_2008,good,America Votes,
+VIRGINIA,2010,full,1,VA SBE direct; va_2010,good,America Votes,
+VIRGINIA,2012,full,1,VA SBE direct; va_2012,unreliable,"America Votes (unreliable, excluded)",
+VIRGINIA,2014,full,1,VA SBE direct; va_2014,unreliable,"America Votes (unreliable, excluded)",
+VIRGINIA,2016,full,1,MEDSL precinct; VA SBE direct; va_2016,none,,
+VIRGINIA,2018,full,0.993,MEDSL precinct; va_2018,none,,
+VIRGINIA,2020,full,0.993,MEDSL precinct; va_2020,none,,
+VIRGINIA,2022,full,0.993,MEDSL precinct; va_2022,none,,
+VIRGINIA,2024,full,0.993,MEDSL precinct; va_2024,none,,
+WASHINGTON,1990,none,0,,none,,
+WASHINGTON,1992,none,0,,good,America Votes,
+WASHINGTON,1994,none,0,,good,America Votes,
+WASHINGTON,1996,none,0,,good,America Votes,
+WASHINGTON,1998,none,0,,good,America Votes,
+WASHINGTON,2000,full,1,wa,good,America Votes,
+WASHINGTON,2002,full,1,wa,good,America Votes,
+WASHINGTON,2004,full,1,wa,good,America Votes,
+WASHINGTON,2006,full,1,wa,good,America Votes,
+WASHINGTON,2008,none,0,,good,America Votes,
+WASHINGTON,2010,partial,0.949,wa,good,America Votes,
+WASHINGTON,2012,full,1,wa,unreliable,"America Votes (unreliable, excluded)",
+WASHINGTON,2014,full,1,wa,unreliable,"America Votes (unreliable, excluded)",
+WASHINGTON,2016,full,1,MEDSL precinct,none,,
+WASHINGTON,2018,full,1,MEDSL precinct,none,,
+WASHINGTON,2020,full,1,MEDSL precinct,none,,
+WASHINGTON,2022,full,1,MEDSL precinct,none,,
+WASHINGTON,2024,full,1,MEDSL precinct,none,,
+WEST VIRGINIA,1990,none,0,,none,,
+WEST VIRGINIA,1992,none,0,,good,America Votes,
+WEST VIRGINIA,1994,none,0,,good,America Votes,
+WEST VIRGINIA,1996,none,0,,good,America Votes,
+WEST VIRGINIA,1998,none,0,,good,America Votes,
+WEST VIRGINIA,2000,full,1,wv,good,America Votes,
+WEST VIRGINIA,2002,full,0.982,wv,good,America Votes,
+WEST VIRGINIA,2004,full,0.982,wv,good,America Votes,
+WEST VIRGINIA,2006,full,0.982,wv,good,America Votes,
+WEST VIRGINIA,2008,partial,0.873,wv,good,America Votes,
+WEST VIRGINIA,2010,partial,0.564,wv,good,America Votes,
+WEST VIRGINIA,2012,partial,0.455,wv,unreliable,"America Votes (unreliable, excluded)",
+WEST VIRGINIA,2014,full,1,wv,unreliable,"America Votes (unreliable, excluded)",
+WEST VIRGINIA,2016,full,1,MEDSL precinct,none,,
+WEST VIRGINIA,2018,full,1,MEDSL precinct,none,,
+WEST VIRGINIA,2020,full,1,MEDSL precinct,none,,
+WEST VIRGINIA,2022,full,1,MEDSL precinct,none,,
+WEST VIRGINIA,2024,full,1,MEDSL precinct,none,,
+WISCONSIN,1990,none,0,,none,,
+WISCONSIN,1992,none,0,,good,America Votes,
+WISCONSIN,1994,none,0,,good,America Votes,
+WISCONSIN,1996,none,0,,good,America Votes,
+WISCONSIN,1998,none,0,,good,America Votes,
+WISCONSIN,2000,full,1,wi,good,America Votes,
+WISCONSIN,2002,full,1,wi,good,America Votes,
+WISCONSIN,2004,none,0,,good,America Votes,
+WISCONSIN,2006,full,1,wi,good,America Votes,
+WISCONSIN,2008,full,1,wi,good,America Votes,
+WISCONSIN,2010,full,1,wi,good,America Votes,
+WISCONSIN,2012,full,1,wi,unreliable,"America Votes (unreliable, excluded)",
+WISCONSIN,2014,full,1,wi,unreliable,"America Votes (unreliable, excluded)",
+WISCONSIN,2016,full,1,MEDSL precinct,none,,
+WISCONSIN,2018,full,1,MEDSL precinct,none,,
+WISCONSIN,2020,full,1,MEDSL precinct,none,,
+WISCONSIN,2022,full,1,MEDSL precinct,none,,
+WISCONSIN,2024,full,1,MEDSL precinct,none,,
+WYOMING,1990,none,0,,good,America Votes,
+WYOMING,1992,none,0,,good,America Votes,
+WYOMING,1994,none,0,,good,America Votes,
+WYOMING,1996,none,0,,good,America Votes,
+WYOMING,1998,none,0,,good,America Votes,
+WYOMING,2000,full,1,wy,good,America Votes,
+WYOMING,2002,full,1,wy,good,America Votes,
+WYOMING,2004,full,1,wy,good,America Votes,
+WYOMING,2006,none,0,,good,America Votes,
+WYOMING,2008,full,1,wy,good,America Votes,
+WYOMING,2010,full,1,wy,good,America Votes,
+WYOMING,2012,full,1,wy,none,,
+WYOMING,2014,full,1,wy,none,,
+WYOMING,2016,full,1,MEDSL precinct,none,,
+WYOMING,2018,full,1,MEDSL precinct,none,,
+WYOMING,2020,full,1,MEDSL precinct,none,,
+WYOMING,2022,full,1,MEDSL precinct,none,,
+WYOMING,2024,full,1,MEDSL precinct,none,,

@@ -1,0 +1,12 @@
+year,district,county,candidate,ocr_value,corrected_value,how_verified
+1998,1,Kearny,Jim Phillips,NA,196,OCR '1%' read as 16; page image (KS_1998.pdf p.105) shows 196; district sum then ties to printed Total 36618
+1998,3,Total (printed),Vince Snowbarger,(cell missing in OCR),93938,OCR dropped the second Total cell; page image (p.107) shows 93938; district total 103376+93938 = overview 197314
+1998,4,H arvey,Jim Lawing,NA,3596,OCR '3 5%' unreadable; page image (p.108) shows 3596; district sum then ties to printed Total 62737
+2000,1,Gove,Jerry Moran,1390,1290,OCR 1390; page image (KS_2000.pdf p.108) shows 1290; needed for the district sum to tie to printed Total 216484
+2000,1,K earny,Jerry Moran,1329,1229,OCR 1329; page image (p.108) shows 1229; needed for the district sum to tie to printed Total 216484
+2000,1,L ane,Jerry Moran,NA,996,OCR '9%' unreadable; page image (p.108) shows 996; needed for the district sum to tie to printed Total 216484
+2000,1,Logan,Jerry Moran,1385,1285,OCR 1385; page image (p.108) shows 1285; needed for the district sum to tie to printed Total 216484
+2000,4,Butler,Steven A. Rosile,NA,796,OCR '7 %' unreadable; page image (p.111) shows 796; district sum then ties to printed Total 8732
+2002,2,G eary,Dan Lykins,(row unreadable: G eary ... 2 ... 3),2,Row OCR garbled ('2 ... 3'); page image (KS_2002.pdf p.108) shows Lykins 2 / Clack blank / Ryun 3; district sums then tie to printed Total 79160 and 127477
+2002,2,G eary,Art Clack,(row unreadable: G eary ... 2 ... 3),0,Blank cell on the printed page (Clack column empty for Geary); Clack sum ties to printed Total 4340
+2002,2,G eary,Jim Ryun,(row unreadable: G eary ... 2 ... 3),3,see Geary Lykins

@@ -1,0 +1,11 @@
+year,district,county_ocr_label,ocr_cells,corrected_cells,how_verified
+1990,18,CASS,"3,319",3319|1|2,"OCR row had only Michel's cell (3,319); page image (PDF p.44) shows Gillin 1, Port 2"
+1990,18,LOGAN,"2,325|5",2325|5|1,OCR dropped Port's 1 (printed 'I'); page image (PDF p.44)
+1990,18,SCHUYLER,"2,234|0",2234|1|0,"OCR shifted Gillin's 1 out; page image (PDF p.44) shows Gillin 1, Port 0"
+1990,1,(printed candidate total: CHARLES A. HAYES),100 1890,100890,"OCR of the printed total was garbled; page image (PDF p.35) shows 100,890, equal to the county sum and the printed percentage"
+1990,1,(printed candidate total: BABETTE PEYTON),61708,6708,"OCR of the printed total was garbled; page image (PDF p.35) shows 6,708, equal to the county sum and the printed percentage"
+1990,2,(printed candidate total: GUS SAVAGE),801245,80245,"OCR of the printed total was garbled; page image (PDF p.35) shows 80,245, equal to the county sum and the printed percentage"
+1990,2,(printed candidate total: WILLIAM T. HESPEL),221350,22350,"OCR of the printed total was garbled; page image (PDF p.35) shows 22,350, equal to the county sum and the printed percentage"
+1990,3,(printed candidate total: MARTIN A. RUSSO),110 1512,110512,"OCR of the printed total was garbled; page image (PDF p.35) shows 110,512, equal to the county sum and the printed percentage"
+1990,3,(printed candidate total: CARLL. KLEIN),45 1299,45299,"OCR of the printed total was garbled; page image (PDF p.35) shows 45,299, equal to the county sum and the printed percentage"
+1992,14,LEE,"9,250|5,168",9250|5168|1,OCR dropped Dinwiddie's 1; page image (PDF p.63); district write-in total 59 = 58 + 1

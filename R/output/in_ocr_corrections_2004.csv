@@ -1,0 +1,2 @@
+district,county,candidate,ocr_value,corrected_value,how_verified
+all,all,all,,,No corrections: every cell and total was read directly from 200-dpi crops of the page images (PDF pp. 49 and 51); tesseract was used only to locate the section. All 25 candidate lines tie to their printed totals and all 25 totals appear in Wikipedia's 2004 district results.
