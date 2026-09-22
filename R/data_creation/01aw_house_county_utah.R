@@ -1,3 +1,8 @@
+## SUPERSEDED 2026-09-22 by 02af_house_ut_2012_2014.R (the state's own official canvass workbooks, full 29/29 counties both years) --
+## this OpenElections-sourced build's partial coverage (15/29 in 2012, 25/29 in 2014) is a genuine repo gap, not a parsing bug, but it is
+## fully replaced in the panel now; its output files were removed (R/output/long/he_ut.rds, R/output/elect_he_cty_ut.rds) and its
+## source_registry.csv row was deleted to avoid a base_token collision with the new source. Kept here only as a record of the approach.
+##
 ## Utah: found via OpenElections (github.com/openelections/openelections-data-ut). Part of the
 ## post-large-states push through the remaining state list. Repo only starts at 2012 (checked the
 ## full directory listing via a codeload.github.com tarball -- GitHub's listing API was

@@ -164,7 +164,6 @@
 "he_cty_tx_sos_2014",253,TRUE,0
 "he_cty_tx_sos_2016",254,TRUE,0
 "he_cty_tx_sos_2018",254,TRUE,0
-"he_cty_ut",40,TRUE,0
 "he_cty_ut_1990",29,TRUE,0
 "he_cty_ut_1992",29,TRUE,0
 "he_cty_ut_1994",29,TRUE,0
@@ -174,6 +173,8 @@
 "he_cty_ut_2002",29,TRUE,0
 "he_cty_ut_2004",29,TRUE,0
 "he_cty_ut_2006",29,TRUE,0
+"he_cty_ut_2012",29,TRUE,0
+"he_cty_ut_2014",29,TRUE,0
 "he_cty_ut_xls",58,TRUE,0
 "he_cty_va_1990",136,TRUE,0
 "he_cty_va_1992",136,TRUE,0

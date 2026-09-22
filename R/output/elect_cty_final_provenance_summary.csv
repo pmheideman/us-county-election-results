@@ -165,7 +165,6 @@
 "HE","he_cty_tx_sos_2014","as_source",253,2014,2014
 "HE","he_cty_tx_sos_2016","as_source",254,2016,2016
 "HE","he_cty_tx_sos_2018","as_source",254,2018,2018
-"HE","he_cty_ut","as_source",40,2012,2014
 "HE","he_cty_ut_1990","as_source",29,1990,1990
 "HE","he_cty_ut_1992","as_source",29,1992,1992
 "HE","he_cty_ut_1994","as_source",29,1994,1994
@@ -175,6 +174,8 @@
 "HE","he_cty_ut_2002","as_source",29,2002,2002
 "HE","he_cty_ut_2004","as_source",29,2004,2004
 "HE","he_cty_ut_2006","as_source",29,2006,2006
+"HE","he_cty_ut_2012","as_source",29,2012,2012
+"HE","he_cty_ut_2014","as_source",29,2014,2014
 "HE","he_cty_ut_xls","as_source",58,2008,2010
 "HE","he_cty_va_1990","as_source",136,1990,1990
 "HE","he_cty_va_1992","as_source",136,1992,1992

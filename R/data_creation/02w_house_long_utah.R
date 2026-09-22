@@ -1,3 +1,6 @@
+## SUPERSEDED 2026-09-22 by 02af_house_ut_2012_2014.R -- see 01aw_house_county_utah.R's header. Do not re-run this script; its output
+## files (he_ut.rds, elect_he_cty_ut.rds) were deleted and its source_registry.csv row removed.
+##
 ## Long table for Utah OpenElections 2012/2014 (01aw): county precinct files from the cached repo tarball, blank-party fallback via the
 ## candidate lookup exactly as 01aw. Candidate spelling for display comes from the raw string.
 source(file.path("R", "data_creation", "02w_common.R"))
