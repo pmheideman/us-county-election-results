@@ -12,4 +12,4 @@ state election offices and OpenElections). Our license applies to our compilatio
 keeps its own terms.
 
 Status: **provisional** until the source terms marked "confirm" in `docs/DECISIONS.md` (section 9) have been checked.
-Copyright holder: [fill in].
+Copyright holder: Paul Heideman.
