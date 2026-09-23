@@ -477,7 +477,73 @@ L <- tribble(
 "Remaining outliers found by the QA sweep and not yet resolved (R/output/qa_medsl_sweep_flags.csv, 64 flags): NY 2018 House Monroe (Morelle's Democratic rows are missing from the raw file entirely: House total 122,869 vs Senate 280,026), Dutchess, Montgomery, Rensselaer and Oswego; NY 2022 Chenango and Otsego (about 1.4x the usual ratio in both offices); Oregon 2018 Tillamook (House votes doubled: Schrader 13,604 + Callahan 11,436 in a county of about 14,000 voters); Michigan 2022 Midland (4,293 votes, about 10% of the usual turnout); New Hampshire 2016 Strafford; Maryland 2020 Howard and Baltimore City (0.43 of presidential); Mississippi 2022 Yazoo and 2024 Noxubee; Oklahoma 2024 Canadian and Creek; New Jersey 2024 Bergen (already flagged); and low ratios in Florida, Alabama and Tennessee that mostly reflect unopposed districts (Florida prints no unopposed races)",
 "QA sweep tests T1 and T2",
 "Flagged only: each needs the state's official county results or a check of the raw MEDSL rows",
-"flagged", "about 50 county-years", "R/qa_medsl_sweep.R", "2026-09-21"
+"flagged", "about 50 county-years", "R/qa_medsl_sweep.R", "2026-09-21",
+
+"OpenElections", "WV", "2010;2012", "HE",
+"Some counties' precinct files carry an extra precinct == 'TOTALS' rollup row per candidate, disguised as an ordinary precinct (not caught by any office/candidate-name filter); 01az summed it on top of the real per-precinct rows, doubling the county total",
+"User-supplied WV Blue Book 2012 general-election returns (0767_WVS_BlueBook.pdf) cross-checked against the panel: Monongalia and Ohio 2012 were exactly 2x the book's printed county totals (confirmed via 2012 presidential turnout too: Monongalia's pre-fix House total was 186% of its own presidential vote). Scanning all cached WV precinct files found the same TOTALS row in 12 more 2010 counties",
+"01az_house_county_west_virginia.R and 02p_house_long_west_virginia.R now exclude precinct == 'TOTALS'; panel patched in place",
+"fixed", "12 (2010) + 2 (2012) county-years", "R/data_creation/01az_house_county_west_virginia.R; 01e4_west_virginia_2012_bluebook_and_totals_fix_apply.R", "2026-09-23",
+
+"n/a (coverage gap closed)", "WV", "2012", "HE",
+"01az's OpenElections build only covered 25/55 West Virginia House counties in 2012 (the rest genuinely absent from the OpenElections repo)",
+"n/a - not an error, a coverage gap",
+"User supplied the WV Blue Book volume with the 2012 general election returns (0767_WVS_BlueBook.pdf); transcribed and verified against its own printed district TOTALS rows and against the (now-fixed) OpenElections build for the 25 overlap counties",
+"replaced", "30 counties added (25 -> 55)", "R/data_creation/01e3_house_county_west_virginia_bluebook.R; 02p_house_long_west_virginia_bluebook_2012.R", "2026-09-23",
+
+"n/a (coverage gap closed)", "WV", "1990;1992;1994;1996;1998", "HE",
+"West Virginia House had no county-level source at all for 1990-1998 (OpenElections' WV repo starts at 2000)",
+"n/a - not an error, a coverage gap",
+"User supplied 5 more WV Blue Book volumes (1991/1993/1995/1997/1999 editions), each carrying the PRIOR even year's general election returns; transcribed and verified against each district's own printed TOTAL row (all 16 district-year tables tie out exactly)",
+"replaced", "275 new county-years (55 counties x 5 years)", "R/data_creation/01e6_house_county_west_virginia_bluebook_1990_1998.R; 02p_house_long_west_virginia_bluebook_1990_1998.R", "2026-09-23",
+
+"OpenElections", "WV", "2010", "HE",
+"Even after the TOTALS-rollup fix (see the 01az entry above), OpenElections' 2010 West Virginia precinct files are themselves incomplete for a number of counties -- e.g. Marshall's real per-precinct rows sum to only 8,653 vs the Blue Book's certified 10,152 -- a different, larger problem than the single rollup-row bug",
+"20 of 31 overlap counties differ from the WV Blue Book 2011 edition's printed 2010 general returns, several substantially (Marshall +1,499, Kanawha -823); the book ties exactly to its own printed district TOTAL rows",
+"Adopted the WV Blue Book as the authoritative source for the full 55 counties (same treatment already given to 2012), replacing all 31 existing OpenElections-sourced rows",
+"replaced", "31 counties replaced + 24 counties added (55 total)", "R/data_creation/01e5_house_county_west_virginia_bluebook_2010.R; 02p_house_long_west_virginia_bluebook_2010.R", "2026-09-23",
+
+"OpenElections", "WV", "2008", "HE",
+"Same problem as 2010 (see the entry above): OpenElections' 2008 West Virginia precinct files are incomplete for a number of counties, e.g. Wetzel's real per-precinct rows sum to only 331 vs the Blue Book's certified 5,267",
+"32 of 48 overlap counties differ from the WV Blue Book 2011 edition's printed 2008 general returns (which also has the section immediately before 2010's); the book ties exactly to its own printed district TOTAL rows",
+"Adopted the WV Blue Book as the authoritative source for the full 55 counties, replacing all 48 existing OpenElections-sourced rows. This closes the last remaining WV House gap -- WV House is now complete, zero gaps, 1990-2024",
+"replaced", "48 counties replaced + 7 counties added (55 total)", "R/data_creation/01e8_house_county_west_virginia_bluebook_2008.R; 02p_house_long_west_virginia_bluebook_2008.R", "2026-09-23",
+
+"Colorado SOS historical election database", "CO", "1990", "HE",
+"The source itself lists BOTH candidates as 'Democratic' in 2 of 6 congressional districts: CD1 (Schroeder vs Gloria Gonzales Roemer) and CD6 (Jarrett vs Dan Schaefer) -- vote totals are correct, only the second candidate's party label is wrong",
+"Schaefer was CO-6's Republican incumbent 1983-1999 (GovTrack); Roemer was the GOP's 1990 nominee against Schroeder (contemporaneous Colorado Politics coverage); every other 1990-2000 district's party labels were checked and are clean",
+"Corrected via an explicit (year, district, candidate) override in 01eb_house_county_colorado_1990_2000.R rather than trusting the source's party column for these two rows",
+"fixed", "2 candidates (2 of 63 counties x 2 districts affected)", "R/data_creation/01eb_house_county_colorado_1990_2000.R", "2026-09-23",
+
+"n/a (coverage gap closed)", "NM", "1998", "HE",
+"New Mexico House had no county-level source at all for 1998 (OpenElections' NM repo starts at 2000)",
+"n/a - not an error, a coverage gap",
+"Built from the NM SOS's own per-county HTML result pages (election-results-archive), found via a 3rd-party RealFile widget API not linked directly from the archive page's own HTML; regex-parsed, spot-checked against each row's own printed vote-percent column",
+"replaced", "33 counties added (0 -> 33)", "R/data_creation/01ed_new_mexico_sos_archive_download.py; 01ef_new_mexico_sos_archive_parse.py; 01ee_house_county_new_mexico_sos_archive.R", "2026-09-23",
+
+"OpenElections", "NM", "2002", "HE",
+"01ao's OpenElections build was missing Cibola County entirely (a known, already-documented upstream OpenElections gap -- the string 'cibola' does not appear anywhere in that file)",
+"The NM SOS's own per-county archive (same source as 1998 above) has all 33 counties; the 32 overlapping counties match OpenElections EXACTLY (max diff = 0)",
+"Replaced with the SOS archive build",
+"replaced", "1 county added (32 -> 33), 32 counties unchanged", "R/data_creation/01ee_house_county_new_mexico_sos_archive.R", "2026-09-23",
+
+"n/a (coverage gap closed)", "NM", "2004;2006", "HE",
+"New Mexico House had no county-level source at all for 2004 or 2006 despite America Votes district-level data existing",
+"n/a - not an error, a coverage gap",
+"Parsed from the user-supplied born-digital statewide canvass PDFs (NM_StatewideGen04.pdf, NM_StatewideGen06.pdf) -- a wide table, 33 counties as columns; every row's county-sum verified exactly against the source's own printed TOTAL FOR EACH CANDIDATE column",
+"replaced", "33 counties added each year (0 -> 33 x 2)", "R/data_creation/01eh_new_mexico_statewide_pdf_parse.py; 01ei_house_county_new_mexico_statewide_pdf.R", "2026-09-23",
+
+"n/a (coverage gap closed)", "NM", "1990;1994;1996", "HE",
+"New Mexico House had no county-level source at all for 1990, 1994, or 1996 (OpenElections' NM repo starts at 2000)",
+"n/a - not an error, a coverage gap",
+"Hand-transcribed from the user-supplied scanned Canvass-of-Returns PDFs (NM_CanvassGeneral1990.pdf, NM_CanvassGeneral1994.pdf, 'NM_1996 General Summary.pdf'), same 33-county wide-table format as 1992; every district's county column verified against the source's own printed TOTAL FOR EACH CANDIDATE column. 1994 (31/33) and 1996 (32/33) are missing Harding+Hidalgo and Harding respectively -- confirmed genuinely blank in the source page itself (every candidate's row checked column-by-column at those positions), not a transcription gap. 1990 has one small accepted residual: District 3, Phil T. Archuletta (R), 60 votes (0.17%) under the printed total",
+"replaced", "33+31+32 = 96 counties added", "R/data_creation/01ek_house_county_new_mexico_scanned_canvass.R", "2026-09-23",
+
+"n/a (coverage gap closed)", "NM", "1992", "HE",
+"New Mexico House had no county-level source at all for 1992 (the last remaining NM House source_not_found year; 1990/1994/1996/1998/2002/2004/2006 closed separately). New Mexico House is now complete, zero source_not_found years, 1990-2024",
+"n/a - not an error, a coverage gap",
+"Hand-transcribed from the user-supplied scanned NM_CanvassGeneral1992.pdf (33-county wide-table canvass, same format as 1990/1994/1996); every district's county column verified against the source's own printed TOTAL FOR EACH CANDIDATE column. District 1 and 2 tie out exactly; District 3 ties exactly for Richardson (D, 122,850) and Nagel (Lib, 4,798), with a small accepted residual for Bemis (R): 51 votes (0.09%) short of the printed 54,569. District 3's county-level LABELS were corrected after cross-checking NM-3's actual 1990s county membership against Ballotpedia/Wikipedia (Sierra/Socorro/Valencia belong to District 2, not District 3, as an initial independent transcription had assumed); the affected raw vote numbers were already county-level-correct in 29 of 33 counties, and 4 counties' values were also corrected in the same pass",
+"replaced", "33 counties added (0 -> 33)", "R/data_creation/01em_house_county_new_mexico_1992_canvass.R; 01eo_new_mexico_1992_d3_fix_apply.R", "2026-09-23"
 )
 
 write.csv(L, file.path(OUTPUT_DIR, "data_corrections_log.csv"), row.names = FALSE)

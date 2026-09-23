@@ -89,12 +89,12 @@ CALIFORNIA,2018,full,1,MEDSL precinct,none,,
 CALIFORNIA,2020,full,1,MEDSL precinct,good,America Votes,
 CALIFORNIA,2022,full,1,MEDSL precinct,none,,
 CALIFORNIA,2024,full,1,MEDSL precinct,none,,
-COLORADO,1990,none,0,,none,,
-COLORADO,1992,none,0,,good,America Votes,
-COLORADO,1994,none,0,,good,America Votes,
-COLORADO,1996,none,0,,good,America Votes,
-COLORADO,1998,none,0,,good,America Votes,
-COLORADO,2000,none,0,,good,America Votes,
+COLORADO,1990,full,0.984,co_1990,none,,
+COLORADO,1992,full,0.984,co_1992,good,America Votes,
+COLORADO,1994,full,0.984,co_1994,good,America Votes,
+COLORADO,1996,full,0.984,co_1996,good,America Votes,
+COLORADO,1998,full,0.984,co_1998,good,America Votes,
+COLORADO,2000,full,0.984,co_2000,good,America Votes,
 COLORADO,2002,full,1,co,good,America Votes,
 COLORADO,2004,full,1,co,good,America Votes,
 COLORADO,2006,full,1,co,good,America Votes,
@@ -539,15 +539,15 @@ NEW JERSEY,2018,full,1,MEDSL precinct,none,,"DONE 2012,2014 via OpenElections (g
 NEW JERSEY,2020,full,1,MEDSL precinct,none,,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
 NEW JERSEY,2022,full,1,MEDSL precinct; nj_2022,none,,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
 NEW JERSEY,2024,partial,0.952,MEDSL precinct,none,,"DONE 2012,2014 via OpenElections (github.com/openelections/openelections-data-nj) -- see 01n_house_county_new_jersey.R. NJ's repo only starts at 2010 (unlike most other states). 2010 NOT included: the only 'general' file that year is a special State Senate election, no regular November federal general-election file exists in the repo at all for 2010 -- a genuine gap in OpenElections' own archive. Party field is unusually noisy (NJ lets candidates register free-text ballot-line names like 'None of Them', 'Politicians are Crooks', 'D-R Party' -- checked that last one specifically since it looks like a fusion label, but it's a real minor candidate under a made-up party name, not an actual Dem-Rep fusion ticket); only 'Republican'/'Democratic' mapped to REP/DEM, everything else correctly falls into neither."
-NEW MEXICO,1990,none,0,,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
-NEW MEXICO,1992,none,0,,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
-NEW MEXICO,1994,none,0,,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
-NEW MEXICO,1996,none,0,,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
-NEW MEXICO,1998,none,0,,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,1990,full,1,nm_1990,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,1992,full,1,nm_1992,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,1994,partial,0.939,nm_1994,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,1996,partial,0.97,nm_1996,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,1998,full,1,nm_1998,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
 NEW MEXICO,2000,full,1,nm,none,,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
-NEW MEXICO,2002,partial,0.97,nm,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
-NEW MEXICO,2004,none,0,,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
-NEW MEXICO,2006,none,0,,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2002,full,1,nm; nm_2002,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2004,full,1,nm_2004,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
+NEW MEXICO,2006,full,1,nm_2006,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
 NEW MEXICO,2008,full,1,nm,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
 NEW MEXICO,2010,full,1,nm,good,America Votes,"America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
 NEW MEXICO,2012,full,1,nm,unreliable,"America Votes (unreliable, excluded)","America Votes table exists in the book but wasn't matched by the parser (1992-2000 specifically); SOS site (sos.nm.gov) loads fine, not bot-blocked, just haven't located the actual results-archive subpage."
@@ -845,18 +845,18 @@ WASHINGTON,2018,full,1,MEDSL precinct,none,,
 WASHINGTON,2020,full,1,MEDSL precinct,none,,
 WASHINGTON,2022,full,1,MEDSL precinct,none,,
 WASHINGTON,2024,full,1,MEDSL precinct,none,,
-WEST VIRGINIA,1990,none,0,,none,,
-WEST VIRGINIA,1992,none,0,,good,America Votes,
-WEST VIRGINIA,1994,none,0,,good,America Votes,
-WEST VIRGINIA,1996,none,0,,good,America Votes,
-WEST VIRGINIA,1998,none,0,,good,America Votes,
+WEST VIRGINIA,1990,full,1,wv_bluebook_1990,none,,
+WEST VIRGINIA,1992,full,1,wv_bluebook_1992,good,America Votes,
+WEST VIRGINIA,1994,full,1,wv_bluebook_1994,good,America Votes,
+WEST VIRGINIA,1996,full,1,wv_bluebook_1996,good,America Votes,
+WEST VIRGINIA,1998,full,1,wv_bluebook_1998,good,America Votes,
 WEST VIRGINIA,2000,full,1,wv,good,America Votes,
 WEST VIRGINIA,2002,full,0.982,wv,good,America Votes,
 WEST VIRGINIA,2004,full,0.982,wv,good,America Votes,
 WEST VIRGINIA,2006,full,0.982,wv,good,America Votes,
-WEST VIRGINIA,2008,partial,0.873,wv,good,America Votes,
-WEST VIRGINIA,2010,partial,0.564,wv,good,America Votes,
-WEST VIRGINIA,2012,partial,0.455,wv,unreliable,"America Votes (unreliable, excluded)",
+WEST VIRGINIA,2008,full,1,wv; wv_bluebook_2008,good,America Votes,
+WEST VIRGINIA,2010,full,1,wv; wv_bluebook_2010,good,America Votes,
+WEST VIRGINIA,2012,full,1,wv; wv_bluebook_2012,unreliable,"America Votes (unreliable, excluded)",
 WEST VIRGINIA,2014,full,1,wv,unreliable,"America Votes (unreliable, excluded)",
 WEST VIRGINIA,2016,full,1,MEDSL precinct,none,,
 WEST VIRGINIA,2018,full,1,MEDSL precinct,none,,
