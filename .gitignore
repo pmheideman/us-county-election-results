@@ -23,3 +23,6 @@ R/output/test.rds
 
 # Release files (published via GitHub Releases, not committed)
 release/**/*.csv
+
+# Shiny app: derived .rds data (rebuild via shiny_app/data_prep/prepare_data.R) and raw tigris shapefile cache
+shiny_app/data/
