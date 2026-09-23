@@ -129,7 +129,15 @@ read_wv_precinct_year <- function(year) {
   all_rows <- purrr::map_dfr(files, function(f) {
     dest <- download_oe(paste0(year, "/", f), paste0(year, "_", f))
     df <- read_csv(dest, show_col_types = FALSE, col_types = cols(.default = "c"))
-    h <- df %>% filter(toupper(trimws(office)) == "U.S. HOUSE")
+    ## Some counties' precinct files carry an extra `precinct == "TOTALS"` row per candidate -- a
+    ## county-wide rollup disguised as an ordinary precinct row (same "pseudo-total-row" bug class
+    ## as Oregon/Kansas/Georgia/New York elsewhere in this project; confirmed here for Monongalia/
+    ## Ohio 2012 and 12 counties in 2010 by comparing against the WV Blue Book's printed 2012 U.S.
+    ## House totals -- the real-precinct sum, the TOTALS row, and the Blue Book's own printed total
+    ## all agree exactly, while summing real precincts + TOTALS together silently doubles the
+    ## county, e.g. Monongalia 2012 13,775 real vs 27,550 pre-fix). Excluded unconditionally; not
+    ## every county/year has this row (confirmed 2008 has none), so this is a no-op where absent.
+    h <- df %>% filter(toupper(trimws(office)) == "U.S. HOUSE", toupper(trimws(precinct)) != "TOTALS")
     if (nrow(h) == 0) return(tibble(county = character(), party = character(), votes = double()))
     ## Mercer County's 2010 file has `candidate` and `party` swapped for every House row (confirmed
     ## in the raw CSV: candidate is literally blank, and the real candidate name -- e.g. `Elliott E.

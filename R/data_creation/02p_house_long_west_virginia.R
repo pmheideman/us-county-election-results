@@ -24,7 +24,11 @@ precinct_year <- function(year) {
   message(year, ": ", length(files), " cached county precinct files")
   purrr::map_dfr(files, function(f) {
     df <- read_csv(file.path(RAW_DIR, f), show_col_types = FALSE, col_types = cols(.default = "c"))
-    h <- df %>% filter(toupper(trimws(office)) == "U.S. HOUSE"); if (nrow(h) == 0) return(NULL)
+    ## `precinct == "TOTALS"` is a county-wide rollup row present in some counties' files, not a real
+    ## precinct -- see 01az_house_county_west_virginia.R for the doubling bug this caused before it
+    ## was excluded there; excluded identically here so this long table stays reproducible from
+    ## elect_he_cty_wv.rds.
+    h <- df %>% filter(toupper(trimws(office)) == "U.S. HOUSE", toupper(trimws(precinct)) != "TOTALS"); if (nrow(h) == 0) return(NULL)
     swapped <- is.na(h$candidate) & !is.na(h$party) & nchar(trimws(h$party)) > 4 &
       !toupper(trimws(h$party)) %in% c("DEM", "REP", "DEMOCRAT", "DEMOCRATIC", "REPUBLICAN", "LIBERTARIAN", "CONSTITUTION", "MOUNTAIN")
     if (any(swapped)) { tmp <- h$candidate[swapped]; h$candidate[swapped] <- h$party[swapped]; h$party[swapped] <- tmp }
