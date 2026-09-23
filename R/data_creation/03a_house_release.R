@@ -47,7 +47,14 @@ flag_surname <- !flag_placeholder & !is_writein & !grepl(" ", long$candidate)
 flag_initials <- !flag_placeholder & !is_writein & vapply(strsplit(sub(",? (Jr|Sr|II|III|IV)\\.?$", "", long$candidate), " "), function(t) length(t) >= 2 && all(grepl("^[A-Z]\\.?$", t[-length(t)])), NA)
 ## (AL/SC/AR/IN 2016 were fixed 2026-09-20: straight-party and "unopposed candidates" rows had been counted as House votes.) Still flagged: Maine 2024, NJ Bergen 2024.
 ## (Maine 2024 was also flagged until 2026-09-20: its 'Total Ballots Cast' pseudo-row was the cause and is now excluded.) Still flagged: NJ Bergen 2024.
-infl <- long$source == "medsl" & long$county_fips == 34003 & long$year == 2024
+## Mississippi 1990/1992 (added 2026-09-22): the county-level sum for one specific candidate in three district-years exceeds the correct
+## (FEC-certified) total by a suspiciously round amount (1990 D2 Espy +4,000; 1992 D2 Espy +2,002; 1992 D5 Taylor +2,000) that survived two
+## independent transcription passes plus a dedicated FEC-reconciliation pass without locating a specific bad county cell -- see
+## data_corrections_log.csv. Every county's row for that candidate/year is flagged, not just one, since which specific county holds the
+## excess is unknown.
+infl <- (long$source == "medsl" & long$county_fips == 34003 & long$year == 2024) |
+  (long$source == "ms_1990" & long$year == 1990 & long$candidate == "Mike Espy") |
+  (long$source == "ms_1992" & long$year == 1992 & long$candidate %in% c("Mike Espy", "Gene Taylor"))
 long <- long %>% mutate(quality_flag = paste0(ifelse(flag_placeholder, "placeholder_name;", ""), ifelse(flag_surname, "surname_only;", ""), ifelse(flag_initials, "initials_only;", ""), ifelse(infl, "totals_possibly_inflated;", "")),
                         quality_flag = sub(";$", "", quality_flag))
 

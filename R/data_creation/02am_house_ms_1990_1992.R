@@ -40,6 +40,54 @@
 ## years -- worth a fresh look with a better scan or an independent source (e.g. the FEC's own historical House returns
 ## workbooks, already used elsewhere in this project's qa_state_reconcile_congress.R) if this state is revisited.
 ##
+## FEC RECONCILIATION PASS (2026-09-22, same session, after the above was first written): R/data/fec_official/fec1990_house.csv
+## and fec1992_house.csv (already cached in this repo from an earlier, unrelated FEC reconciliation effort) give independent
+## certified district totals for every MS district except the two unopposed ones (1990 D3; no 1992 equivalent). Comparing:
+##   1990 D1: book's own printed total (65,926) does NOT match FEC (67,318, i.e. Whitten 43,668/Bowlin 23,650) -- a ~2%,
+##            plausibly write-in/scattered-vote-shaped gap. Re-examined the full page image specifically for a missed
+##            "scattered votes" or similar line: NONE found, the printed table is complete as-is. Left as an accepted,
+##            documented gap vs FEC (the county-level transcription is not in question here, only the book-vs-FEC total).
+##   1990 D2 (Espy):  FEC's Espy total (59,393) matches the BOOK'S OWN printed total EXACTLY -- confirming the book's total
+##            is correct and the problem is specifically in reconciling it against the county rows. Re-verified the
+##            transcription via THREE more independent methods this pass (direct high-DPI re-read, a separately-cropped
+##            county-name-column vs Espy-number-column position count, and a red-gridline overlay calibrated off the
+##            table's own header and Totals-row baselines) -- all three land on the exact same 22 county values and the
+##            exact same 63,393 sum. Individually re-examined the largest-magnitude cells (Warren 8,006, Washington 7,678,
+##            Hinds-equivalent rows) at 500dpi: all read correctly as printed. The 4,000-vote excess could not be traced to
+##            any single county cell. UNRESOLVED.
+##   1990 D3: still not independently checkable against FEC (no FEC row exists for an unopposed race). Unchanged, 220 over.
+##   1990 D4, D5: CONFIRMED CORRECT -- now verified against FEC exactly (Parker 57,137/Parks 13,754; Taylor 89,926/Smith
+##            20,588), not just internally consistent with the book's own total as before.
+##   1992 D1: Whitten's 2-vote gap vs FEC (121,666 vs 121,664) confirmed negligible, not chased further.
+##   1992 D2 (Espy): FEC's Espy total (135,162) does NOT equal the book's own printed total (133,361) -- these two
+##            "official" figures disagree with each other by 1,801, a DIFFERENT relationship than 1990 D2 (where book and
+##            FEC agreed). The transcribed county-sum (139,162) exceeds FEC by exactly 4,000 (same round number as 1990 D2)
+##            and exceeds the book's own total by 5,801. Re-verified the full county list and the printed Totals row at
+##            500dpi -- both read correctly as printed; large cells (Hinds 14,908, Warren 11,999, Washington 12,776)
+##            individually re-checked and confirmed correct. UNRESOLVED.
+##   1992 D3, D4: CONFIRMED CORRECT / negligible against FEC (D3 exact; D4 candidates within 2-22 votes of FEC, i.e. the
+##            book's own printed total for D4 was itself off from FEC by ~2,000, not the county-level transcription --
+##            the original "off by 2,022" note above was comparing against the book's total, which is now understood to
+##            sometimes itself differ from FEC; against FEC, D4's county-level transcription is essentially exact).
+##   1992 D5 (Taylor): FEC's Taylor total (120,766) matches the book's OWN printed total EXACTLY (same pattern as 1990 D2).
+##            The transcribed county-sum (124,766) exceeds both by exactly 4,000. Re-verified at 500dpi, including the
+##            largest cell (Harrison 34,564, confirmed correct digit-by-digit). UNRESOLVED.
+##
+## STRIKING PATTERN, reported as-is without a confirmed explanation: the unresolved excess is EXACTLY 4,000 in all three
+## remaining problem districts (1990 D2, 1992 D2, 1992 D5) -- two different Democratic candidates (Espy, Taylor), two
+## different years, three different single-page tables, each independently transcribed and re-verified with no individual
+## cell found to be wrong. This is far too precise to be three unrelated transcription slips. The most likely explanation:
+## the book's own "Totals" row (which FEC's certified figure agrees with in 2 of these 3 cases, suggesting FEC's national
+## compilation may have simply reused each state's own submitted total rather than independently re-summing counties) is
+## itself 4,000 short of the sum of its own printed county rows, in all three cases -- i.e. the COUNTY-LEVEL numbers as
+## printed may be the more accurate figures, and the shared "official" total the less accurate one. This cannot be
+## confirmed without a third, independent source (e.g. an actual state canvass record); until then this remains a
+## genuine, unresolved discrepancy and the affected districts are NOT folded into the panel. Also unresolved: 1990 is
+## still 81/82 counties (Yalobusha entirely absent from the transcription, not found on a re-check of the page); notably,
+## adding a missing county back could only ever RAISE a district's total, which rules out Yalobusha's absence as the
+## explanation for any of the three too-high gaps above -- if anything this suggests Yalobusha's real row may have been
+## merged into an adjacent county's printed number, compounding the same puzzle rather than resolving it.
+##
 ## COVERAGE GAP: 1990 is 81/82 counties -- YALOBUSHA is missing. Confirmed it is not a redistricting artifact and not simply
 ## unread: D1, D4 and D5 each tie EXACTLY to their printed totals WITHOUT Yalobusha, which rules out it being a member of any
 ## of those three districts (adding it would break an already-exact tie). That leaves D2 or D3 as the only two districts it
