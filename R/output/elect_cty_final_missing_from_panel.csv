@@ -11,6 +11,7 @@
 "pe_cty_historical","PE",15,6,"2000,2004,2008,2012,2016,2020"
 "pe_cty_medsl","PE",NA,3,"2012,2016,2020"
 "se_cty_historical","SE",10,3,"2010"
+"he_cty_medsl","HE",36,2,"2016,2018"
 "he_cty_va","HE",51,2,"2014,2016"
 "se_cty_historical","SE",46,2,"2016,2020"
 "pe_cty_historical","PE",51,1,"2000"
