@@ -18,11 +18,9 @@
 ##  - Bedford City VA (51515, pre-2013) -> Bedford County (51019)
 ##  - Clifton Forge City VA (51560, pre-2001) -> Alleghany County (51005)
 ##  - South Boston City VA (51780, pre-1995) -> Halifax County (51083)
-##  - Two Kansas City MO non-county buckets slipped past the release build's own exclusion list under malformed
-##    FIPS codes ("36000", "2938000" -- state_fips got garbled; the correctly-excluded codes 29380/23099/36122/23000
-##    are already dropped upstream in 03a/03d). Dropped here too; flagged in the console output as a release-pipeline
-##    TODO (R/data_creation/03a_house_release.R and 03d_release_all_offices.R's drop_k lists should add these next
-##    time the release is rebuilt, rather than being re-filtered ad hoc in every downstream consumer).
+##  - Two Kansas City MO non-county buckets ("36000", "2938000") used to leak through 03a/03d's own exclusion filter
+##    because they were baked into the county crosswalk itself; fixed upstream 2026-09-22 (see data_corrections_log.csv)
+##    by excluding them before the crosswalk is built, so the release CSVs this script reads no longer contain them.
 
 source(file.path("R", "00_setup.R"))
 suppressMessages({
@@ -57,10 +55,7 @@ summ <- read_csv(file.path(REL, "us_county_results_summary.csv"), show_col_types
 ## Historical-FIPS -> current-polygon crosswalk (docs/DECISIONS.md section 5). Remap, then re-aggregate in case a
 ## year has BOTH the historical and current code (shouldn't happen for these four, but summing is safe either way).
 FIPS_CROSSWALK <- c("46113" = "46102", "51515" = "51019", "51560" = "51005", "51780" = "51083")
-KNOWN_BAD_FIPS <- c("36000", "2938000")   # Kansas City MO non-county bucket, malformed state_fips; see header note
-n_bad <- sum(summ$county_fips %in% KNOWN_BAD_FIPS)
-if (n_bad > 0) message("dropping ", n_bad, " known non-county rows (Kansas City MO bucket, malformed FIPS): ", paste(unique(summ$county_fips[summ$county_fips %in% KNOWN_BAD_FIPS]), collapse = ", "))
-summ <- summ %>% filter(!county_fips %in% KNOWN_BAD_FIPS) %>%
+summ <- summ %>%
   mutate(county_fips = recode(county_fips, !!!FIPS_CROSSWALK)) %>%
   group_by(office, year, county_fips) %>%
   summarise(state_fips = first(state_fips), state = first(state), state_po = first(state_po), county_name = first(county_name),
@@ -85,7 +80,7 @@ gaps <- gaps %>% left_join(state_lookup %>% select(state_upper, state_po, state_
 ## ---- 4. Candidate-level long table (click/hover detail) -------------------------------------------------------
 long <- read_csv(file.path(REL, "us_county_results_long.csv"), show_col_types = FALSE,
                   col_types = cols(county_fips = col_character(), state_fips = col_character(), district = col_character()))
-long <- long %>% filter(!county_fips %in% KNOWN_BAD_FIPS) %>% mutate(county_fips = recode(county_fips, !!!FIPS_CROSSWALK)) %>%
+long <- long %>% mutate(county_fips = recode(county_fips, !!!FIPS_CROSSWALK)) %>%
   filter(county_fips %in% counties_sf$county_fips) %>%
   select(year, office, county_fips, district, candidate, party, party_group, votes, quality_flag)
 

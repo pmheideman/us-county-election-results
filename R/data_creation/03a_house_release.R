@@ -23,6 +23,11 @@ summ <- readRDS(file.path(LONG_DIR, "house_county_summary.rds"))
 ## ---- names: county and state ---------------------------------------------------------------------------------------------------------------
 xw <- read_delim(file.path(PROJECT_ROOT, "R/data/raw_election/countypres_2000-2024.tab"), delim = "\t", show_col_types = FALSE) %>%
   filter(!is.na(county_fips)) %>% distinct(county_fips, county_name, state, state_po)
+## MEDSL's own presidential crosswalk carries two more Kansas City, MO pseudo-county rows (36000 used in 2024, 2938000 in 2000-2020) -- like the
+## House bucket 29380 below, these aren't real counties. Drop them here (before cty is built from xw) so they don't get treated as a legitimate
+## county downstream; previously only excluded from the n_expected count (see corrections log 2026-09-22), which let them leak into the released
+## summary/long files as a phantom "Kansas City" county.
+xw <- xw %>% filter(!county_fips %in% c(36000, 2938000))
 cty <- xw %>% group_by(county_fips) %>% slice(1) %>% ungroup() %>%
   mutate(county_name = tools::toTitleCase(tolower(county_name)), state = tools::toTitleCase(tolower(state)))
 ## Virginia: independent cities are listed as "City" (the MEDSL table names some of them without it, e.g. 51515 "Bedford" next to the county 51019 "Bedford"); the two cities that no longer exist are added
@@ -92,7 +97,7 @@ unopposed <- tribble(~state, ~year, ~note,
   "LOUISIANA", 2000, "district 2 unopposed", "LOUISIANA", 2004, "district 4 unopposed", "LOUISIANA", 2008, "districts 3,5 unopposed",
   "LOUISIANA", 2010, "district 7 unopposed", "LOUISIANA", 2022, "district 4 unopposed",
   "ARKANSAS", 1998, "district 1 unopposed (25 counties)", "ARKANSAS", 2000, "district 3 unopposed (16 counties)", "OKLAHOMA", 2010, "district 4 unopposed", "OKLAHOMA", 2014, "district 1 unopposed", "OKLAHOMA", 2016, "district 1 unopposed", "OKLAHOMA", 2024, "district 3 unopposed")
-n_expected <- xw %>% filter(!county_fips %in% c(36000, 2938000)) %>% group_by(state) %>% summarise(counties_expected = n_distinct(county_fips), .groups = "drop") %>% mutate(state = toupper(state))
+n_expected <- xw %>% group_by(state) %>% summarise(counties_expected = n_distinct(county_fips), .groups = "drop") %>% mutate(state = toupper(state))
 covered_n <- out_sum %>% group_by(state = toupper(state), year) %>% summarise(counties_covered = n_distinct(county_fips), .groups = "drop")
 gaps <- cov %>% left_join(unopposed, by = c("state", "year")) %>% left_join(n_expected, by = "state") %>% left_join(covered_n, by = c("state", "year")) %>%
   mutate(counties_covered = ifelse(is.na(counties_covered), 0L, counties_covered),

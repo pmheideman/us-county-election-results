@@ -10,6 +10,8 @@ hg <- read_csv(file.path(H, "us_county_results_gaps.csv"), col_types = cc, na = 
 
 ## ---- county / state names (same crosswalk as 03a) ---------------------------------------------------------------------------------------------
 xw <- read_delim(file.path(PROJECT_ROOT, "R/data/raw_election/countypres_2000-2024.tab"), delim = "\t", show_col_types = FALSE) %>% filter(!is.na(county_fips)) %>% distinct(county_fips, county_name, state, state_po)
+## Kansas City, MO pseudo-county rows (36000 in 2024, 2938000 in 2000-2020; see 03a and corrections log 2026-09-22) -- not real counties, drop before cty is built
+xw <- xw %>% filter(!county_fips %in% c(36000, 2938000))
 cty <- xw %>% group_by(county_fips) %>% slice(1) %>% ungroup() %>% mutate(county_name = tools::toTitleCase(tolower(county_name)), state = tools::toTitleCase(tolower(state)))
 cty <- cty %>% mutate(county_name = ifelse(state_po == "VA" & county_fips >= 51510 & !grepl("City$", county_name), paste(county_name, "City"), county_name))
 cty <- bind_rows(cty, tibble(county_fips = c(51560, 51780), county_name = c("Clifton Forge City", "South Boston City"), state = "Virginia", state_po = "VA"))
