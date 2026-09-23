@@ -266,10 +266,10 @@
 "PE","pe_cty_medsl","as_source",21850,2000,2024
 "PE","pe_cty_medsl_cand_2024","as_source",128,2024,2024
 "PE","pe_cty_ms_2004","as_source",82,2004,2004
-"SE","se_cty_av33_2018","as_source",3,2018,2018
 "SE","se_cty_historical","as_source",107769,1908,2014
 "SE","se_cty_in_enr_2016","as_source",92,2016,2016
 "SE","se_cty_in_enr_2018","as_source",92,2018,2018
 "SE","se_cty_in_enr_2022","as_source",92,2022,2022
 "SE","se_cty_in_enr_2024","as_source",92,2024,2024
 "SE","se_cty_medsl","as_source",9731,2016,2024
+"SE","se_cty_nyboe_2018","as_source",3,2018,2018
