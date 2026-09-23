@@ -40,9 +40,8 @@ Columns: `source`, `state_po`, `year`, `origin`, `publisher`, `document` (title 
 | `sos_report` | A report, canvass or statement of vote published by the state's election office (PDF, book or scan), read by text extraction, OCR or by hand |
 | `sos_file` | A downloadable data file published by the state (spreadsheet, CSV, XML or text) |
 | `sos_web` | A state election website or database (HTML tables, archive pages, a results app) |
-| `academic_xls` | A spreadsheet compiled by a university (Alabama 1990-2012, Auburn University); a secondary compilation, permission not confirmed |
 
-`license_status`: `not_stated` = official public record with no terms on the pages used; `unverified` = a license is believed to exist (MEDSL: CC0 1.0; OpenElections: check the repository) or permission is needed (Auburn spreadsheet) but it has not been checked. **No license has been verified yet**; do not assume the data may be redistributed under the release license until the `license` column is confirmed.
+`license_status`: `not_stated` = official public record with no terms on the pages used; `unverified` = a license is believed to exist (MEDSL: CC0 1.0; OpenElections: check the repository) but it has not been checked. **No license has been verified yet**; do not assume the data may be redistributed under the release license until the `license` column is confirmed.
 
 Candidate names for some rows were completed from Wikipedia district-results pages (Wikipedia text is CC BY-SA); the individual renames are listed in `candidate_name_overrides.csv` in the repository.
 

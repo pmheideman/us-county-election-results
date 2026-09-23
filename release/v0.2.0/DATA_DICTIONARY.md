@@ -41,9 +41,8 @@ Columns: `source`, `state_po`, `year`, `origin`, `publisher`, `document` (title 
 | `sos_file` | A downloadable data file published by the state (spreadsheet, CSV, XML or text) |
 | `sos_web` | A state election website or database (HTML tables, archive pages, a results app) |
 | `secondary_web` | A public web compilation of official results (Wikipedia's by-county tables: Maine and Mississippi President 2004), used where no primary county source was found; the statewide sums are checked against the FEC certified totals |
-| `academic_xls` | A spreadsheet compiled by a university (Alabama 1990-2012, Auburn University); a secondary compilation, permission not confirmed |
 
-`license_status`: `not_stated` = official public record with no terms on the pages used; `cc_by_sa_secondary` = a Wikipedia-compiled table (text CC BY-SA 4.0; the underlying vote counts are public facts); `unverified` = a license is believed to exist (MEDSL: CC0 1.0; OpenElections: check the repository) or permission is needed (Auburn spreadsheet) but it has not been checked. **No license has been verified yet**; do not assume the data may be redistributed under the release license until the `license` column is confirmed.
+`license_status`: `not_stated` = official public record with no terms on the pages used; `cc_by_sa_secondary` = a Wikipedia-compiled table (text CC BY-SA 4.0; the underlying vote counts are public facts); `unverified` = a license is believed to exist (MEDSL: CC0 1.0; OpenElections: check the repository) but it has not been checked. **No license has been verified yet**; do not assume the data may be redistributed under the release license until the `license` column is confirmed.
 
 Candidate names for some rows were completed from Wikipedia district-results pages (Wikipedia text is CC BY-SA); the individual renames are listed in `candidate_name_overrides.csv` in the repository.
 
