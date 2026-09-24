@@ -467,6 +467,18 @@ L <- tribble(
 "Added 46 county-years (01fu_house_county_southcarolina_2010.R; 01fv_southcarolina_apply.R)",
 "fixed", "46 county-years", "R/data_creation/01fu_house_county_southcarolina_2010.R; 01fv_southcarolina_apply.R", "2026-09-24",
 
+"Oregon Secretary of State (State Library of Oregon digital collection)", "OR", "1990;1992;1994;1996;1998;2000;2002;2004;2012", "HE",
+"Oregon House county rows for 1990-1998 were missing and those for 2000, 2002, 2004 and 2012 were partial (19, 22, 27 and 34 of 36 counties, several split counties with only one district's votes: Marion, Lane, Benton, Linn). Rebuilt from the Secretary of State's Official Abstracts / Statistical Summaries (State Library of Oregon; the 1996 document also holds the 1998 abstract); 1990 and 1992 tables with misread OCR digits were typed from a second OCR pass and the page images; 1994 District 1 is the Automatic Recount Certification",
+"Every district's candidate columns add up to the printed TOTAL row; 1990 and 1992 candidate totals equal the FEC",
+"Added 222 county-years and replaced 102 partial ones (01gn_oregon_parse.py; 01go_house_county_oregon.R; 01gp_oregon_apply.R); 43 existing county rows changed",
+"replaced", "324 county-years", "R/data_creation/01gn_oregon_parse.py; 01go_house_county_oregon.R; 01gp_oregon_apply.R", "2026-09-24",
+
+"North Carolina State Board of Elections (State Library digital collection)", "NC", "1992;1994", "HE",
+"North Carolina House county rows for 1992 and 1994 were missing. They come from the Board's typed Abstract of Votes Cast for Member of Congress (scanned pages, OCR'd, misread digits settled from a second OCR pass and the page images). 1992 District 10's county rows are 34 (Ballenger) and 2 (Brown) votes short of its printed TOTAL row (the FEC confirms the printed total); kept as printed. 1994 District 4 is the recount result",
+"Every district's county rows add up to its printed TOTAL row in every column (1992 District 10 excepted); the 1992 totals equal the FEC's official candidate totals",
+"Added 200 county-years (01gk_northcarolina_1992_1994_parse.py; 01gl_house_county_northcarolina_1992_1994.R; 01gm_northcarolina_1992_1994_apply.R)",
+"fixed", "200 county-years", "R/data_creation/01gk_northcarolina_1992_1994_parse.py; 01gl_house_county_northcarolina_1992_1994.R; 01gm_northcarolina_1992_1994_apply.R", "2026-09-24",
+
 "North Dakota Secretary of State", "ND", "1990;1992;1994;1996;1998", "HE",
 "North Dakota House county rows for 1990-1998 were missing. They come from the Secretary of State's scanned Official Abstract of Votes Cast (embedded OCR text layer, columns located by word position). 1990 gives only the Democratic-NPL and Republican candidates by county (6 write-ins statewide); in 1994 Griggs, LaMoure and McHenry counties show more House votes than the printed Total Ballots Cast (checked against the page image: the source prints it so)",
 "All 53 county cells of every candidate add up to the printed statewide total; those equal the FEC's official totals in 1990 (152,530 / 81,443), 1992, 1996 and 1998 (total votes 233,973 plus 6 write-ins; 297,898; 263,010; 212,888)",

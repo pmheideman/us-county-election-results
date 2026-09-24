@@ -170,6 +170,8 @@
 "HE","he_cty_mtsos_1996","as_source",56,1996,1996
 "HE","he_cty_mtsos_1998","as_source",56,1998,1998
 "HE","he_cty_nc","as_source",900,2000,2016
+"HE","he_cty_ncdcr_1992","as_source",100,1992,1992
+"HE","he_cty_ncdcr_1994","as_source",100,1994,1994
 "HE","he_cty_ncsbe_1996","as_source",100,1996,1996
 "HE","he_cty_ncsbe_1998","as_source",100,1998,1998
 "HE","he_cty_nd","as_source",424,2000,2014
@@ -226,7 +228,16 @@
 "HE","he_cty_ok","as_source",368,2004,2014
 "HE","he_cty_ok_pdfs","as_source",308,1994,2006
 "HE","he_cty_okarc_1998","as_source",77,1998,1998
-"HE","he_cty_or","as_source",246,2000,2014
+"HE","he_cty_or","as_source",144,2006,2014
+"HE","he_cty_orsl_1990","as_source",36,1990,1990
+"HE","he_cty_orsl_1992","as_source",36,1992,1992
+"HE","he_cty_orsl_1994","as_source",36,1994,1994
+"HE","he_cty_orsl_1996","as_source",36,1996,1996
+"HE","he_cty_orsl_1998","as_source",36,1998,1998
+"HE","he_cty_orsl_2000","as_source",36,2000,2000
+"HE","he_cty_orsl_2002","as_source",36,2002,2002
+"HE","he_cty_orsl_2004","as_source",36,2004,2004
+"HE","he_cty_orsl_2012","as_source",36,2012,2012
 "HE","he_cty_pa","as_source",536,2000,2014
 "HE","he_cty_ri","as_source",15,2008,2014
 "HE","he_cty_ri_1990","as_source",5,1990,1990

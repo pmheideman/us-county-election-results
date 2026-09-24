@@ -169,6 +169,8 @@
 "he_cty_mtsos_1996",56,TRUE,0
 "he_cty_mtsos_1998",56,TRUE,0
 "he_cty_nc",900,TRUE,0
+"he_cty_ncdcr_1992",100,TRUE,0
+"he_cty_ncdcr_1994",100,TRUE,0
 "he_cty_ncsbe_1996",100,TRUE,0
 "he_cty_ncsbe_1998",100,TRUE,0
 "he_cty_nd",424,TRUE,0
@@ -225,7 +227,16 @@
 "he_cty_ok",368,TRUE,0
 "he_cty_ok_pdfs",308,TRUE,0
 "he_cty_okarc_1998",77,TRUE,0
-"he_cty_or",246,TRUE,0
+"he_cty_or",144,TRUE,0
+"he_cty_orsl_1990",36,TRUE,0
+"he_cty_orsl_1992",36,TRUE,0
+"he_cty_orsl_1994",36,TRUE,0
+"he_cty_orsl_1996",36,TRUE,0
+"he_cty_orsl_1998",36,TRUE,0
+"he_cty_orsl_2000",36,TRUE,0
+"he_cty_orsl_2002",36,TRUE,0
+"he_cty_orsl_2004",36,TRUE,0
+"he_cty_orsl_2012",36,TRUE,0
 "he_cty_pa",536,TRUE,0
 "he_cty_ri",15,TRUE,0
 "he_cty_ri_1990",5,TRUE,0
