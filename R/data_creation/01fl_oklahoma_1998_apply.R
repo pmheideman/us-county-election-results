@@ -1,0 +1,11 @@
+## Add Oklahoma House 1998 (elect_he_cty_okarc_1998.rds; 01fk_house_county_oklahoma_1998.R) to the panel. 2026-09-23. ADDED (no Oklahoma House rows for 1998 before). Gate: nothing else changes.
+source(file.path("R", "00_setup.R"))
+panel <- readRDS(file.path(OUTPUT_DIR, "elect_cty_final.rds"))
+bk <- file.path(tempdir(), "backup_ok98"); dir.create(bk, showWarnings = FALSE, recursive = TRUE)
+if (!file.exists(file.path(bk, "elect_cty_final_before_ok98.rds"))) saveRDS(panel, file.path(bk, "elect_cty_final_before_ok98.rds"))
+new <- readRDS(file.path(OUTPUT_DIR, "elect_he_cty_okarc_1998.rds")) %>% transmute(year, cty_fips, sample, demovote, repuvote, totalvote, state = NA_character_)
+stopifnot(nrow(new) == 77, all(new$totalvote > 0), all(new$cty_fips %/% 1000 == 40))
+is_target <- panel$sample == "HE" & panel$cty_fips %/% 1000 == 40 & panel$year == 1998; stopifnot(sum(is_target) %in% c(0, 77))
+p2 <- bind_rows(panel[!is_target, ], new[, names(panel)]) %>% arrange(year, cty_fips, sample); stopifnot(anyDuplicated(p2[, c("year", "cty_fips", "sample")]) == 0)
+other0 <- panel %>% filter(!is_target) %>% arrange(year, cty_fips, sample); other1 <- p2 %>% filter(!(sample == "HE" & cty_fips %/% 1000 == 40 & year == 1998)) %>% arrange(year, cty_fips, sample); stopifnot(isTRUE(all.equal(other0, other1, check.attributes = FALSE)))
+saveRDS(p2, file.path(OUTPUT_DIR, "elect_cty_final.rds")); message("panel rows ", nrow(panel), " -> ", nrow(p2))

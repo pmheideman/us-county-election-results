@@ -443,6 +443,12 @@ L <- tribble(
 "Added 'Federal Votes', 'Public Counter', 'Manually Counted (Emergency)' and 'Scattered Votes' to the pseudo-row list (01a PSEUDO_RE) and replaced 22 House and 22 Senate panel rows (01df_medsl_ny_pseudo_v3_apply.R, gated, backed up). Before the fix New York City's 2022 House shares were about half of their true value",
 "fixed", "44 county-years (22 House, 22 Senate)", "R/data_creation/01a_election_data_medsl.R; 01df_medsl_ny_pseudo_v3_apply.R", "2026-09-21",
 
+"Oklahoma State Election Board (Wayback Machine capture)", "OK", "1998", "HE",
+"Oklahoma House county rows for 1998 were missing. They now come from the State Election Board's own 'General Election 11/3/98: Congressional Officers' page as archived by the Wayback Machine: every candidate's votes in every county of each of the six districts (a county split between districts appears in each and is summed)",
+"Every district table ties to its STATE TOTAL line and every county row to its total; district totals equal the FEC's official results (Largent 91,031, Coburn 85,581, Watkins 89,832)",
+"Added 77 county-years (01fk_house_county_oklahoma_1998.R; 01fl_oklahoma_1998_apply.R)",
+"fixed", "77 county-years", "R/data_creation/01fj_oklahoma_1998_parse.py; 01fk_house_county_oklahoma_1998.R; 01fl_oklahoma_1998_apply.R", "2026-09-23",
+
 "Missouri Secretary of State (Official Manual)", "MO", "1990;1992;1994;1996;1998", "HE",
 "Missouri House county rows for 1990-1998 were missing (no county-level source in the OpenElections/MEDSL data). They now come from the Official Manual of the State of Missouri (Blue Book), whose general-election pages give, per congressional district, each candidate's votes in every county or part of a county: 45 district tables read by eye from page images. Split counties (St. Louis County and City, Jackson, St. Charles, Franklin) are summed over the districts and 'Kansas City' rows (District 5, 1994-1998) belong to Jackson County. The 1990 pages list only the Republican and Democratic candidates. The 1992 page 706 heads the District 5 table 'District 9' (misprint)",
 "County rows add up to the printed TOTALS of every district in every column, except the Republican column of 1992 District 8 where the 26 county cells add up to 147,128 and the book and the FEC print 147,398 (270 votes: probably a transposed digit in one county, left as printed)",
