@@ -166,7 +166,9 @@
 "HE","he_cty_ms_2002","as_source",82,2002,2002
 "HE","he_cty_ms_2004","as_source",82,2004,2004
 "HE","he_cty_mt","as_source",448,2000,2014
+"HE","he_cty_mtsos_1990","as_source",56,1990,1990
 "HE","he_cty_mtsos_1992","as_source",56,1992,1992
+"HE","he_cty_mtsos_1994","as_source",56,1994,1994
 "HE","he_cty_mtsos_1996","as_source",56,1996,1996
 "HE","he_cty_mtsos_1998","as_source",56,1998,1998
 "HE","he_cty_nc","as_source",900,2000,2016
@@ -342,6 +344,9 @@
 "HE","he_cty_wv_bluebook_2010","as_source",55,2010,2010
 "HE","he_cty_wv_bluebook_2012","as_source",55,2012,2012
 "HE","he_cty_wy","as_source",276,1978,2014
+"HE","he_cty_wyia_1990","as_source",23,1990,1990
+"HE","he_cty_wyia_1992","as_source",23,1992,1992
+"HE","he_cty_wyia_1994","as_source",23,1994,1994
 "HE","he_cty_wysos_1996","as_source",23,1996,1996
 "HE","he_cty_wysos_1998","as_source",23,1998,1998
 "HE","he_cty_wysos_2006","as_source",23,2006,2006

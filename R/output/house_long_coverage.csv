@@ -165,7 +165,9 @@
 "he_cty_ms_2002",82,TRUE,0
 "he_cty_ms_2004",82,TRUE,0
 "he_cty_mt",448,TRUE,0
+"he_cty_mtsos_1990",56,TRUE,0
 "he_cty_mtsos_1992",56,TRUE,0
+"he_cty_mtsos_1994",56,TRUE,0
 "he_cty_mtsos_1996",56,TRUE,0
 "he_cty_mtsos_1998",56,TRUE,0
 "he_cty_nc",900,TRUE,0
@@ -341,6 +343,9 @@
 "he_cty_wv_bluebook_2010",55,TRUE,0
 "he_cty_wv_bluebook_2012",55,TRUE,0
 "he_cty_wy",161,TRUE,0
+"he_cty_wyia_1990",23,TRUE,0
+"he_cty_wyia_1992",23,TRUE,0
+"he_cty_wyia_1994",23,TRUE,0
 "he_cty_wysos_1996",23,TRUE,0
 "he_cty_wysos_1998",23,TRUE,0
 "he_cty_wysos_2006",23,TRUE,0
