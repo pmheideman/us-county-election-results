@@ -443,6 +443,12 @@ L <- tribble(
 "Added 'Federal Votes', 'Public Counter', 'Manually Counted (Emergency)' and 'Scattered Votes' to the pseudo-row list (01a PSEUDO_RE) and replaced 22 House and 22 Senate panel rows (01df_medsl_ny_pseudo_v3_apply.R, gated, backed up). Before the fix New York City's 2022 House shares were about half of their true value",
 "fixed", "44 county-years (22 House, 22 Senate)", "R/data_creation/01a_election_data_medsl.R; 01df_medsl_ny_pseudo_v3_apply.R", "2026-09-21",
 
+"Nevada Secretary of State", "NV", "1990;1992;1994;1996;1998", "HE",
+"Nevada House county rows for 1990-1998 were missing (no county-level source in the OpenElections/MEDSL data). They now come from the Secretary of State's official general-election abstracts (17 counties; district 1 is entirely Clark County; district 2 covers the other counties and part of Clark): five PDF documents (three scanned, one with a noisy OCR layer, one with a text layer) transcribed from the page images. 1992 is a fax-quality scan in which the digits 5 and 6 are easily confused",
+"Every row's 17 county cells add up to the printed total (after one FEC-assisted correction of Sferrazza's Clark cell in 1992); statewide candidate totals equal the FEC's official results in all five years (minor candidate Golden 1992: 2,860 vs FEC 2,850)",
+"Added 85 county-years (01fe_house_county_nevada_1990_1998.R; 01ff_nevada_apply.R)",
+"fixed", "85 county-years", "R/data_creation/01fd_nevada_1990_1998_transcribe.py; 01fe_house_county_nevada_1990_1998.R; 01ff_nevada_apply.R", "2026-09-23",
+
 "Ohio Secretary of State (Wayback Machine capture)", "OH", "1996;2002", "HE",
 "Ohio House county rows for 1996 were missing, and the OpenElections 2002 row for Cuyahoga County held only 46,100 House votes (Democratic share 0.48, Republican 0.52): it missed the Cuyahoga portions of CD10 (Kucinich) and CD11 (Tubbs Jones), which the SOS page shows as 'Cuyahoga Total' (374,372 votes; Democratic 0.72, Republican 0.27). 1996 and 2002 now come from the Ohio Secretary of State's own results pages as archived by the Wayback Machine (October 2004 captures)",
 "County rows tie to the printed district totals of the pages (difference of 1 vote in one 2000 district, not used); 1996 district totals equal America Votes in every compared district except one America Votes typo; the other 87 counties of 2002 are identical to the OpenElections rows",

@@ -1,0 +1,12 @@
+## Add Nevada House 1990-1998 (elect_he_cty_nvsos_<year>.rds; 01fe_house_county_nevada_1990_1998.R) to the panel. 2026-09-23. All ADDED (no Nevada House rows before 2000). Gate: nothing else changes.
+source(file.path("R", "00_setup.R"))
+panel <- readRDS(file.path(OUTPUT_DIR, "elect_cty_final.rds"))
+bk <- file.path(tempdir(), "backup_nv"); dir.create(bk, showWarnings = FALSE, recursive = TRUE)
+if (!file.exists(file.path(bk, "elect_cty_final_before_nv.rds"))) saveRDS(panel, file.path(bk, "elect_cty_final_before_nv.rds"))
+yrs <- seq(1990, 1998, 2)
+new <- purrr::map_dfr(sprintf("elect_he_cty_nvsos_%d.rds", yrs), function(f) readRDS(file.path(OUTPUT_DIR, f))) %>% transmute(year, cty_fips, sample, demovote, repuvote, totalvote, state = NA_character_)
+stopifnot(nrow(new) == 85, !anyDuplicated(new[, c("year", "cty_fips", "sample")]), all(new$totalvote > 0), all(new$cty_fips %/% 1000 == 32))
+is_target <- panel$sample == "HE" & panel$cty_fips %/% 1000 == 32 & panel$year %in% yrs; stopifnot(sum(is_target) %in% c(0, 85))
+p2 <- bind_rows(panel[!is_target, ], new[, names(panel)]) %>% arrange(year, cty_fips, sample); stopifnot(anyDuplicated(p2[, c("year", "cty_fips", "sample")]) == 0)
+other0 <- panel %>% filter(!is_target) %>% arrange(year, cty_fips, sample); other1 <- p2 %>% filter(!(sample == "HE" & cty_fips %/% 1000 == 32 & year %in% yrs)) %>% arrange(year, cty_fips, sample); stopifnot(isTRUE(all.equal(other0, other1, check.attributes = FALSE)))
+saveRDS(p2, file.path(OUTPUT_DIR, "elect_cty_final.rds")); message("panel rows ", nrow(panel), " -> ", nrow(p2))
