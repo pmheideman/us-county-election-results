@@ -467,6 +467,24 @@ L <- tribble(
 "Added 46 county-years (01fu_house_county_southcarolina_2010.R; 01fv_southcarolina_apply.R)",
 "fixed", "46 county-years", "R/data_creation/01fu_house_county_southcarolina_2010.R; 01fv_southcarolina_apply.R", "2026-09-24",
 
+"North Dakota Secretary of State", "ND", "1990;1992;1994;1996;1998", "HE",
+"North Dakota House county rows for 1990-1998 were missing. They come from the Secretary of State's scanned Official Abstract of Votes Cast (embedded OCR text layer, columns located by word position). 1990 gives only the Democratic-NPL and Republican candidates by county (6 write-ins statewide); in 1994 Griggs, LaMoure and McHenry counties show more House votes than the printed Total Ballots Cast (checked against the page image: the source prints it so)",
+"All 53 county cells of every candidate add up to the printed statewide total; those equal the FEC's official totals in 1990 (152,530 / 81,443), 1992, 1996 and 1998 (total votes 233,973 plus 6 write-ins; 297,898; 263,010; 212,888)",
+"Added 265 county-years (01gh_northdakota_1990_1998_parse.py; 01gi_house_county_northdakota_1990_1998.R; 01gj_northdakota_apply.R)",
+"fixed", "265 county-years", "R/data_creation/01gh_northdakota_1990_1998_parse.py; 01gi_house_county_northdakota_1990_1998.R; 01gj_northdakota_apply.R", "2026-09-24",
+
+"South Dakota Secretary of State", "SD", "1992", "HE",
+"South Dakota House county rows for 1992 were missing. They come from the Secretary of State's scanned 1992 general-election returns (1992G.pdf), hand-transcribed from the page image because OCR dropped counties",
+"The 66 county rows add up to the printed statewide totals of all five candidates (Johnson 230,070; Timmer 89,375; Newland 3,931; Wieczorek 6,746; Balakier 2,780)",
+"Added 66 county-years (01gb_southdakota_1992_transcribe.py; 01gc_house_county_southdakota_1992.R; 01gd_southdakota_apply.R)",
+"fixed", "66 county-years", "R/data_creation/01gb_southdakota_1992_transcribe.py; 01gc_house_county_southdakota_1992.R; 01gd_southdakota_apply.R", "2026-09-24",
+
+"Delaware Department of Elections", "DE", "1990;1992;1994;1996", "HE",
+"Delaware House county rows for 1990-1996 were missing. They come from the Department's scanned 'Official Results of General Election for Statewide Offices' tables (image-only PDFs), hand-transcribed; the table gives City of Wilmington and Rural New Castle separately, added together as New Castle County",
+"Every candidate's four county cells add up to the printed Total Votes Cast, and each column to the printed office total (1990: 177,432 votes; 1992: 276,124; 1994: 195,037; 1996: 266,825)",
+"Added 12 county-years (01ge_delaware_1990_1996_transcribe.py; 01gf_house_county_delaware_1990_1996.R; 01gg_delaware_1990_1996_apply.R)",
+"fixed", "12 county-years", "R/data_creation/01ge_delaware_1990_1996_transcribe.py; 01gf_house_county_delaware_1990_1996.R; 01gg_delaware_1990_1996_apply.R", "2026-09-24",
+
 "Delaware Department of Elections", "DE", "2012", "HE",
 "Delaware House county rows for 2012 were missing. They come from the Department's results archive (Statewide Offices By County): the file's first column is headed 'Wilmington' but holds New Castle County's totals (165,723 for Carney)",
 "County columns add up to every candidate's printed Office Total",
