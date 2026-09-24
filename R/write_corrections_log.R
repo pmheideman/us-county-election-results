@@ -467,6 +467,12 @@ L <- tribble(
 "Added 46 county-years (01fu_house_county_southcarolina_2010.R; 01fv_southcarolina_apply.R)",
 "fixed", "46 county-years", "R/data_creation/01fu_house_county_southcarolina_2010.R; 01fv_southcarolina_apply.R", "2026-09-24",
 
+"Tennessee Secretary of State", "TN", "1998", "HE",
+"Tennessee House county rows for 1998 were missing. They come from the Secretary of State's archived county report (image-only PDF; OCR keyed and checked, three misread cells corrected from the page images: District 4 Moore, District 7 printed total, District 8 Madison)",
+"Every district's county rows add up to its printed DISTRICT TOTAL in every candidate column; the totals equal the FEC's official results",
+"Added 95 county-years (01gy_tennessee_1998_parse.py; 01gz_house_county_tennessee_1998.R; 01ha_tennessee_1998_apply.R)",
+"fixed", "95 county-years", "R/data_creation/01gy_tennessee_1998_parse.py; 01gz_house_county_tennessee_1998.R; 01ha_tennessee_1998_apply.R", "2026-09-24",
+
 "Montana Secretary of State", "MT", "1990;1994", "HE",
 "Montana House county rows for 1990 and 1994 were missing. 1990 (two districts, Western and Eastern) is hand-transcribed from the scanned official canvass sheet, in which the numbers sit one line above the county names, so the candidate pairs were assigned to the Western (19 counties) and Eastern (37) county lists in order; 1994 is read from the Secretary of State's 1994 Statewide General Canvass Lotus worksheet",
 "1990: the four candidate columns add up to the printed TOTALS row (Williams 100,409; Johnson 63,837; Burris 56,739; Marlenee 96,449) and every county's pair is 80-100% of its Total Vote Cast; 1994: county rows add up to the printed TOTAL row (Jamison 148,715; Kelly 32,046; Williams 171,372)",
