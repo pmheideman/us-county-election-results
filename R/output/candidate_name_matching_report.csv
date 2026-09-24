@@ -119,10 +119,19 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 1990,6,CA,45,placeholder,Democratic Candidate,DEM,0,NA,unmatched,NA
 1990,6,CA,45,placeholder,Other Candidate 1,OTHER,46068,Joe Shea,vote_total,wikipedia votes 46068
 1990,6,CA,45,placeholder,Republican Candidate,REP,123591,Duncan Hunter,vote_total,wikipedia votes 123591
+1990,16,ID,01,surname,Larocco,DEM,85054,Larry LaRocco,vote_total,wikipedia votes 85054
+1990,16,ID,01,surname,Smyser,REP,75406,Skip Smyser,vote_total,wikipedia votes 75406
+1990,16,ID,02,surname,McDevitt,REP,56044,Sean McDevitt,vote_total,wikipedia votes 56044
+1990,16,ID,02,surname,Stallings,DEM,98008,Richard H. Stallings,vote_total,wikipedia votes 98008
 1990,23,ME,01,surname,Andrews,DEM,167623,Thomas Andrews,surname,wikipedia party Democratic
 1990,23,ME,01,surname,Emery,REP,110836,David F. Emery,surname,wikipedia party Republican
 1990,23,ME,02,surname,McGowan,DEM,116798,Patrick K. McGowan,surname,wikipedia party Democratic
 1990,23,ME,02,surname,Snowe,REP,121704,Olympia Snowe,surname,wikipedia party Republican
+1990,35,NM,01,surname,Cand_dem,DEM,41306,NA,unmatched,NA
+1990,35,NM,01,surname,Cand_rep,REP,97375,NA,unmatched,NA
+1990,35,NM,02,surname,Cand_rep,REP,80677,NA,no_wikipedia_district,NA
+1990,35,NM,03,surname,Cand_dem,DEM,104225,NA,unmatched,NA
+1990,35,NM,03,surname,Cand_rep,REP,35691,NA,unmatched,NA
 1992,6,CA,01,placeholder,Democratic Candidate,DEM,119656,Dan Hamburg,party_D_R,wikipedia votes 119676 vs ours 119656
 1992,6,CA,01,placeholder,Other Candidate 2,OTHER,18264,Phil Baldwin / Matthew L. Howard,pooled_minor_sum,sum of 2 wikipedia candidates = 18264
 1992,6,CA,01,placeholder,Republican Candidate,REP,113266,Frank Riggs,vote_total,wikipedia votes 113266
@@ -469,6 +478,15 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 1994,13,GA,10,surname,Norwood,REP,96099,Charlie Norwood,surname,wikipedia party Republican
 1994,13,GA,11,surname,Lovett,REP,37533,Woodrow Lovett,surname,wikipedia party Republican
 1994,13,GA,11,surname,Woodrow,DEM,71560,NA,unmatched,NA
+1994,35,NM,01,surname,Cand_dem,DEM,42316,NA,unmatched,NA
+1994,35,NM,01,surname,Cand_rep,REP,119996,NA,unmatched,NA
+1994,35,NM,02,surname,Cand_dem,DEM,45310,NA,unmatched,NA
+1994,35,NM,02,surname,Cand_grn,OTHER,6898,NA,unmatched,NA
+1994,35,NM,02,surname,Cand_rep,REP,89966,NA,unmatched,NA
+1994,35,NM,03,surname,Cand_dem,DEM,99900,NA,unmatched,NA
+1994,35,NM,03,surname,Cand_lib,OTHER,3697,NA,unmatched,NA
+1994,35,NM,03,surname,Cand_rep,REP,53515,NA,unmatched,NA
+1994,37,NC,11,surname,Lauterer,DEM,76862,Maggie Palmer Lauterer,surname,wikipedia party Democratic
 1994,40,OK,01,surname,Largent,REP,107085,Steve Largent,surname,wikipedia party Republican
 1994,40,OK,01,surname,Price,DEM,63753,Stuart Price,surname,wikipedia party Democratic
 1994,40,OK,02,surname,Coburn,REP,82479,Tom Coburn,surname,wikipedia party Republican
@@ -482,6 +500,8 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 1994,40,OK,05,surname,Keith,OTHER,38270,Tom Keith,surname_unique,only candidate with this surname in the district; wikipedia party Democratic
 1994,40,OK,06,surname,Lucas,REP,106961,Frank Lucas,surname,wikipedia party Republican
 1994,40,OK,06,surname,Tollett,DEM,45399,Jeffrey S. Tollett,surname,wikipedia party Democratic
+1994,44,RI,02,surname,Elliot,REP,56347,A. John Elliot,surname,wikipedia party Republican
+1994,44,RI,02,surname,Reed,DEM,119659,Jack Reed,surname,wikipedia party Democratic
 1996,4,AZ,01,surname,Cox,DEM,89738,John Cox,surname,wikipedia party Democratic
 1996,4,AZ,01,surname,Salmon,REP,135634,Matt Salmon,surname,wikipedia party Republican
 1996,4,AZ,02,surname,Bangle,OTHER,5333,Alice Bangle,surname,wikipedia party Libertarian
@@ -680,6 +700,17 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 1996,33,NH,02,surname,Bass,REP,123001,Charles Bass,surname,wikipedia party Republican
 1996,33,NH,02,surname,Kendel,OTHER,3727,Roy Kendel,surname,wikipedia party Independent American
 1996,33,NH,02,surname,Lamirande,OTHER,10757,Carole Lamirande,surname,wikipedia party Independent
+1996,35,NM,01,surname,Cand_dem,DEM,71635,NA,unmatched,NA
+1996,35,NM,01,surname,Cand_grn,OTHER,7060,NA,unmatched,NA
+1996,35,NM,01,surname,Cand_rep,REP,109290,NA,unmatched,NA
+1996,35,NM,01,surname,Cand_una,OTHER,4056,NA,unmatched,NA
+1996,35,NM,02,surname,Cand_dem,DEM,74915,NA,unmatched,NA
+1996,35,NM,02,surname,Cand_rep,REP,95091,NA,unmatched,NA
+1996,35,NM,03,surname,Cand_dem,DEM,124594,NA,unmatched,NA
+1996,35,NM,03,surname,Cand_rep,REP,56580,NA,unmatched,NA
+1996,56,WY,00,surname,Cubin,REP,116004,Barbara Cubin,surname,wikipedia party Republican
+1996,56,WY,00,surname,Dawson,OTHER,8255,Dave Dawson,surname,wikipedia party Libertarian
+1996,56,WY,00,surname,Maxfield,DEM,85724,Pete Maxfield,surname,wikipedia party Democratic
 1998,6,CA,29,surname,Blasdell-,OTHER,2717,Karen Blasdell-Wilkinson,vote_total,wikipedia votes 2717
 1998,13,GA,01,surname,Kingston,REP,92229,Jack Kingston,page_text,'Jack Kingston' appears 2 times on the page
 1998,13,GA,02,surname,Bishop,DEM,77953,Sanford Bishop,surname,wikipedia party Democratic
@@ -704,6 +735,9 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 1998,23,ME,01,surname,Greiner,OTHER,9182,Eric Greiner,surname,wikipedia party U.S. Taxpayers
 1998,23,ME,02,surname,Baldacci,DEM,146202,John Baldacci,surname,wikipedia party Democratic
 1998,23,ME,02,surname,Reisman,REP,45674,Johnathan Reisman,surname,wikipedia party Republican
+1998,56,WY,00,surname,Cubin,REP,100687,Barbara Cubin,surname,wikipedia party Republican
+1998,56,WY,00,surname,Farris,DEM,67399,Scott Farris,surname,wikipedia party Democratic
+1998,56,WY,00,surname,Richardson,OTHER,6133,Steve Richardson,surname,wikipedia party Libertarian
 2000,1,AL,01,surname,Callahan,REP,151188,Sonny Callahan,surname,wikipedia party Republican
 2000,1,AL,01,surname,Coffee,OTHER,14031,Dick Coffee,surname,wikipedia party Libertarian
 2000,1,AL,02,surname,Everett,REP,154980,Terry Everett,surname,wikipedia party Republican
@@ -732,7 +766,6 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 2000,33,NH,02,surname,Brannen,DEM,110367,Barney Brannen,surname,wikipedia party Democratic
 2000,33,NH,02,surname,Christeson,OTHER,6188,Brian Christeson,surname,wikipedia party Libertarian
 2000,33,NH,02,surname,Kendel,OTHER,2204,Roy Kendel,surname,wikipedia party Constitution
-2000,36,NY,07,placeholder,Unnamed (name Missing In Source),OTHER,153374,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
 2000,40,OK,01,surname,Clem,OTHER,2984,Michael A. Clem,vote_total,wikipedia votes 2984
 2000,40,OK,01,surname,Largent,REP,138528,Steve Largent,vote_total,wikipedia votes 138528
 2000,40,OK,01,surname,Lowe,DEM,58493,Dan Lowe,vote_total,wikipedia votes 58493
@@ -813,6 +846,8 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 2004,1,AL,06,surname,Bachus,REP,264819,Spencer Bachus,vote_total,wikipedia votes 264819
 2004,1,AL,07,surname,Cameron,REP,61019,Steve Cameron,vote_total,wikipedia votes 61019
 2004,1,AL,07,surname,Davis,DEM,183408,Artur Davis,vote_total,wikipedia votes 183408
+2004,9,CT,03,surname,Richterelser,REP,69160,Richter Elser,vote_total,wikipedia votes 69160
+2004,9,CT,05,surname,Fernandoramirez,OTHER,3196,NA,unmatched,NA
 2004,12,FL,05,surname,Werder,OTHER,33,H. David Werder,vote_total,wikipedia votes 33
 2006,1,AL,01,surname,Beckerle,DEM,52770,Vivian Sheffield Beckerle,vote_total,wikipedia votes 52770
 2006,1,AL,01,surname,Bonner,REP,112944,Jo Bonner,vote_total,wikipedia votes 112944
@@ -879,19 +914,6 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 2012,21,KY,02,surname,Beacham,OTHER,6304,Andrew R. Beacham,vote_total,wikipedia votes 6304
 2012,21,KY,04,surname,Lewis,OTHER,8674,David Lewis,vote_total,wikipedia votes 8674
 2012,21,KY,06,surname,Vance,OTHER,8340,Randolph Vance,vote_total,wikipedia votes 8340
-2012,25,MA,01,placeholder,Democrats,DEM,262263,Richard Neal,party_D_R,wikipedia votes 261936 vs ours 262263
-2012,25,MA,06,placeholder,Democrats,DEM,9365,John F. Tierney,party_word,only DEM candidate on wikipedia for the district
-2012,25,MA,08,placeholder,Democrats,DEM,147327,Stephen Lynch,party_word,only DEM candidate on wikipedia for the district
-2012,25,MA,08,placeholder,Republicans,REP,80702,Joe Selvaggi,party_D_R,wikipedia votes 82242 vs ours 80702
-2012,25,MA,08,surname,Unenrolled,OTHER,9649,NA,unmatched,NA
-2012,36,NY,23,surname,Reed,REP,20764,Tom Reed,surname,wikipedia party Republican Party (United States)
-2012,36,NY,23,surname,Shinagawa,DEM,11594,Nate Shinagawa,surname,wikipedia party Democratic Party (United States)
-2012,36,NY,NA,surname,Buerkle,REP,13840,Ann Marie Buerkle,surname_statewide,only candidate with this surname in the state-year
-2012,36,NY,NA,surname,Maffei,DEM,13164,Dan Maffei,surname_statewide,only candidate with this surname in the state-year
-2012,36,NY,NA,surname,Rozum,OTHER,2882,Ursula Rozum,surname_statewide,only candidate with this surname in the state-year
-2012,49,UT,01,surname,Bishop,REP,7391,Rob Bishop,surname,wikipedia party Republican Party (United States)
-2012,49,UT,01,surname,McAleer,DEM,9317,Donna M. McAleer,surname,wikipedia party Democratic Party (United States)
-2012,49,UT,01,surname,Phipps,OTHER,371,Sherry Phipps,surname,wikipedia party Constitution Party (United States)
 2012,53,WA,05,surname,Uncertified,OTHER,3,NA,unmatched,NA
 2012,53,WA,06,surname,Uncertified,OTHER,117,NA,unmatched,NA
 2014,1,AL,01,surname,Byrne,REP,6299,Bradley Byrne,surname,wikipedia party Republican Party (United States)
@@ -906,13 +928,6 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 2014,1,AL,06,surname,Palmer,REP,26728,Gary Palmer,surname,wikipedia party Republican Party (United States)
 2014,1,AL,07,surname,Sewell,DEM,17130,Terri Sewell,surname,wikipedia party Democratic Party (United States)
 2014,21,KY,03,surname,Puccetti,OTHER,2318,Gregory Peter Puccetti,vote_total,wikipedia votes 2318
-2014,49,UT,02,surname,McCausland,OTHER,102,Shaun McCausland,surname,wikipedia party Constitution Party (United States)
-2014,49,UT,02,placeholder,Unnamed (name Missing In Source),OTHER,1,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
-2014,49,UT,03,surname,Chaffetz,REP,3172,Jason Chaffetz,surname,wikipedia party Republican Party (United States)
-2014,49,UT,03,surname,Mates,OTHER,76,Ben J. Mates,surname,wikipedia party Independent (United States)
-2014,49,UT,03,surname,Strong,OTHER,237,Zack Strong,surname,wikipedia party Independent American Party
-2014,49,UT,03,surname,Tryon,OTHER,321,Stephen P. Tryon,surname,wikipedia party Independent (United States)
-2014,49,UT,03,surname,Wonnacott,DEM,1796,Brian Wonnacott,surname,wikipedia party Democratic Party (United States)
 2016,10,DE,00,surname,Rochester,DEM,233554,Lisa Blunt Rochester,surname,wikipedia party Democratic
 2016,12,FL,02,placeholder,Unnamed (name Missing In Source),OTHER,507,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
 2016,12,FL,04,placeholder,Unnamed (name Missing In Source),OTHER,651,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
@@ -933,14 +948,10 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 2016,24,MD,06,placeholder,Unnamed (name Missing In Source),OTHER,191,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
 2016,24,MD,07,placeholder,Unnamed (name Missing In Source),OTHER,369,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
 2016,24,MD,08,placeholder,Unnamed (name Missing In Source),OTHER,285,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
-2016,36,NY,19,surname,Woerner,OTHER,0,NA,unmatched,NA
-2016,36,NY,24,surname,Anonymous,OTHER,2,NA,unmatched,NA
 2016,38,ND,00,placeholder,Unnamed (name Missing In Source),OTHER,574,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
 2016,44,RI,01,placeholder,Unnamed (name Missing In Source),OTHER,812,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
 2016,44,RI,02,placeholder,Unnamed (name Missing In Source),OTHER,543,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
 2016,56,WY,00,placeholder,Unnamed (name Missing In Source),OTHER,739,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
-2018,36,NY,08,placeholder,Unnamed (name Missing In Source),OTHER,0,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
-2018,36,NY,19,placeholder,Unnamed (name Missing In Source),OTHER,204,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
 2018,50,VT,00,surname,Gibbs,OTHER,1,NA,unmatched,NA
 2018,50,VT,00,surname,Morrisey,OTHER,1,NA,unmatched,NA
 2018,50,VT,00,surname,Others,OTHER,5,Other / write-in candidates,aggregate_label,generic pooled or unnamed row

@@ -26,3 +26,6 @@ release/**/*.csv
 
 # Shiny app: derived .rds data (rebuild via shiny_app/data_prep/prepare_data.R) and raw tigris shapefile cache
 shiny_app/data/
+
+# Python bytecode
+__pycache__/

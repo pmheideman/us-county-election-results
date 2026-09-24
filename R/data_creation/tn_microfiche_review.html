@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>TN Microfiche Review</title>
+<style>
+:root {
+  --bg: #f6f5f1; --panel: #ffffff; --ink: #1f1e1b; --muted: #6b6860; --line: #dcd9d0;
+  --ok: #1d7a4a; --ok-bg: #e3f3ea; --bad: #b3261e; --bad-bg: #fbe7e5;
+  --warn-bg: #fff1c7; --accent: #2f5fb3; --verified-bg: #eef6f0;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font: 14px/1.4 system-ui, sans-serif; background: var(--bg); color: var(--ink); }
+header { position: sticky; top: 0; z-index: 5; background: var(--panel); border-bottom: 1px solid var(--line);
+  display: flex; gap: 16px; align-items: center; padding: 8px 16px; flex-wrap: wrap; }
+header h1 { font-size: 16px; margin: 0 8px 0 0; }
+.yr { padding: 4px 10px; border: 1px solid var(--line); border-radius: 6px; background: none; cursor: pointer; font: inherit; }
+.yr.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+#status { color: var(--muted); margin-left: auto; }
+main { display: grid; grid-template-columns: 220px 1fr; gap: 0; }
+nav { border-right: 1px solid var(--line); padding: 8px; position: sticky; top: 49px; height: calc(100vh - 49px); overflow: auto; background: var(--panel); }
+nav .d { display: flex; justify-content: space-between; padding: 6px 8px; border-radius: 6px; cursor: pointer; }
+nav .d:hover { background: var(--bg); }
+nav .d.on { background: var(--ink); color: #fff; }
+.tag { font-size: 12px; padding: 0 6px; border-radius: 10px; }
+.tag.ok { background: var(--ok-bg); color: var(--ok); }
+.tag.bad { background: var(--bad-bg); color: var(--bad); }
+#content { padding: 12px 16px 200px; min-width: 0; }
+.ties { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 12px; margin-bottom: 12px; position: sticky; top: 49px; z-index: 4; }
+.ties table { border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.ties td, .ties th { padding: 2px 10px; text-align: right; border-bottom: 1px solid var(--line); }
+.ties th { font-weight: 600; color: var(--muted); }
+.ties td.bad { color: var(--bad); font-weight: 600; }
+.ties td.ok { color: var(--ok); }
+.sugg { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.sugg b { color: var(--ink); }
+.fec { color: var(--muted); font-size: 13px; margin-top: 4px; }
+.row { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 6px 8px; margin-bottom: 8px; }
+.row.verified { background: var(--verified-bg); border-color: #b9dcc6; }
+.row.total { border-left: 4px solid var(--accent); }
+.row.ignore { opacity: .45; }
+.row.focus { outline: 2px solid var(--accent); }
+.strip { background-repeat: no-repeat; border: 1px solid var(--line); overflow: hidden; }
+.scroller { overflow-x: auto; }
+.ctl { display: flex; gap: 6px; align-items: center; margin-top: 6px; flex-wrap: wrap; }
+.ctl input.v { width: 88px; font: 15px ui-monospace, monospace; text-align: right; padding: 3px 5px; border: 1px solid var(--line); border-radius: 4px; }
+.ctl input.v.amb { background: var(--warn-bg); }
+.ctl input.v.changed { border-color: var(--accent); }
+.ctl input.v.dis { box-shadow: inset 0 0 0 2px #e0892b; }
+.cells { position: relative; height: 30px; flex: none; }
+.cells input.county { position: absolute; left: 0; width: 140px; }
+.cells select.kind { position: absolute; left: 146px; }
+.ctl input.county { width: 150px; padding: 3px 5px; }
+.ctl select { padding: 3px; }
+.ctl button { font: inherit; font-size: 12px; padding: 3px 8px; border: 1px solid var(--line); background: var(--bg); border-radius: 4px; cursor: pointer; }
+.ctl button.vbtn { background: var(--ink); color: #fff; border-color: var(--ink); }
+.row.verified .ctl button.vbtn { background: var(--ok); border-color: var(--ok); }
+.ctl .ocr { color: var(--muted); font-size: 12px; margin-left: 8px; font-family: ui-monospace, monospace; }
+.opts { display: flex; gap: 12px; align-items: center; font-size: 13px; }
+.note { font-size: 12px; color: #8a4b00; background: #fff4e0; padding: 1px 6px; border-radius: 4px; }
+.bbok { font-size: 12px; color: var(--ok); background: var(--ok-bg); padding: 1px 6px; border-radius: 4px; }
+.bbbad { font-size: 12px; color: var(--bad); background: var(--bad-bg); padding: 1px 6px; border-radius: 4px; }
+.bbnone { font-size: 12px; color: var(--muted); border: 1px dashed var(--line); padding: 0 6px; border-radius: 4px; }
+.ctl input.v.bbdiff { box-shadow: inset 0 0 0 2px var(--bad); }
+.bbv { font: 12px ui-monospace, monospace; color: var(--bad); text-align: right; }
+.cells.hasbb { height: 48px; }
+.help { color: var(--muted); font-size: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>TN House microfiche review</h1>
+  <span id="years"></span>
+  <span class="opts">
+    <label>Zoom <input id="zoom" type="range" min="0.3" max="1.3" step="0.05" value="0.6"></label>
+    <label>Contrast <input id="contrast" type="range" min="1" max="3" step="0.1" value="1.4"></label>
+    <label><input id="tall" type="checkbox"> show neighbouring rows</label>
+    <label><input id="onlyAmb" type="checkbox"> only unverified</label>
+    <label><input id="hl068" type="checkbox"> highlight 0/6/8</label>
+    <label><input id="needs" type="checkbox"> hide Blue Book matches</label>
+    <button id="acceptBB" class="yr" title="mark every unverified row in this district that equals the Blue Book as verified">accept Blue Book matches</button>
+  </span>
+  <span id="status">loading…</span>
+</header>
+<main>
+  <nav id="nav"></nav>
+  <div id="content"></div>
+</main>
+<script>
+const AMBIG = /[068]/;
+const CONFUSE = {"0":"68","6":"085","8":"0635","3":"85","5":"63","1":"7","7":"1","9":"4","4":"9"};
+let S, META, year = localStorage.getItem("tn_year") || "1990", district = +(localStorage.getItem("tn_d") || 1);
+let dirty = false, saveTimer = null;
+
+const $ = s => document.querySelector(s);
+const num = v => (v === "" || v == null || isNaN(+v)) ? null : +v;
+
+async function load() {
+  const r = await fetch("/api/state"); META = await r.json(); S = META.state;
+  $("#years").innerHTML = Object.keys(S).map(y => `<button class="yr" data-y="${y}">${y}</button>`).join(" ");
+  document.querySelectorAll(".yr").forEach(b => b.onclick = () => { year = b.dataset.y; district = 1; $("#hl068").checked = year === "1992"; render(); });
+  $("#hl068").checked = year === "1992";
+  for (const id of ["zoom", "contrast"]) {
+    const v = localStorage.getItem("tn_" + id); if (v) $("#" + id).value = v;
+    $("#" + id).oninput = () => { localStorage.setItem("tn_" + id, $("#" + id).value); renderRows(); };
+  }
+  $("#tall").onchange = renderRows; $("#onlyAmb").onchange = renderRows; $("#hl068").onchange = renderRows; $("#needs").onchange = renderRows;
+  $("#acceptBB").onclick = () => {
+    let n = 0;
+    for (const r of S[year]) if (r._d === district && !r.verified && bbMatch(r) === true) { r.verified = true; r.note = (r.note ? r.note + " | " : "") + "accepted: equals Blue Book"; n++; }
+    $("#status").textContent = n + " rows accepted"; changed(true);
+  };
+  $("#status").textContent = "ready";
+  render();
+}
+
+function districts() {  // assign districts from the order of total rows
+  let k = 1; const rows = S[year];
+  for (const r of rows) { r._d = k; if (r.kind === "total") k++; }
+  return k - 1;
+}
+
+function norm(c) { return (c || "").toUpperCase().replace(/[^A-Z]/g, ""); }
+function bbDistrict(d) { const b = META.bluebook[year]; return b && b.districts ? b.districts[String(d)] : null; }
+function bbRow(r) {  // Blue Book values for this row (same district + county), or null
+  const bd = bbDistrict(r._d); if (!bd) return null;
+  if (r.kind === "total") return bd.total || null;
+  const m = (bd.rows || []).find(x => norm(x.county) === norm(r.county));
+  return m ? m.values : null;
+}
+function bbMatch(r) {  // true: every Blue Book cell equals ours; false: some differ; null: no Blue Book row
+  if (r.kind === "ignore") return null;
+  const b = bbRow(r); if (!b) return null;
+  return b.every((v, j) => v == null || String(+String(v).replace(/,/g, "")) === String(+(r.values[j] || 0)));
+}
+
+function tie(d) {
+  const n = META.ncols[year], rows = S[year].filter(r => r._d === d);
+  const counties = rows.filter(r => r.kind === "county" || r.kind === "unknown");
+  const total = rows.find(r => r.kind === "total");
+  const cols = [];
+  for (let j = 0; j < n; j++) {
+    const sum = counties.reduce((a, r) => a + (num(r.values[j]) || 0), 0);
+    const tot = total ? num(total.values[j]) : null;
+    cols.push({ sum, tot, diff: tot == null ? null : tot - sum });
+  }
+  const ok = total && cols.every(c => c.diff === 0) && counties.every(r => r.kind === "county");
+  return { cols, total, counties, ok, verified: rows.filter(r => r.verified).length, n: rows.length };
+}
+
+function suggestions(t) {
+  const out = [];
+  t.cols.forEach((c, j) => {
+    if (!c.diff) return;
+    const cand = t.counties.map(r => ({ r, v: r.values[j] })).concat(t.total ? [{ r: t.total, v: t.total.values[j], isTot: true }] : []);
+    for (const { r, v, isTot } of cand) {
+      const s = String(v ?? "");
+      for (let i = 0; i < s.length; i++) {
+        for (const alt of (CONFUSE[s[i]] || "")) {
+          const nv = +(s.slice(0, i) + alt + s.slice(i + 1));
+          const delta = nv - +s;
+          if ((!isTot && delta === c.diff) || (isTot && -delta === c.diff))
+            out.push(`col ${j + 1}: <b>${r.county}</b> ${s} → ${nv}`);
+        }
+      }
+    }
+  });
+  return out;
+}
+
+function render() {
+  localStorage.setItem("tn_year", year); localStorage.setItem("tn_d", district);
+  document.querySelectorAll(".yr").forEach(b => b.classList.toggle("on", b.dataset.y === year));
+  const nd = districts();
+  let html = "";
+  for (let d = 1; d <= Math.max(nd, 1); d++) {
+    const t = tie(d);
+    html += `<div class="d ${d === district ? "on" : ""}" data-d="${d}"><span>District ${d}</span>
+      <span><span class="tag ${t.ok ? "ok" : "bad"}">${t.ok ? "ties" : "open"}</span> ${t.verified}/${t.n}</span></div>`;
+  }
+  const un = S[year].filter(r => r._d > nd).length;
+  if (un) html += `<div class="d ${district > nd ? "on" : ""}" data-d="${nd + 1}"><span>after last total</span><span>${un}</span></div>`;
+  const all = S[year], v = all.filter(r => r.verified).length;
+  html += `<p class="help">${v} of ${all.length} rows verified in ${year}.</p>
+    <p class="help">Enter = verify row &amp; next · Tab = next cell.<br>Amber fill = a 2+ digit value containing 0/6/8 (toggle; on for 1992).<br>Orange ring = OCR and visual reading disagree, or the reader was unsure (hover for all readings).<br>Red ring + 'BB n' = differs from the Blue Book (typeset, no write-ins).<br>Tick 'show neighbouring rows' if a strip is cut off; ↑↓ move the crop.</p>`;
+  $("#nav").innerHTML = html;
+  document.querySelectorAll("nav .d").forEach(e => e.onclick = () => { district = +e.dataset.d; render(); });
+  renderRows();
+}
+
+function renderTies() {
+  const t = tie(district), n = META.ncols[year];
+  let h = `<table><tr><th></th>${[...Array(n)].map((_, j) => `<th>${j + 1}</th>`).join("")}</tr>
+    <tr><td>county sum</td>${t.cols.map(c => `<td>${c.sum.toLocaleString()}</td>`).join("")}</tr>
+    <tr><td>printed total</td>${t.cols.map(c => `<td>${c.tot == null ? "–" : c.tot.toLocaleString()}</td>`).join("")}</tr>
+    ${bbDistrict(district) && bbDistrict(district).total ? `<tr><td>Blue Book total</td>${bbDistrict(district).total.map((v, j) => `<td>${v == null ? "–" : (+String(v).replace(/,/g, "")).toLocaleString()}</td>`).join("")}</tr>` : ""}
+    <tr><td>difference</td>${t.cols.map(c => `<td class="${c.diff ? "bad" : "ok"}">${c.diff == null ? "–" : c.diff === 0 ? "✓" : c.diff.toLocaleString()}</td>`).join("")}</tr></table>`;
+  const s = suggestions(t);
+  if (s.length) h += `<div class="sugg">Single-digit fixes that would close a gap: ${s.slice(0, 12).join(" · ")}</div>`;
+  if (t.counties.some(r => r.kind !== "county")) h += `<div class="sugg">Some rows have no county yet.</div>`;
+  const fec = META.fec[year] && META.fec[year][String(district)];
+  if (fec) h += `<div class="fec">FEC: ${fec.map(f => `${f.candidate} ${f.party ? "(" + f.party[0] + ")" : ""} ${f.votes.toLocaleString()}`).join(" · ")}</div>`;
+  return h;
+}
+
+function renderRows() {
+  const z = +$("#zoom").value, con = +$("#contrast").value, tall = $("#tall").checked;
+  const list = S[year].map((r, i) => [r, i]).filter(([r]) => r._d === district && (!$("#onlyAmb").checked || !r.verified)
+      && (!$("#needs").checked || (!r.verified && bbMatch(r) !== true && r.kind !== "ignore")));
+  let h = `<div class="ties" id="ties">${renderTies()}</div>`;
+  for (const [r, i] of list) {
+    const cols = META.columns[r.page] || [];
+    const [x0, y0, bx1, y1] = r.box, pad = tall ? 60 : 0;
+    const x1 = cols.length ? Math.min(bx1, cols[cols.length - 1][1] + 50) : bx1;
+    const w = (x1 - x0) * z, hgt = (y1 - y0 + 2 * pad) * z;
+    const opts = ["county", "total", "unknown", "ignore"].map(k => `<option ${k === r.kind ? "selected" : ""}>${k}</option>`).join("");
+    const cells = r.values.map((v, j) => {
+      const amb = $("#hl068").checked && !r.verified && (v || "").length > 1 && AMBIG.test(v || "");
+      const ch = v !== (r.draft[j] ?? "");
+      const dis = r.vision && r.ocrv && (r.ocrv[j] ?? "") !== "" && r.ocrv[j] !== r.vision[j];
+      const unsure = r.unsure && r.unsure.includes(j);
+      const bb = bbRow(r), bv = bb ? bb[j] : null;
+      const bbDiff = bv != null && String(+String(bv).replace(/,/g, "")) !== String(+(v || 0));
+      const c = cols[j], left = c ? (c[1] - x0) * z - Math.max(80, (c[1] - c[0]) * z) : 0;
+      const style = c ? `position:absolute;left:${left}px;width:${Math.max(80, (c[1] - c[0]) * z)}px` : "";
+      const tip = [bv != null ? "Blue Book: " + bv : "", r.ocrv ? "OCR: " + (r.ocrv[j] || "–") : "", r.vision ? "visual: " + (r.vision[j] || "–") : ""].filter(Boolean).join(" · ");
+      const bbTag = bbDiff ? `<span class="bbv" style="position:absolute;left:${left}px;width:${Math.max(80, (c ? c[1] - c[0] : 80) * z)}px;top:31px">BB ${bv}</span>` : "";
+      return bbTag + `<input class="v ${amb ? "amb" : ""} ${ch ? "changed" : ""} ${bbDiff ? "bbdiff" : (dis || unsure) && !(bv != null && !bbDiff) ? "dis" : ""}" style="${style}" title="${tip}" data-i="${i}" data-j="${j}" value="${v ?? ""}" inputmode="numeric">`;
+    }).join("");
+    const bm = bbMatch(r);
+    const badge = bm === true ? `<span class="bbok">= Blue Book</span>` : bm === false ? `<span class="bbbad">≠ Blue Book</span>` : (r.kind === "county" && META.bluebook[year] ? `<span class="bbnone">not in Blue Book</span>` : "");
+    h += `<div class="row ${r.verified ? "verified" : ""} ${r.kind}" id="r${i}">
+      <div class="scroller"><div class="strip" style="width:${w}px;height:${hgt}px;
+        background-image:url('/pages/${r.page}_deskew.png');
+        background-position:${-x0 * z}px ${-(y0 - pad) * z}px;
+        background-size:auto ${pageH(r.page) * z}px;filter:contrast(${con})"></div></div>
+      <div class="ctl">
+        <div class="cells ${bm === false ? "hasbb" : ""}" style="width:${w}px">
+          <input class="county" list="cl" data-i="${i}" value="${r.county}">
+          <select data-i="${i}" class="kind">${opts}</select>
+          ${cells}
+        </div>
+      </div>
+      <div class="ctl">
+        <button class="vbtn" data-i="${i}">${r.verified ? "✓ verified" : "verify"}</button>
+        <button data-i="${i}" data-a="up" title="move crop up">↑</button>
+        <button data-i="${i}" data-a="down" title="move crop down">↓</button>
+        <button data-i="${i}" data-a="add" title="insert a row below">+ row</button>
+        ${badge}
+        <span class="ocr" title="OCR">OCR: ${esc(r.ocr).slice(0, 50)}</span>
+        ${r.note ? `<span class="note">${esc(r.note)}</span>` : ""}
+      </div></div>`;
+  }
+  h += `<datalist id="cl">${META.counties.concat(["DISTRICT TOTAL"]).map(c => `<option value="${c}">`).join("")}</datalist>`;
+  $("#content").innerHTML = h;
+  bind();
+}
+
+const pageH = p => META.sizes[p][1];
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+function bind() {
+  document.querySelectorAll("input.v").forEach(e => {
+    e.oninput = () => { S[year][+e.dataset.i].values[+e.dataset.j] = e.value.replace(/[^0-9]/g, ""); changed(false); };
+    e.onkeydown = ev => { if (ev.key === "Enter") { ev.preventDefault(); verify(+e.dataset.i, true); } };
+    e.onfocus = () => { document.querySelectorAll(".row.focus").forEach(x => x.classList.remove("focus")); e.closest(".row").classList.add("focus"); };
+  });
+  document.querySelectorAll("input.county").forEach(e => e.onchange = () => {
+    const r = S[year][+e.dataset.i]; r.county = e.value.toUpperCase();
+    if (r.county === "DISTRICT TOTAL") r.kind = "total"; else if (r.kind === "unknown") r.kind = "county";
+    changed(true);
+  });
+  document.querySelectorAll("select.kind").forEach(e => e.onchange = () => { S[year][+e.dataset.i].kind = e.value; changed(true); });
+  document.querySelectorAll(".ctl button").forEach(b => b.onclick = () => {
+    const i = +b.dataset.i, r = S[year][i];
+    if (b.classList.contains("vbtn")) return verify(i, false);
+    if (b.dataset.a === "up") { r.box[1] -= 8; r.box[3] -= 8; }
+    if (b.dataset.a === "down") { r.box[1] += 8; r.box[3] += 8; }
+    if (b.dataset.a === "add") {
+      const nr = JSON.parse(JSON.stringify(r)); const h = r.box[3] - r.box[1];
+      nr.id = r.id + "_add" + Date.now() % 100000; nr.box[1] += 57; nr.box[3] += 57; nr.kind = "unknown"; nr.county = "?";
+      nr.values = r.values.map(() => ""); nr.draft = nr.values.slice(); nr.verified = false; nr.ocr = "(added)";
+      S[year].splice(i + 1, 0, nr);
+    }
+    changed(true);
+  });
+}
+
+function verify(i, next) {
+  const r = S[year][i]; r.verified = !r.verified || next;
+  changed(false);
+  const el = document.getElementById("r" + i);
+  el.classList.toggle("verified", r.verified);
+  el.querySelectorAll("input.v").forEach(x => x.classList.remove("amb"));
+  el.querySelector(".vbtn").textContent = r.verified ? "✓ verified" : "verify";
+  if (next) {
+    const nxt = [...document.querySelectorAll(".row")].find(x => +x.id.slice(1) > i && !x.classList.contains("verified"));
+    if (nxt) { const inp = nxt.querySelector("input.v"); inp.focus(); inp.select(); nxt.scrollIntoView({ block: "center" }); }
+  }
+}
+
+function changed(full) {
+  dirty = true; $("#status").textContent = "unsaved…";
+  if (full) render(); else { $("#ties").innerHTML = renderTies(); refreshNav(); }
+  clearTimeout(saveTimer); saveTimer = setTimeout(save, 700);
+}
+function refreshNav() {
+  document.querySelectorAll("nav .d").forEach(e => {
+    const d = +e.dataset.d, t = tie(d), tag = e.querySelector(".tag");
+    if (!tag) return;
+    tag.className = "tag " + (t.ok ? "ok" : "bad"); tag.textContent = t.ok ? "ties" : "open";
+    tag.nextSibling.textContent = ` ${t.verified}/${t.n}`;
+  });
+}
+async function save() {
+  const clean = {}; for (const y in S) clean[y] = S[y].map(({ _d, ...r }) => r);
+  try {
+    const r = await fetch("/api/save", { method: "POST", body: JSON.stringify(clean) });
+    const j = await r.json(); dirty = false; $("#status").textContent = "saved " + j.saved;
+  } catch (e) { $("#status").textContent = "SAVE FAILED – is the server running?"; }
+}
+window.onbeforeunload = () => dirty ? "unsaved" : undefined;
+load();
+</script>
+</body>
+</html>

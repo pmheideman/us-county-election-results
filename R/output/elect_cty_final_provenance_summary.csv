@@ -268,6 +268,10 @@
 "HE","he_cty_sd_sos","as_source",726,1990,2012
 "HE","he_cty_sdsos_1992","as_source",66,1992,1992
 "HE","he_cty_tn","as_source",760,2000,2014
+"HE","he_cty_tnbb_1990","as_source",95,1990,1990
+"HE","he_cty_tnbb_1992","as_source",95,1992,1992
+"HE","he_cty_tnbb_1994","as_source",95,1994,1994
+"HE","he_cty_tnbb_1996","as_source",95,1996,1996
 "HE","he_cty_tnsos_1998","as_source",95,1998,1998
 "HE","he_cty_tx_sos_1992","as_source",254,1992,1992
 "HE","he_cty_tx_sos_1994","as_source",254,1994,1994
