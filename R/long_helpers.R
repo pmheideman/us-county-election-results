@@ -102,6 +102,23 @@ standard_party_label <- function(x) {
 ## Non-vote rows that some sources print as if they were candidates: blank / void / over- / under-votes, New York's "Blank, Void & Scattering" and its "Bvs Subtotal", "Times Blank Voted", rejected or invalid write-ins.
 ## They are not votes for anybody, so they are never part of a candidate table or of a county total (docs/DECISIONS.md; the FEC totals exclude them). \b keeps names such as "Blankenship" safe.
 PSEUDO_NAME_RE <- "^(bvs\\b|blanks?\\b|voids?\\b|(over|under) ?votes?\\b|times blank voted|rejected\\b|write-in: invalid|invalid write)"
+STATE_FIPS_OF_PO <- c(AL = 1L, AK = 2L, AZ = 4L, AR = 5L, CA = 6L, CO = 8L, CT = 9L, DE = 10L, DC = 11L, FL = 12L, GA = 13L, HI = 15L, ID = 16L, IL = 17L, IN = 18L, IA = 19L, KS = 20L, KY = 21L, LA = 22L, ME = 23L, MD = 24L, MA = 25L, MI = 26L, MN = 27L, MS = 28L, MO = 29L, MT = 30L, NE = 31L, NV = 32L, NH = 33L, NJ = 34L, NM = 35L, NY = 36L, NC = 37L, ND = 38L, OH = 39L, OK = 40L, OR = 41L, PA = 42L, RI = 44L, SC = 45L, SD = 46L, TN = 47L, TX = 48L, UT = 49L, VT = 50L, VA = 51L, WA = 53L, WV = 54L, WI = 55L, WY = 56L)
+
+## Hand-checked party fixes (R/data/party_label_corrections.csv: year, state_po, district, candidate, party, party_group, reason), found by comparing
+## one-major-party districts with the FEC / Clerk of the House lists (2026-09-24). Applied in every long build; 01ho_party_label_fixes_apply.R carries them
+## into the shares files and the panel. Candidate matched by letters only (case/punctuation-insensitive).
+apply_party_label_corrections <- function(df) {
+  f <- file.path(PROJECT_ROOT, "R", "data", "party_label_corrections.csv")
+  if (!file.exists(f) || !nrow(df)) return(df)
+  fx <- readr::read_csv(f, show_col_types = FALSE, col_types = readr::cols(.default = "c")) %>%
+    dplyr::transmute(year = as.integer(year), state_fips = as.integer(STATE_FIPS_OF_PO[state_po]), district = norm_district(district),
+                     ckey = gsub("[^A-Z]", "", toupper(candidate)), party_fix = party, group_fix = party_group)
+  df %>% dplyr::mutate(ckey2 = gsub("[^A-Z]", "", toupper(candidate))) %>%
+    dplyr::left_join(fx, by = c("year", "state_fips", "district", "ckey2" = "ckey")) %>%
+    dplyr::mutate(party = dplyr::coalesce(party_fix, party), party_group = dplyr::coalesce(group_fix, party_group)) %>%
+    dplyr::select(-ckey2, -party_fix, -group_fix)
+}
+
 finalize_long <- function(df, source, stage = "general", office = "house") {
   df <- df[!grepl(PSEUDO_NAME_RE, trimws(df$candidate), ignore.case = TRUE), ]
   if (!"district" %in% names(df)) df$district <- NA
@@ -118,6 +135,7 @@ finalize_long <- function(df, source, stage = "general", office = "house") {
   df %>% dplyr::left_join(canon, by = c("year", "state_fips", "district", "ckey")) %>% dplyr::left_join(prim, by = c("year", "state_fips", "district", "ckey")) %>%
     dplyr::mutate(party = dplyr::coalesce(lab, lab_primary, dplyr::case_when(party_group == "DEM" ~ "Democratic", party_group == "REP" ~ "Republican", TRUE ~ "Other")),
                   candidate = cand_canon) %>%
+    apply_party_label_corrections() %>%
     dplyr::group_by(year, state_fips, county_fips, district, candidate, party, party_group, stage = if ("stage" %in% names(df)) stage else stage) %>%
     dplyr::summarise(votes = sum(votes), .groups = "drop") %>% dplyr::arrange(year, county_fips, district, dplyr::desc(votes)) %>%
     make_long(source, stage = stage, office = office)

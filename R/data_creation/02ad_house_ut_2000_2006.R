@@ -88,32 +88,36 @@ row_ys_all <- num_tokens(p1, y_min = 220, y_max = 606) %>% pull(y) %>% unique() 
 stopifnot(length(row_ys_all) == 30)                                            # 29 counties + TOTAL
 row_ys <- setNames(row_ys_all[1:29], UT_COUNTIES); total_y <- row_ys_all[30]
 
-## District 1 (page 3): House columns are the LAST 3 (x >= 340) -- Senate (5 candidates) occupies x < 340
-p3 <- d2000[[3]]
-t1 <- num_tokens(p3, x_min = 340, y_min = min(row_ys), y_max = total_y - 1)
-tot1 <- num_tokens(p3, x_min = 340, y_min = total_y, y_max = total_y)
-col_xs1 <- sort(unique(assign_col(tot1$x, sort(unique(tot1$x)), tol = 0))); col_xs1 <- sort(unique(tot1$x))
-m1 <- build_matrix(t1, row_ys, col_xs1, total_check = tot1$val[order(tot1$x)])
-add_district(2000, 1, m1, c("Jim Dexter", "Edward Bowen", "James V. Hansen"), c("L", "IA", "R"))
-
-## District 2 (page 4): House columns are the LAST 4 (x >= 300) -- an unrelated race occupies x < 300
-p4 <- d2000[[4]]
-t2 <- num_tokens(p4, x_min = 300, y_min = min(row_ys), y_max = total_y - 1)
-tot2 <- num_tokens(p4, x_min = 300, y_min = total_y, y_max = total_y)
-col_xs2 <- sort(unique(tot2$x))
-m2 <- build_matrix(t2, row_ys, col_xs2, total_check = tot2$val[order(tot2$x)])
-add_district(2000, 2, m2, c("Derek W. Smith", "Jim Matheson", "Steven Alberts Voris", "Peter Pixton"), c("R", "D", "Unaffiliated", "L"))
-
-## District 3 (page 5): House columns are the FIRST 6 (x < 410) -- Governor occupies x >= 432 (its own column anchor). 410, not 390, because a
-## single-digit Tolpinrud (col 6, anchor x=380) value right-aligns as far as x=391 -- 390 clipped it, silently dropping Daggett/Duchesne/Emery/
-## Garfield/Morgan/Wayne's values and undershooting the printed total by 39 votes until caught by the total-tie check and traced here.
-p5 <- d2000[[5]]
-t3 <- num_tokens(p5, x_max = 410, y_min = min(row_ys), y_max = total_y - 1)
-tot3 <- num_tokens(p5, x_max = 410, y_min = total_y, y_max = total_y)
-col_xs3 <- sort(unique(tot3$x))
-m3 <- build_matrix(t3, row_ys, col_xs3, total_check = tot3$val[order(tot3$x)])
-add_district(2000, 3, m3, c("Bruce Bangerter", "Chris Cannon", "Donald Dunn", "Michael J. Lehman", "Kitty K. Burton", "Randall Tolpinrud"),
-             c("IA", "R", "D", "IA", "L", "NL"))
+## 2000 page layout (CORRECTED 2026-09-24): the canvass prints ONE continuous run of candidate columns that wraps across pages 3-5:
+##   p3: Senate (Pearlman, Schriner, Strickland write-ins; Hatch R; Howell D; Dexter L; Bowen IA) | D1 Hansen
+##   p4: D1 Collinwood D, Seely L, Anderson IA, Frandsen NL (x < 300) | D2 Smith R, Matheson D, Voris Unaffiliated, Pixton L (x >= 300)
+##   p5: D2 Bangerter IA (first column) | D3 Cannon R, Dunn D, Lehman IA, Burton L, Tolpinrud NL | Governor (x >= 432)
+## The first version took Dexter and Bowen (Senate) as District 1 House candidates, dropped Collinwood/Seely/Anderson/Frandsen as an 'unrelated
+## race', and put Bangerter in District 3. Candidate lists and party labels checked against the Clerk of the House 'Statistics of the Presidential
+## and Congressional Election of November 7, 2000' (R/data/clerk_house_stats/2000Stat.htm); every district total equals it.
+p3 <- d2000[[3]]; p4 <- d2000[[4]]; p5 <- d2000[[5]]
+cols_of <- function(pg, x_min = -Inf, x_max = Inf) {
+  tt <- num_tokens(pg, x_min = x_min, x_max = x_max, y_min = total_y, y_max = total_y)
+  list(t = num_tokens(pg, x_min = x_min, x_max = x_max, y_min = min(row_ys), y_max = total_y - 1), tot = tt, xs = sort(unique(tt$x)))
+}
+c3 <- cols_of(p3, x_min = 340)                                             # x >= 340 holds Dexter, Bowen (Senate) and Hansen (the last column)
+x_cut <- mean(tail(c3$xs, 2)); c3 <- cols_of(p3, x_min = x_cut); stopifnot(length(c3$xs) == 1)
+mh <- build_matrix(c3$t, row_ys, c3$xs, total_check = c3$tot$val)
+c4a <- cols_of(p4, x_max = 300); m4a <- build_matrix(c4a$t, row_ys, c4a$xs, total_check = c4a$tot$val[order(c4a$tot$x)])
+stopifnot(ncol(m4a) == 4)
+add_district(2000, 1, cbind(mh, m4a), c("James V. Hansen", "Kathleen McConkie Collinwood", "Dave Starr Seely", "Hartley D. Anderson", "Matthew D. Frandsen"),
+             c("R", "D", "L", "IA", "NL"))
+m1 <- cbind(mh, m4a)
+c4b <- cols_of(p4, x_min = 300); m4b <- build_matrix(c4b$t, row_ys, c4b$xs, total_check = c4b$tot$val[order(c4b$tot$x)])
+## District 3 page: first 6 columns (x < 410; see the Tolpinrud note in the first version: a right-aligned single digit reaches x = 391)
+c5 <- cols_of(p5, x_max = 410); m5 <- build_matrix(c5$t, row_ys, c5$xs, total_check = c5$tot$val[order(c5$tot$x)])
+stopifnot(ncol(m4b) == 4, ncol(m5) == 6)
+m2 <- cbind(m4b, m5[, 1, drop = FALSE])
+add_district(2000, 2, m2, c("Derek W. Smith", "Jim Matheson", "Steven Alberts Voris", "Peter Pixton", "Bruce Bangerter"), c("R", "D", "Unaffiliated", "L", "IA"))
+m3 <- m5[, 2:6, drop = FALSE]
+add_district(2000, 3, m3, c("Chris Cannon", "Donald Dunn", "Michael J. Lehman", "Kitty K. Burton", "Randall Tolpinrud"), c("R", "D", "IA", "L", "NL"))
+clerk2000 <- list(`1` = c(180591, 71229, 3151, 5131, 1703), `2` = c(107114, 145021, 597, 2165, 4704), `3` = c(138943, 88547, 5436, 3570, 852))
+stopifnot(all(colSums(m1) == clerk2000[["1"]]), all(colSums(m2) == clerk2000[["2"]]), all(colSums(m3) == clerk2000[["3"]]))
 message("2000: districts built (", nrow(m1), "/", nrow(m2), "/", nrow(m3), " counties), all 3 tie exactly to their own printed total")
 
 ## ============================================================================================================================================

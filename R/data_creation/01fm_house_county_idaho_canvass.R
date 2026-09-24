@@ -4,10 +4,13 @@
 ## Layout: one row per contest x candidate x county, plus per-county pseudo-candidates "Total Ballots Cast" and "Total Votes Cast" (is_pseudocandidate = 1). County names carry a trailing space in places ("Ada ").
 ## Ada County is in both districts and is summed. Check (stop on failure): for every county and district the candidate votes add up to that county's "Total Votes Cast".
 ## Party: literal (Democratic / Republican / anything else OTHER). Outputs: R/output/long/he_idcv_<year>.rds and R/output/elect_he_cty_idcv_<year>.rds (1990, 1992, 2022; folded in by 01fn_idaho_apply.R).
+## 2026-09-24: also 1994, 1996, 1998, 2000 and 2016 from ..._1994_2020.csv, replacing flawed rows (folded in by 01hn_idaho_canvass_replace_apply.R): the OpenElections files for 1994-1998 have
+## no rows at all for Helen Chenoweth (R, District 1 winner each year), 2000 lacks Donovan Bramwell (L, District 2), and MEDSL 2016 undercounts one county (Labrador -6,406).
 source(file.path("R", "00_setup.R")); source(file.path("R", "long_helpers.R"))
 library(readr)
 D <- file.path(PROJECT_ROOT, "R/data/raw_house_county_open_states/idaho_canvass")
-d <- bind_rows(read_csv(file.path(D, "us_house_county_1990_1992.csv"), show_col_types = FALSE, col_types = cols(.default = "c")), read_csv(file.path(D, "us_house_county_2022_2022.csv"), show_col_types = FALSE, col_types = cols(.default = "c"))) %>%
+d <- bind_rows(read_csv(file.path(D, "us_house_county_1990_1992.csv"), show_col_types = FALSE, col_types = cols(.default = "c")), read_csv(file.path(D, "us_house_county_2022_2022.csv"), show_col_types = FALSE, col_types = cols(.default = "c")),
+  read_csv(file.path(D, "us_house_county_1994_2020.csv"), show_col_types = FALSE, col_types = cols(.default = "c")) %>% filter(substr(election_date, 1, 4) %in% c("1994", "1996", "1998", "2000", "2016"))) %>%
   filter(election_type == "General", office_name == "United States Representative") %>%
   mutate(year = as.integer(substr(election_date, 1, 4)), county = toupper(trimws(granular_division_name)), district = sprintf("%02d", as.integer(district_name)), votes = as.numeric(votes))
 tv <- d %>% filter(candidate_name == "Total Votes Cast") %>% select(year, district, county, tv = votes)

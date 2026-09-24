@@ -1,0 +1,8 @@
+year,state_po,district,candidate,party,party_group,reason
+2022,WY,00,Lynnette Greybull,Democratic,DEM,"MEDSL labels the Democratic nominee Libertarian (FEC: Democrat, 47,250)"
+2008,OR,01,Joel Haugen,Republican,REP,"OpenElections labels him Independent; he was the Republican nominee (FEC: R, 58,279)"
+2002,PA,10,Don Sherwood,Republican,REP,"party 'Demrep' (Republican incumbent also on the Democratic line) counted as OTHER; Republican nominee (FEC: R, 152,017)"
+1998,TN,09,Claude Burdikoff,Republican,REP,"SOS report column read as Independent; Republican nominee (FEC/Clerk: R, 18,078)"
+2006,TX,22,Shelley Sekula Gibbs,Republican,REP,"labelled Write-In; she was the Republican write-in candidate (Clerk lists her as a write-in, 61,938); classified REP so the district is not 100% Democratic"
+1994,VA,09,Frederick C. Boucher,Democratic,DEM,"party field 'General Election' counted as OTHER; Democratic nominee (Clerk: D, 102,876)"
+2002,WV,03,Paul E. Chapman,Republican,REP,"labelled Democratic; Republican nominee (FEC: R, 37,229)"

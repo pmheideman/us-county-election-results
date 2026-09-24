@@ -63,9 +63,14 @@
 "he_cty_ia_1996",99,TRUE,0
 "he_cty_ia_1998",99,TRUE,0
 "he_cty_ia_2008_supp",10,TRUE,0
-"he_cty_id",484,TRUE,0
+"he_cty_id",308,TRUE,0
 "he_cty_idcv_1990",44,TRUE,0
 "he_cty_idcv_1992",44,TRUE,0
+"he_cty_idcv_1994",44,TRUE,0
+"he_cty_idcv_1996",44,TRUE,0
+"he_cty_idcv_1998",44,TRUE,0
+"he_cty_idcv_2000",44,TRUE,0
+"he_cty_idcv_2016",44,TRUE,0
 "he_cty_idcv_2022",44,TRUE,0
 "he_cty_il_1990",102,TRUE,0
 "he_cty_il_1992",102,TRUE,0
@@ -136,7 +141,7 @@
 "he_cty_me",16,TRUE,0
 "he_cty_me_2018",16,TRUE,0
 "he_cty_me_historical",192,TRUE,0
-"he_cty_medsl",12795,TRUE,0
+"he_cty_medsl",12751,TRUE,0
 "he_cty_medsl_cand_2024",3,TRUE,0
 "he_cty_mi",747,TRUE,0
 "he_cty_mn",174,TRUE,0
