@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="County election results">
+  <!-- 4x4 grid of "counties", shaded along the map's red-to-blue diverging ramp -->
+  <rect x="1"  y="1"  width="7" height="7" rx="1.2" fill="#346AB4"/>
+  <rect x="9"  y="1"  width="7" height="7" rx="1.2" fill="#A3B2D6"/>
+  <rect x="17" y="1"  width="7" height="7" rx="1.2" fill="#E4E1DA"/>
+  <rect x="25" y="1"  width="6" height="7" rx="1.2" fill="#D8A6A6"/>
+  <rect x="1"  y="9"  width="7" height="7" rx="1.2" fill="#A3B2D6"/>
+  <rect x="9"  y="9"  width="7" height="7" rx="1.2" fill="#D8A6A6"/>
+  <rect x="17" y="9"  width="7" height="7" rx="1.2" fill="#AB4C4C"/>
+  <rect x="25" y="9"  width="6" height="7" rx="1.2" fill="#AB4C4C"/>
+  <rect x="1"  y="17" width="7" height="7" rx="1.2" fill="#E4E1DA"/>
+  <rect x="9"  y="17" width="7" height="7" rx="1.2" fill="#AB4C4C"/>
+  <rect x="17" y="17" width="7" height="7" rx="1.2" fill="#D8A6A6"/>
+  <rect x="25" y="17" width="6" height="7" rx="1.2" fill="#346AB4"/>
+  <rect x="1"  y="25" width="7" height="6" rx="1.2" fill="#D8A6A6"/>
+  <rect x="9"  y="25" width="7" height="6" rx="1.2" fill="#AB4C4C"/>
+  <rect x="17" y="25" width="7" height="6" rx="1.2" fill="#A3B2D6"/>
+  <rect x="25" y="25" width="6" height="6" rx="1.2" fill="#346AB4"/>
+</svg>

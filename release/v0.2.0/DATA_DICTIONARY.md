@@ -22,12 +22,24 @@ All offices share the same three tables; the `office` column is `house`, `presid
 ## us_county_results_summary.csv (one row per year x county)
 County totals across all districts in the county: `n_districts`, `dem_votes`, `rep_votes`, `other_votes`, `total_votes`,
 `dem_two_party_share` = D / (D + R), `rep_share_of_total` = R / all votes (the outcome used by Mayda et al.), `status` (`covered`),
-`quality_flag` (adds `one_party_race` when no Democratic or no Republican votes, and `other_candidates_aggregated`). `n_districts` is blank for President and Senate. Counties split across House districts appear once per office here; their
+`quality_flag` (adds `one_party_race` when no Democratic or no Republican votes, `other_candidates_aggregated`, and `excludes_unopposed_seat`: House only, part of the county lies in a district whose unopposed winner was not on the ballot or not tabulated, so the county's totals cover only its contested districts; see `us_county_results_no_ballot.csv`). `n_districts` is blank for President and Senate. Counties split across House districts appear once per office here; their
 per-district detail is in the long file.
 
 ## us_county_results_gaps.csv (one row per state-year that is not fully covered)
-`counties_covered`, `counties_expected`, `coverage_pct`, `status` (`partial` or `none`), `gap_reason`: `unopposed_no_ballot` (known: Louisiana,
-Oklahoma), `special_election_only` (Senate: the only race that year was a special election, excluded), `partial`, or `source_not_found` (no county-level source found yet; may include some unopposed seats), and a note. President and Senate rows are listed by `office`; for the Senate a state-year is expected when a race appears in any source, so a race missing from every source cannot be listed.
+`counties_covered`, `counties_expected`, `coverage_pct`, `status` (`partial` or `none`), `gap_reason`: `unopposed_no_ballot` (every county without returns lies in House seats whose unopposed winner was not on the ballot; the note names each district and winner), `special_election_only` (Senate: the only race that year was a special election, excluded), `partial`, or `source_not_found` (no county-level source found yet; may include some unopposed seats), and a note. A `partial` row can mix both: the note then counts the no-ballot counties and the counties genuinely missing data. President and Senate rows are listed by `office`; for the Senate a state-year is expected when a race appears in any source, so a race missing from every source cannot be listed.
+
+## us_county_results_no_ballot.csv (one row per year x House district x county with no ballot)
+House seats whose winner was unopposed and therefore has no county returns: Florida, Louisiana and Oklahoma do not print unopposed candidates on the ballot (Louisiana declares them elected, R.S. 18:511); Arkansas prints them but does not tabulate their votes. 84 seats, 1990-2024; no other state leaves unopposed House candidates off the ballot in the FEC or House Clerk records.
+| Column | Meaning |
+|---|---|
+| year, office, state_fips, state, state_po, county_fips, county_name | As in the long file (`office` is always `house`) |
+| district | The unopposed seat (2 digits) |
+| candidate, party_group | The unopposed winner and `DEM`/`REP` |
+| whole_county | `yes`: the county lies only in no-ballot seats that year, so it has no House row in the other files. `no`: the county is split and its other districts were contested; its summary row carries `excludes_unopposed_seat` |
+| reason | `unopposed_no_ballot` |
+| state_rule | The state law as the House Clerk's statistics state it |
+| source | The record showing the seat was unopposed: FEC *Federal Elections* (1990, 2004-2022) or House Clerk *Statistics of the Congressional Election* (1992-2002, 2024) |
+| county_method | How the district's counties were found: `same_map_year:<year>` = the counties reporting that district in the nearest election on the same district map; `boundary_overlay:...` = district boundaries overlaid on county boundaries (1990: UCLA historical district shapefiles, 102nd Congress; Louisiana 2022: Census TIGER 118th Congress), counting a county when at least 1% of its area is in the district |
 
 ## SOURCES.csv (one row per `source` token)
 Columns: `source`, `state_po`, `year`, `origin`, `publisher`, `document` (title of the publication or dataset), `locator` (URL, or the local file name in the project's data folder when the original URL was not recorded), `format`, `obtained` (downloaded / user-supplied), `transcription` (parsed text, OCR, or read by hand from page images, plus the build script), `license`, `license_status`, `n_rows`, `n_counties`, `n_districts`, `corrections_log_entries` (row numbers in `data_corrections_log.csv` that concern this state and year) and `notes`.

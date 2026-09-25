@@ -10,7 +10,9 @@
 ##   totals_possibly_inflated NJ Bergen 2024 total is 1.86x the presidential total (raw rows look duplicated);
 ##                            -- shares are probably fine, `votes` totals are not (see data_corrections_log.csv)
 ##   one_party_race          (summary file) no Democratic or no Republican votes in the county-year
-## gap reasons: unopposed_no_ballot (known structural: LA, OK), source_not_found (no county-level source yet; may include some unopposed seats),
+##   excludes_unopposed_seat (summary file) part of the county lies in a district whose unopposed winner was not on the ballot (FL/LA/OK) or not
+##                           tabulated (AR); the county's totals cover only its contested districts (see us_county_results_no_ballot.csv)
+## gap reasons: unopposed_no_ballot (every blank county lies in seats whose unopposed winner was not on the ballot; built by 03c_house_no_ballot.R), source_not_found (no county-level source yet; may include some unopposed seats),
 ##   partial (some counties or districts missing).
 
 source(file.path("R", "00_setup.R")); source(file.path("R", "long_helpers.R")); source(file.path("R", "source_tokens.R"))
@@ -79,11 +81,15 @@ write_csv(out_long %>% select(-source_internal), file.path(REL, "us_county_resul
 infl_k <- long %>% filter(infl) %>% distinct(year, county_fips) %>% mutate(infl = TRUE)
 ph_k <- long %>% filter(flag_placeholder) %>% distinct(year, county_fips) %>% mutate(ph = TRUE)
 sn_k <- long %>% filter(flag_surname) %>% distinct(year, county_fips) %>% mutate(sn = TRUE)
+## no-ballot seats (unopposed, not on the ballot / not tabulated) and their counties: built by 03c_house_no_ballot.R, which must run first
+nbc <- read_csv(file.path(OUTPUT_DIR, "house_no_ballot_counties.csv"), col_types = cols(county_fips = col_double(), whole_county = col_logical(), .default = col_character())) %>% mutate(year = as.numeric(year))
+## county with returns that ALSO lies partly in a no-ballot seat: its totals leave out that seat (usually a safe seat, so shares lean against its party)
+nb_k <- nbc %>% filter(!whole_county) %>% distinct(year, county_fips) %>% mutate(nbs = TRUE)
 out_sum <- summ %>% left_join(cty %>% select(county_fips, county_name, state_name = state, state_po), by = c("county_fips")) %>%
-  left_join(infl_k, by = c("year", "county_fips")) %>% left_join(ph_k, by = c("year", "county_fips")) %>% left_join(sn_k, by = c("year", "county_fips")) %>%
+  left_join(infl_k, by = c("year", "county_fips")) %>% left_join(ph_k, by = c("year", "county_fips")) %>% left_join(sn_k, by = c("year", "county_fips")) %>% left_join(nb_k, by = c("year", "county_fips")) %>%
   mutate(office = "house",
          quality_flag = sub(";$", "", paste0(ifelse(!is.na(ph), "placeholder_name;", ""), ifelse(!is.na(sn), "surname_only;", ""), ifelse(!is.na(infl), "totals_possibly_inflated;", ""),
-                                            ifelse(dem_votes == 0 | rep_votes == 0, "one_party_race;", "")))) %>%
+                                            ifelse(dem_votes == 0 | rep_votes == 0, "one_party_race;", ""), ifelse(!is.na(nbs), "excludes_unopposed_seat;", "")))) %>%
   transmute(year, office, state_fips = sprintf("%02d", state_fips), state = state_name, state_po, county_fips = sprintf("%05d", county_fips), county_name,
             n_districts, dem_votes, rep_votes, other_votes, total_votes, dem_two_party_share = round(dem_two_party_share, 6),
             rep_share_of_total = round(rep_share_of_total, 6), status = "covered", quality_flag) %>% arrange(year, county_fips)
@@ -92,17 +98,23 @@ write_csv(out_sum, file.path(REL, "us_county_results_summary.csv"), na = "")
 ## ---- gaps: state-year coverage with a reason ------------------------------------------------------------------------------------------------------------------
 cov <- read.csv(file.path(PROJECT_ROOT, "house_results_coverage.csv"), stringsAsFactors = FALSE) %>%
   filter(year >= 1990, !state %in% c("ALASKA", "HAWAII"), county_status != "full")
-unopposed <- tribble(~state, ~year, ~note,
-  "LOUISIANA", 1990, "district 6 unopposed", "LOUISIANA", 1996, "districts 1,2,3 unopposed", "LOUISIANA", 1998, "districts 1,3,4,5,7 unopposed",
-  "LOUISIANA", 2000, "district 2 unopposed", "LOUISIANA", 2004, "district 4 unopposed", "LOUISIANA", 2008, "districts 3,5 unopposed",
-  "LOUISIANA", 2010, "district 7 unopposed", "LOUISIANA", 2022, "district 4 unopposed",
-  "ARKANSAS", 1998, "district 1 unopposed (25 counties)", "ARKANSAS", 2000, "district 3 unopposed (16 counties)", "ARKANSAS", 2004, "district 4 unopposed (29 counties; SOS certification report lists opposed races only)", "FLORIDA", 1990, "districts 8,10,12,13,16 unopposed (not on the ballot)", "FLORIDA", 1994, "districts 4,10,13,14,18,23 unopposed (not on the ballot)", "OKLAHOMA", 2010, "district 4 unopposed", "OKLAHOMA", 2014, "district 1 unopposed", "OKLAHOMA", 2016, "district 1 unopposed", "OKLAHOMA", 2024, "district 3 unopposed")
+nb_seats <- nbc %>% distinct(year, state_po, district, candidate) %>% arrange(year, state_po, district) %>% group_by(year, state_po) %>%
+  summarise(seats = paste0(ifelse(n() > 1, "districts ", "district "), paste0(as.integer(district), " (", candidate, ")", collapse = ", "), " unopposed, ",
+                                ifelse(state_po[1] == "AR", "votes not tabulated", "not on the ballot")), .groups = "drop") %>%
+  left_join(cty %>% distinct(state_po, state = toupper(state)), by = "state_po")
+nb_blank <- nbc %>% filter(whole_county) %>% distinct(year, county_fips)
 n_expected <- xw %>% group_by(state) %>% summarise(counties_expected = n_distinct(county_fips), .groups = "drop") %>% mutate(state = toupper(state))
 covered_n <- out_sum %>% group_by(state = toupper(state), year) %>% summarise(counties_covered = n_distinct(county_fips), .groups = "drop")
-gaps <- cov %>% left_join(unopposed, by = c("state", "year")) %>% left_join(n_expected, by = "state") %>% left_join(covered_n, by = c("state", "year")) %>%
-  mutate(counties_covered = ifelse(is.na(counties_covered), 0L, counties_covered),
-         gap_reason = case_when(!is.na(note) ~ "unopposed_no_ballot", county_status == "partial" ~ "partial", TRUE ~ "source_not_found"),
-         note = ifelse(is.na(note), ifelse(gap_reason == "source_not_found", "no county-level source found yet; may include unopposed seats", ""), note)) %>%
+## a state-year is unopposed_no_ballot when every county without returns lies wholly in no-ballot seats; when only some do, it stays partial/none and the note says both
+blank_n <- cov %>% distinct(state, year) %>% left_join(xw %>% distinct(state = toupper(state), county_fips), by = "state", relationship = "many-to-many") %>%
+  anti_join(out_sum %>% distinct(year = as.numeric(year), county_fips = as.numeric(county_fips)), by = c("year", "county_fips")) %>% mutate(nb = paste(year, county_fips) %in% paste(nb_blank$year, nb_blank$county_fips)) %>%
+  group_by(state, year) %>% summarise(n_blank = n(), n_nb = sum(nb), .groups = "drop")
+gaps <- cov %>% left_join(nb_seats %>% select(state, year, seats), by = c("state", "year")) %>% left_join(blank_n, by = c("state", "year")) %>% left_join(n_expected, by = "state") %>% left_join(covered_n, by = c("state", "year")) %>%
+  mutate(counties_covered = ifelse(is.na(counties_covered), 0L, counties_covered), n_nb = ifelse(is.na(n_nb), 0L, n_nb),
+         gap_reason = case_when(n_nb > 0 & n_nb == n_blank ~ "unopposed_no_ballot", county_status == "partial" ~ "partial", TRUE ~ "source_not_found"),
+         note = case_when(gap_reason == "unopposed_no_ballot" ~ seats,
+                          n_nb > 0 ~ paste0(seats, " (", n_nb, ifelse(n_nb == 1, " county", " counties"), "); ", n_blank - n_nb, ifelse(n_blank - n_nb == 1, " other county", " other counties"), " missing data"),
+                          gap_reason == "source_not_found" ~ "no county-level source found yet; may include unopposed seats", TRUE ~ "")) %>%
   transmute(office = "house", state, year, counties_covered, counties_expected, coverage_pct = round(county_coverage_pct, 3), status = county_status, gap_reason, note) %>%
   arrange(state, year)
 write_csv(gaps, file.path(REL, "us_county_results_gaps.csv"), na = "")

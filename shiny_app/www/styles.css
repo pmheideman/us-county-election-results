@@ -1,0 +1,157 @@
+/* Visual identity for the county election results app: warm "almanac paper" surfaces, ink text, serif display
+   type. Party colors are reserved for the data (map fill, candidate bars) -- the chrome stays neutral so the
+   interface itself never reads as partisan. */
+
+:root {
+  --paper: #f6f4ef;
+  --paper-raised: #fffdf9;
+  --ink: #1f1e1c;
+  --ink-muted: #6b6a66;
+  --rule: #e2ddd2;
+  --accent: #a8742a;   /* ochre: used sparingly for the header rule and focus/active states */
+}
+
+body { background: var(--paper); }
+
+/* ---- header ---------------------------------------------------------------------------------------------- */
+.bslib-page-sidebar > .navbar {
+  background: var(--paper-raised) !important;
+  border-bottom: 1px solid var(--rule);
+  box-shadow: inset 0 -3px 0 var(--accent);
+  padding-top: 0.55rem;
+  padding-bottom: 0.65rem;
+}
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+.app-logo { width: 34px; height: 34px; flex: none; }
+.app-titles { display: flex; flex-direction: column; line-height: 1.1; min-width: 0; }
+.app-title {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-weight: 650;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0;
+}
+.app-subtitle {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--ink-muted);
+  margin-top: 0.2rem;
+}
+.app-header-links { margin-left: auto; display: flex; gap: 0.5rem; flex: none; }
+.btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.btn-github:hover, .btn-github:focus-visible {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper-raised);
+}
+@media (max-width: 640px) {
+  .app-subtitle { display: none; }
+  .btn-github .btn-label { display: none; }
+  .app-title { font-size: 1.1rem; }
+}
+
+/* ---- sidebar --------------------------------------------------------------------------------------------- */
+.bslib-sidebar-layout > .sidebar {
+  background: var(--paper-raised);
+  border-right: 1px solid var(--rule);
+}
+.sidebar .control-label, .sidebar-section-title {
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--ink-muted);
+}
+.sidebar-section-title { margin: 0 0 0.5rem; }
+.sidebar hr { border-color: var(--rule); opacity: 1; }
+.sidebar .help-block { font-size: 0.82rem; color: var(--ink-muted); }
+
+/* office picker as a segmented control (Shiny markup: .radio > label > input + span) */
+#office .shiny-options-group { display: flex; border: 1px solid var(--rule); border-radius: 8px; overflow: hidden; }
+#office .radio { flex: 1; margin: 0; }
+#office .radio + .radio label { border-left: 1px solid var(--rule); }
+#office .radio label { display: block; margin: 0; padding: 0; cursor: pointer; }
+#office .radio input { position: absolute; opacity: 0; pointer-events: none; }
+#office .radio span {
+  display: block; text-align: center; white-space: nowrap;
+  padding: 0.45rem 0.3rem; font-size: 0.86rem; font-weight: 600; color: var(--ink-muted);
+  transition: background 0.15s, color 0.15s;
+}
+#office .radio label:hover span { color: var(--ink); background: var(--paper); }
+#office .radio input:checked + span { background: var(--ink); color: var(--paper-raised); }
+#office .radio input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: -2px; }
+
+/* year slider: big serif year readout */
+.irs--shiny .irs-single {
+  font-family: "Source Serif 4", Georgia, serif; font-size: 0.95rem; font-weight: 650;
+  background: var(--ink); padding: 2px 6px;
+}
+.irs--shiny .irs-single:before { border-top-color: var(--ink); }
+.irs--shiny .irs-bar { background: transparent; border: none; }   /* no fill left of the handle: a year is a point, not a range */
+.irs--shiny .irs-line { background: #cfc9bc; border: none; }
+.irs--shiny .irs-handle { border-color: var(--ink); }
+.irs--shiny .irs-min, .irs--shiny .irs-max { background: transparent; color: var(--ink-muted); }
+
+/* county detail */
+.detail-county {
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 1.15rem; font-weight: 650; margin-bottom: 0.35rem;
+}
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.78rem;
+  color: var(--ink-muted);
+}
+.sidebar-footer a { color: var(--ink); }
+
+/* ---- map ------------------------------------------------------------------------------------------------- */
+.map-card { border: 1px solid var(--rule); box-shadow: none; }
+.leaflet-container { background: #eeebe4; font-family: inherit; }
+.leaflet .legend {
+  background: rgba(255, 253, 249, 0.94);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  box-shadow: none;
+  color: var(--ink);
+  font-size: 0.78rem;
+}
+.leaflet-tooltip { border-color: var(--rule); border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.detail-panel { font-size: 0.9rem; }
+.detail-panel p { margin-bottom: 0.4rem; }
+.sidebar hr { margin: 0.25rem 0; }
+
+/* phones: bslib stacks sidebar over main without filling, which collapses the map -- give it a real height */
+@media (max-width: 575.98px) {
+  .map-card { min-height: 65vh; }
+  .map-card .leaflet { height: 65vh !important; }
+}
+
+/* covered county that also lies in a no-ballot (unopposed) district */
+.nb-note {
+  margin-top: 0.8rem; padding: 0.55rem 0.7rem;
+  border-left: 3px solid #9c8f6c; background: #f4efe2; border-radius: 0 6px 6px 0;
+}

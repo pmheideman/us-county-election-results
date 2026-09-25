@@ -5,6 +5,7 @@
 ##   counties_sf.rds   -- one row per county (sf polygons, EPSG:4326), 48 states (AK/HI excluded for now, see below)
 ##   results.rds       -- one row per (office, year, county_fips): shares, vote counts, gap_reason/status, n_districts
 ##   candidates.rds    -- one row per (office, year, county_fips, district, candidate): for the click/hover detail panel
+##   no_ballot.rds     -- one row per (year, House district, county) where the unopposed winner was not on the ballot / not tabulated
 ##   meta.rds          -- small lookup: valid years per office, state list, etc.
 ##
 ## AK/HI note: the user plans to add Alaska and Hawaii later. Geometry is kept in real lat/lon (no Albers/USA
@@ -84,6 +85,10 @@ long <- long %>% mutate(county_fips = recode(county_fips, !!!FIPS_CROSSWALK)) %>
   filter(county_fips %in% counties_sf$county_fips) %>%
   select(year, office, county_fips, district, candidate, party, party_group, votes, quality_flag)
 
+## ---- 4b. House seats with no ballot (unopposed): explains grey counties that are NOT missing data ------------------------------------------
+no_ballot <- read_csv(file.path(REL, "us_county_results_no_ballot.csv"), show_col_types = FALSE, col_types = cols(.default = col_character())) %>%
+  transmute(office, year = as.integer(year), county_fips, state, state_po, district, candidate, party_group, whole_county = whole_county == "yes", state_rule)
+
 ## ---- 5. Meta: valid years per office (drives the year selector) ------------------------------------------------
 meta <- list(
   years_by_office = summ %>% distinct(office, year) %>% arrange(office, year) %>% group_by(office) %>% summarise(years = list(sort(year))) %>% tibble::deframe(),
@@ -95,6 +100,7 @@ saveRDS(counties_sf, file.path(APP_DATA_DIR, "counties_sf.rds"))
 saveRDS(summ, file.path(APP_DATA_DIR, "results.rds"))
 saveRDS(gaps, file.path(APP_DATA_DIR, "gaps.rds"))
 saveRDS(long, file.path(APP_DATA_DIR, "candidates.rds"))
+saveRDS(no_ballot, file.path(APP_DATA_DIR, "no_ballot.rds"))
 saveRDS(meta, file.path(APP_DATA_DIR, "meta.rds"))
 
 message("Wrote: counties_sf (", nrow(counties_sf), " rows), results (", nrow(summ), " rows), gaps (", nrow(gaps), " rows), candidates (", nrow(long), " rows)")

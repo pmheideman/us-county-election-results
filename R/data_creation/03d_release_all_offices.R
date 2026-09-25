@@ -1,6 +1,6 @@
 ## Release v0.2.0: U.S. House (as in release/v0.1.0-house, built by 03a) + PRESIDENT + SENATE county results, 1990-2024, 48 states (no AK, HI, DC), regular general elections, final results.
 ## Inputs: release/v0.1.0-house/* (House files, already release-ready), R/output/long/pe_long_all.rds and se_long_all.rds (02zb_pe_se_long_assemble.R, master-checked against the panel).
-## Output: release/v0.2.0/{us_county_results_long.csv, us_county_results_summary.csv, us_county_results_gaps.csv, SOURCES.csv, data_corrections_log.csv, DATA_DICTIONARY.md, VERSION}
+## Output: release/v0.2.0/{us_county_results_long.csv, us_county_results_summary.csv, us_county_results_gaps.csv, us_county_results_no_ballot.csv, SOURCES.csv, data_corrections_log.csv, DATA_DICTIONARY.md, VERSION}
 ## President and Senate rows: district is blank (statewide offices). quality_flag values added: other_candidates_aggregated (the source itemizes only the two major-party nominees; all other candidates are one row, see SOURCES.csv).
 source(file.path("R", "00_setup.R")); source(file.path("R", "long_helpers.R")); source(file.path("R", "source_tokens.R")); library(readr)
 H <- file.path(PROJECT_ROOT, "release", "v0.1.0-house"); REL <- file.path(PROJECT_ROOT, "release", "v0.2.0"); dir.create(REL, showWarnings = FALSE, recursive = TRUE)
@@ -78,6 +78,13 @@ gp <- grid %>% left_join(cover, by = c("office", "year", "state_po")) %>% left_j
   left_join(cty %>% distinct(state_po, state), by = "state_po") %>%
   transmute(office, state = toupper(state), year = as.character(year), counties_covered = as.character(covered), counties_expected = as.character(expected), coverage_pct = as.character(round(covered / expected, 3)), status, gap_reason, note)
 gaps_all <- bind_rows(hg, gp) %>% arrange(factor(office, c("house", "senate", "president")), state, as.integer(year)); write_csv(gaps_all, file.path(REL, "us_county_results_gaps.csv"), na = "")
+
+## ---- House seats with no ballot (unopposed winner not on the ballot, or not tabulated), by county: from 03c_house_no_ballot.R --------------------
+nbc <- read_csv(file.path(PROJECT_ROOT, "R", "output", "house_no_ballot_counties.csv"), col_types = cc, na = character())
+nbc <- nbc %>% mutate(cf = as.integer(county_fips)) %>% left_join(cty %>% transmute(cf = county_fips, county_name, state), by = "cf") %>% { stopifnot(!anyNA(.$county_name)); . } %>%
+  transmute(year, office = "house", state_fips = substr(county_fips, 1, 2), state, state_po, county_fips, county_name, district, candidate, party_group = party,
+            whole_county = ifelse(whole_county == "TRUE", "yes", "no"), reason = "unopposed_no_ballot", state_rule, source, county_method)
+write_csv(nbc, file.path(REL, "us_county_results_no_ballot.csv"), na = "")
 
 file.copy(file.path(PROJECT_ROOT, "R", "output", "data_corrections_log.csv"), file.path(REL, "data_corrections_log.csv"), overwrite = TRUE)
 writeLines("0.2.0", file.path(REL, "VERSION"))

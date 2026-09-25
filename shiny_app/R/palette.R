@@ -20,3 +20,9 @@ GAP_BORDER <- "#8a8578"
 ## Party-group colors for the candidate detail panel (text, not map fill) -- reuse the same ramp's saturated ends
 ## for visual consistency with the map.
 PARTY_COLOR <- c(DEM = DIVERGING_RAMP[11], REP = DIVERGING_RAMP[1], OTHER = "#6b6a66")
+
+## "No ballot" (House seat won unopposed; FL/LA/OK leave the name off the ballot, AR does not count the votes): a muted khaki -- a hue the
+## red/blue ramp never uses, so it cannot be read as a vote share, and not partisan. Solid border, unlike the dashed "data not found" gray: this
+## is a known, structural absence of returns, not missing data.
+NO_BALLOT_FILL <- "#cdbf98"
+NO_BALLOT_BORDER <- "#9c8f6c"

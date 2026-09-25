@@ -23,6 +23,13 @@ results     <- readRDS("data/results.rds")
 gaps        <- readRDS("data/gaps.rds")
 candidates  <- readRDS("data/candidates.rds")
 meta        <- readRDS("data/meta.rds")
+no_ballot   <- readRDS("data/no_ballot.rds")
+
+## state FIPS -> postal code / name (counties_sf only carries the FIPS)
+STATES <- results %>% distinct(state_fips, state_po, state) %>% group_by(state_fips) %>% slice(1) %>% ungroup()
+state_po_of   <- function(fips) STATES$state_po[match(fips, STATES$state_fips)]
+state_name_of <- function(fips) STATES$state[match(fips, STATES$state_fips)]
+PARTY_WORD <- c(DEM = "Democrat", REP = "Republican")
 
 OFFICE_CHOICES <- c("President" = "president", "U.S. House" = "house", "U.S. Senate" = "senate")
 OFFICE_LABEL <- setNames(names(OFFICE_CHOICES), OFFICE_CHOICES)
@@ -30,22 +37,55 @@ OFFICE_LABEL <- setNames(names(OFFICE_CHOICES), OFFICE_CHOICES)
 pal_fun <- colorNumeric(palette = DIVERGING_RAMP, domain = c(0, 1), na.color = GAP_FILL)
 
 fmt_pct <- function(x) ifelse(is.na(x), "—", paste0(sprintf("%.1f", 100 * x), "%"))
-fmt_n   <- function(x) ifelse(is.na(x), "—", format(round(x), big.mark = ","))
+fmt_n   <- function(x) ifelse(is.na(x), "—", format(round(x), big.mark = ",", trim = TRUE))
 
 ## ---- UI ------------------------------------------------------------------------------------------------------
+REPO_URL <- "https://github.com/pmheideman/us-county-election-results"
+
+app_theme <- bs_theme(
+  version = 5,
+  bg = "#fffdf9", fg = "#1f1e1c",
+  primary = "#1f1e1c", secondary = "#6b6a66",
+  base_font = font_google("Inter"),
+  heading_font = font_google("Source Serif 4", wght = c(400, 600, 700)),
+  "border-color" = "#e2ddd2",
+  "border-radius" = "0.5rem"
+)
+
+app_header <- div(
+  class = "app-header",
+  tags$img(src = "logo.svg", class = "app-logo", alt = ""),
+  div(class = "app-titles",
+      h1(class = "app-title", "U.S. County Election Results"),
+      span(class = "app-subtitle", "President · House · Senate  ·  1990–2024")),
+  div(class = "app-header-links",
+      tags$a(class = "btn-github", href = REPO_URL, target = "_blank", rel = "noopener",
+             title = "Source code and data on GitHub",
+             icon("github"), span(class = "btn-label", "Code & data")))
+)
+
 ui <- page_sidebar(
-  title = "U.S. County Election Results, 1990–2024",
-  theme = bs_theme(version = 5, base_font = font_google("Inter"), primary = "#2a78d6"),
+  title = app_header,
+  window_title = "U.S. County Election Results, 1990–2024",
+  theme = app_theme,
+  tags$head(
+    tags$link(rel = "stylesheet", href = "styles.css"),
+    tags$link(rel = "icon", type = "image/svg+xml", href = "logo.svg")
+  ),
   sidebar = sidebar(
     width = 380,
     radioButtons("office", "Office", choices = OFFICE_CHOICES, selected = "president"),
     sliderInput("year", "Year", min = 1992, max = 2024, value = 2024, step = 4, sep = "", ticks = FALSE),
-    helpText("Color: Democratic share of the two-party vote (Dem + Rep). Gray counties have no data for this selection — hover or click for why."),
+    helpText("Color: Democratic share of the two-party vote (Dem + Rep). Tan counties had no ballot because the House candidate ran unopposed; gray dashed counties are missing data. Hover or click for details."),
     hr(),
-    h5("Selected county"),
-    uiOutput("detail_panel")
+    h5(class = "sidebar-section-title", "Selected county"),
+    div(class = "detail-panel", uiOutput("detail_panel")),
+    div(class = "sidebar-footer",
+        "Open data (CC BY 4.0) and code (MIT). Sources, coverage notes and downloads on ",
+        tags$a(href = REPO_URL, target = "_blank", rel = "noopener", "GitHub", .noWS = "after"), ".")
   ),
   card(
+    class = "map-card",
     full_screen = TRUE,
     style = "padding:0;",
     leafletOutput("map", height = "100%")
@@ -64,37 +104,85 @@ server <- function(input, output, session) {
     updateSliderInput(session, "year", min = min(yrs), max = max(yrs), step = step, value = new_val)
   }, ignoreInit = FALSE)
 
+  ## the selection the map and panel use: office + year, debounced so that dragging the slider (one value per year passed) or an office switch
+  ## that also moves the slider triggers one redraw, not a queue of redraws that land late
+  sel <- debounce(reactive(list(office = input$office, year = input$year)), 300)
+  sel_office <- reactive(sel()$office)
+  sel_year   <- reactive(sel()$year)
+
   sel_results <- reactive({
-    req(input$office, input$year)
-    results %>% filter(office == input$office, year == input$year)
+    req(sel_office(), sel_year())
+    results %>% filter(office == sel_office(), year == sel_year())
   })
 
-  ## every county in scope, left-joined to this selection's results -- unmatched rows are genuine gaps
+  ## this selection's no-ballot House seats (unopposed winner not on the ballot / not tabulated), by county
+  sel_no_ballot <- reactive({
+    if (sel_office() != "house") return(no_ballot[0, ])
+    no_ballot %>% filter(year == sel_year())
+  })
+
+  ## every county in scope, left-joined to this selection's results. Counties without results fall in one of three kinds:
+  ##   no_ballot -- House: every district in the county was won unopposed and the state put no race on the ballot (a known absence, not missing data)
+  ##   no_race   -- no regular race for this office in the state this year (Senate seat not up, or only a special election, which is out of scope)
+  ##   missing   -- a race was held but we have not found county returns
   map_data <- reactive({
     r <- sel_results()
     d <- counties_sf %>% left_join(r %>% select(county_fips, state_po, county_name, n_districts, dem_votes, rep_votes,
                                                   other_votes, total_votes, dem_two_party_share, rep_share_of_total, quality_flag),
                                     by = "county_fips")
-    d$fill <- ifelse(is.na(d$dem_two_party_share), GAP_FILL, pal_fun(d$dem_two_party_share))
     d$is_gap <- is.na(d$total_votes)
+    nb_whole <- sel_no_ballot() %>% filter(whole_county) %>% pull(county_fips)
+    g <- gaps %>% filter(office == sel_office(), year == sel_year())
+    special <- g$state_fips[g$gap_reason == "special_election_only"]
+    raced <- c(unique(r$state_fips), g$state_fips)       # states with a race for this office this year (covered or listed as a gap)
+    d$gap_kind <- ifelse(!d$is_gap, NA_character_,
+                  ifelse(d$county_fips %in% nb_whole, "no_ballot",
+                  ifelse(d$state_fips_geo %in% special | !d$state_fips_geo %in% raced, "no_race", "missing")))
+    d$fill <- ifelse(!d$is_gap, pal_fun(d$dem_two_party_share),
+              ifelse(d$gap_kind == "no_ballot", NO_BALLOT_FILL, GAP_FILL))
     d
   })
 
-  gap_reason_for <- function(state_po, yr, off) {
-    g <- gaps %>% filter(state_po == !!state_po, year == !!yr, office == !!off)
-    if (nrow(g) == 0) return(NA_character_)
-    paste0(g$gap_reason[1], if (!is.na(g$note[1]) && nzchar(g$note[1])) paste0(" (", g$note[1], ")") else "")
+  ## plain-language sentences for the unopposed seats of one county
+  no_ballot_lines <- function(fips) {
+    nb <- sel_no_ballot() %>% filter(county_fips == fips) %>% arrange(district)
+    if (nrow(nb) == 0) return(character())
+    sprintf("%s (%s) ran unopposed in District %d.", nb$candidate, PARTY_WORD[nb$party_group], as.integer(nb$district))
+  }
+  no_ballot_rule <- function(fips) { nb <- sel_no_ballot() %>% filter(county_fips == fips); if (nrow(nb)) nb$state_rule[1] else NA_character_ }
+
+  gap_sentence <- function(row) {
+    st_fips <- row$state_fips_geo; st_name <- state_name_of(st_fips) %||% "this state"; off <- OFFICE_LABEL[[sel_office()]]
+    if (row$gap_kind == "no_race") {
+      g <- gaps %>% filter(office == sel_office(), year == sel_year(), state_fips == st_fips)
+      if (nrow(g) && g$gap_reason[1] == "special_election_only")
+        return(sprintf("No regular %s election in %s in %s. The only %s race was a special election, which this dataset does not include yet.", off, st_name, sel_year(), off))
+      return(sprintf("No %s election in %s in %s.", off, st_name, sel_year()))
+    }
+    g <- gaps %>% filter(office == sel_office(), year == sel_year(), state_fips == st_fips)
+    note <- if (nrow(g) && g$gap_reason[1] == "source_not_found") " No county-level source has been found yet for this state and year." else ""
+    paste0("Missing data: the ", off, " race was held here, but county-level returns are not in the dataset.", note)
   }
 
-  county_label <- function(row) {
-    nm <- row$county_name_geo
-    if (row$is_gap) {
-      reason <- gap_reason_for(row$state_fips_geo, input$year, input$office)
-      reason_txt <- if (is.na(reason)) "no election held / data not yet available" else reason
-      return(HTML(sprintf("<b>%s</b><br/>No data — %s", nm, htmlEscape(reason_txt))))
-    }
-    HTML(sprintf("<b>%s, %s</b><br/>Dem %s &middot; Rep %s of two-party vote<br/>Total votes: %s",
-                  nm, row$state_po, fmt_pct(row$dem_two_party_share), fmt_pct(1 - row$dem_two_party_share), fmt_n(row$total_votes)))
+  ## hover labels for every county at once (vectorized: building them row by row took ~8 s per redraw, so redraws queued up behind the controls)
+  county_labels <- function(d) {
+    d <- st_drop_geometry(d)
+    nm <- htmlEscape(d$county_name_geo); st <- state_po_of(d$state_fips_geo); st[is.na(st)] <- ""
+    ## no-ballot seats per county, collapsed to one string
+    nb <- sel_no_ballot() %>% arrange(district) %>% group_by(county_fips) %>%
+      summarise(who = paste(sprintf("%s (%s-%d)", candidate, substr(party_group, 1, 1), as.integer(district)), collapse = ", "),
+                head_txt = if (all(state_po == "AR")) "No votes counted" else "No ballot", .groups = "drop")
+    k <- match(d$county_fips, nb$county_fips)
+    ## gap sentences depend only on (state, kind): compute once per combination
+    gk <- unique(d[d$is_gap & d$gap_kind != "no_ballot", c("state_fips_geo", "gap_kind")])
+    gk$txt <- vapply(seq_len(nrow(gk)), function(i) gap_sentence(gk[i, ]), "")
+    gtxt <- gk$txt[match(paste(d$state_fips_geo, d$gap_kind), paste(gk$state_fips_geo, gk$gap_kind))]
+    covered <- sprintf("<b>%s, %s</b><br/>Dem %s &middot; Rep %s of two-party vote<br/>Total votes: %s%s", nm, d$state_po,
+                       fmt_pct(d$dem_two_party_share), fmt_pct(1 - d$dem_two_party_share), fmt_n(d$total_votes),
+                       ifelse(is.na(k), "", "<br/><i>Excludes a district won unopposed (no ballot)</i>"))
+    no_ballot_txt <- sprintf("<b>%s, %s</b><br/>%s: %s ran unopposed", nm, st, nb$head_txt[k], htmlEscape(nb$who[k]))
+    gap_txt <- sprintf("<b>%s, %s</b><br/>%s", nm, st, htmlEscape(gtxt))
+    lapply(ifelse(!d$is_gap, covered, ifelse(d$gap_kind == "no_ballot", no_ballot_txt, gap_txt)), HTML)
   }
 
   output$map <- renderLeaflet({
@@ -105,17 +193,21 @@ server <- function(input, output, session) {
 
   observe({
     d <- map_data()
-    labels <- lapply(seq_len(nrow(d)), function(i) county_label(d[i, ]))
+    labels <- county_labels(d)
+    ## no clearGroup(): every redraw draws the same counties, and a polygon with an existing layerId replaces the old one in place,
+    ## so the map never goes blank between the clear and the (~1 s) redraw
     leafletProxy("map") %>%
-      clearGroup("counties") %>%
       addPolygons(data = d, layerId = ~county_fips, group = "counties",
-                  fillColor = ~fill, fillOpacity = 0.85, color = ~ifelse(is_gap, GAP_BORDER, "#ffffff"),
-                  weight = 0.4, dashArray = ~ifelse(is_gap, "3,2", NA),
+                  fillColor = ~fill, fillOpacity = ~ifelse(gap_kind %in% "no_race", 0, 0.85),
+                  color = ~ifelse(!is_gap, "#ffffff", ifelse(gap_kind == "no_ballot", NO_BALLOT_BORDER, ifelse(gap_kind == "no_race", "#c9c4b8", GAP_BORDER))),
+                  weight = 0.4, dashArray = ~ifelse(gap_kind %in% "missing", "3,2", NA),
                   label = labels, labelOptions = labelOptions(sticky = TRUE),
                   highlightOptions = highlightOptions(weight = 1.6, color = "#0b0b0b", bringToFront = TRUE)) %>%
       clearControls() %>%
       addLegend(position = "bottomright", pal = pal_fun, values = c(0, 1), title = "Dem. share<br/>of D+R vote",
-                labFormat = labelFormat(transform = function(x) 100 * x, suffix = "%"), opacity = 0.9)
+                labFormat = labelFormat(transform = function(x) 100 * x, suffix = "%"), opacity = 0.9) %>%
+      { kinds <- unique(na.omit(d$gap_kind)); lg <- c(no_ballot = "Unopposed, no ballot", missing = "Data not found")[intersect(c("no_ballot", "missing"), kinds)]
+        if (length(lg)) addLegend(., position = "bottomright", colors = c(no_ballot = NO_BALLOT_FILL, missing = GAP_FILL)[names(lg)], labels = unname(lg), opacity = 0.9) else . }
   })
 
   ## ---- click detail --------------------------------------------------------------------------------------
@@ -132,18 +224,29 @@ server <- function(input, output, session) {
     nm <- row$county_name_geo; st <- row$state_fips_geo
 
     if (row$is_gap) {
-      reason <- gap_reason_for(st, input$year, input$office)
-      reason_txt <- if (is.na(reason)) "no election held this cycle, or county-level data not yet available" else reason
-      return(tagList(h6(paste0(nm, " (", st, ")")), p(class = "text-muted", paste0("No data — ", reason_txt))))
+      title <- div(class = "detail-county", paste0(nm, ", ", state_po_of(st)))
+      if (row$gap_kind == "no_ballot") {
+        is_ar <- identical(state_po_of(st), "AR")
+        lead <- if (is_ar) sprintf("No votes were counted for the House race here in %s.", sel_year()) else sprintf("There was no House race on the ballot here in %s.", sel_year())
+        return(tagList(title, p(strong(lead)), lapply(no_ballot_lines(fips), p), p(class = "text-muted", no_ballot_rule(fips)),
+                       p(class = "text-muted small", "This is not missing data: no county returns exist for an unopposed seat.")))
+      }
+      return(tagList(title, p(gap_sentence(row))))
     }
 
-    cands <- candidates %>% filter(office == input$office, year == input$year, county_fips == fips)
+    cands <- candidates %>% filter(office == sel_office(), year == sel_year(), county_fips == fips)
+    flags <- setdiff(strsplit(row$quality_flag %||% "", ";")[[1]], c("excludes_unopposed_seat", NA))   # that one is explained in its own note below
     header <- tagList(
-      h6(paste0(row$county_name, ", ", row$state_po)),
+      div(class = "detail-county", paste0(row$county_name, ", ", row$state_po)),
       p(strong(fmt_pct(row$dem_two_party_share)), " Dem. — ", strong(fmt_pct(1 - row$dem_two_party_share)), " Rep. (two-party share)"),
       p(class = "text-muted small", "Total votes: ", fmt_n(row$total_votes),
-        if (!is.na(row$quality_flag)) paste0(" · flag: ", row$quality_flag) else NULL)
+        if (length(flags)) paste0(" · flag: ", paste(flags, collapse = "; ")) else NULL)
     )
+
+    nb_note <- if (length(no_ballot_lines(fips))) div(class = "nb-note",
+      p(class = "small fw-bold mb-1", "Not included: a district with no ballot"),
+      lapply(no_ballot_lines(fips), function(t) p(class = "small mb-1", t)),
+      p(class = "small text-muted mb-0", no_ballot_rule(fips), " The totals above cover only this county's contested districts.")) else NULL
 
     candidate_row <- function(c) {
       pg <- if (is.na(c$party_group) || !c$party_group %in% names(PARTY_COLOR)) "OTHER" else c$party_group
@@ -152,7 +255,7 @@ server <- function(input, output, session) {
           span(c$candidate), span(class = "text-muted", paste0(" (", party_label, ") — ", fmt_n(c$votes))))
     }
 
-    if (input$office == "house" && !is.na(row$n_districts) && row$n_districts > 1) {
+    if (sel_office() == "house" && !is.na(row$n_districts) && row$n_districts > 1) {
       by_district <- cands %>% arrange(district, desc(votes))
       district_blocks <- lapply(split(by_district, by_district$district), function(dd) {
         tagList(p(class = "small fw-bold mt-2 mb-1", paste("District", dd$district[1])),
@@ -160,11 +263,11 @@ server <- function(input, output, session) {
       })
       xdist <- tagList(p(class = "small fw-bold mt-3 mb-1", "County-wide total (all districts)"),
                         p(class = "small", "Dem: ", fmt_n(row$dem_votes), " · Rep: ", fmt_n(row$rep_votes), " · Other: ", fmt_n(row$other_votes)))
-      return(tagList(header, tags$div(district_blocks), xdist))
+      return(tagList(header, tags$div(district_blocks), xdist, nb_note))
     }
 
     cands <- cands %>% arrange(desc(votes))
-    tagList(header, lapply(seq_len(nrow(cands)), function(i) candidate_row(cands[i, ])))
+    tagList(header, lapply(seq_len(nrow(cands)), function(i) candidate_row(cands[i, ])), nb_note)
   })
 }
 
