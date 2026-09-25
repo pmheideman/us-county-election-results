@@ -5,6 +5,8 @@ county-level **U.S. House** results, which are otherwise available only in paid 
 open datasets (MEDSL, OpenElections). It also supports a replication of Mayda et al. (2022), *The Political Impact of
 Immigration*.
 
+**Interactive map:** <https://pmheideman.shinyapps.io/us-county-election-results/>
+
 **Start here:** [`docs/DECISIONS.md`](docs/DECISIONS.md) records scope, data model, map design, gap handling, data-quality
 rules, sources and licensing, and what is still open.
 
@@ -17,4 +19,5 @@ rules, sources and licensing, and what is still open.
 - Large intermediate `.rds` files (`R/output/**/*.rds`, including the working panel `elect_cty_final.rds`) and all raw
   source downloads (`R/data/`) are likewise excluded from git; they are reproducible by re-running the pipeline.
 - Status: in progress. Current release is **v0.2.0** (President, House, Senate, 1990-2024); see section 11 of
-  `docs/DECISIONS.md` and the coverage snapshot. The Shiny map app has not been built yet.
+  `docs/DECISIONS.md` and the coverage snapshot. The Shiny map app (`shiny_app/`) is live at
+  <https://pmheideman.shinyapps.io/us-county-election-results/>.
