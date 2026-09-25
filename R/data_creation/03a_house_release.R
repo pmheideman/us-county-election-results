@@ -96,7 +96,7 @@ unopposed <- tribble(~state, ~year, ~note,
   "LOUISIANA", 1990, "district 6 unopposed", "LOUISIANA", 1996, "districts 1,2,3 unopposed", "LOUISIANA", 1998, "districts 1,3,4,5,7 unopposed",
   "LOUISIANA", 2000, "district 2 unopposed", "LOUISIANA", 2004, "district 4 unopposed", "LOUISIANA", 2008, "districts 3,5 unopposed",
   "LOUISIANA", 2010, "district 7 unopposed", "LOUISIANA", 2022, "district 4 unopposed",
-  "ARKANSAS", 1998, "district 1 unopposed (25 counties)", "ARKANSAS", 2000, "district 3 unopposed (16 counties)", "OKLAHOMA", 2010, "district 4 unopposed", "OKLAHOMA", 2014, "district 1 unopposed", "OKLAHOMA", 2016, "district 1 unopposed", "OKLAHOMA", 2024, "district 3 unopposed")
+  "ARKANSAS", 1998, "district 1 unopposed (25 counties)", "ARKANSAS", 2000, "district 3 unopposed (16 counties)", "ARKANSAS", 2004, "district 4 unopposed (29 counties; SOS certification report lists opposed races only)", "FLORIDA", 1990, "districts 8,10,12,13,16 unopposed (not on the ballot)", "FLORIDA", 1994, "districts 4,10,13,14,18,23 unopposed (not on the ballot)", "OKLAHOMA", 2010, "district 4 unopposed", "OKLAHOMA", 2014, "district 1 unopposed", "OKLAHOMA", 2016, "district 1 unopposed", "OKLAHOMA", 2024, "district 3 unopposed")
 n_expected <- xw %>% group_by(state) %>% summarise(counties_expected = n_distinct(county_fips), .groups = "drop") %>% mutate(state = toupper(state))
 covered_n <- out_sum %>% group_by(state = toupper(state), year) %>% summarise(counties_covered = n_distinct(county_fips), .groups = "drop")
 gaps <- cov %>% left_join(unopposed, by = c("state", "year")) %>% left_join(n_expected, by = "state") %>% left_join(covered_n, by = c("state", "year")) %>%

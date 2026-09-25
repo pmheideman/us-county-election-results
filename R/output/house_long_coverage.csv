@@ -10,6 +10,7 @@
 "he_cty_ar_2000",59,TRUE,0
 "he_cty_ar_2002",74,TRUE,0
 "he_cty_ar_2006",75,TRUE,0
+"he_cty_arsoscert_2004",46,TRUE,0
 "he_cty_az",120,TRUE,0
 "he_cty_az_1990",15,TRUE,0
 "he_cty_az_1992",15,TRUE,0
@@ -48,6 +49,7 @@
 "he_cty_dede_1994",3,TRUE,0
 "he_cty_dede_1996",3,TRUE,0
 "he_cty_dede_2012",3,TRUE,0
+"he_cty_deedsum_1998",3,TRUE,0
 "he_cty_fl",796,TRUE,0
 "he_cty_ga",1113,TRUE,0
 "he_cty_ga_2012",159,TRUE,0
@@ -143,6 +145,7 @@
 "he_cty_me_historical",192,TRUE,0
 "he_cty_medsl",12731,TRUE,0
 "he_cty_medsl_cand_2024",3,TRUE,0
+"he_cty_medslmt_2022",56,TRUE,0
 "he_cty_mi",747,TRUE,0
 "he_cty_mimanual_1990",83,TRUE,0
 "he_cty_mimanual_1992",83,TRUE,0
@@ -180,6 +183,7 @@
 "he_cty_nc",900,TRUE,0
 "he_cty_ncdcr_1992",100,TRUE,0
 "he_cty_ncdcr_1994",100,TRUE,0
+"he_cty_ncmanual_1990",100,TRUE,0
 "he_cty_ncsbe_1996",100,TRUE,0
 "he_cty_ncsbe_1998",100,TRUE,0
 "he_cty_nd",424,TRUE,0
@@ -200,6 +204,11 @@
 "he_cty_ne_2006",93,TRUE,0
 "he_cty_nh",20,TRUE,0
 "he_cty_nh_historical",40,TRUE,0
+"he_cty_nhmanual_1994",10,TRUE,0
+"he_cty_nhmanual_1998",10,TRUE,0
+"he_cty_nhmanual_2002",10,TRUE,0
+"he_cty_nhmanual_2004",10,TRUE,0
+"he_cty_nhmanual_2008",10,TRUE,0
 "he_cty_nj",42,TRUE,0
 "he_cty_nj_2022",21,TRUE,0
 "he_cty_nj_2024",21,TRUE,0
@@ -255,6 +264,9 @@
 "he_cty_orsl_2004",36,TRUE,0
 "he_cty_orsl_2012",36,TRUE,0
 "he_cty_pa",536,TRUE,0
+"he_cty_padosprec_1994",67,TRUE,0
+"he_cty_padosprec_1996",67,TRUE,0
+"he_cty_padosprec_1998",67,TRUE,0
 "he_cty_ri",15,TRUE,0
 "he_cty_ri_1990",5,TRUE,0
 "he_cty_ri_1992",5,TRUE,0
@@ -360,6 +372,11 @@
 "he_cty_wa",234,TRUE,0
 "he_cty_wasos_2008",39,TRUE,0
 "he_cty_wasos_2010",39,TRUE,0
+"he_cty_wasosdb_1990",39,TRUE,0
+"he_cty_wasosdb_1992",39,TRUE,0
+"he_cty_wasosdb_1994",39,TRUE,0
+"he_cty_wasosdb_1996",39,TRUE,0
+"he_cty_wasosdb_1998",39,TRUE,0
 "he_cty_wi",504,TRUE,0
 "he_cty_wi_1990",72,TRUE,0
 "he_cty_wi_1992",72,TRUE,0

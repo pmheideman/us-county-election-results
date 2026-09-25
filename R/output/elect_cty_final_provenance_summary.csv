@@ -10,6 +10,7 @@
 "HE","he_cty_ar_2000","as_source",59,2000,2000
 "HE","he_cty_ar_2002","as_source",74,2002,2002
 "HE","he_cty_ar_2006","as_source",75,2006,2006
+"HE","he_cty_arsoscert_2004","as_source",46,2004,2004
 "HE","he_cty_az","as_source",120,2000,2014
 "HE","he_cty_az_1990","as_source",15,1990,1990
 "HE","he_cty_az_1992","as_source",15,1992,1992
@@ -48,6 +49,7 @@
 "HE","he_cty_dede_1994","as_source",3,1994,1994
 "HE","he_cty_dede_1996","as_source",3,1996,1996
 "HE","he_cty_dede_2012","as_source",3,2012,2012
+"HE","he_cty_deedsum_1998","as_source",3,1998,1998
 "HE","he_cty_fl","as_source",796,1992,2016
 "HE","he_cty_ga","as_source",1113,2000,2014
 "HE","he_cty_ga_2012","as_source",159,2012,2012
@@ -144,6 +146,7 @@
 "HE","he_cty_me_historical","as_source",192,1990,2014
 "HE","he_cty_medsl","as_source",12784,2016,2024
 "HE","he_cty_medsl_cand_2024","as_source",3,2024,2024
+"HE","he_cty_medslmt_2022","as_source",56,2022,2022
 "HE","he_cty_mi","as_source",747,1998,2014
 "HE","he_cty_mimanual_1990","as_source",83,1990,1990
 "HE","he_cty_mimanual_1992","as_source",83,1992,1992
@@ -181,6 +184,7 @@
 "HE","he_cty_nc","as_source",900,2000,2016
 "HE","he_cty_ncdcr_1992","as_source",100,1992,1992
 "HE","he_cty_ncdcr_1994","as_source",100,1994,1994
+"HE","he_cty_ncmanual_1990","as_source",100,1990,1990
 "HE","he_cty_ncsbe_1996","as_source",100,1996,1996
 "HE","he_cty_ncsbe_1998","as_source",100,1998,1998
 "HE","he_cty_nd","as_source",424,2000,2014
@@ -201,6 +205,11 @@
 "HE","he_cty_ne_2006","as_source",93,2006,2006
 "HE","he_cty_nh","as_source",20,2012,2014
 "HE","he_cty_nh_historical","as_source",40,1996,2010
+"HE","he_cty_nhmanual_1994","as_source",10,1994,1994
+"HE","he_cty_nhmanual_1998","as_source",10,1998,1998
+"HE","he_cty_nhmanual_2002","as_source",10,2002,2002
+"HE","he_cty_nhmanual_2004","as_source",10,2004,2004
+"HE","he_cty_nhmanual_2008","as_source",10,2008,2008
 "HE","he_cty_nj","as_source",42,2012,2014
 "HE","he_cty_nj_2022","as_source",21,2022,2022
 "HE","he_cty_nj_2024","as_source",21,2024,2024
@@ -256,6 +265,9 @@
 "HE","he_cty_orsl_2004","as_source",36,2004,2004
 "HE","he_cty_orsl_2012","as_source",36,2012,2012
 "HE","he_cty_pa","as_source",536,2000,2014
+"HE","he_cty_padosprec_1994","as_source",67,1994,1994
+"HE","he_cty_padosprec_1996","as_source",67,1996,1996
+"HE","he_cty_padosprec_1998","as_source",67,1998,1998
 "HE","he_cty_ri","as_source",15,2008,2014
 "HE","he_cty_ri_1990","as_source",5,1990,1990
 "HE","he_cty_ri_1992","as_source",5,1992,1992
@@ -361,6 +373,11 @@
 "HE","he_cty_wa","as_source",234,2000,2014
 "HE","he_cty_wasos_2008","as_source",39,2008,2008
 "HE","he_cty_wasos_2010","as_source",39,2010,2010
+"HE","he_cty_wasosdb_1990","as_source",39,1990,1990
+"HE","he_cty_wasosdb_1992","as_source",39,1992,1992
+"HE","he_cty_wasosdb_1994","as_source",39,1994,1994
+"HE","he_cty_wasosdb_1996","as_source",39,1996,1996
+"HE","he_cty_wasosdb_1998","as_source",39,1998,1998
 "HE","he_cty_wi","as_source",504,2000,2014
 "HE","he_cty_wi_1990","as_source",72,1990,1990
 "HE","he_cty_wi_1992","as_source",72,1992,1992
@@ -389,10 +406,12 @@
 "PE","pe_cty_medsl","as_source",21850,2000,2024
 "PE","pe_cty_medsl_cand_2024","as_source",128,2024,2024
 "PE","pe_cty_ms_2004","as_source",82,2004,2004
+"SE","se_cty_ca_sos_2022","as_source",58,2022,2022
 "SE","se_cty_historical","as_source",107769,1908,2014
 "SE","se_cty_in_enr_2016","as_source",92,2016,2016
 "SE","se_cty_in_enr_2018","as_source",92,2018,2018
 "SE","se_cty_in_enr_2022","as_source",92,2022,2022
 "SE","se_cty_in_enr_2024","as_source",92,2024,2024
-"SE","se_cty_medsl","as_source",9731,2016,2024
+"SE","se_cty_medsl","as_source",9711,2016,2024
+"SE","se_cty_nj_2024","as_source",21,2024,2024
 "SE","se_cty_nyboe_2018","as_source",3,2018,2018
