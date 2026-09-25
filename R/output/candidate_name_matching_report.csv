@@ -478,14 +478,6 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 1994,13,GA,10,surname,Norwood,REP,96099,Charlie Norwood,surname,wikipedia party Republican
 1994,13,GA,11,surname,Lovett,REP,37533,Woodrow Lovett,surname,wikipedia party Republican
 1994,13,GA,11,surname,Woodrow,DEM,71560,NA,unmatched,NA
-1994,35,NM,01,surname,Cand_dem,DEM,42316,NA,unmatched,NA
-1994,35,NM,01,surname,Cand_rep,REP,119996,NA,unmatched,NA
-1994,35,NM,02,surname,Cand_dem,DEM,45310,NA,unmatched,NA
-1994,35,NM,02,surname,Cand_grn,OTHER,6898,NA,unmatched,NA
-1994,35,NM,02,surname,Cand_rep,REP,89966,NA,unmatched,NA
-1994,35,NM,03,surname,Cand_dem,DEM,99900,NA,unmatched,NA
-1994,35,NM,03,surname,Cand_lib,OTHER,3697,NA,unmatched,NA
-1994,35,NM,03,surname,Cand_rep,REP,53515,NA,unmatched,NA
 1994,37,NC,11,surname,Lauterer,DEM,76862,Maggie Palmer Lauterer,surname,wikipedia party Democratic
 1994,40,OK,01,surname,Largent,REP,107085,Steve Largent,surname,wikipedia party Republican
 1994,40,OK,01,surname,Price,DEM,63753,Stuart Price,surname,wikipedia party Democratic
@@ -700,14 +692,6 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 1996,33,NH,02,surname,Bass,REP,123001,Charles Bass,surname,wikipedia party Republican
 1996,33,NH,02,surname,Kendel,OTHER,3727,Roy Kendel,surname,wikipedia party Independent American
 1996,33,NH,02,surname,Lamirande,OTHER,10757,Carole Lamirande,surname,wikipedia party Independent
-1996,35,NM,01,surname,Cand_dem,DEM,71635,NA,unmatched,NA
-1996,35,NM,01,surname,Cand_grn,OTHER,7060,NA,unmatched,NA
-1996,35,NM,01,surname,Cand_rep,REP,109290,NA,unmatched,NA
-1996,35,NM,01,surname,Cand_una,OTHER,4056,NA,unmatched,NA
-1996,35,NM,02,surname,Cand_dem,DEM,74915,NA,unmatched,NA
-1996,35,NM,02,surname,Cand_rep,REP,95091,NA,unmatched,NA
-1996,35,NM,03,surname,Cand_dem,DEM,124594,NA,unmatched,NA
-1996,35,NM,03,surname,Cand_rep,REP,56580,NA,unmatched,NA
 1996,56,WY,00,surname,Cubin,REP,116004,Barbara Cubin,surname,wikipedia party Republican
 1996,56,WY,00,surname,Dawson,OTHER,8255,Dave Dawson,surname,wikipedia party Libertarian
 1996,56,WY,00,surname,Maxfield,DEM,85724,Pete Maxfield,surname,wikipedia party Democratic

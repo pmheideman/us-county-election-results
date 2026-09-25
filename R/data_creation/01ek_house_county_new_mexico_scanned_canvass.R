@@ -1,3 +1,8 @@
+## SUPERSEDED FOR 1994 (2026-09-24): this 1994 block shifted every county column after Grant by one (it took Harding and Hidalgo as blank; the
+## state canvassing board canvass on SRI microfiche micro_IA40706953_0112 shows all 33 counties), so 12 of 31 county rows were wrong. 1994 now comes
+## from 01il_mississippi_new_mexico_1994_transcribe.py / 01io (label srinm_1994). SUPERSEDED FOR 1996 too: Harding's District 3 cells were filed
+## under Guadalupe, Santa Fe's District 1 cells under San Miguel, Libertarian Nagel (D3) and D1's Green/Unaffiliated outside Bernalillo were left out;
+## re-transcribed by 01ir_new_mexico_1996_retranscribe.py (label srinm_1996). This script now writes 1990 only.
 ## New Mexico House 1990, 1994, 1996 -- hand-transcribed from the user-supplied scanned "Canvass of
 ## Returns of General Election" PDFs (`NM_CanvassGeneral1990.pdf`, `NM_CanvassGeneral1994.pdf`,
 ## `NM_1996 General Summary.pdf`). Unlike most other states' scanned canvasses in this project, the
@@ -136,7 +141,7 @@ all_raw <- bind_rows(raw_1990, raw_1994, raw_1996) %>%
   left_join(nm_fips, by = c("county" = "county_name")) %>%
   filter(!is.na(county_fips), votes > 0)
 
-for (yr in c(1990, 1994, 1996)) {
+for (yr in c(1990)) {   ## 1994 and 1996 superseded 2026-09-24, see header
   long_yr <- finalize_long(all_raw %>% filter(year == yr) %>% select(year, county_fips, district, candidate, party, party_group, votes), paste0("nm_canvass_", yr))
   ## Saved as "he_nm_<year>" (not "he_nm_canvass_<year>") -- see 01em's header note for why this
   ## exact naming is required for 02z_house_long_assemble.R's file resolution to find it.
@@ -149,7 +154,7 @@ for (yr in c(1990, 1994, 1996)) {
   message(yr, ": ", nrow(shares), "/33 counties")
 }
 
-sanity <- purrr::map_dfr(c(1990, 1994, 1996), ~ readRDS(file.path(OUTPUT_DIR, sprintf("elect_he_cty_nm_%d.rds", .x))))
+sanity <- purrr::map_dfr(c(1990), ~ readRDS(file.path(OUTPUT_DIR, sprintf("elect_he_cty_nm_%d.rds", .x))))
 s <- sanity$demovote + sanity$repuvote
 message("sanity range demovote+repuvote: [", round(min(s), 3), ", ", round(max(s), 3), "]")
 stopifnot(all(s >= 0 & s <= 1.001))
