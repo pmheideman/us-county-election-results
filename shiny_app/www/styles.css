@@ -155,3 +155,39 @@ body { background: var(--paper); }
   margin-top: 0.8rem; padding: 0.55rem 0.7rem;
   border-left: 3px solid #9c8f6c; background: #f4efe2; border-radius: 0 6px 6px 0;
 }
+
+/* year slider with previous/next buttons on either side */
+.year-stepper { display: flex; align-items: center; gap: 0.4rem; }
+.year-slider { flex: 1; min-width: 0; }
+.year-slider .form-group { margin-bottom: 0; }
+.btn-year-step {
+  flex: none; width: 2rem; height: 2rem; padding: 0; margin-top: 1.1rem;   /* line up with the slider bar, below the year readout */
+  display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--rule); border-radius: 999px; background: var(--paper-raised); color: var(--ink);
+  font-size: 0.8rem;
+}
+.btn-year-step:hover, .btn-year-step:focus-visible { background: var(--ink); border-color: var(--ink); color: var(--paper-raised); }
+
+/* author / contact line */
+.sidebar-footer .author-line { margin-bottom: 0.35rem; color: var(--ink); }
+
+/* title on the map itself (so a downloaded PNG says what it shows) */
+.leaflet .map-title {
+  background: rgba(255, 253, 249, 0.94);
+  border: 1px solid var(--rule); border-radius: 6px; padding: 0.35rem 0.6rem;
+  color: var(--ink); text-align: right;
+}
+.map-title-main { font-family: "Source Serif 4", Georgia, serif; font-size: 1.05rem; font-weight: 650; line-height: 1.2; }
+.map-title-credit { font-size: 0.68rem; color: var(--ink-muted); }
+
+/* PNG download button, bottom-left of the map card */
+.map-card { position: relative; }
+.btn-map-png {
+  position: absolute; left: 24px; bottom: 30px; z-index: 1000;   /* inside the map, clear of the card padding */
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  font-size: 0.8rem; font-weight: 600; color: var(--ink);
+  background: rgba(255, 253, 249, 0.94); border: 1px solid var(--rule); border-radius: 999px;
+  padding: 0.3rem 0.75rem; cursor: pointer;
+}
+.btn-map-png:hover, .btn-map-png:focus-visible { background: var(--ink); border-color: var(--ink); color: var(--paper-raised); }
+.btn-map-png:disabled { opacity: 0.6; cursor: progress; }

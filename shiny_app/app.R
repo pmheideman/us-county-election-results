@@ -19,6 +19,7 @@ source(file.path("R", "palette.R"))
 
 ## ---- data --------------------------------------------------------------------------------------------------
 counties_sf <- readRDS("data/counties_sf.rds")
+states_sf   <- readRDS("data/states_sf.rds")
 results     <- readRDS("data/results.rds")
 gaps        <- readRDS("data/gaps.rds")
 candidates  <- readRDS("data/candidates.rds")
@@ -41,6 +42,8 @@ fmt_n   <- function(x) ifelse(is.na(x), "—", format(round(x), big.mark = ",", 
 
 ## ---- UI ------------------------------------------------------------------------------------------------------
 REPO_URL <- "https://github.com/pmheideman/us-county-election-results"
+AUTHOR <- "Paul Heideman"
+AUTHOR_EMAIL <- "pmheideman@gmail.com"
 
 app_theme <- bs_theme(
   version = 5,
@@ -70,25 +73,37 @@ ui <- page_sidebar(
   theme = app_theme,
   tags$head(
     tags$link(rel = "stylesheet", href = "styles.css"),
-    tags$link(rel = "icon", type = "image/svg+xml", href = "logo.svg")
+    tags$link(rel = "icon", type = "image/svg+xml", href = "logo.svg"),
+    tags$script(src = "https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.js"),
+    tags$script(src = "map_png.js")
   ),
   sidebar = sidebar(
     width = 380,
     radioButtons("office", "Office", choices = OFFICE_CHOICES, selected = "president"),
-    sliderInput("year", "Year", min = 1992, max = 2024, value = 2024, step = 4, sep = "", ticks = FALSE),
+    ## year slider flanked by previous/next buttons, which step through the office's actual election years
+    div(class = "form-group shiny-input-container year-control",
+        tags$label(class = "control-label", `for` = "year", "Year"),
+        div(class = "year-stepper",
+            actionButton("year_prev", NULL, icon = icon("chevron-left"), class = "btn-year-step", title = "Previous election"),
+            div(class = "year-slider", sliderInput("year", NULL, min = 1992, max = 2024, value = 2024, step = 4, sep = "", ticks = FALSE, width = "100%")),
+            actionButton("year_next", NULL, icon = icon("chevron-right"), class = "btn-year-step", title = "Next election"))),
     helpText("Color: Democratic share of the two-party vote (Dem + Rep). Tan counties had no ballot because the House candidate ran unopposed; gray dashed counties are missing data. Hover or click for details."),
     hr(),
     h5(class = "sidebar-section-title", "Selected county"),
     div(class = "detail-panel", uiOutput("detail_panel")),
     div(class = "sidebar-footer",
-        "Open data (CC BY 4.0) and code (MIT). Sources, coverage notes and downloads on ",
-        tags$a(href = REPO_URL, target = "_blank", rel = "noopener", "GitHub", .noWS = "after"), ".")
+        p(class = "author-line", "Built by ", strong(AUTHOR), " · ",
+          tags$a(href = paste0("mailto:", AUTHOR_EMAIL), AUTHOR_EMAIL)),
+        p(class = "mb-0", "Open data (CC BY 4.0) and code (MIT). Sources, coverage notes and downloads on ",
+          tags$a(href = REPO_URL, target = "_blank", rel = "noopener", "GitHub", .noWS = "after"), "."))
   ),
   card(
     class = "map-card",
     full_screen = TRUE,
     style = "padding:0;",
-    leafletOutput("map", height = "100%")
+    leafletOutput("map", height = "100%"),
+    tags$button(id = "download_png", type = "button", class = "btn-map-png", title = "Download the current map view as a PNG image",
+                icon("download"), span("PNG"))
   )
 )
 
@@ -103,6 +118,19 @@ server <- function(input, output, session) {
     new_val <- yrs[which.min(abs(yrs - cur))]
     updateSliderInput(session, "year", min = min(yrs), max = max(yrs), step = step, value = new_val)
   }, ignoreInit = FALSE)
+
+  ## previous/next buttons: move to the adjacent election year for the selected office, clamped at the ends. Steps count
+  ## from the last requested year, not input$year, so quick repeated clicks each move a year before the slider catches up.
+  year_target <- reactiveVal(NULL)
+  observeEvent(input$year, year_target(input$year))
+  step_year <- function(dir) {
+    yrs <- sort(meta$years_by_office[[input$office]])
+    cur <- year_target() %||% input$year
+    nxt <- if (dir > 0) yrs[yrs > cur][1] else rev(yrs[yrs < cur])[1]
+    if (!is.na(nxt)) { year_target(nxt); updateSliderInput(session, "year", value = nxt) }
+  }
+  observeEvent(input$year_prev, step_year(-1))
+  observeEvent(input$year_next, step_year(+1))
 
   ## the selection the map and panel use: office + year, debounced so that dragging the slider (one value per year passed) or an office switch
   ## that also moves the slider triggers one redraw, not a queue of redraws that land late
@@ -187,7 +215,12 @@ server <- function(input, output, session) {
 
   output$map <- renderLeaflet({
     leaflet(options = leafletOptions(minZoom = 3, maxZoom = 10)) %>%
-      addProviderTiles("Esri.WorldGrayCanvas") %>%
+      addProviderTiles("Esri.WorldGrayCanvas", options = tileOptions(crossOrigin = "anonymous")) %>%   # CORS tiles, so the PNG export can read them
+      ## state outlines sit in their own pane above the counties: redrawn counties (and hover highlights) are re-added to the
+      ## overlay pane, which would otherwise bury lines added to the same pane earlier
+      addMapPane("state_lines", zIndex = 450) %>%
+      addPolylines(data = states_sf, color = "#000000", weight = 1.1, opacity = 1, fill = FALSE,
+                   options = pathOptions(pane = "state_lines", interactive = FALSE)) %>%
       fitBounds(unname(meta$bounds["xmin"]), unname(meta$bounds["ymin"]), unname(meta$bounds["xmax"]), unname(meta$bounds["ymax"]))
   })
 
@@ -204,6 +237,9 @@ server <- function(input, output, session) {
                   label = labels, labelOptions = labelOptions(sticky = TRUE),
                   highlightOptions = highlightOptions(weight = 1.6, color = "#0b0b0b", bringToFront = TRUE)) %>%
       clearControls() %>%
+      addControl(html = sprintf('<div class="map-title-main">%s &middot; %s</div><div class="map-title-credit">Map: %s &middot; github.com/pmheideman/us-county-election-results</div>',
+                                OFFICE_LABEL[[sel_office()]], sel_year(), AUTHOR),
+                 position = "topright", className = "map-title") %>%
       addLegend(position = "bottomright", pal = pal_fun, values = c(0, 1), title = "Dem. share<br/>of D+R vote",
                 labFormat = labelFormat(transform = function(x) 100 * x, suffix = "%"), opacity = 0.9) %>%
       { kinds <- unique(na.omit(d$gap_kind)); lg <- c(no_ballot = "Unopposed, no ballot", missing = "Data not found")[intersect(c("no_ballot", "missing"), kinds)]

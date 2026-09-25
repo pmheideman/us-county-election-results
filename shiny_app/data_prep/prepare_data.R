@@ -50,6 +50,12 @@ EXCLUDED_STATE_FIPS <- c("02", "15", "72", "60", "66", "69", "78")   # AK, HI, P
 counties_sf <- counties_raw %>% filter(!state_fips_geo %in% EXCLUDED_STATE_FIPS)
 message("counties_sf: ", nrow(counties_sf), " counties (48 states)")
 
+## State outlines, drawn over the counties. The same 1:20m cartographic file, so the lines match the county edges.
+states_sf <- tigris::states(cb = TRUE, resolution = "20m", year = 2020, progress_bar = FALSE) %>%
+  st_transform(4326) %>%
+  transmute(state_fips_geo = STATEFP) %>%
+  filter(state_fips_geo %in% counties_sf$state_fips_geo)
+
 ## ---- 2. Results summary (drives map fill) --------------------------------------------------------------------
 summ <- read_csv(file.path(REL, "us_county_results_summary.csv"), show_col_types = FALSE, col_types = cols(county_fips = col_character(), state_fips = col_character()))
 
@@ -97,6 +103,7 @@ meta <- list(
 
 ## ---- write -------------------------------------------------------------------------------------------------
 saveRDS(counties_sf, file.path(APP_DATA_DIR, "counties_sf.rds"))
+saveRDS(states_sf, file.path(APP_DATA_DIR, "states_sf.rds"))
 saveRDS(summ, file.path(APP_DATA_DIR, "results.rds"))
 saveRDS(gaps, file.path(APP_DATA_DIR, "gaps.rds"))
 saveRDS(long, file.path(APP_DATA_DIR, "candidates.rds"))
