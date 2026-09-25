@@ -141,7 +141,7 @@
 "he_cty_me",16,TRUE,0
 "he_cty_me_2018",16,TRUE,0
 "he_cty_me_historical",192,TRUE,0
-"he_cty_medsl",12751,TRUE,0
+"he_cty_medsl",12731,TRUE,0
 "he_cty_medsl_cand_2024",3,TRUE,0
 "he_cty_mi",747,TRUE,0
 "he_cty_mimanual_1990",83,TRUE,0
@@ -202,7 +202,12 @@
 "he_cty_nh_historical",40,TRUE,0
 "he_cty_nj",42,TRUE,0
 "he_cty_nj_2022",21,TRUE,0
+"he_cty_nj_2024",21,TRUE,0
 "he_cty_nj_historical",126,TRUE,0
+"he_cty_njdoe_1992",21,TRUE,0
+"he_cty_njdoe_1994",21,TRUE,0
+"he_cty_njdoe_1996",21,TRUE,0
+"he_cty_njdoe_1998",21,TRUE,0
 "he_cty_nm",165,TRUE,0
 "he_cty_nm_1990",33,TRUE,0
 "he_cty_nm_1992",33,TRUE,0

@@ -1190,7 +1190,6 @@ year,state_fips,po,district,kind,candidate,party_group,votes,new,method,evidence
 2024,19,IA,03,placeholder,Unnamed (name Missing In Source),OTHER,1197,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
 2024,19,IA,04,placeholder,Unnamed (name Missing In Source),OTHER,1127,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
 2024,23,ME,02,surname,Others,OTHER,410,Other / write-in candidates,aggregate_label,generic pooled or unnamed row
-2024,34,NJ,02,surname,Salerno,DEM,1,Joe Salerno,surname,wikipedia party Democratic Party (United States)
 2024,48,TX,01,surname,Moran,REP,258504,Nathaniel Moran,surname,wikipedia party Republican Party (United States)
 2024,48,TX,02,surname,Crenshaw,REP,214631,Dan Crenshaw,vote_total,wikipedia votes 214631
 2024,48,TX,02,surname,Filler,DEM,112252,Peter Filler,vote_total,wikipedia votes 112252
