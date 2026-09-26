@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below, and cite the upstream sources listed in SOURCES.csv where relevant."
+type: dataset
+title: "U.S. county-level election results: President, U.S. House and U.S. Senate, 1990-2024"
+version: 1.0.0
+date-released: 2026-09-26
+doi: 10.5281/zenodo.22976553
+authors:
+  - family-names: Heideman
+    given-names: Paul
+license: CC-BY-4.0
+repository-code: "https://github.com/pmheideman/us-county-election-results"
+url: "https://pmheideman.shinyapps.io/us-county-election-results/"
+abstract: >-
+  Candidate-level county results for U.S. House (1990-2024), President (1992-2024) and U.S. Senate (1990-2024)
+  general elections in the 48 contiguous states, assembled from state election offices, MEDSL, OpenElections and
+  Algara & Amlani, with every source, correction and coverage gap documented.
+keywords:
+  - elections
+  - county
+  - U.S. House
+  - congressional elections
+  - presidential elections
+  - Senate elections

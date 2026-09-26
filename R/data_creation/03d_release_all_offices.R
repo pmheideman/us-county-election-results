@@ -1,9 +1,9 @@
-## Release v0.2.0: U.S. House (as in release/v0.1.0-house, built by 03a) + PRESIDENT + SENATE county results, 1990-2024, 48 states (no AK, HI, DC), regular general elections, final results.
+## Release (v1.0.0; was v0.2.0): U.S. House (as in release/v0.1.0-house, built by 03a) + PRESIDENT + SENATE county results, 1990-2024, 48 states (no AK, HI, DC), regular general elections, final results.
 ## Inputs: release/v0.1.0-house/* (House files, already release-ready), R/output/long/pe_long_all.rds and se_long_all.rds (02zb_pe_se_long_assemble.R, master-checked against the panel).
-## Output: release/v0.2.0/{us_county_results_long.csv, us_county_results_summary.csv, us_county_results_gaps.csv, us_county_results_no_ballot.csv, SOURCES.csv, data_corrections_log.csv, DATA_DICTIONARY.md, VERSION}
+## Output: release/v<VERSION>/{us_county_results_long.csv (+ .parquet), us_county_results_summary.csv, us_county_results_gaps.csv, us_county_results_no_ballot.csv, SOURCES.csv, data_corrections_log.csv, DATA_DICTIONARY.md, VERSION}
 ## President and Senate rows: district is blank (statewide offices). quality_flag values added: other_candidates_aggregated (the source itemizes only the two major-party nominees; all other candidates are one row, see SOURCES.csv).
 source(file.path("R", "00_setup.R")); source(file.path("R", "long_helpers.R")); source(file.path("R", "source_tokens.R")); library(readr)
-H <- file.path(PROJECT_ROOT, "release", "v0.1.0-house"); REL <- file.path(PROJECT_ROOT, "release", "v0.2.0"); dir.create(REL, showWarnings = FALSE, recursive = TRUE)
+H <- file.path(PROJECT_ROOT, "release", "v0.1.0-house"); VERSION <- "1.0.0"; REL <- file.path(PROJECT_ROOT, "release", paste0("v", VERSION)); dir.create(REL, showWarnings = FALSE, recursive = TRUE)
 cc <- cols(.default = col_character())
 hl <- read_csv(file.path(H, "us_county_results_long.csv"), col_types = cc, na = character()); hs <- read_csv(file.path(H, "us_county_results_summary.csv"), col_types = cc, na = character())
 hg <- read_csv(file.path(H, "us_county_results_gaps.csv"), col_types = cc, na = character()); hsrc <- read_csv(file.path(H, "SOURCES.csv"), col_types = cc, na = character())
@@ -37,6 +37,8 @@ out_ps <- ps %>% transmute(year = as.character(year), office, state_fips = sprin
                             candidate, party, party_group, votes = as.character(votes), source, quality_flag) %>% arrange(office, year, county_fips, desc(as.numeric(votes)))
 long_all <- bind_rows(hl, out_ps) %>% arrange(factor(office, c("house", "senate", "president")), as.integer(year), county_fips, district)
 write_csv(long_all, file.path(REL, "us_county_results_long.csv"), na = "")
+## Parquet copy of the long file: same rows and columns, with year and votes stored as integers (FIPS codes stay character, so leading zeros survive)
+nanoparquet::write_parquet(long_all %>% mutate(year = as.integer(year), votes = as.integer(votes)), file.path(REL, "us_county_results_long.parquet"))
 
 ## ---- SOURCES.csv ----------------------------------------------------------------------------------------------------------------------------------
 psrc <- build_sources_table(ps %>% transmute(year, office, state_po, county_fips, district = NA_character_, source, source_internal), file.path(PROJECT_ROOT, "R", "output", "data_corrections_log.csv")) %>%
@@ -87,6 +89,15 @@ nbc <- nbc %>% mutate(cf = as.integer(county_fips)) %>% left_join(cty %>% transm
 write_csv(nbc, file.path(REL, "us_county_results_no_ballot.csv"), na = "")
 
 file.copy(file.path(PROJECT_ROOT, "R", "output", "data_corrections_log.csv"), file.path(REL, "data_corrections_log.csv"), overwrite = TRUE)
-writeLines("0.2.0", file.path(REL, "VERSION"))
+writeLines(VERSION, file.path(REL, "VERSION"))
+
+## ---- packaging for the GitHub Release: changelog copy, SHA-256 checksums, one zip of everything (DATA_DICTIONARY.md is hand-maintained in REL) ------
+file.copy(file.path(PROJECT_ROOT, "CHANGELOG.md"), file.path(REL, "CHANGELOG.md"), overwrite = TRUE)
+zipname <- paste0("us_county_election_results_v", VERSION, ".zip")
+pkg <- setdiff(sort(list.files(REL)), c("SHA256SUMS.txt", zipname)); stopifnot("DATA_DICTIONARY.md" %in% pkg)
+old_wd <- setwd(REL)
+system2("sha256sum", pkg, stdout = "SHA256SUMS.txt")
+unlink(zipname); utils::zip(zipname, c(pkg, "SHA256SUMS.txt"), flags = "-9Xq")
+setwd(old_wd)
 message("long rows: ", nrow(long_all), " (house ", nrow(hl), ", president ", sum(out_ps$office == "president"), ", senate ", sum(out_ps$office == "senate"), ") | summary rows: ", nrow(sum_all), " | gaps rows: ", nrow(gaps_all), " | sources: ", nrow(src_all))
 print(as.data.frame(gp %>% count(office, gap_reason)))

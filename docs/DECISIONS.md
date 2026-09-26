@@ -4,7 +4,7 @@ Decision record for the county-level election data project and its map app. Each
 why, and what it implies**. Dates are when the decision was made; the owner of every decision is the project lead
 (the user) unless marked *proposed*. Items marked **OPEN** are not decided yet.
 
-Last updated: 2026-09-20.
+Last updated: 2026-09-26 (v1.0.0 release).
 
 ---
 
@@ -123,32 +123,30 @@ years will turn out to be `unopposed_no_ballot` rather than missing sources. (Th
 the repository. The large data files are published as **GitHub Releases** (up to 2 GB per file), not committed. Raw downloads
 (`R/data/`, about 3.6 GB) and the Mayda replication package are not in the repository (see `.gitignore`).
 
-**License (provisional):** data **CC BY 4.0**, code **MIT** (`LICENSE`, `LICENSE-DATA.md`). Why: our main upstream sources are
+**License (final as of v1.0.0, 2026-09-26):** data **CC BY 4.0**, code **MIT** (`LICENSE`, `LICENSE-DATA.md`). Why: our main upstream sources are
 CC0 (MEDSL, Algara & Amlani) or public records, so we are free to choose. CC BY 4.0 allows any reuse, including commercial and
 redistribution, and only requires credit, which gives the project citations and covers attribution duties from any upstream that
-needs it. CC0 would be equally lawful and is the maximally open alternative. **Provisional** until the source terms marked
-"confirm" in section 9 are checked; the Alabama 1990-2012 rows come from a file the Alabama Secretary of State hosts (see section 9), so no separate
-compiler permission is needed beyond confirming the SOS site's terms. The copyright holder line in the license files is a placeholder.
+needs it. CC0 would be equally lawful and is the maximally open alternative. **Made final for v1.0.0 (2026-09-26)** after the
+source-terms check in section 9: the license covers our compilation, corrections and documentation, and `LICENSE-DATA.md` states that each
+upstream source keeps its own terms, naming the states whose site terms restrict reuse (FL, IN, CO, WI; NC and UT non-commercial) and pointing to
+the `license`/`license_status` columns of `SOURCES.csv`. Copyright holder: Paul Heideman.
 
 **File formats and versioning (defaults, change on request).** The question is: what are the columns of the released CSV, what are
 the files called, and how do we number releases so other people's code does not break?
 
-- `us_county_results_long.csv` (and `.parquet`): one row per year x office x county x district x candidate. Columns:
-  `year`, `office` (president / house / senate), `state_fips`, `county_fips` (5 characters, leading zero kept), `county_name`,
-  `district` (House; blank otherwise), `stage` (default `general`; runoff or first-round only where we have it),
-  `candidate`, `party` (as reported), `party_group` (DEM / REP / OTHER), `votes`, `detail_level` (`candidate` or
-  `party_shares_only`), `source`, `quality_flag`.
-- `us_county_results_summary.csv`: one row per year x office x county with `dem_votes`, `rep_votes`, `other_votes`,
-  `total_votes`, `dem_two_party_share`, `rep_share_of_total`, `n_districts`, `status` and `gap_reason`.
-- `us_county_results_gaps.csv`: every county-year-office we do not cover, with its reason code.
-- `DATA_DICTIONARY.md`, `data_corrections_log.csv`, `SOURCES.csv`, `CHANGELOG.md` ship with every release.
+- `us_county_results_long.csv` (and `.parquet`): one row per year x office x county x district x candidate x party line.
+- `us_county_results_summary.csv`: one row per year x office x county (D, R, other and total votes, shares, flags).
+- `us_county_results_gaps.csv`: every state-year-office that is not fully covered, with its reason code.
+- `us_county_results_no_ballot.csv`: House seats whose unopposed winner was not on the ballot, by county.
+- `DATA_DICTIONARY.md` (the authoritative column list), `data_corrections_log.csv`, `SOURCES.csv`, `CHANGELOG.md`, `VERSION` and `SHA256SUMS.txt`
+  ship with every release, as one zip plus the individual files.
 - File names stay the same across releases; the release number goes in a `VERSION` file and the GitHub tag: `v0.1.0`, `v0.2.0`, ...
   (a change in columns or meaning bumps the middle number; new years or states or fixes bump the last).
 
 ## 8b. Still open
 
 1. Order of work (decided 2026-09-20): **House first**, then Senate and President. Status: the House long table is complete (see section 11).
-2. Confirm the source terms flagged in section 9, and fill in the copyright holder.
+2. ~~Confirm the source terms flagged in section 9, and fill in the copyright holder.~~ Done: terms checked 2026-09-23 (section 9); license made final with a state-terms caveat for v1.0.0.
 3. Data-quality issues still flagged in `data_corrections_log.csv`: MEDSL 2016 totals inflated in AL, SC, AR and IN; Maine 2024
    totals doubled; New Jersey Bergen County 2024 total; Indiana 2018-2022 coverage; Indiana and Alabama pre-2016 gaps.
 
@@ -245,9 +243,16 @@ proprietary data and we did not use it. The check below agrees for most sources,
   - **Oregon House 2002** (districts 1,2,4,5, and very nearly exactly 2x for district 3) is a confirmed, unresolved real anomaly: the FEC's clean 2002 workbook and our raw OpenElections source disagree, and direct inspection of the raw precinct file shows Multnomah County alone reporting more votes for Blumenauer than the FEC's whole-district certified total, with no rollup-row bug found to explain it. Flagged, not fixed; needs a different Oregon county-level source for the 2000s.
   - **Lesson for any future scanned-document parsing in this project:** treat a brand-new OCR/positional parser as a hypothesis, not ground truth, until at least one flagged result has been checked against the actual source page image — the parser is at least as likely to be wrong as the underlying data.
 
-## 11. Current status and next steps (as of 2026-09-21, end of session)
+## 11. Current status and next steps (updated 2026-09-26)
 
-**State:** release `v0.2.0` is current and reflects every fix below; `R/output/elect_cty_final.rds` (panel) and `R/output/data_corrections_log.csv` are the source of truth. No git repo — files are saved directly, nothing to commit.
+**State:** release `v1.0.0` (2026-09-26) is the first public release, published as a GitHub Release (with a Zenodo DOI) from the files built by `03a` + `03d`
+into `release/v1.0.0/`; see `CHANGELOG.md`. `R/output/elect_cty_final.rds` (panel) and `R/output/data_corrections_log.csv` are the source of truth. The code is in the
+public GitHub repository `pmheideman/us-county-election-results`; the map app is live at https://pmheideman.shinyapps.io/us-county-election-results/.
+Coverage at v1.0.0: 41 state-years in the gaps file (House 31: 20 unopposed seats not on the ballot, 6 `source_not_found`, 5 partial; Senate 10: 8 special-election-only, 2 partial).
+`R/assemble_panel.R` reports only its known, documented exceptions (Kentucky/Florida House 2016 residual; special-election, pre-1990 and Hawaii rows that are out of scope;
+FIPS-convention rows such as Clifton Forge 2000 and Oglala Lakota under 46113).
+
+**Open items carried over from 2026-09-21** (not re-checked for v1.0.0; see the corrections log for current status):
 
 **To resume, in priority order:**
 1. **Oregon House 2000s.** A real, unexplained doubling-scale anomaly in the OpenElections source (2002 confirmed; 2000/2004 use the same file family and are unchecked) needs either a fix or a different source. See the "House vs FEC, 1990-2002" entry above.
@@ -256,6 +261,6 @@ proprietary data and we did not use it. The check below agrees for most sources,
 4. **Kentucky/Florida House 2016** small per-county discrepancies (`R/assemble_panel.R` residual) — low priority, votes are off by single digits to a few hundred.
 5. Remaining flagged items from earlier sweeps not yet closed: NY 2018 House (Monroe/Dutchess/Montgomery/Rensselaer/Oswego) and Senate (Lewis/Madison/Wyoming/Nassau); NY 2022 Chenango/Otsego; MI 2022 Midland; NH 2016 Strafford; MD 2020 Howard/Baltimore City; MS Yazoo 2022/Noxubee 2024; OK 2024 Canadian/Creek; NJ Bergen 2024; Missouri's Kansas City vote bucket (Senate D undercount); Maine 2012 Senate (Angus King mislabeled DEM instead of OTHER, Cynthia Dill should be DEM); Angus King-style name errors from `qa_state_reconcile_congress.R` (Bill Cassidy, Dwight Grotberg, Charles Summers) not yet corrected in the panel.
 6. **Never independently benchmarked against a paid source** (America Votes/CQ, Dave Leip's Atlas) — the "most accurate free source" claim rests on completeness + the FEC/state-canvass checks above, not on beating the paid alternatives directly. If that comparison ever becomes possible (e.g. a sample of America Votes volumes), it would be the strongest remaining validation.
-7. Longer-standing open items from `docs/DECISIONS.md` section 9 / the corrections log: license verification (1,448 `unverified` source rows), 185 House state-years with `source_not_found`, and the Shiny map app (not started).
+7. ~~License verification, 185 House `source_not_found` state-years, Shiny map app.~~ Done since: license terms checked (section 9), House gaps down to 6 `source_not_found` state-years, app live.
 
 **Caution carried forward:** don't re-source `01a_election_data_medsl.R` in full without immediately re-running `01dd`, `01dn` and any other apply script that patches `elect_{pe,he,se}_cty_medsl.rds` directly — it silently reverts them (see the "Pseudo-candidate and doubled-vote fixes" entry above). After any panel or source-file change, re-run in order: `build_provenance.R` → `R/assemble_panel.R` (should print PASS) → `02z` → `03b` → `02z` → `02zb` → `03a` → `03d`.

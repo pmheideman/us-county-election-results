@@ -1,4 +1,6 @@
 ## Hand-maintained log of every data error found in the election panel and how it was handled.
+## WARNING (2026-09-26): entries from 2026-09-22 onward were appended to R/output/data_corrections_log.csv directly and are NOT in the
+## tribble below; the CSV is now the source of truth. Re-running this script as is would drop those entries (24 of 135 at v1.0.0).
 ## Output: R/output/data_corrections_log.csv. Re-run this script after adding a row below.
 ## Companion to build_provenance.R: every panel row that build_provenance.R reports as "modified" should
 ## be explainable by an entry here. Only counts that were actually measured are given; the rest are

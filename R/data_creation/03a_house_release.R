@@ -36,8 +36,8 @@ cty <- xw %>% group_by(county_fips) %>% slice(1) %>% ungroup() %>%
 cty <- cty %>% mutate(county_name = ifelse(state_po == "VA" & county_fips >= 51510 & !grepl("City$", county_name), paste(county_name, "City"), county_name))
 cty <- bind_rows(cty, tibble(county_fips = c(51560, 51780), county_name = c("Clifton Forge City", "South Boston City"), state = "Virginia", state_po = "VA"))
 stopifnot(!anyDuplicated(cty$county_fips))
-## Non-county buckets in the MEDSL files have no real county FIPS and cannot be mapped: Maine 23000/23099 (federal/UOCAVA ballots), New York
-## 36122 (9,540 votes) and Missouri 29380 (Kansas City: 127,894 votes in 2016 that MEDSL assigns to a made-up FIPS instead of Jackson/Clay/Platte,
+## Non-county buckets in the MEDSL files have no real county FIPS and cannot be mapped: Maine 23000/23099 (federal/UOCAVA ballots) and
+## Missouri 29380 (Kansas City: 127,894 votes in 2016 that MEDSL assigns to a made-up FIPS instead of Jackson/Clay/Platte,
 ## so those three counties are UNDERCOUNTED in 2016). They are excluded from the release files and flagged in data_corrections_log.csv.
 drop_k <- setdiff(unique(long$county_fips), cty$county_fips)
 message("non-county buckets excluded from the release: ", paste(drop_k, collapse = ", "), " (", format(sum(long$votes[long$county_fips %in% drop_k]), big.mark = ","), " votes)")

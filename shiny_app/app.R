@@ -1,5 +1,5 @@
 ## U.S. County Election Results -- interactive map (President / House / Senate, 1990-2024).
-## Data built by R/prepare_data.R from release/v0.2.0/*.csv. Run shiny_app/R/prepare_data.R first (or whenever the
+## Data built by R/prepare_data.R from release/v1.0.0/*.csv. Run shiny_app/R/prepare_data.R first (or whenever the
 ## release is rebuilt) before launching this app.
 ##
 ## AK/HI: excluded for now (see prepare_data.R header). The map uses real lat/lon (leaflet, no Albers/USA

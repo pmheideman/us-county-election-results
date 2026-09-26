@@ -1,4 +1,4 @@
-## Builds the Shiny app's data files from the v0.2.0 release CSVs + county geometry. Run once (and any time the
+## Builds the Shiny app's data files from the v1.0.0 release CSVs + county geometry. Run once (and any time the
 ## release is rebuilt); the app itself only reads the .rds files this script writes to shiny_app/data/.
 ##
 ## Outputs (all in shiny_app/data/):
@@ -36,7 +36,7 @@ options(tigris_use_cache = TRUE)
 Sys.setenv(TIGRIS_CACHE_DIR = file.path(APP_DATA_DIR, "tigris_cache"))
 dir.create(Sys.getenv("TIGRIS_CACHE_DIR"), showWarnings = FALSE, recursive = TRUE)
 
-REL <- file.path(PROJECT_ROOT, "release", "v0.2.0")
+REL <- file.path(PROJECT_ROOT, "release", "v1.0.0")
 
 ## ---- 1. County geometry --------------------------------------------------------------------------------------
 ## Cartographic boundary (cb=TRUE), 1:20,000,000 -- already generalized/lightweight, no extra simplification needed.

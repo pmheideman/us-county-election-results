@@ -80,7 +80,10 @@ read_precinct_file <- function(path, office_year, party_fallback = TRUE, fill_bl
       county_fips = as.integer(county_fips),
       mode = toupper(mode)
     ) %>%
-    filter(!is.na(votes), votes >= 0, !is.na(county_fips))
+    filter(!is.na(votes), votes >= 0, !is.na(county_fips)) %>%
+    ## MEDSL 2016 codes Yates County, NY (36123) as 36122, which is not a county, with a blank county_name; the precincts
+    ## (jurisdiction "Yates": Barrington, Benton, Italy, Jerusalem, Milo, ...) are Yates's. 2016 House and Senate only (01jp).
+    mutate(county_fips = ifelse(county_fips == 36122L, 36123L, county_fips))
 
   if (exclude_other_offices && "office" %in% names(raw)) {
     raw <- raw %>% filter(grepl("^(US|U\\.S\\.) (HOUSE|SENATE)$", toupper(trimws(office))))
