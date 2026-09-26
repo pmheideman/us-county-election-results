@@ -35,3 +35,6 @@ shiny_app/rsconnect/
 
 # Python bytecode
 __pycache__/
+
+# Outreach drafts (Hugging Face card, Kaggle text, posts): working copies, not part of the dataset
+outreach/

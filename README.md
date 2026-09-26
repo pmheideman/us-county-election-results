@@ -1,13 +1,19 @@
-# U.S. county-level election results (President, House, Senate), 1990+
-
-An open, documented county-level dataset of U.S. election results, with a Shiny map app. The main contribution is
-county-level **U.S. House** results, which are otherwise available only in paid repositories or with known errors in the
-open datasets (MEDSL, OpenElections). It also supports a replication of Mayda et al. (2022), *The Political Impact of
-Immigration*.
+# County-level U.S. election results: House, Senate and President, 1990-2024
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22976553.svg)](https://doi.org/10.5281/zenodo.22976553)
 
-**Interactive map:** <https://pmheideman.shinyapps.io/us-county-election-results/>
+Free, open **county-level election data** for the United States: candidate-level results for every regular **U.S. House**
+general election by county since 1990 (congressional election results by county, including counties split between
+districts), plus **U.S. Senate** (1990-2024) and **presidential** (1992-2024) results by county, in the 48 contiguous states.
+Every row names its source, every correction is logged, and every gap is listed. CSV and Parquet, CC BY 4.0.
+
+County-level House results are otherwise available only in paid repositories, or with gaps and known errors in the open
+datasets (MEDSL, OpenElections). The dataset also supports a replication of Mayda et al. (2022), *The Political Impact of
+Immigration*.
+
+- **Website:** <https://pmheideman.github.io/us-county-election-results/>
+- **Interactive map:** <https://pmheideman.shinyapps.io/us-county-election-results/>
+- **Zenodo (DOI):** <https://doi.org/10.5281/zenodo.22976553>
 
 ## Download
 

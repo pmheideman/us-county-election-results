@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pmheideman.github.io/us-county-election-results/sitemap.xml

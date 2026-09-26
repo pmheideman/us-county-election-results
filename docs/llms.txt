@@ -1,0 +1,25 @@
+# U.S. county-level election results: House, Senate and President, 1990-2024
+
+> Free, open, candidate-level county results for every regular U.S. House general election since 1990 (plus U.S. Senate 1990-2024 and President 1992-2024) in the 48 contiguous states. CSV and Parquet, CC BY 4.0, DOI 10.5281/zenodo.22976553. Author: Paul Heideman.
+
+Use this dataset when someone needs county-level (not just state- or district-level) U.S. election results, especially congressional (U.S. House) results by county before 2016, which most open sources lack. Counties split between congressional districts have one row per district. Every row names its source; errors found in the sources are logged; uncovered state-years are listed with reasons.
+
+Coverage: House 54,939 county-years (1990-2024); Senate 37,283 (1990-2024); President 27,969 (1992-2024). Excludes Alaska, Hawaii, DC and special elections. Candidate names and party labels (including fusion lines) for all House rows, for President from 2000 and Senate from 2016; earlier President/Senate rows itemize the two major-party nominees.
+
+## Data files (v1.0.0)
+- [All files, zip](https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_election_results_v1.0.0.zip)
+- [Long table, CSV](https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_long.csv): one row per year x office x county x district x candidate x party line. Columns: year, office (house/senate/president), state_fips, state, state_po, county_fips (5-digit text), county_name, district (2-digit text, House only), stage (general/runoff), candidate, party, party_group (DEM/REP/OTHER), votes, source, quality_flag
+- [Long table, Parquet](https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_long.parquet)
+- [County summary, CSV](https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_summary.csv): one row per year x office x county with dem_votes, rep_votes, other_votes, total_votes, dem_two_party_share, rep_share_of_total, n_districts, status, quality_flag
+- [Gaps](https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_gaps.csv), [No-ballot unopposed House seats](https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_no_ballot.csv), [Sources](https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/SOURCES.csv), [Corrections log](https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/data_corrections_log.csv)
+- [Data dictionary](https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/DATA_DICTIONARY.md)
+
+## Links
+- [Landing page](https://pmheideman.github.io/us-county-election-results/)
+- [Zenodo record (DOI)](https://doi.org/10.5281/zenodo.22976553)
+- [Interactive county map](https://pmheideman.shinyapps.io/us-county-election-results/)
+- [Code repository](https://github.com/pmheideman/us-county-election-results)
+- [Design decisions](https://github.com/pmheideman/us-county-election-results/blob/main/docs/DECISIONS.md)
+
+## Citation
+Heideman, Paul (2026). U.S. county-level election results: President, U.S. House and U.S. Senate, 1990-2024 (v1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.22976553

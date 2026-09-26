@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>County-Level U.S. Election Results: House, Senate and President, 1990–2024</title>
+<meta name="description" content="Free, open county-level U.S. election results: U.S. House (congressional) results by county 1990–2024, plus President and Senate. Candidate names, parties and votes for every county, with every source documented. CSV and Parquet, CC BY 4.0.">
+<link rel="canonical" href="https://pmheideman.github.io/us-county-election-results/">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<meta name="author" content="Paul Heideman">
+<meta name="citation_title" content="U.S. county-level election results: President, U.S. House and U.S. Senate, 1990-2024">
+<meta name="citation_author" content="Heideman, Paul">
+<meta name="citation_publication_date" content="2026/09/26">
+<meta name="citation_doi" content="10.5281/zenodo.22976553">
+<meta property="og:type" content="website">
+<meta property="og:title" content="County-level U.S. election results, 1990–2024 (House, Senate, President)">
+<meta property="og:description" content="Open county-level results for every U.S. House, Senate and presidential general election since 1990, with candidate names, parties and documented sources.">
+<meta property="og:url" content="https://pmheideman.github.io/us-county-election-results/">
+<meta property="og:image" content="https://pmheideman.github.io/us-county-election-results/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,650&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "U.S. county-level election results: President, U.S. House and U.S. Senate, 1990-2024",
+  "alternateName": ["County-level U.S. House election results", "Congressional election results by county", "US county election data 1990-2024"],
+  "description": "Candidate-level county results for U.S. House (1990-2024), President (1992-2024) and U.S. Senate (1990-2024) regular general elections in the 48 contiguous states. 420,503 rows covering 54,939 House, 27,969 presidential and 37,283 Senate county-years, with candidate names, party labels (including fusion lines), party group, votes, the source of every row and data-quality flags. Assembled from state election offices' official reports, canvasses and websites, the MIT Election Data and Science Lab (MEDSL), OpenElections and Algara & Amlani. Every source is documented, every correction is logged, and every state-year that is not fully covered is listed with its reason. Counties split between congressional districts have one row per district.",
+  "url": "https://pmheideman.github.io/us-county-election-results/",
+  "sameAs": ["https://doi.org/10.5281/zenodo.22976553", "https://github.com/pmheideman/us-county-election-results"],
+  "identifier": ["https://doi.org/10.5281/zenodo.22976553", "10.5281/zenodo.22976553"],
+  "version": "1.0.0",
+  "datePublished": "2026-09-26",
+  "keywords": ["county-level election results", "county election data", "U.S. House election results by county", "congressional election results by county", "presidential election results by county", "Senate election results by county", "election returns", "vote shares", "FIPS", "political science", "United States"],
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "creator": {"@type": "Person", "name": "Paul Heideman"},
+  "citation": "Heideman, Paul (2026). U.S. county-level election results: President, U.S. House and U.S. Senate, 1990-2024 (v1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.22976553",
+  "temporalCoverage": "1990/2024",
+  "spatialCoverage": {"@type": "Place", "name": "United States (48 contiguous states), by county"},
+  "variableMeasured": ["year", "office", "state FIPS", "county FIPS", "county name", "congressional district", "stage (general or runoff)", "candidate", "party", "party group (DEM, REP, OTHER)", "votes", "source", "quality flag", "Democratic two-party vote share", "Republican share of total vote"],
+  "includedInDataCatalog": {"@type": "DataCatalog", "name": "Zenodo", "url": "https://zenodo.org"},
+  "distribution": [
+    {"@type": "DataDownload", "name": "All files (zip)", "encodingFormat": "application/zip", "contentUrl": "https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_election_results_v1.0.0.zip"},
+    {"@type": "DataDownload", "name": "Candidate-level long table (CSV)", "encodingFormat": "text/csv", "contentUrl": "https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_long.csv"},
+    {"@type": "DataDownload", "name": "Candidate-level long table (Parquet)", "encodingFormat": "application/vnd.apache.parquet", "contentUrl": "https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_long.parquet"},
+    {"@type": "DataDownload", "name": "County summary: votes and shares (CSV)", "encodingFormat": "text/csv", "contentUrl": "https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_summary.csv"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Where can I download county-level U.S. House election results?",
+     "acceptedAnswer": {"@type": "Answer", "text": "This dataset has county-level results for every regular U.S. House general election from 1990 to 2024 in the 48 contiguous states, with candidate names, parties and votes, free under CC BY 4.0. Download it from the GitHub Release or Zenodo (DOI 10.5281/zenodo.22976553)."}},
+    {"@type": "Question", "name": "How are counties split between congressional districts handled?",
+     "acceptedAnswer": {"@type": "Answer", "text": "The long file has one row per county, district and candidate, so a county split between districts appears once for each district. The summary file adds these up to one row per county and year."}},
+    {"@type": "Question", "name": "How is this different from MEDSL, OpenElections or Dave Leip's Atlas?",
+     "acceptedAnswer": {"@type": "Answer", "text": "MEDSL's county presidential file starts in 2000 and its House and Senate precinct files start in 2016. OpenElections coverage varies by state and year. Leip's Atlas sells its data. This dataset combines those open sources with official state reports and canvasses, many transcribed from scans, to reach 1990, corrects errors found along the way and documents each one."}},
+    {"@type": "Question", "name": "Is the data free to use?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Yes. The compiled data is licensed CC BY 4.0: you may use and share it for any purpose, including commercially, with credit. Some underlying state records carry their own terms, listed in SOURCES.csv."}},
+    {"@type": "Question", "name": "Which elections and years are included?",
+     "acceptedAnswer": {"@type": "Answer", "text": "Regular general elections for U.S. House (1990-2024), President (1992-2024) and U.S. Senate (1990-2024) in the 48 contiguous states. Alaska, Hawaii, DC and special elections are not included."}}
+  ]
+}
+</script>
+
+<style>
+:root {
+  --paper: #f6f4ef;
+  --paper-raised: #fffdf9;
+  --ink: #1f1e1c;
+  --ink-muted: #5f5e5a;
+  --rule: #e2ddd2;
+  --accent: #8f6220;
+  --accent-strong: #a8742a;
+  --code-bg: #efece4;
+  --nb: #cdbf98;
+  --gap: #b0aca3;
+  --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #1b1a18; --paper-raised: #242320; --ink: #ece9e2; --ink-muted: #aba79e; --rule: #3a3833;
+    --accent: #d9a55a; --accent-strong: #d9a55a; --code-bg: #2b2a26; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #1b1a18; --paper-raised: #242320; --ink: #ece9e2; --ink-muted: #aba79e; --rule: #3a3833;
+  --accent: #d9a55a; --accent-strong: #d9a55a; --code-bg: #2b2a26; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 1.0625rem; line-height: 1.6; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:hover { color: var(--accent-strong); }
+.wrap { max-width: 880px; margin: 0 auto; padding: 0 16px; }
+header.site { background: var(--paper-raised); border-bottom: 1px solid var(--rule); box-shadow: inset 0 -3px 0 var(--accent-strong); }
+header.site .wrap { display: flex; align-items: center; gap: .7rem; padding-top: .7rem; padding-bottom: .8rem; }
+header.site img { width: 30px; height: 30px; flex: none; }
+header.site .name { font-family: var(--serif); font-weight: 650; font-size: 1.05rem; }
+header.site nav { margin-left: auto; display: flex; gap: 1rem; font-size: .92rem; flex-wrap: wrap; justify-content: flex-end; }
+header.site nav a { color: var(--ink-muted); text-decoration: none; }
+header.site nav a:hover { color: var(--ink); }
+h1, h2, h3 { font-family: var(--serif); font-weight: 650; line-height: 1.2; letter-spacing: -0.01em; }
+h1 { font-size: clamp(1.85rem, 4.6vw, 2.7rem); margin: 2.4rem 0 .8rem; text-wrap: balance; }
+h2 { font-size: 1.5rem; margin: 3rem 0 .8rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); }
+h3 { font-size: 1.12rem; margin: 1.6rem 0 .4rem; }
+.lede { font-size: 1.18rem; color: var(--ink); max-width: 44em; }
+.eyebrow { font-size: .76rem; font-weight: 600; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-muted); margin-top: 2rem; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.5rem 0 .5rem; }
+.btn { display: inline-block; padding: .6rem 1rem; border-radius: 6px; border: 1px solid var(--rule); background: var(--paper-raised); color: var(--ink); text-decoration: none; font-weight: 600; font-size: .95rem; }
+.btn:hover { border-color: var(--accent-strong); color: var(--ink); }
+.btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.btn.primary:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+.small { font-size: .88rem; color: var(--ink-muted); }
+figure { margin: 2rem 0 0; }
+figure img { width: 100%; height: auto; display: block; border-radius: 6px; border: 1px solid var(--rule); }
+figcaption { font-size: .88rem; color: var(--ink-muted); margin-top: .6rem; }
+.legend { display: flex; flex-wrap: wrap; align-items: center; gap: .4rem 1rem; margin-top: .4rem; }
+.ramp { display: inline-block; width: 120px; height: 10px; border-radius: 2px; vertical-align: middle; background: linear-gradient(90deg, #8E1213, #AB4C4C, #C3797A, #D8A6A6, #E9D0D0, #f0efec, #CFD6E7, #A3B2D6, #738EC4, #346AB4, #0047B0); }
+.sw { display: inline-block; width: 12px; height: 12px; border-radius: 2px; vertical-align: -1px; margin-right: .3rem; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; margin: 1.2rem 0; }
+.stat { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 6px; padding: .8rem 1rem; }
+.stat b { display: block; font-family: var(--serif); font-size: 1.6rem; font-weight: 650; font-variant-numeric: tabular-nums; }
+.stat span { font-size: .88rem; color: var(--ink-muted); }
+.table-wrap { overflow-x: auto; margin: 1rem 0; border: 1px solid var(--rule); border-radius: 6px; background: var(--paper-raised); }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: .55rem .8rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; background: var(--code-bg); }
+tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; white-space: nowrap; }
+code { font-family: var(--mono); font-size: .86em; background: var(--code-bg); padding: .1em .35em; border-radius: 4px; }
+pre { background: var(--code-bg); border: 1px solid var(--rule); border-radius: 6px; padding: .9rem 1rem; overflow-x: auto; font-size: .85rem; line-height: 1.5; }
+pre code { background: none; padding: 0; font-size: inherit; }
+ul.points { padding-left: 1.2rem; }
+ul.points li { margin: .4rem 0; }
+details { background: var(--paper-raised); border: 1px solid var(--rule); border-radius: 6px; padding: .7rem 1rem; margin: .6rem 0; }
+details summary { cursor: pointer; font-weight: 600; }
+details[open] summary { margin-bottom: .4rem; }
+blockquote { margin: 1rem 0; padding: .8rem 1rem; border-left: 3px solid var(--accent-strong); background: var(--paper-raised); border-radius: 0 6px 6px 0; }
+footer { margin: 4rem 0 0; padding: 1.5rem 0 3rem; border-top: 1px solid var(--rule); font-size: .88rem; color: var(--ink-muted); }
+@media (max-width: 720px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { header.site nav { display: none; } body { font-size: 1rem; } }
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <img src="logo.svg" alt="" width="30" height="30">
+    <span class="name">US County Election Results</span>
+    <nav aria-label="Sections">
+      <a href="#download">Download</a>
+      <a href="#faq">FAQ</a>
+      <a href="#cite">Cite</a>
+      <a href="https://github.com/pmheideman/us-county-election-results">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="eyebrow">Open dataset · v1.0.0 · CC BY 4.0</p>
+  <h1>County-level U.S. election results: House, Senate and President, 1990–2024</h1>
+  <p class="lede">Free, documented <strong>county-level election data</strong> for the United States: every regular
+  <strong>U.S. House</strong> general election by county since 1990, plus <strong>Senate</strong> and
+  <strong>presidential</strong> results. Each row gives the candidate, party and votes in one county, and says where the numbers came from.</p>
+
+  <div class="actions">
+    <a class="btn primary" href="https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_election_results_v1.0.0.zip">Download all files (zip, 9.5 MB)</a>
+    <a class="btn" href="https://pmheideman.shinyapps.io/us-county-election-results/">Explore the map</a>
+    <a class="btn" href="https://doi.org/10.5281/zenodo.22976553">Zenodo · DOI</a>
+  </div>
+
+  <figure>
+    <img src="house_2024_map.png" width="1600" height="1000" loading="eager"
+         alt="Map of the 48 contiguous states shaded by county: the Democratic share of the two-party vote for U.S. House in 2024, from deep red to deep blue.">
+    <figcaption>
+      U.S. House, 2024: Democratic share of the two-party vote in each county.
+      <span class="legend">
+        <span><span class="small">Republican</span> <span class="ramp" aria-hidden="true"></span> <span class="small">Democratic</span></span>
+        <span><span class="sw" style="background:var(--nb)"></span>Unopposed seat, not on the ballot</span>
+        <span><span class="sw" style="background:var(--gap)"></span>No data</span>
+      </span>
+      Solid blocks are uncontested races. The <a href="https://pmheideman.shinyapps.io/us-county-election-results/">interactive map</a> covers every year and office, with candidate names on hover.
+    </figcaption>
+  </figure>
+
+  <h2 id="glance">At a glance</h2>
+  <div class="stats">
+    <div class="stat"><b>54,939</b><span>House county-years, 1990–2024</span></div>
+    <div class="stat"><b>37,283</b><span>Senate county-years, 1990–2024</span></div>
+    <div class="stat"><b>27,969</b><span>Presidential county-years, 1992–2024</span></div>
+    <div class="stat"><b>1,523</b><span>documented sources</span></div>
+  </div>
+  <ul class="points">
+    <li><strong>County-level House results back to 1990.</strong> Open datasets usually start in 2016 (MEDSL) or cover
+      only some states and years (OpenElections). The earlier years here come from official state reports, canvasses and
+      blue books, many transcribed from scans or microfiche.</li>
+    <li><strong>Candidate-level, not just shares.</strong> Names, party labels (including fusion lines such as Working Families),
+      a DEM / REP / OTHER party group, and votes.</li>
+    <li><strong>Split counties handled.</strong> A county divided between congressional districts has one row per district, and
+      the summary file adds them up to one row per county.</li>
+    <li><strong>Every number traceable.</strong> Each row names its source. <code>SOURCES.csv</code> describes each of the 1,523
+      sources: publisher, document, where to find it, how it was transcribed, and its terms of use.</li>
+    <li><strong>Errors found and fixed in the open.</strong> 135 entries in <code>data_corrections_log.csv</code> record source errors
+      (doubled counts, missing counties, wrong party labels) and how each was handled. Checked against FEC and state certified totals.</li>
+    <li><strong>Gaps listed, not hidden.</strong> 41 state-years are not fully covered. Most are House seats won unopposed
+      and never printed on the ballot, or Senate years with only a special election. Each one is listed with its reason.</li>
+  </ul>
+
+  <h2 id="download">Download</h2>
+  <p>Files are attached to the <a href="https://github.com/pmheideman/us-county-election-results/releases/tag/v1.0.0">GitHub Release</a>
+  and archived on <a href="https://doi.org/10.5281/zenodo.22976553">Zenodo</a>. Column definitions are in
+  <a href="https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/DATA_DICTIONARY.md">DATA_DICTIONARY.md</a>.</p>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>File</th><th>Contents</th><th>Size</th></tr></thead>
+    <tbody>
+      <tr><td><a href="https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_long.csv">us_county_results_long.csv</a><br>
+        <a class="small" href="https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_long.parquet">.parquet</a></td>
+        <td>One row per year × office × county × district × candidate × party line: candidate, party, party group, votes, source, quality flag</td><td class="num">46 MB<br><span class="small">3 MB</span></td></tr>
+      <tr><td><a href="https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_summary.csv">us_county_results_summary.csv</a></td>
+        <td>One row per year × office × county: Democratic, Republican, other and total votes; two-party and total shares</td><td class="num">12 MB</td></tr>
+      <tr><td><a href="https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_gaps.csv">us_county_results_gaps.csv</a></td>
+        <td>Every state-year-office not fully covered, with the reason</td><td class="num">5 KB</td></tr>
+      <tr><td><a href="https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_no_ballot.csv">us_county_results_no_ballot.csv</a></td>
+        <td>House seats whose unopposed winner was not on the ballot (FL, LA, OK) or not tabulated (AR), by county</td><td class="num">133 KB</td></tr>
+      <tr><td><a href="https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/SOURCES.csv">SOURCES.csv</a></td>
+        <td>Every source: publisher, document, locator, transcription method, license terms</td><td class="num">1.7 MB</td></tr>
+      <tr><td><a href="https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/data_corrections_log.csv">data_corrections_log.csv</a></td>
+        <td>Every error found in the sources and how it was handled</td><td class="num">109 KB</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Quick start</h3>
+  <p>Read FIPS codes and districts as text so leading zeros survive.</p>
+<pre><code># R
+library(readr)
+url  &lt;- "https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_summary.csv"
+cty  &lt;- read_csv(url, col_types = cols(.default = col_character()))
+house_2024 &lt;- subset(cty, office == "house" &amp; year == "2024")</code></pre>
+<pre><code># Python
+import pandas as pd
+url = "https://github.com/pmheideman/us-county-election-results/releases/download/v1.0.0/us_county_results_long.parquet"
+long = pd.read_parquet(url)   # year and votes are integers; FIPS codes are strings
+senate = long.query("office == 'senate' and year >= 2016")</code></pre>
+
+  <h2 id="coverage">Coverage</h2>
+  <div class="table-wrap">
+  <table>
+    <thead><tr><th>Office</th><th>Years</th><th>County-years</th><th>Candidate detail</th></tr></thead>
+    <tbody>
+      <tr><td>U.S. House</td><td class="num">1990–2024</td><td class="num">54,939</td><td>Every candidate, per district</td></tr>
+      <tr><td>President</td><td class="num">1992–2024</td><td class="num">27,969</td><td>Every candidate from 2000; the two major-party nominees before that</td></tr>
+      <tr><td>U.S. Senate</td><td class="num">1990–2024</td><td class="num">37,283</td><td>Every candidate from 2016; the two major-party nominees before that</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="small">48 contiguous states; Alaska, Hawaii and DC are not included. Regular general elections only (Louisiana and
+  Texas runoffs are included where they decided the seat); special elections are excluded. Counties use 5-digit FIPS codes.</p>
+
+  <h2 id="faq">Frequently asked questions</h2>
+  <details open>
+    <summary>Where can I download county-level U.S. House election results?</summary>
+    <p>Here. This dataset has county-level results for every regular U.S. House general election from 1990 to 2024 in the
+    48 contiguous states, with candidate names, parties and votes. It's free under CC BY 4.0. Use the
+    <a href="#download">download links above</a> or the <a href="https://doi.org/10.5281/zenodo.22976553">Zenodo record</a>.</p>
+  </details>
+  <details>
+    <summary>How are counties split between congressional districts handled?</summary>
+    <p>The long file has one row per county, district and candidate, so a county split between three districts appears
+    three times, once per district. The summary file adds these up to one row per county and year, with the number of
+    districts in <code>n_districts</code>.</p>
+  </details>
+  <details>
+    <summary>How is this different from MEDSL, OpenElections or Dave Leip's Atlas?</summary>
+    <p>MEDSL's county presidential file starts in 2000, and its House and Senate precinct files start in 2016. OpenElections
+    is volunteer-built, so coverage varies by state and year. Leip's Atlas sells its data. This dataset starts from those open
+    sources and fills the rest from official state reports and canvasses to reach back to 1990. Errors found along the way
+    are corrected and logged, and every row says which source it came from.</p>
+  </details>
+  <details>
+    <summary>Can I get vote shares instead of raw votes?</summary>
+    <p>Yes. <code>us_county_results_summary.csv</code> has Democratic, Republican, other and total votes, the Democratic
+    two-party share (D ÷ (D + R)) and the Republican share of all votes, for every county, office and year.</p>
+  </details>
+  <details>
+    <summary>Why are some counties blank for the House?</summary>
+    <p>Mostly because the seat was won unopposed. Florida, Louisiana and Oklahoma leave unopposed candidates off the ballot,
+    and Arkansas doesn't count their votes, so no county returns exist. These are listed in
+    <code>us_county_results_no_ballot.csv</code>. Six state-years have no county-level source found yet; they're listed in
+    <code>us_county_results_gaps.csv</code>.</p>
+  </details>
+  <details>
+    <summary>Is the data free to use, including commercially?</summary>
+    <p>Yes. The compiled data is licensed <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>: use it for
+    anything, with credit. Vote counts are public records, but a few state websites publish results under their own terms.
+    The <code>license</code> columns of <code>SOURCES.csv</code> list them.</p>
+  </details>
+  <details>
+    <summary>How accurate is it?</summary>
+    <p>State totals are checked against the FEC's certified results and the states' own canvasses. For President (2000–2024), 648 of 658
+    state-level nominee totals match the certified figures within 0.5%. House and Senate results (2004–2022) are compared
+    with the FEC district by district and state by state. Known remaining problems are
+    listed in the corrections log and flagged row by row in <code>quality_flag</code>.</p>
+  </details>
+
+  <h2 id="cite">Cite</h2>
+  <blockquote>Heideman, Paul (2026). <em>U.S. county-level election results: President, U.S. House and U.S. Senate, 1990–2024</em>
+  (v1.0.0) [Data set]. Zenodo. <a href="https://doi.org/10.5281/zenodo.22976553">https://doi.org/10.5281/zenodo.22976553</a></blockquote>
+  <p class="small">Please also cite the upstream sources you rely on (listed in <code>SOURCES.csv</code>). The code that builds the
+  dataset is on <a href="https://github.com/pmheideman/us-county-election-results">GitHub</a> under the MIT license. Design and
+  data decisions are documented in <a href="https://github.com/pmheideman/us-county-election-results/blob/main/docs/DECISIONS.md">DECISIONS.md</a>,
+  and changes between releases in the <a href="https://github.com/pmheideman/us-county-election-results/blob/main/CHANGELOG.md">changelog</a>.</p>
+</main>
+
+<footer>
+  <div class="wrap">
+    Built by Paul Heideman. Data CC BY 4.0 · code MIT ·
+    <a href="https://github.com/pmheideman/us-county-election-results/issues">Report a problem</a> ·
+    <a href="llms.txt">llms.txt</a>
+  </div>
+</footer>
+</body>
+</html>
